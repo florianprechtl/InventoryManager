@@ -2,6 +2,8 @@
 	include("connectDB.php");
 	
     $db = connectToDB();
-
-    echo "jooo";
+	$username = $_POST['username'];
+    $password ? $_POST['password'];
+    
+    echo $username . " entered the password " . $password; 
 ?>
