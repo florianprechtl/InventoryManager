@@ -28,4 +28,8 @@
             return $db;
         }
     }
+
+    function echoSomething() {
+        echo "something";
+    }
 ?>

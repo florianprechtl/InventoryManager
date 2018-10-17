@@ -1,7 +1,7 @@
 <?php
-	inlcude("connectDB.php");
+	include("connectDB.php");
 	
-    $db= connectToDB();
+    $db = connectToDB();
 
     echo "jooo";
 ?>
