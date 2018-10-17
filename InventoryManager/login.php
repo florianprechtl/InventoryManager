@@ -18,7 +18,7 @@
         <div class="row center padding-top">
             <p class="col-sm-12">Please enter your login data</p>
         </div>
-        <form method="POST" action="checklogin.php" enctype="multipart/form-data">
+        <form method="POST" action="checkLogin.php" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-sm-12 input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
@@ -33,7 +33,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Passwort</span>
                     </div>
-                    <input type="text" class="form-control" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                    <input type="password" class="form-control" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                 </div>
             </div>
 
