@@ -18,12 +18,14 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 if ($row['Password'] == $password) {
-                    echo "Einloggen erfolgreich <br>";
+                    echo "Login succesfull <br>";
                     echo "userNr: " . $row['UserNr']. " -         Name: " . $row['Name']. " -          Password: " . $row['Password']. "<br>";
+                } else {
+                    echo "Login denied, wrong password <br>";
                 }
             }
         } else {
-            echo "0 results";
+            echo "There is no user with the name: <b>$username</b><br>";
         }
     }
 ?>
