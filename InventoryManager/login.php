@@ -37,8 +37,10 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary full-width margin-bottom" type="submit" name="submit">Login</button>
-            <a href="registration.php">Not registered yet? Click here!</a>
+            <button class="btn btn-primary full-width" type="submit" name="submit">Login</button>
+            <div class="padding-bottom">
+                <a class="registration-link" href="registration.php">Not registered yet? Click here!</a>
+            </div>
         </form>
     </div>
 

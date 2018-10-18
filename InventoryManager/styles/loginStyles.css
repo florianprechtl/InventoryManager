@@ -1,8 +1,15 @@
 .login-container {
     max-width: 400px;
-    background-color: #429ef4;
-    color: #FFFFFF;
+    background-color: #1258EE;
+    color: #DEE3EF;
     margin: auto;
+}
+
+.registration-link {
+    color: #B1C7F5;
+}
+.registration-link:hover {
+    color: #031D54;
 }
 
 input {
