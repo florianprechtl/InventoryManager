@@ -7,7 +7,7 @@
     $password = $_POST['password'];
     
     echo $username . " entered the password " . $password; 
-    checkUserAccountInformation();
+    checkUserAccountInformation($username);
 
     
     function checkUserAccountInformation($username) {
