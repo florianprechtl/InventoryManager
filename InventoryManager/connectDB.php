@@ -21,7 +21,7 @@
         }
         
         // Create connection
-        $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname, /* $connectstr_dbage*/);
+        $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname /*,  $connectstr_dbage*/);
         
         // Check connection
         if ($db->connect_error) {
