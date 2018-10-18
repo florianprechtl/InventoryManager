@@ -35,10 +35,10 @@
     
 	<form>
 
-    <p class = "normal"> Name : 
-    <input type="text" name="name" required> <p>
+    <p class = "normal"> First Name : 
+    <input type="text" name="firstname" required> <p>
 
-    <p class = "normal"> Family name : 
+    <p class = "normal"> Last Name : 
     <input type="text" name="family" required> <p>
 
     <p class = "normal"> Age :
@@ -52,7 +52,7 @@
     <p class = "normal"> Email :
     <input type="text" name="email" required> <p>
 
-    <p class = "important"> User name : 
+    <p class = "important"> Username : 
     <input type="text" name="username" required> <p>
 
     <p class = "important"> Password :
