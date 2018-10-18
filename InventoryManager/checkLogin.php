@@ -8,23 +8,24 @@
     
     echo $username . " entered the password " . $password; 
     checkUserAccountInformation($username);
-    echo "Joooo";
+    echo "1";
 
     
     function checkUserAccountInformation($username) {
-        echo "jooo";
+        echo "2";
         $sql = "SELECT * FROM user WHERE Name = $username;";
         
         $result = $db->query($sql);
+        echo "3";
         
         if ($result->num_rows > 0) {
+            echo "4";
             while($row = $result->fetch_assoc()) {
                 echo "userNr: " . $row['UserNr']. " - Name: " . $row['Name']. " " . $row['Password']. "<br>";
             }
         } else {
             echo "0 results";
         }
+        echo "5";
     }
 ?>
-
-Insert into user (UserNr, Name, Password, Age, Sex, MemberSince) Values ('Flo', '21', 'Test')
