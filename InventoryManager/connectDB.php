@@ -25,6 +25,7 @@
             die("Connection failed: " . $db->connect_error);
             return null;
         } else {
+            echo "connection did work";
             return $db;
         }
     }
