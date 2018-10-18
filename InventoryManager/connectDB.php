@@ -5,7 +5,7 @@
         $connectstr_dbname = '';
         $connectstr_dbusername = '';
         $connectstr_dbpassword = '';
-        $connectstr_dbage = '';
+       /* $connectstr_dbage = '';*/
         
         foreach ($_SERVER as $key => $value) {
             if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
@@ -16,12 +16,12 @@
             $connectstr_dbname = 'inventory_manager_db';
             $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
             $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-            $connectstr_dbage = preg_replace("/^.*Age=(.+?)$/", "\\1", $value);
+           /* $connectstr_dbage = preg_replace("/^.*Age=(.+?)$/", "\\1", $value);*/
 
         }
         
         // Create connection
-        $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname, $connectstr_dbage);
+        $db = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname, /* $connectstr_dbage*/);
         
         // Check connection
         if ($db->connect_error) {
