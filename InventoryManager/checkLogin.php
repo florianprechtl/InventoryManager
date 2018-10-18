@@ -1,7 +1,7 @@
 <?php
 	include("connectDB.php");
 	
-    connectToDB();
+    $db = connectToDB();
 
 	$username = $_POST['username'];
     $password = $_POST['password'];
