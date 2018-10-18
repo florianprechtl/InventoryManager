@@ -7,19 +7,21 @@
     $password = $_POST['password'];
     
     echo $username . " entered the password " . $password; 
-    checkUserAccountInformation($username, $db);
+    checkUserAccountInformation($username, $password, $db);
 
     
-    function checkUserAccountInformation($username, $db) {
+    function checkUserAccountInformation($username, $password, $db) {
         echo $username . "<br>";
         $sql = "SELECT * FROM user WHERE Name = '$username'";
-        echo $sql."<br>";
         
         $result = $db->query($sql);
         
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo "userNr: " . $row['UserNr']. " - Name: " . $row['Name']. " " . $row['Password']. "<br>";
+                if ($row['Password'] == $password) {
+                    echo "Einloggen erfolgreich <br>";
+                    echo "userNr: " . $row['UserNr']. " - Name: " . $row['Name']. " " . $row['Password']. "<br>";
+                }
             }
         } else {
             echo "0 results";
