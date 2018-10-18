@@ -7,11 +7,11 @@
     $password = $_POST['password'];
     
     echo $username . " entered the password " . $password; 
-    checkUserAccountInformation($username);
+    checkUserAccountInformation($username, $db);
     echo "1";
 
     
-    function checkUserAccountInformation($username) {
+    function checkUserAccountInformation($username, $db) {
         echo "2";
         $sql = "SELECT * FROM user WHERE Name = $username;";
         
