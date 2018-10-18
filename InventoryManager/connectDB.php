@@ -12,7 +12,7 @@
             }
             
             $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-            $connectstr_dbname = 'inventory_manager_db';
+            $connectstr_dbname = 'localdb';
             $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
             $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
         }
@@ -27,9 +27,5 @@
         } else {
             return $db;
         }
-    }
-
-    function echoSomething() {
-        echo "something";
     }
 ?>
