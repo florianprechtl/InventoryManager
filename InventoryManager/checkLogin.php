@@ -11,7 +11,6 @@
 
     
     function checkUserAccountInformation($username, $password, $db) {
-        echo $username . "<br>";
         $sql = "SELECT * FROM user WHERE Name = '$username'";
         
         $result = $db->query($sql);
