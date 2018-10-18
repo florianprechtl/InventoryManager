@@ -27,6 +27,10 @@
         } else {
             return $db;
         }
+        echo $connectstr_dbhost."<br>";
+        echo $connectstr_dbname."<br>";
+        echo $connectstr_dbusername."<br>";
+        echo $connectstr_dbpassword."<br>";
     }
 
     function echoSomething() {
