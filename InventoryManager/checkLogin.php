@@ -11,15 +11,15 @@
 
     
     function checkUserAccountInformation($username, $password, $db) {
-        $sql = "SELECT * FROM user WHERE UserName = '$username'";
+        $sql = "SELECT * FROM user WHERE Username = '$username'";
         
         $result = $db->query($sql);
         
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 if ($row['Password'] == $password) {
-                    echo "Login succesfull <br>";
-                    echo "userNr: " . $row['UserNr']. " -         Name: " . $row['Name']. " -          Password: " . $row['Password']. "<br>";
+                    echo "Login succesfull <br><br>";
+                    echo "userNr: " . $row['UserNr']. "<br>Name: " . $row['Username']. "<br>Password: " . $row['Password']. "<br>";
                 } else {
                     echo "Login denied, wrong password <br>";
                 }
