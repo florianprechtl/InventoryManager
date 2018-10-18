@@ -19,7 +19,14 @@
             while($row = $result->fetch_assoc()) {
                 if ($row['Password'] == $password) {
                     echo "Login succesfull <br><br>";
-                    echo "userNr: " . $row['UserNr']. "<br>Name: " . $row['Username']. "<br>Password: " . $row['Password']. "<br>";
+                    echo "UserNr: " . $row['UserNr'].
+                        "<br>Userame: " . $row['Username'].
+                        "<br>Password: " . $row['Password'].
+                        "<br>Firstname: " . $row['Firstname'].
+                        "<br>Lastname: " . $row['Lastname'].
+                        "<br>Sex: " . $row['Sex'].
+                        "<br>Member since: " . $row['MemberSince'].
+                        "<br>";
                 } else {
                     echo "Login denied, wrong password <br>";
                 }
