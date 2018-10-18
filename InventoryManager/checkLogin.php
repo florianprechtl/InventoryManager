@@ -6,7 +6,7 @@
 	$username = $_POST['username'];
     $password = $_POST['password'];
     
-    echo $username . " entered the password " . $password; 
+    echo $username . " entered the password " . $password . "<br>"; 
     checkUserAccountInformation($username, $password, $db);
 
     
@@ -19,7 +19,7 @@
             while($row = $result->fetch_assoc()) {
                 if ($row['Password'] == $password) {
                     echo "Einloggen erfolgreich <br>";
-                    echo "userNr: " . $row['UserNr']. " - Name: " . $row['Name']. " " . $row['Password']. "<br>";
+                    echo "userNr: " . $row['UserNr']. " -         Name: " . $row['Name']. " -          Password: " . $row['Password']. "<br>";
                 }
             }
         } else {
