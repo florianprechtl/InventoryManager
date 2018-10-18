@@ -23,10 +23,8 @@
         // Check connection
         if ($db->connect_error) {
             die("Connection failed: " . $db->connect_error);
-            echo "did not work";
             return null;
         } else {
-            echo "connection did work";
             return $db;
         }
     }
