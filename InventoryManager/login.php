@@ -38,6 +38,7 @@
             </div>
 
             <button class="btn btn-primary full-width margin-bottom" type="submit" name="submit">Login</button>
+            <a href="registration.php">Not registered yet? Click here!</a>
         </form>
     </div>
 
