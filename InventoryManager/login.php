@@ -38,7 +38,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary full-width" type="submit" name="submit">Login</button>
+            <button class="btn btn-primary full-width margin-bottom" type="submit" name="submit">Login</button>
+            <a class="btn btn-danger full-width" href="modaltest.php">Modaltest</a>
             <div class="padding-bottom">
                 <a class="registration-link" href="register.php">Not registered yet? Click here!</a>
             </div>
