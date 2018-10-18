@@ -8,9 +8,11 @@
     
     echo $username . " entered the password " . $password; 
     checkUserAccountInformation($username);
+    echo "Joooo";
 
     
     function checkUserAccountInformation($username) {
+        echo "jooo";
         $sql = "SELECT * FROM user WHERE Name = $username;";
         
         $result = $db->query($sql);
