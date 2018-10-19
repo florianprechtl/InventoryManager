@@ -16,6 +16,10 @@
 
 <body>
     <div class="login-container container-fluid">
+        <!--Header-->
+        <div class="row header">
+            <h1 class="col-sm-12" align="center">Login</h1>
+        </div>
         <div class="row center padding-top">
             <p class="col-sm-12">Please enter your login data</p>
         </div>
@@ -38,8 +42,7 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary full-width margin-bottom" type="submit" name="submit">Login</button>
-            <a class="btn btn-danger full-width" href="modaltest.php">Modaltest</a>
+            <button class="btn full-width margin-bottom button-login" type="submit" name="submit">Login</button>
             <div class="padding-bottom">
                 <a class="registration-link" href="register.php">Not registered yet? Click here!</a>
             </div>

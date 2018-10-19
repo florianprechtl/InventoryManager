@@ -31,7 +31,7 @@
 }
 
 .header {
-    background-color: #1258EE;
+    background-color: #031D54;
     color: #FFFFFF;
 }
 .dropdown-menu {
@@ -39,7 +39,7 @@
 }
 .inventory-item-preview {
     margin: 15px;
-    background-color: orange;
+    background-color: #B1C7F5;
     border-radius: 5px;
     min-height: 140px;
     min-width: 140px;
@@ -55,7 +55,7 @@
   width: 4em;
   height: 4em;
   margin-right: 1em;
-  background-color: steelblue;
+  background-color: #031D54;
   text-align: center;
 }
 
@@ -77,4 +77,8 @@
 
 .icon-container div:last-child {
   margin-right: 0;
+}
+
+.add-entry-icon {
+    color: #B1C7F5;
 }

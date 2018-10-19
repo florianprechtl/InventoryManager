@@ -79,8 +79,30 @@
 
         <!--Inventory Showplace-->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
-            <div class="inventory-item-preview icon-box">
-                <a><i class="fas fa-plus"></i></a>
+            <div class="inventory-item-preview icon-box" data-toggle="modal" data-target="#myModal">
+                <a><i class="fas fa-plus add-entry-icon"></i></a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add new Inventory Item</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>here you could add a bunch of inputs within a form</p>
+                            <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
+                            <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <div class="inventory-item-preview">
             </div>
