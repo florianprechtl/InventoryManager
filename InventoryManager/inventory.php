@@ -96,8 +96,19 @@
                             <p>here you could add a bunch of inputs within a form</p>
                             <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
                             <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <div class="form-group shadow-textarea">
+                                    <label for="exampleFormControlTextarea6">Description</label>
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
