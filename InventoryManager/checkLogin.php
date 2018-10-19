@@ -28,6 +28,7 @@
                         "<br>Sex: " . $row['Sex'].
                         "<br>Member since: " . $row['MemberSince'].
                         "<br>";
+                    echo "<div class='padding-bottom'><a href='inventory.php'>Go to Main Page</a></div>";
                 } else {
                     echo "Login denied, wrong password <br>";
                 }
