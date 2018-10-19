@@ -62,7 +62,7 @@
                                             <label for="contain">Contains the words</label>
                                             <input class="form-control" type="text" />
                                         </div>
-                                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
