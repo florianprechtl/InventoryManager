@@ -28,11 +28,11 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Select Inventory:</label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>Regfridgerator</option>
+                        <option>Stuff in my Cupboard</option>
+                        <option>My Bag</option>
+                        <option>Other fridge</option>
+                        <option>Shared Fridge</option>
                     </select>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary search-assesories"><i class="fas fa-search"></i></button>
+                            <button type="button" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
