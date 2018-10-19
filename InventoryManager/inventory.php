@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="width: 800px;">
+    <div class="container-fluid" style="max-width: 800px; width:100%">
         <div class="row header">
             <h1 class="col-sm-12" align="center">Inventory Manager</h1>
         </div>
