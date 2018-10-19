@@ -37,4 +37,44 @@
 .dropdown-menu {
     width: 250px;
 }
+.inventory-item-preview {
+    margin: 15px;
+    background-color: orange;
+    border-radius: 5px;
+    min-height: 140px;
+    min-width: 140px;
+    box-shadow: black 0px 0px 5px 0px
+}
 
+.inventory-item-preview:hover {
+    box-shadow: inset black 0px 0px 5px 0px
+}
+
+.icon-box {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  background-color: steelblue;
+  text-align: center;
+}
+
+.icon-box:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.icon-box a {  
+  color: white;
+  font-size: 2em;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon-container div:last-child {
+  margin-right: 0;
+}
