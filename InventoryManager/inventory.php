@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="col-sm-4" id="image_demo" style="width:315px; height: 350p;">
                                 </div>
-                                <a class="btn btn-success crop_image" id="button-upload-pic" style="display: none;">Crop & Upload Image</a>
+                                <a class="btn btn-success full-width crop_image" id="button-upload-pic" style="display: none;">Crop & Upload Image</a>
                             </form>
                         </div>
                         <div class="modal-footer">
