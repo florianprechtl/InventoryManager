@@ -152,6 +152,8 @@
 
             $image_crop = $('#image_demo').croppie({
                 enableExif: true,
+                enableResize: true,
+                enableRotate: true,
                 viewport: {
                     width: 200,
                     height: 200,
