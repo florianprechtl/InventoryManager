@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/resetCss.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/inventoryStyles.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="croppie/croppie.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <title>Inventory Manager</title>
@@ -105,6 +106,13 @@
                                     <label for="exampleFormControlTextarea6">Description</label>
                                     <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label for="upload_image">Image</label><br>
+                                    <input type="file" name="upload_image" id="upload_image" />
+                                </div>
+                                <div class="col-sm-4" id="image_demo" style="width:315px; height: 350p;">
+                                </div>
+                                <a class="btn btn-success crop_image" id="button-upload-pic" style="display: none;">Crop & Upload Image</a>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -130,9 +138,68 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="croppie/croppie.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#image_demo').fadeOut();
+
+            $image_crop = $('#image_demo').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'square' //circle
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+            $('#upload_image').on('change', function() {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    $image_crop.croppie('bind', {
+                        url: event.target.result
+                    }).then(function() {
+                        console.log('jQuery bind complete');
+                    });
+                }
+                reader.readAsDataURL(this.files[0]);
+                $('#image_demo').fadeIn();
+                $('#button-upload-pic').fadeIn();
+            });
+
+            $('.crop_image').click(function(event) {
+                $image_crop.croppie('result', {
+                    type: 'canvas',
+                    size: 'viewport'
+                }).then(function(response) {
+                    $.ajax({
+                        url: "uploadCroppedPic.php",
+                        type: "POST",
+                        data: {
+                            "image": response
+                        },
+                        success: function(data) {
+                            $('#image_demo').fadeOut();
+                            $('#button-upload-pic').fadeOut();
+                            $('#uploaded_image').html(data);
+                        }
+                    });
+                })
+            });
+
+        });
+
+    </script>
+
 </body>
 
 </html>
