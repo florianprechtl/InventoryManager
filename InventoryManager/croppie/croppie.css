@@ -268,11 +268,19 @@ background: #ccc;
 .cr-rotate-l {
     float: left;
     margin-left: 15px;
+    margin-bottom: 15px;
 }
 
 .cr-rotate-r {
     float: right;
     margin-right: 15px;
     margin-bottom: 15px;
-    color: white;
+}
+
+.cr-rotate-r i {
+    color: white
+}
+
+.cr-rotate-r i:hover {
+    opacity: 0.8;
 }
