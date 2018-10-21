@@ -154,9 +154,9 @@
         
                 if (isset($_GET["inventory"])) {
                     $inventoryNr = $_GET["inventory"];
-                    $sql = "SELECT * FROM product where InventoryNr = $inventoryNr";
+                    $sql = "SELECT * FROM inventoryentry where InventoryNr = $inventoryNr";
                 } else {
-                    $sql = "SELECT * FROM product where InventoryNr = 1";
+                    $sql = "SELECT * FROM inventoryentry where InventoryNr = 1";
                 }
         
                 $result = $db->query($sql);
