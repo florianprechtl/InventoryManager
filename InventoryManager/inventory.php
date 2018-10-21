@@ -37,11 +37,19 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Select Inventory:</label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Regfridgerator</option>
-                        <option>Stuff in my Cupboard</option>
-                        <option>My Bag</option>
-                        <option>Other fridge</option>
-                        <option>Shared Fridge</option>
+                        <?php
+                            $db = connectToDB();
+
+                            $sql = "SELECT * FROM Inventory";
+
+                            $result = $db->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    echo "  <option value='$row[InventoryNr]'>$row[Name]</option>";
+                                }
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -60,26 +68,11 @@
                                         <div class="form-group">
                                             <label for="filter">Filter by</label>
                                             <select class="form-control">
-                                                <?php
-                                                    $db = connectToDB();
-
-                                                    $sql = "SELECT * FROM Inventory";
-
-                                                    $result = $db->query($sql);
-
-                                                    if ($result->num_rows > 0) {
-                                                        while($row = $result->fetch_assoc()) {
-                                                            echo "  <option value='$row[InventoryNr]'>$row[Name]</option>";
-                                                        }
-                                                    }
-                                                ?>
-<!--
                                                 <option value="0" selected>All Snippets</option>
                                                 <option value="1">Featured</option>
                                                 <option value="2">Most popular</option>
                                                 <option value="3">Top rated</option>
                                                 <option value="4">Most commented</option>
--->
                                             </select>
                                         </div>
                                         <div class="form-group">
