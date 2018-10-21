@@ -1,4 +1,5 @@
 <?php
+    include('connectDB.php');
 ?>
 <html>
 
@@ -59,6 +60,19 @@
                                         <div class="form-group">
                                             <label for="filter">Filter by</label>
                                             <select class="form-control">
+                                                <?php
+                                                    $db = connectToDB();
+
+                                                    $sql = "SELECT * FROM inventory";
+
+                                                    $result = $db->query($sql);
+
+                                                    if ($result->num_rows > 0) {
+                                                        while($row = $result->fetch_assoc()) {
+                                                            echo "  <option value='$row[InventoryNr]'>$row[Name]</option>";
+                                                        }
+                                                    }
+                                                ?>
                                                 <option value="0" selected>All Snippets</option>
                                                 <option value="1">Featured</option>
                                                 <option value="2">Most popular</option>
@@ -133,8 +147,6 @@
                 </div>
             </div>
             <?php
-                include('connectDB.php');
-                
                 $db = connectToDB();
         
                 $sql = "SELECT * FROM product";
@@ -147,22 +159,7 @@
                                 </div>";
                     }
                 }
-    
             ?>
-<!--
-            <div class="inventory-item-preview">
-            </div>
-            <div class="inventory-item-preview">
-            </div>
-            <div class="inventory-item-preview">
-            </div>
-            <div class="inventory-item-preview">
-            </div>
-            <div class="inventory-item-preview">
-            </div>
-            <div class="inventory-item-preview">
-            </div>
--->
         </div>
     </div>
 
