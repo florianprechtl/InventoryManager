@@ -140,7 +140,7 @@
                                     <label for="upload_image">Image</label><br>
                                     <input type="file" name="upload_image" id="upload_image" />
                                 </div>
-                                <div class="" id="image_demo" style="width:315px; height: 350p;">
+                                <div class="" id="image_demo" style="width:300px; height: 350p;">
                                 </div>
                                 <div class="container-fluid">
                                     <div class="row" id="button-upload-pic" style="display: none;">
