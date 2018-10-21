@@ -137,7 +137,7 @@
                 
                 $db = connectToDB();
         
-                $sql = "SELECT * FROM product;"
+                $sql = "SELECT * FROM product";
         
                 $result = $db->query($sql);
 
