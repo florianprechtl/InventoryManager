@@ -120,8 +120,7 @@
                                 <div class="" id="image_demo" style="width:315px; height: 350p;">
                                 </div>
                                 <div class="row" id="button-upload-pic" style="display: none;">
-                                    <a class="col-sm-10 btn btn-success crop_image" >Crop & Upload Image</a>
-                                    <a class="col-sm-2 btn btn-danger" id="rotate">Rotate</a>
+                                    <a class="col-sm-12 btn btn-success crop_image" >Crop & Upload Image</a>
                                 </div>
                             </form>
                         </div>
@@ -200,10 +199,6 @@
                         }
                     });
                 })
-            });
-            
-            $('#rotate').click(function(event) {
-                $image_crop.croppie('rotate', parseInt(90));
             });
 
         });
