@@ -117,9 +117,13 @@
                                     <label for="upload_image">Image</label><br>
                                     <input type="file" name="upload_image" id="upload_image" />
                                 </div>
-                                <div class="col-sm-4" id="image_demo" style="width:315px; height: 350p;">
+                                <div class="" id="image_demo" style="width:300px; height: 350p;">
                                 </div>
-                                <a class="btn btn-success full-width crop_image" id="button-upload-pic" style="display: none;">Crop & Upload Image</a>
+                                <div class="container-fluid">
+                                    <div class="row" id="button-upload-pic" style="display: none;">
+                                        <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -152,12 +156,13 @@
 
             $image_crop = $('#image_demo').croppie({
                 enableExif: true,
-                enableResize: true,
                 enableRotate: true,
+                enableOrientation: true,
                 viewport: {
                     width: 200,
                     height: 200,
                     type: 'square' //circle
+
                 },
                 boundary: {
                     width: 300,
@@ -202,6 +207,7 @@
         });
 
     </script>
+
 </body>
 
 </html>
