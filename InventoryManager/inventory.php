@@ -96,7 +96,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <button type="button" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
+                                <button type="submit" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </div>
