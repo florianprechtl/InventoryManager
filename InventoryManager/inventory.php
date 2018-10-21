@@ -120,7 +120,7 @@
                                 <div class="" id="image_demo" style="width:315px; height: 350p;">
                                 </div>
                                 <div class="row" id="button-upload-pic" style="display: none;">
-                                    <a class="col-sm-12 btn btn-success crop_image" >Crop & Upload Image</a>
+                                    <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
                                 </div>
                             </form>
                         </div>
@@ -132,6 +132,24 @@
 
                 </div>
             </div>
+            <?php
+                include('connectDB.php');
+                
+                $db = connectToDB();
+        
+                $sql = "SELECT * FROM product;"
+        
+                $result = $db->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "  <div class='inventory-item-preview'>
+                                </div>";
+                    }
+                }
+    
+            ?>
+<!--
             <div class="inventory-item-preview">
             </div>
             <div class="inventory-item-preview">
@@ -144,6 +162,7 @@
             </div>
             <div class="inventory-item-preview">
             </div>
+-->
         </div>
     </div>
 
@@ -202,8 +221,9 @@
             });
 
         });
+
     </script>
-    
+
 </body>
 
 </html>
