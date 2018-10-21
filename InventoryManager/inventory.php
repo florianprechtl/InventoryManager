@@ -44,6 +44,9 @@
 
                             $result = $db->query($sql);
 
+                            if (isset($_GET['inventory'])) {
+                                echo "<option value='89'>Fuck yeah</option>";
+                            }
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo "  <option value='$row[InventoryNr]'>$row[Name]</option>";
