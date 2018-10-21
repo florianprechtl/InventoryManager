@@ -44,7 +44,7 @@
 
                             $result = $db->query($sql);
 
-                            if (isset($_GET['inventory'])) {
+                            if (isset($_GET["inventory"])) {
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row[InventoryNr]) {
@@ -152,7 +152,12 @@
             <?php
                 $db = connectToDB();
         
-                $sql = "SELECT * FROM product";
+                if (isset($_GET["inventory"])) {
+                    $inventoryNr = $_GET["inventory"];
+                    $sql = "SELECT * FROM product where InventoryNr = $inventoryNr";
+                } else {
+                    $sql = "SELECT * FROM product where InventoryNr = 1";
+                }
         
                 $result = $db->query($sql);
 
