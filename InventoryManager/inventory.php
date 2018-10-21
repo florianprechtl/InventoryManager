@@ -63,7 +63,7 @@
                                                 <?php
                                                     $db = connectToDB();
 
-                                                    $sql = "SELECT * FROM inventory";
+                                                    $sql = "SELECT * FROM Inventory";
 
                                                     $result = $db->query($sql);
 
@@ -73,11 +73,13 @@
                                                         }
                                                     }
                                                 ?>
+<!--
                                                 <option value="0" selected>All Snippets</option>
                                                 <option value="1">Featured</option>
                                                 <option value="2">Most popular</option>
                                                 <option value="3">Top rated</option>
                                                 <option value="4">Most commented</option>
+-->
                                             </select>
                                         </div>
                                         <div class="form-group">
