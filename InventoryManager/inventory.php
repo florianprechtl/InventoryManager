@@ -142,8 +142,10 @@
                                 </div>
                                 <div class="" id="image_demo" style="width:315px; height: 350p;">
                                 </div>
-                                <div class="row" id="button-upload-pic" style="display: none;">
-                                    <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
+                                <div class="container-fluid">
+                                    <div class="row" id="button-upload-pic" style="display: none;">
+                                        <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
+                                    </div>
                                 </div>
                             </form>
                         </div>
