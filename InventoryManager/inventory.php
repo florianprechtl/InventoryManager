@@ -117,12 +117,11 @@
                                     <label for="upload_image">Image</label><br>
                                     <input type="file" name="upload_image" id="upload_image" />
                                 </div>
-                                <div class="" id="image_demo" style="width:300px; height: 350p;">
+                                <div class="" id="image_demo" style="width:315px; height: 350p;">
                                 </div>
-                                <div class="container-fluid">
-                                    <div class="row" id="button-upload-pic" style="display: none;">
-                                        <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
-                                    </div>
+                                <div class="row" id="button-upload-pic" style="display: none;">
+                                    <a class="col-sm-10 btn btn-success crop_image" >Crop & Upload Image</a>
+                                    <a class="col-sm-2 btn btn-danger" id="rotate">Rotate</a>
                                 </div>
                             </form>
                         </div>
@@ -161,8 +160,7 @@
                 viewport: {
                     width: 200,
                     height: 200,
-                    type: 'square' //circle
-
+                    type: 'square', //circle
                 },
                 boundary: {
                     width: 300,
@@ -203,11 +201,14 @@
                     });
                 })
             });
+            
+            $('#rotate').click(function(event) {
+                $image_crop.croppie('rotate', parseInt(90));
+            });
 
         });
-
     </script>
-
+    
 </body>
 
 </html>
