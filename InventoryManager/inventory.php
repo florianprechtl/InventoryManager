@@ -45,12 +45,17 @@
                             $result = $db->query($sql);
 
                             if (isset($_GET['inventory'])) {
-                                echo "<option value='89'>Fuck yeah</option>";
-                            }
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                                    echo "  <option value='$row[InventoryNr]'>$row[Name]</option>";
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        if ($_GET['inventory'] == $row['InventoryNr']) {
+                                            echo "<option selected value='$row[InventoryNr]'>$row[Name]</option>";
+                                        } else {
+                                            echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+                                        }
+                                    }
                                 }
+                            } else {
+                                echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                             }
                         ?>
                     </select>
