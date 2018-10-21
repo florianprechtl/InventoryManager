@@ -32,12 +32,13 @@
         </div>
 
         <!--Search bar and Inventory select-->
-        <div class="row justify-content-between margin-top">
-            <div class="col-sm-5">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Select Inventory:</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <?php
+        <form method="GET" action="inventory.php" enctype="multipart/form-data">
+            <div class="row justify-content-between margin-top">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Inventory:</label>
+                        <select class="form-control" name="inventory" id="exampleFormControlSelect1">
+                            <?php
                             $db = connectToDB();
 
                             $sql = "SELECT * FROM Inventory";
@@ -58,49 +59,50 @@
                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                             }
                         ?>
-                    </select>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-5">
-                <label for="exampleFormControlSelect1">Search for specific entries:</label>
-                <div class="input-group" id="adv-search">
+                <div class="col-sm-5">
+                    <label for="exampleFormControlSelect1">Search for specific entries:</label>
+                    <div class="input-group" id="adv-search">
 
-                    <input type="text" class="form-control" placeholder="Search for snippets" />
-                    <div class="input-group-btn">
-                        <div class="btn-group" role="group">
-                            <div class="dropdown dropdown-lg search-assesories">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg search-assesories">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
 
-                                <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label for="filter">Filter by</label>
-                                            <select class="form-control">
-                                                <option value="0" selected>All Snippets</option>
-                                                <option value="1">Featured</option>
-                                                <option value="2">Most popular</option>
-                                                <option value="3">Top rated</option>
-                                                <option value="4">Most commented</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="contain">Author</label>
-                                            <input class="form-control" type="text" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="contain">Contains the words</label>
-                                            <input class="form-control" type="text" />
-                                        </div>
-                                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                                    </form>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filter by</label>
+                                                <select class="form-control">
+                                                    <option value="0" selected>All Snippets</option>
+                                                    <option value="1">Featured</option>
+                                                    <option value="2">Most popular</option>
+                                                    <option value="3">Top rated</option>
+                                                    <option value="4">Most commented</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contain">Author</label>
+                                                <input class="form-control" type="text" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contain">Contains the words</label>
+                                                <input class="form-control" type="text" />
+                                            </div>
+                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                        </form>
+                                    </div>
                                 </div>
+                                <button type="button" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                             </div>
-                            <button type="button" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
 
         <!--Inventory Showplace-->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
