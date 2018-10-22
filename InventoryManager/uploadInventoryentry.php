@@ -15,9 +15,26 @@
 
     echo "yeah it works!";
 
-    if (isset($name_product, )) {
-        
+    if (isset($name_prod_gr)) {
+        $sql_prod_gr = "INSERT INTO productgroup (ProdgrNr, Name, Description, NameShort, IconName, IconExtension) VALUES (NULL, $name_prod_gr, $descr_prod_gr, NULL, NULL, NULL)";
+        $result = $db->query($sql_prod_gr);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                print_r($row);
+            }
+        }
+            
     }
+    echo "worked as well!";
+
+//    if (isset($name_product)) {
+//        $sql_product = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, ImageName, ImageExtension) VALUES ('7', '3', 'Nutella', 'chocolate creame', 'kg', NULL, NULL);"
+//    }
+//
+//    if (isset($name_product) && isset($name_prod_gr)) {
+//        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '1', '5', '3', '12', $date_buying, $date_expiring, NULL);"
+//    }
+
 
 //    $sql = "SELECT * FROM Inventory";
 //
