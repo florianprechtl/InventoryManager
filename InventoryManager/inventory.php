@@ -129,7 +129,7 @@
                             <p>here you could add a bunch of inputs within a form</p>
                             <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
                             <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
-                            <form>
+                            <form method="POST" action="uploadProductentry.php" enctype="multipart/form-data">
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
@@ -144,11 +144,11 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                    <input type="text" class="form-control" name="name_product">
                                                 </div>
                                                 <div class="form-group shadow-textarea">
                                                     <label for="exampleFormControlTextarea6">Description</label>
-                                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+                                                    <textarea class="form-control z-depth-1" name="descr_product" rows="3" placeholder="Write something here..."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -176,15 +176,19 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Productgroup name</label><br>
-                                                    <input class="form-control" name="amount" type="text">
+                                                    <input class="form-control" name="name_prod_gr" type="text">
+                                                </div>
+                                                <div class="form-group shadow-textarea">
+                                                    <label for="exampleFormControlTextarea6">Productgroup description</label>
+                                                    <textarea class="form-control z-depth-1" name="descr_prod_gr" rows="3" placeholder="Write something here..."></textarea>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="amount">Unit</label><br>
-                                                    <input class="form-control" name="amount" type="text">
+                                                    <label for="unit">Unit</label><br>
+                                                    <input class="form-control" name="unit" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Amount</label><br>
-                                                    <input class="form-control" name="amount" type="text">
+                                                    <input class="form-control" name="amount" type="number" min="0">
                                                 </div>
                                                 <div class="form-group" id="buying-date-container">
                                                     <label for="buying_date">Buying date</label><br>
@@ -201,7 +205,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
