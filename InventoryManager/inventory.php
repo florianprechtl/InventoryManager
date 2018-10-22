@@ -192,6 +192,10 @@
                                                     <input type="text">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="amount">Productgroup name</label><br>
+                                                    <input class="form-control" name="amount" type="text">
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="amount">Unit</label><br>
                                                     <input class="form-control" name="amount" type="text">
                                                 </div>
