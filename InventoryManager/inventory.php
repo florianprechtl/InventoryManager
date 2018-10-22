@@ -18,7 +18,7 @@
 
     <script src="jquery/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>s
     <script src="croppie/croppie.js"></script>
     <script src="bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
     
@@ -175,7 +175,12 @@
                                                     </div>
                                                 </div>
                                                 <div id="buying-date-container">
-                                                        <input type="text">
+                                                    <label for="buying_date">Buying date</label>
+                                                        <input name="buying_date" type="text">
+                                                </div>
+                                                <div id="buying-date-container">
+                                                    <label for="expiring_date">Buying date</label>
+                                                        <input name="expiring_date" type="text">
                                                 </div>
                                             </div>
                                         </div>
