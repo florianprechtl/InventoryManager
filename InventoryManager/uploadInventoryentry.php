@@ -12,7 +12,8 @@
     $date_expiring = $_POST['date_expiring'];
 
 
-    echo "yeah it works!";
+    echo "yeah it works!<br>";
+    echo $name_prod_gr . "<br>";
 
     if ($name_prod_gr && trim($name_prod_gr) != '') {
         $sql_prod_gr = "INSERT INTO productgroup (ProdgrNr, Name, Description, NameShort, IconName, IconExtension) VALUES (NULL, $name_prod_gr, $descr_prod_gr, NULL, NULL, NULL)";
