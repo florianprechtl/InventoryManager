@@ -21,7 +21,7 @@
     <script src="bootstrap/js/bootstrap.js"></script>s
     <script src="croppie/croppie.js"></script>
     <script src="bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
-    
+
     <title>Inventory Manager</title>
 </head>
 
@@ -174,13 +174,21 @@
                                                         <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
-                                                <div id="buying-date-container">
-                                                    <label for="buying_date">Buying date</label>
-                                                        <input name="buying_date" type="text">
+                                                <div class="form-group">
+                                                    <label for="amount">Unit</label><br>
+                                                    <input name="amount" type="text">
                                                 </div>
-                                                <div id="buying-date-container">
-                                                    <label for="expiring_date">Buying date</label>
-                                                        <input name="expiring_date" type="text">
+                                                <div class="form-group">
+                                                    <label for="amount">Amount</label><br>
+                                                    <input name="amount" type="text">
+                                                </div>
+                                                <div class="form-group" id="buying-date-container">
+                                                    <label for="buying_date">Buying date</label><br>
+                                                    <input name="buying_date" type="text">
+                                                </div>
+                                                <div class="form-group" id="buying-date-container">
+                                                    <label for="expiring_date">Expiring date</label><br>
+                                                    <input name="expiring_date" type="text">
                                                 </div>
                                             </div>
                                         </div>
