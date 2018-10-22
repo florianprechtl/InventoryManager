@@ -192,12 +192,12 @@
                                                     <input class="form-control" name="amount" type="number" min="0">
                                                 </div>
                                                 <div class="form-group" id="buying-date-container">
-                                                    <label for="buying_date">Buying date</label><br>
-                                                    <input class="form-control" name="buying_date" type="text">
+                                                    <label for="date_buying">Buying date</label><br>
+                                                    <input class="form-control" name="date_buying" type="text">
                                                 </div>
                                                 <div class="form-group" id="buying-date-container">
-                                                    <label for="expiring_date">Expiring date</label><br>
-                                                    <input class="form-control" name="expiring_date" type="text">
+                                                    <label for="date_expiring">Expiring date</label><br>
+                                                    <input class="form-control" name="date_expiring" type="text">
                                                 </div>
                                             </div>
                                         </div>
