@@ -25,6 +25,7 @@
 //    }
         // works as well, but we shoud not do it that way
         $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '1', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
+        echo $sql_inventoryentry; 
         $db->query($sql_inventoryentry);
 
 
