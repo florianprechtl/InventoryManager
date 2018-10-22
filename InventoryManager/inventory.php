@@ -50,7 +50,7 @@
                             if (isset($_GET["inventory"])) {
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
-                                        if ($_GET['inventory'] == $row[InventoryNr]) {
+                                        if ($_GET['inventory'] == $row['InventoryNr']) {
                                             echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
