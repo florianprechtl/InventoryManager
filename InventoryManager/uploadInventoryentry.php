@@ -1,4 +1,5 @@
 <?php
+    include('connectDB.php');
     $db = connectToDB();
 
     $name_product = $POST["name_product"];
