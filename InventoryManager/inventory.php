@@ -171,8 +171,19 @@
                                                 </div>
                                                 <div class="container-fluid">
                                                     <div class="row" id="button-upload-pic" style="display: none;">
-                                                        <a class="col-sm-12 btn btn-success crop_image">Crop & Upload Image</a>
+                                                        <a class="col-sm-12 btn btn-success crop_image margin-bottom">Crop & Upload Image</a>
                                                     </div>
+                                                </div>
+                                                <!-- Default unchecked -->
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                                    <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label>
+                                                </div>
+
+                                                <!-- Default checked -->
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                                                    <label class="custom-control-label" for="defaultChecked">Default checked</label>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Unit</label><br>
