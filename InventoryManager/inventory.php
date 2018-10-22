@@ -174,23 +174,6 @@
                                                         <a class="col-sm-12 btn btn-success crop_image margin-bottom">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
-                                                <!-- Default unchecked -->
-                                                <div class="custom-control custom-radio">
-                                                    <label>Productgroup</label>
-                                                    <input type="radio" class="custom-control-input" name="radio_prodgr_select">
-                                                    <select>
-                                                        <option>
-                                                            1
-                                                        </option>
-                                                        <option>
-                                                            2
-                                                        </option>
-                                                    </select>
-<!--                                                    <label class="custom-control-label" for="defaultUnchecked">Default</label>-->
-                                                    <input type="radio" class="custom-control-input" name="radio_prodgr_new" checked>
-<!--                                                    <label class="custom-control-label" for="defaultChecked">Default checked</label>-->
-                                                    <input type="text">
-                                                </div>
                                                 <div class="form-group">
                                                     <label for="amount">Productgroup name</label><br>
                                                     <input class="form-control" name="amount" type="text">
