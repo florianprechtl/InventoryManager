@@ -125,11 +125,12 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <div class="modal-body">
-                            <p>here you could add a bunch of inputs within a form</p>
-                            <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
-                            <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
-                            <form method="POST" action="uploadProductentry.php" enctype="multipart/form-data">
+                        <form method="POST" action="uploadInventoryentry.php" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <p>here you could add a bunch of inputs within a form</p>
+                                <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
+                                <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
+
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
@@ -202,12 +203,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
                     </div>
 
                 </div>
