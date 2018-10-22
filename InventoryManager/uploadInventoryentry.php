@@ -11,7 +11,13 @@
     $date_buying = $_POST['date_buying'];
     $date_expiring = $_POST['date_expiring'];
 
+    $
+
     echo "yeah it works!";
+
+    if (isset($name_product, )) {
+        
+    }
 
 //    $sql = "SELECT * FROM Inventory";
 //
