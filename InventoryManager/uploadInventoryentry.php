@@ -2,16 +2,16 @@
     include('connectDB.php');
     $db = connectToDB();
 
-    $name_product = $_POST['name_product'];
-    $descr_product = $_POST'descr_product'];
-    $name_prod_gr = $_POST['name_prod_gr'];
-    $descr_prod_gr = $_POST['descr_prod_gr'];
-    $unit = $_POST['unit'];
-    $amount = $_POST['amount'];
-    $date_buying = $_POST['date_buying'];
-    $date_expiring = $_POST['date_expiring'];
+//    $name_product = $_POST['name_product'];
+//    $descr_product = $_POST'descr_product'];
+//    $name_prod_gr = $_POST['name_prod_gr'];
+//    $descr_prod_gr = $_POST['descr_prod_gr'];
+//    $unit = $_POST['unit'];
+//    $amount = $_POST['amount'];
+//    $date_buying = $_POST['date_buying'];
+//    $date_expiring = $_POST['date_expiring'];
 
-    echo "yeah it works!";
+    print_r($_POST);
 
 //    $sql = "SELECT * FROM Inventory";
 //
