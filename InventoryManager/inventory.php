@@ -162,9 +162,9 @@
         
                 if (isset($_GET["inventory"])) {
                     $inventoryNr = $_GET["inventory"];
-                    $sql = "SELECT * FROM inventoryentry where InventoryNr = $inventoryNr";
+                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $inventoryNr";
                 } else {
-                    $sql = "SELECT * FROM inventoryentry where InventoryNr = 1";
+                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = 1;"
                 }
         
                 $result = $db->query($sql);
@@ -172,6 +172,7 @@
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>
+                                    $row[Name]
                                 </div>";
                     }
                 }
