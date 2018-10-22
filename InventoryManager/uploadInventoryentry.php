@@ -8,8 +8,8 @@
     $descr_prod_gr = $_POST['descr_prod_gr'];
     $unit = $_POST['unit'];
     $amount = $_POST['amount'];
-    $date_buying = date_format(new DateTime($_POST['date_buying']), 'Y-m-d'); ;
-    $date_expiring = date_format(new DateTime($_POST['date_expiring'], 'Y-m-d'); );
+    $date_buying = date_format(new DateTime($_POST['date_buying']), 'Y-m-d');
+    $date_expiring = date_format(new DateTime($_POST['date_expiring'], 'Y-m-d');
 
 //    if (trim($name_prod_gr) != '') {
 //        
