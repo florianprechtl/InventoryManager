@@ -1,0 +1,3 @@
+- don't forget the ' in your sql request if you're using variables that will be used as chars  -> will break your neck
+- don't forget the _ in $_POST
+- always keep in mind that the smallest typos will break your neck, especially if it's something like "name_descr = name_descr"
