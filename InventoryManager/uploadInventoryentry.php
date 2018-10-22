@@ -3,7 +3,7 @@
     $db = connectToDB();
 
     $name_product = $_POST['name_product'];
-
+    $descr_product = $_POST'descr_product'];
     $name_prod_gr = $_POST['name_prod_gr'];
     $descr_prod_gr = $_POST['descr_prod_gr'];
     $unit = $_POST['unit'];
