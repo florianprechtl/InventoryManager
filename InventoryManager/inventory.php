@@ -176,14 +176,20 @@
                                                 </div>
                                                 <!-- Default unchecked -->
                                                 <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-                                                    <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label>
-                                                </div>
-
-                                                <!-- Default checked -->
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
-                                                    <label class="custom-control-label" for="defaultChecked">Default checked</label>
+                                                    <label>Productgroup</label>
+                                                    <input type="radio" class="custom-control-input" name="radio_prodgr_select">
+                                                    <select>
+                                                        <option>
+                                                            1
+                                                        </option>
+                                                        <option>
+                                                            2
+                                                        </option>
+                                                    </select>
+<!--                                                    <label class="custom-control-label" for="defaultUnchecked">Default</label>-->
+                                                    <input type="radio" class="custom-control-input" name="radio_prodgr_new" checked>
+<!--                                                    <label class="custom-control-label" for="defaultChecked">Default checked</label>-->
+                                                    <input type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Unit</label><br>
