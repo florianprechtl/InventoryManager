@@ -176,19 +176,19 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Unit</label><br>
-                                                    <input name="amount" type="text">
+                                                    <input class="form-control" name="amount" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="amount">Amount</label><br>
-                                                    <input name="amount" type="text">
+                                                    <input class="form-control" name="amount" type="text">
                                                 </div>
                                                 <div class="form-group" id="buying-date-container">
                                                     <label for="buying_date">Buying date</label><br>
-                                                    <input name="buying_date" type="text">
+                                                    <input class="form-control" name="buying_date" type="text">
                                                 </div>
                                                 <div class="form-group" id="buying-date-container">
                                                     <label for="expiring_date">Expiring date</label><br>
-                                                    <input name="expiring_date" type="text">
+                                                    <input class="form-control" name="expiring_date" type="text">
                                                 </div>
                                             </div>
                                         </div>
