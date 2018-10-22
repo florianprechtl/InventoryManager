@@ -23,13 +23,9 @@
 //        $sql_product = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, ImageName, ImageExtension) VALUES (NULL, NULL, '$name_product', '$descr_product', '$unit', NULL, NULL)"
 //        $db->query($sql_product); 
 //    }
-
-    if () {
         // works as well, but we shoud not do it that way
         $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '1', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
         $db->query($sql_inventoryentry);
-        
-    }
 
 
 //    $sql = "SELECT * FROM Inventory";
