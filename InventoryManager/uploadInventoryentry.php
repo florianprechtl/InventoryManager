@@ -13,7 +13,7 @@
 
     if (trim($name_prod_gr) != '') {
         echo "here<br>";
-        $sql_prod_gr = "INSERT INTO productgroup (ProdgrNr, Name, Description, NameShort, IconName, IconExtension) VALUES (NULL, $name_prod_gr, $descr_prod_gr, NULL, NULL, NULL)";
+        $sql_prod_gr = "INSERT INTO productgroup (ProdgrNr, Name, Description, NameShort, IconName, IconExtension) VALUES (NULL, '$name_prod_gr', '$descr_prod_gr', NULL, NULL, NULL)";
         $result = mysqli_query($db, $sql_prod_gr) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($db), E_USER_ERROR);
         echo $result;
 //        if ($result->num_rows > 0) {
