@@ -15,7 +15,7 @@
 
     echo "yeah it works!";
 
-    if (isset($name_prod_gr)) {
+    if ($name_prod_gr && trim($name_prod_gr) != '') {
         $sql_prod_gr = "INSERT INTO productgroup (ProdgrNr, Name, Description, NameShort, IconName, IconExtension) VALUES (NULL, $name_prod_gr, $descr_prod_gr, NULL, NULL, NULL)";
         $result = $db->query($sql_prod_gr);
         if ($result->num_rows > 0) {
