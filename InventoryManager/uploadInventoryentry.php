@@ -8,8 +8,8 @@
     $descr_prod_gr = $_POST['descr_prod_gr'];
     $unit = $_POST['unit'];
     $amount = $_POST['amount'];
-    $date_buying = date_format(new DateTime($_POST['date_buying']), 'Y-m-d');
-    $date_expiring = date_format(new DateTime($_POST['date_expiring']), 'Y-m-d');
+    $date_buying = convertDate($_POST['date_buying']);
+    $date_expiring = convertDate($_POST['date_expiring']);
 
 //    if (trim($name_prod_gr) != '') {
 //        
@@ -50,4 +50,11 @@
 //            }
 //        }
 //    }
+
+    function convertDate($date) {
+        echo "date gets converted";
+        // converts form mm/dd/yyyy to yyyy-mm-dd
+        $result = explode($date, '/');
+        return result[2].'-'.result[0].'-'.result[1];
+    }
 ?>
