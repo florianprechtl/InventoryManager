@@ -26,8 +26,8 @@
 </head>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+<button type="button" class="btn btn-primary" style="margin:auto" data-toggle="modal" data-target="#exampleModalCenter">
+  Click here to register 
 </button>
 
 <!-- Modal -->
@@ -50,7 +50,7 @@
     </div>
  
             <?php
-              /*  $db = connectToDB();
+               $db = connectToDB();
         
                 if (isset($_GET["inventory"])) {
                     $inventoryNr = $_GET["inventory"];
@@ -69,4 +69,4 @@
                 }
             ?>
         </div>
-</div>*/
+</div>
