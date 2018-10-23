@@ -45,15 +45,16 @@
         <form>
 
     <p> Name : 
-    <input type="text" name="name" required> <p>
+    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 
     <p> Family name : 
-    <input type="text" name="family" required> <p>
+    <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+
 
     <p> Age :
-    <input type="age" name="age" required> <p>
+    <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 
-     <div class="form-group" style="margin:auto; width:250px;height:140px; color : blue; text-align : center;">
+     <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
     <label for="exampleFormControlSelect2"> Choose a gender: </label>
   	  <select multiple class="form-control" id="exampleFormControlSelect2">
     	 	 <option>M</option>
@@ -64,17 +65,14 @@
 
 
     <p> Email :
-    <input type="text" name="email" required> <p>
-
+    <input type="text" name="email" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
     <p> User name : 
-    <input type="text" name="username" required> <p>
-
+    <input type="text" name="username" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
     <p> Password :
-    <input type="password" placeholder="Choose a password" name="psw" required> <p>
+    <input type="password" placeholder="Choose a password" name="psw" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
 	
     <p> Repeat Password :
-    <input type="password" placeholder="Repeat password" name="repeatedpsw" required> <p>
-
+    <input type="password" placeholder="Repeat password" name="repeatedpsw" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
 
 </form>
     </div>
