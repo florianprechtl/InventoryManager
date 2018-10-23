@@ -26,7 +26,7 @@
 
 	
  <div class="padding-bottom" >
-                <a class="registration-link" data-toggle="modal" data-target="#exampleModalCenter" href="registermodal.php">Not registered yet? Click here!</a>
+                <a class="registration-link" data-toggle="modal" data-target="#exampleModalCenter" >Not registered yet? Click here!</a>
 </div>
 
 
