@@ -62,6 +62,10 @@
       		 <option>Other</option>
      	 </select>
     </div>
+		
+<div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">hijo de PUTA</span>
+                    </div>
 
  <input type="text" class="form-control" name="HIJO DE PUTA" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
 		
