@@ -50,7 +50,16 @@
     <p> Family name : 
     <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 
-
+    		
+   <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    <label for="exampleFormControlSelect2"> Choose a gender: </label>
+  	  <select multiple class="form-control" id="exampleFormControlSelect2">
+    	 	 <option>M</option>
+     		 <option>F</option>
+      		 <option>Other</option>
+     	 </select>
+   </div> 
+		
     <p> Age :
     <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
     
@@ -65,15 +74,7 @@
     <p> Repeat Password :
     <input type="password" placeholder="Repeat password" name="repeatedpsw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 	
-		
-     <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    <label for="exampleFormControlSelect2"> Choose a gender: </label>
-  	  <select multiple class="form-control" id="exampleFormControlSelect2">
-    	 	 <option>M</option>
-     		 <option>F</option>
-      		 <option>Other</option>
-     	 </select>
-     </div>
+
 
    
 	
