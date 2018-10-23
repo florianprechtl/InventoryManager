@@ -26,7 +26,7 @@
 
 	
  <div class="padding-bottom" >
-                <a class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" >Not registered yet? Click here!</a>
+                <a class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >Not registered yet? Click here!</a>
 </div>
 
 
