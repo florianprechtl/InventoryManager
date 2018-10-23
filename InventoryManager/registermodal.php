@@ -5,7 +5,6 @@
 
 <head>
     <meta charset="utf-8">
-  /*  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">*/
     <link rel="stylesheet" href="styles/resetCss.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/inventoryStyles.css">
@@ -41,7 +40,50 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+          /*REGISTER INFO COLLECTED*/
+          
+        <form>
+
+    <p> Name : 
+    <input type="text" name="name" required> <p>
+
+    <p> Family name : 
+    <input type="text" name="family" required> <p>
+
+    <p> Age :
+    <input type="age" name="age" required> <p>
+
+     <div class="form-group" style="margin:auto; width:250px;height:140px; color : blue; text-align : center;">
+    <label for="exampleFormControlSelect2"> Choose a gender: </label>
+  	  <select multiple class="form-control" id="exampleFormControlSelect2">
+    	 	 <option>M</option>
+     		 <option>F</option>
+      		 <option>Other</option>
+     	 </select>
+    </div>
+
+
+    <p> Email :
+    <input type="text" name="email" required> <p>
+
+    <p> User name : 
+    <input type="text" name="username" required> <p>
+
+    <p> Password :
+    <input type="password" placeholder="Choose a password" name="psw" required> <p>
+	
+    <p> Repeat Password :
+    <input type="password" placeholder="Repeat password" name="repeatedpsw" required> <p>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" style="margin:auto; width:300px;height:100px;">SEND REGISTRATION</button>
+
+
+</form>
+          
+          
+          
+          
+          
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
