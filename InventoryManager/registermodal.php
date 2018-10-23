@@ -28,7 +28,7 @@
     <!-- Button trigger modal -->
     <br>
     <br>
-<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-primary" style="text-align: center;" data-toggle="modal" data-target="#exampleModalCenter">
   Click here to register 
 </button>
 
