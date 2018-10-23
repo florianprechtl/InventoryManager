@@ -28,9 +28,11 @@
     <!-- Button trigger modal -->
     <br>
     <br>
+<div class="wrapper">
 <button type="button" class="btn btn-primary" style="margin: 0 auto;" data-toggle="modal" data-target="#exampleModalCenter">
   Click here to register 
 </button>
+ </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
