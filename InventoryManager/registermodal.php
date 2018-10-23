@@ -63,14 +63,9 @@
      	 </select>
     </div>
 		
-<div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-sm">hijo de PUTA</span>
-                    </div>
-
- <input type="text" class="form-control" name="HIJO DE PUTA" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
-		
     <p> Email :
     <input type="text" name="email" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+	   
     <p> User name : 
     <input type="text" name="username" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
     <p> Password :
