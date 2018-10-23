@@ -48,10 +48,9 @@
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
-  </div>
-</div>
+ 
             <?php
-                $db = connectToDB();
+              /*  $db = connectToDB();
         
                 if (isset($_GET["inventory"])) {
                     $inventoryNr = $_GET["inventory"];
@@ -68,6 +67,6 @@
                                 </div>";
                     }
                 }
-            ?>
+            ?>*/
         </div>
 </div>
