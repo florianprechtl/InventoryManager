@@ -26,9 +26,10 @@
 </head>
 
      <!--Inventory Showplace-->
-        <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
-            <div class="inventory-item-preview icon-box" data-toggle="modal" data-target="#myModal">
-                <a><i class="fas fa-plus add-entry-icon"></i></a>
+        
+            <div class="padding-bottom">
+                <a class="registration-link"  data-toggle="modal" data-target="#myModal">
+           
             </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
