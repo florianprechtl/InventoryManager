@@ -40,7 +40,7 @@
         </button>
       </div>
       <div class="modal-body">
-          /*REGISTER INFO COLLECTED*/
+      <div class="mx-auto">
           
         <form>
 
@@ -75,11 +75,9 @@
     <p> Repeat Password :
     <input type="password" placeholder="Repeat password" name="repeatedpsw" required> <p>
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="margin:auto; width:300px;height:100px;">SEND REGISTRATION</button>
-
 
 </form>
-          
+    </div>
           
           
           
@@ -87,7 +85,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">REGISTER</button>
       </div>
     </div>
  
