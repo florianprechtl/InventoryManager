@@ -54,7 +54,7 @@
     <p> Age :
     <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 	</div>
-	</div>
+	
 		
      <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
     <label for="exampleFormControlSelect2"> Choose a gender: </label>
@@ -78,9 +78,9 @@
     <p> Repeat Password :
     <input type="password" placeholder="Repeat password" name="repeatedpsw" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
 	</div>
-	</div>
+	
 </form>
-    </div>
+    
           
           
           
