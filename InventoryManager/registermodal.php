@@ -25,111 +25,31 @@
     <title>Register Modal</title>
 </head>
 
-     <!--Inventory Showplace-->
-        
-            <div class="padding-bottom">
-                <a class="registration-link"  data-toggle="modal" data-target="#myModal">
-           
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add new Inventory Item</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <form method="POST" action="uploadInventoryentry.php" enctype="multipart/form-data">
-                            <div class="modal-body">
-                                <p>here you could add a bunch of inputs within a form</p>
-                                <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
-                                <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
-
-                                <div id="accordion">
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h5 class="mb-0">
-                                                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Mandatory Info
-                                                </button>
-                                            </h5>
-                                        </div>
-
-                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                            <div class="card-body">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Name</label>
-                                                    <input type="text" class="form-control" name="name_product">
-                                                </div>
-                                                <div class="form-group shadow-textarea">
-                                                    <label for="exampleFormControlTextarea6">Description</label>
-                                                    <textarea class="form-control z-depth-1" name="descr_product" rows="3" placeholder="Write something here..."></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Detail Info
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="card-body">
-                                                <div class="form-group">
-                                                    <label for="upload_image">Image</label><br>
-                                                    <input type="file" name="upload_image" id="upload_image" />
-                                                </div>
-                                                <div class="" id="image_demo" style="width:300px; height: 350p;">
-                                                </div>
-                                                <div class="container-fluid">
-                                                    <div class="row" id="button-upload-pic" style="display: none;">
-                                                        <a class="col-sm-12 btn btn-success crop_image margin-bottom">Crop & Upload Image</a>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="amount">Productgroup name</label><br>
-                                                    <input class="form-control" name="name_prod_gr" type="text">
-                                                </div>
-                                                <div class="form-group shadow-textarea">
-                                                    <label for="exampleFormControlTextarea6">Productgroup description</label>
-                                                    <textarea class="form-control z-depth-1" name="descr_prod_gr" rows="3" placeholder="Write something here..."></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="unit">Unit</label><br>
-                                                    <input class="form-control" name="unit" type="text">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="amount">Amount</label><br>
-                                                    <input class="form-control" name="amount" type="number" min="0">
-                                                </div>
-                                                <div class="form-group" id="buying-date-container">
-                                                    <label for="date_buying">Buying date</label><br>
-                                                    <input class="form-control" name="date_buying" type="text">
-                                                </div>
-                                                <div class="form-group" id="buying-date-container">
-                                                    <label for="date_expiring">Expiring date</label><br>
-                                                    <input class="form-control" name="date_expiring" type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
             <?php
                 $db = connectToDB();
         
