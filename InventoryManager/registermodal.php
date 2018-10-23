@@ -44,10 +44,10 @@
           
         <form>
 
-    <p> Name : 
+    <p> First Name : 
     <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 
-    <p> Family name : 
+    <p> Last name : 
     <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
 
     		
