@@ -59,19 +59,13 @@
                 <a class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >Not registered yet? Click here!</a>
 </div>
 
-
+		
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-	  
-	    if ($username == NULL){
-	    <p> This username has already an account </p>
-	    }
-	    
-	else {    
+    <div class="modal-content">    	     
       <div class="modal-header">
-        <h5 class="modal-title" style="color:blue" id="exampleModalCenterTitle">REGISTRATION INFO</h5>
+        <h5 class="modal-title" style="color:blue" id="exampleModalCenterTitle">REGISTRATION DEMAND</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -109,7 +103,7 @@
     <input type="password" placeholder="Repeat password" name="repeatedpsw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	
 	
-</form>
+
     
           
           
@@ -121,7 +115,7 @@
         <button type="button" class="btn btn-primary">REGISTER</button>
       </div>
     </div>
- 
+ </form>
 }
         </div>
 </div>
