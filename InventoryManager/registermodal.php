@@ -24,8 +24,8 @@
     <!-- Button trigger modal -->
 <div class="container-fluid" style="max-width: 800px; width:100%">
 	
-<div class="row header">
-            <h1 class="col-sm-12" align="center">MyFridge</h1>
+ <div class="row center padding-top">
+	 <h1 class="col-sm-12" align="center">MyFridge</h1>
 </div>
     <br>
     <br>
