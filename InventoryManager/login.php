@@ -44,7 +44,7 @@
 
             <button class="btn full-width margin-bottom button-login" type="submit" name="submit">Login</button>
             <div class="padding-bottom">
-                <a class="registration-link" href="registermodal.php">First time on our site? Click here!</a>
+                <a class="btn btn-info" role="button" href="registermodal.php">First time on our site? Click here!</a>
             </div>
         </form>
     </div>
