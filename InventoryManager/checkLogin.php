@@ -24,7 +24,6 @@
                         "<br>Password: " . $row['Password'].
                         "<br>Firstname: " . $row['Firstname'].
                         "<br>Lastname: " . $row['Lastname'].
-		        /*"<br>Age: " . $row['Age'].*/
                         "<br>Sex: " . $row['Sex'].
                         "<br>Member since: " . $row['MemberSince'].
                         "<br>";
