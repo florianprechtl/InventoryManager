@@ -22,18 +22,19 @@
 </head>
 
     <!-- Button trigger modal -->
+<div class="container-fluid" style="max-width: 800px; width:100%">
 	
 <div class="row header">
-            <h1 class="col-sm-12" align="center">iFridge *not real* </h1>
+            <h1 class="col-sm-12" align="center">MyFridge</h1>
 </div>
     <br>
     <br>
 
 	
- <div class="padding-bottom" align : "center" >
+ <div class="padding-bottom" >
                 <a class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >Not registered yet? Click here!</a>
+ </div>
 </div>
-
 		
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
