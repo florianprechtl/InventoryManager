@@ -1,6 +1,7 @@
 <?php
     include('connectDB.php');
 
+	    ?>
 <html>
 
 <head>
@@ -96,4 +97,3 @@
 
         </div>
 </div>
-	    ?>
