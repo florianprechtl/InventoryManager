@@ -76,7 +76,7 @@
         <form>
 
     <p> First Name : 
-    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
+    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required > <p>
 
     <p> Last name : 
     <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
