@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-sm-12 input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-sm">Passwort</span>
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
                     </div>
                     <input type="password" class="form-control" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                 </div>
