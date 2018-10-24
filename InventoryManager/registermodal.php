@@ -25,7 +25,7 @@
 <div class="container-fluid" style="max-width: 800px; width:100%">
 	
 <div class="row header">
-            <h1 class="col-sm-20" align="center">MyFridge</h1>
+            <h1 class="col-sm-60" align="center">MyFridge</h1>
 </div>
     <br>
     <br>
