@@ -15,14 +15,17 @@
         // inspiré
         if ($psw == $repeatedpsw)
         {
-        echo "Account creation in process";
+        echo "  Account creation in process  ";
         $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', '15', 'm', '2018-01-01')";
         echo $sql_user; 
         $db->query($sql_user);
         }
         
-        else { echo "Password not equals, do it again";}
+        else { 
+            echo "  Password not equals, do it again  ";
+            echo "<div class='btn btn-secondary'><a href='LoginRegister.php'>Do the demand again</a></div>";
+             }
 
     function convertDate($date) {
         echo $date.'<br>';
