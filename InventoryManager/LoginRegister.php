@@ -74,7 +74,7 @@
       <div class="mx-auto">
           
 
- if ($oui == 1) {
+ if ($oui = 1) {
         <form>
 
     <p> First Name : 
