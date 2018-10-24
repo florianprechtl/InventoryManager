@@ -15,7 +15,7 @@
         // inspiré
         if ($psw == $repeatedpsw)
         {
-        echo "  Account creation in process  ";
+        echo "  New account ";
         $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', '15', 'm', '2018-01-01')";
         echo $sql_user; 
