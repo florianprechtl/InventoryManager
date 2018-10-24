@@ -95,7 +95,7 @@
     <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	   
     <p> User name : 
-    <input type="text" name="username" class="form-control"aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
+    <input type="text" name="newusername" class="form-control"aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
     <p> Password :
     <input type="password" placeholder="Choose a password" name="psw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	
