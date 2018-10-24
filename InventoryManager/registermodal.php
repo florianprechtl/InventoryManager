@@ -25,14 +25,14 @@
 <div class="container-fluid" style="max-width: 800px; width:100%">
 	
 <div class="row header">
-            <h1 class="col-sm-12" align="center">MyFridge</h1>
+            <h1 class="col-sm-20" align="center">MyFridge</h1>
 </div>
     <br>
     <br>
 
 	
  <div class="padding-bottom" >
-                <a class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >Not registered yet? Click here!</a>
+                <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >REGISTER NOW</a>
  </div>
 </div>
 		
