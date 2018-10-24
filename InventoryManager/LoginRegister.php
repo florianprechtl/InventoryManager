@@ -71,7 +71,7 @@
       <div class="modal-body">
       <div class="mx-auto">
           
-        <form>
+        <form method="POST" action="uploadInventoryentry.php" enctype="multipart/form-data">
 
     <p> First Name : 
     <input type="text" name="firstname" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  > <p>
