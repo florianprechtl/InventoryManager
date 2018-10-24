@@ -66,8 +66,14 @@
     <p> Repeat Password :
     <input type="password" placeholder="Repeat password" name="repeatedpsw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	
+	<?php
+		 $psw = $_POST['psw'];
+   		 $repeatedpsw = $_POST['repeatedpsw'];
+		
+		 if ($psw != $repeatedpsw) {
+			 echo "WARNING : PASSWORD and REPEATED PASSWORD are not the same, do it again please";}
 	
-
+	?>
     
           
           
