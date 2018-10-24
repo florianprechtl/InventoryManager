@@ -56,7 +56,7 @@
  
 		
     <p> Age :
-    <input type="number" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
+    <input type="text" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	   
     <p> User name : 
     <input type="text" name="newusername" class="form-control"aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
