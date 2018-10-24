@@ -76,10 +76,10 @@
         <form>
 
     <p> First Name : 
-    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 
     <p> Last name : 
-    <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+    <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 
     		
    <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
@@ -92,19 +92,15 @@
    </div> 
 		
     <p> Age :
-    <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+    <input type="int" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	   
     <p> User name : 
-    <input type="text" name="username" class="form-control"aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+    <input type="text" name="username" class="form-control"aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
     <p> Password :
-    <input type="password" placeholder="Choose a password" name="psw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
+    <input type="password" placeholder="Choose a password" name="psw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	
     <p> Repeat Password :
-    <input type="password" placeholder="Repeat password" name="repeatedpsw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required> <p>
-	
-
-
-   
+    <input type="password" placeholder="Repeat password" name="repeatedpsw" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 	
 	
 </form>
