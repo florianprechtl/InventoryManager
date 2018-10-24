@@ -24,7 +24,7 @@
         
         else { 
             echo "  Password not equals, do it again  ";
-            echo "<div type="button" class='btn btn-secondary'><a href='LoginRegister.php'>Do the demand again</a></div>";
+            echo "<div class='btn btn-primary'><a href='registermodal.php'>Do the demand again</a></div>";
              }
 
     function convertDate($date) {
