@@ -20,7 +20,7 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
 
-
+   $oui = 1
 
     <title>Login Registration </title>
 </head>
@@ -74,8 +74,7 @@
       <div class="mx-auto">
           
 
- <script>
-function myFunction() {
+ if ($oui == 1) {
         <form>
 
     <p> First Name : 
@@ -120,9 +119,10 @@ function myFunction() {
     </div>
  </form>
 	}
-</script>
-	
+
+	else{
 	      <p> hey </p>
+	    }
         </div>
 </div>
 
