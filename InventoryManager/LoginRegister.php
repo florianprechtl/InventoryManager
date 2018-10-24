@@ -73,6 +73,10 @@
       <div class="modal-body">
       <div class="mx-auto">
           
+    <button onclick="myFunction()">Click me</button>
+
+ <script>
+function myFunction() {
         <form>
 
     <p> First Name : 
@@ -116,6 +120,9 @@
       </div>
     </div>
  </form>
+	}
+</script>
+	
 }
         </div>
 </div>
