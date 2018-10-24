@@ -1,7 +1,5 @@
 <?php
       include('connectDB.php');
-
-      $oui = 1;
 ?>
 <html>
 
@@ -73,12 +71,10 @@
       <div class="modal-body">
       <div class="mx-auto">
           
-
- if ($oui == 1) {
         <form>
 
     <p> First Name : 
-    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" required > <p>
+    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  > <p>
 
     <p> Last name : 
     <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
@@ -118,11 +114,7 @@
       </div>
     </div>
  </form>
-	}
-
-	else{
-	      <p> hey </p>
-	    }
+	
         </div>
 </div>
 
