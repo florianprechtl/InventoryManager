@@ -34,7 +34,7 @@
 
 	
  <div class="padding-bottom" >
-                <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >REGISTER NOW</a>
+                <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter" style="color:white" >REGISTER NOW</a>
  </div>
 </div>
 		
