@@ -64,7 +64,12 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-	    <p> Hey </p>
+	  
+	    if ($username == NULL){
+	    <p> This username has already an account </p>
+	    }
+	    
+	else {    
       <div class="modal-header">
         <h5 class="modal-title" style="color:blue" id="exampleModalCenterTitle">REGISTRATION INFO</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -117,7 +122,7 @@
       </div>
     </div>
  
-
+}
         </div>
 </div>
 
