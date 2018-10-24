@@ -74,10 +74,10 @@
         <form>
 
     <p> First Name : 
-    <input type="text" name="name" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  > <p>
+    <input type="text" name="firstname" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  > <p>
 
     <p> Last name : 
-    <input type="text" name="family" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
+    <input type="text" name="lastname" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 
     		
    <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
