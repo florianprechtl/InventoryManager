@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-sm-12 input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-sm">Passwort</span>
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
                     </div>
                     <input type="password" class="form-control" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
                 </div>
@@ -44,7 +44,7 @@
 
             <button class="btn full-width margin-bottom button-login" type="submit" name="submit">Login</button>
             <div class="padding-bottom">
-                <a class="registration-link" href="registermodal.php">Not registered yet? Click here!</a>
+                <a class="registration-link" href="registermodal.php">First time on our site? Click here!</a>
             </div>
         </form>
     </div>
