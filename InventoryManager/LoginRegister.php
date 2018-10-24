@@ -80,14 +80,7 @@
     <input type="text" name="lastname" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
 
     		
-   <div class="form-group" style="margin:auto; width:250px;height:140px; text-align : center;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    <label for="exampleFormControlSelect2"> Choose a gender: </label>
-  	  <select multiple class="form-control" id="exampleFormControlSelect2">
-    	 	 <option>M</option>
-     		 <option>F</option>
-      		 <option>Other</option>
-     	 </select>
-   </div> 
+ 
 		
     <p> Age :
     <input type="number" name="age"  class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" > <p>
