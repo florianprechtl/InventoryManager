@@ -27,12 +27,4 @@
             echo "  Password not equals, do it again  ";
             echo "<div class='btn btn-primary'><a href='registermodal.php'>Do the demand again</a></div>";
              }
-
-    function convertDate($date) {
-        echo $date.'<br>';
-        echo "date gets converted";
-        // converts form mm/dd/yyyy to yyyy-mm-dd
-        $result = explode('/', $date);
-        return $result[2].'-'.$result[1].'-'.$result[0];
-    }
 ?>
