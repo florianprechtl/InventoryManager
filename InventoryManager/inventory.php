@@ -43,11 +43,8 @@
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
                             <?php
                             $db = connectToDB();
-
                             $sql = "SELECT * FROM Inventory";
-
                             $result = $db->query($sql);
-
                             if (isset($_GET["inventory"])) {
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
@@ -251,7 +248,6 @@
                 }
         
                 $result = $db->query($sql);
-
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>";
@@ -269,9 +265,7 @@
 
     <script>
         $(document).ready(function() {
-
             $('#image_demo').fadeOut();
-
             $image_crop = $('#image_demo').croppie({
                 enableExif: true,
                 enableRotate: true,
@@ -286,7 +280,6 @@
                     height: 300
                 }
             });
-
             $('#upload_image').on('change', function() {
                 var reader = new FileReader();
                 reader.onload = function(event) {
@@ -300,7 +293,6 @@
                 $('#image_demo').fadeIn();
                 $('#button-upload-pic').fadeIn();
             });
-
             $('.crop-image').click(function(event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
@@ -320,7 +312,6 @@
                     });
                 })
             });
-
             $('#buying_date_container input').datepicker({
                 format: "dd/mm/yyyy",
                 maxViewMode: 2,
@@ -329,7 +320,6 @@
                 todayHighlight: true,
                 toggleActive: true
             });
-
             $('.button-remove').click(function(event) {
                 $.ajax({
                     url: 'removeInventoryEntry.php',
@@ -345,9 +335,7 @@
                     }
                 });
             });
-
         });
-
     </script>
 
 </body>
