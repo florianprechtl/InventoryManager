@@ -435,7 +435,7 @@
                 }
             }
 
-            $("#image_preview").click(function () {
+            $('#image_preview').click(function () {
                 readURL(this);
             });
 
