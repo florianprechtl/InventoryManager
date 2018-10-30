@@ -312,13 +312,6 @@
                         data: {
                             "image": response
                         },
-                        cache: false,
-                        success: function() {
-                            alert('success!');
-                        },
-                        error: function() {
-                            alert('error!');
-                        },
                         success: function(data) {
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
@@ -341,7 +334,6 @@
                 $.ajax({
                     url: 'removeInventoryEntry.php',
                     type: "POST",
-                    dataType: 'json',
                     data: {
                         'nr': event.target.id.split('_')[2]
                     },
@@ -349,7 +341,6 @@
 //                        alert("jawollo");
 //                        location.reload();
 //                    },
-                    cache: false,
                     success: function() {
                         alert('success!');
                     },
