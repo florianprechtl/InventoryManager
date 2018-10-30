@@ -255,7 +255,7 @@
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>";
-                        echo "  <a type='button' class='button-remove' id='button_remove_$row[InventoryEntryNr]'>X</a>";
+                        echo "  <i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]'>X</i>";
                         echo "  $row[Name]
                                 <br>
                                 <br>
