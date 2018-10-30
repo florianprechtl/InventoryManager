@@ -1,16 +1,17 @@
 <?php
     include('connectDB.php');
+    include('basicFunctions.php');
+
     $db = connectToDB();
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $newusername = $_POST['newusername'];
     $age = $_POST['ager'];
-    /*$sex = $_POST['sex'];*/
+    // $sex = $_POST['sex'];*/
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
     
-    /*$datetotest = 
-    $date_register = convertDate($datetotest]);*/
+    $dateRegister = convertDate(new Date());
 
         // inspiré
         if ($psw == $repeatedpsw)
