@@ -372,19 +372,13 @@
                     type: 'canvas',
                     size: 'viewport'
                 }).then(function (response) {
-                    $.ajax({
-                        url: "uploadCroppedPic.php",
-                        type: "POST",
-                        data: {
-                            "image": response
-                        },
-                        success: function (data) {
-                            $('#image_demo').fadeOut();
-                            $('#button-upload-pic').fadeOut();
-                            $('#image_preview_container').fadeIn();
-                            preshowPicture(data);
-                        }
-                    });
+                    $image_array_1 = split(";", response);
+                    $image_array_2 = split(",", $image_array_1[1]);
+                    
+                    $('#image_demo').fadeOut();
+                    $('#button-upload-pic').fadeOut();
+                    $('#image_preview_container').fadeIn();
+                    preshowPicture($image_array_2);
                 })
             });
 
