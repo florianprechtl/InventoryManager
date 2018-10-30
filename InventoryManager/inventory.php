@@ -435,7 +435,7 @@
                 }
             }
 
-            $(".avatar_edit").click(function () {
+            $(".avatar-edit").click(function () {
                 readURL(this);
             });
 
