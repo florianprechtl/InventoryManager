@@ -232,7 +232,7 @@
                                                     </a>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group" id="image_preview_container">
                                                     <div class="container">
                                                         <div class="avatar-upload">
                                                             <div class="avatar-edit">
@@ -246,7 +246,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="" id="image_demo" style="width:300px; height: 350p;">
+                                                <div class="form-group" id="image_demo" style="width:300px; height: 350p;">
                                                 </div>
                                                 <div class="container-fluid">
                                                     <div class="row" id="button-upload-pic" style="display: none;">
@@ -364,6 +364,7 @@
                 reader.readAsDataURL(this.files[0]);
                 $('#image_demo').fadeIn();
                 $('#button-upload-pic').fadeIn();
+                $('#image_preview_container').fadeOut();
             });
 
             $('#button_crop_image').click(function (event) {
@@ -380,8 +381,8 @@
                         success: function (data) {
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
-                            $('#uploaded_image').html(data);
-                            readURL(this);
+                            $('#image_preview_container').fadeIn();
+                            readURL(data);
                         }
                     });
                 })
@@ -401,7 +402,8 @@
                     url: 'removeInventoryEntry.php',
                     type: "POST",
                     data: {
-                        'nr': event.target.id.split('_')[2]
+                        // the number of the removed button, shown in the id
+                        'nr': event.target.id.split('_')[2],
                     },
                     success: function () {
                         location.reload();
