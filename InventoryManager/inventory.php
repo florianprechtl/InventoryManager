@@ -193,7 +193,7 @@
             </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
+                <div class="modal-dialog" style="max-width: 700px;">
 
                     <!-- Modal content-->
                     <div class="modal-content">
@@ -219,32 +219,9 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                <div class="form-group" id="content_existing_product">
-                                                    <label>Select existing Product:</label>
-                                                    <select class="form-control">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                    </select>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
-                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
-                                                    </a>
-                                                </div>
-
-                                                <div class="form-group" id="content_new_product" style="display: none;">
-                                                    <div class="form-group">
-                                                        <label for="product_name">Product name</label><br>
-                                                        <input class="form-control" name="product_name" type="text" min="0">
-                                                    </div>
-                                                    <div class="form-group shadow-textarea">
-                                                        <label for="product_description">Productgroup description</label>
-                                                        <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
-                                                    </div>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
-                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
-                                                    </a>
-                                                </div>
-
+                                                
+                                                
+                                                // Picture
                                                 <div class="form-group" id="image_preview_container">
                                                     <div class="container">
                                                         <div class="avatar-upload">
@@ -266,6 +243,38 @@
                                                         <a class="col-sm-12 btn btn-success crop-image margin-bottom" id="button_crop_image">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
+                                                
+                                                
+                                                // Existing product
+                                                <div class="form-group" id="content_existing_product">
+                                                    <label>Select existing Product:</label>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
+                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
+                                                    </a>
+                                                </div>
+
+                                                
+                                                // New product
+                                                <div class="form-group" id="content_new_product" style="display: none;">
+                                                    <div class="form-group">
+                                                        <label for="product_name">Product name</label><br>
+                                                        <input class="form-control" name="product_name" type="text" min="0">
+                                                    </div>
+                                                    <div class="form-group shadow-textarea">
+                                                        <label for="product_description">Productgroup description</label>
+                                                        <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
+                                                    </div>
+                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
+                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
+                                                    </a>
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -279,14 +288,6 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                             <div class="card-body">
-                                                <div class="form-group">
-                                                    <label for="amount">Productgroup name</label><br>
-                                                    <input class="form-control" name="name_prod_gr" type="text">
-                                                </div>
-                                                <div class="form-group shadow-textarea">
-                                                    <label for="exampleFormControlTextarea6">Productgroup description</label>
-                                                    <textarea class="form-control z-depth-1" name="descr_prod_gr" rows="3" placeholder="Write something here..."></textarea>
-                                                </div>
                                                 <div class="form-group">
                                                     <label for="unit">Unit</label><br>
                                                     <input class="form-control" name="unit" type="text">
