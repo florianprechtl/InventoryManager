@@ -42,30 +42,30 @@
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
                             <?php
-                            $db = connectToDB();
+                                $db = connectToDB();
 
-                            $sql = "SELECT * FROM Inventory";
+                                $sql = "SELECT * FROM Inventory";
 
-                            $result = $db->query($sql);
+                                $result = $db->query($sql);
 
-                            if (isset($_GET["inventory"])) {
-                                if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        if ($_GET['inventory'] == $row['InventoryNr']) {
-                                            echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                        } else {
+                                if (isset($_GET["inventory"])) {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            if ($_GET['inventory'] == $row['InventoryNr']) {
+                                                echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                            } else {
+                                                echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                         }
                                     }
                                 }
-                            } else {
-                                if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-                                    }
-                                }
-                            }
-                        ?>
+                            ?>
                         </select>
                     </div>
                 </div>
