@@ -36,9 +36,9 @@
 
     .avatar-upload .avatar-edit {
         position: absolute;
-        right: -18px;
+        right: -10px;
         z-index: 1;
-        top: 184px;
+        top: 176px;
         text-align: center;
         
     }
@@ -66,6 +66,7 @@
         background: #B1C7F5;
         border: 3px solid #031D54;
         color: #031D54;
+        box-shadow: none;
     }
 
     .avatar-upload .avatar-edit input + label:after {
