@@ -427,7 +427,9 @@
             });
 
             function preshowPicture(input) {
-                $('#imagePreview').html(input);
+                var image = new Image();
+                image.src = 'data:image/png;' + input;
+                $('#imagePreview').html(image);
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
             }
