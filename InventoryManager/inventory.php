@@ -331,9 +331,10 @@
             });
 
             $('.button-remove').each((elem) => {
-                elem.click(function(event) {
-                        console.log(event.target.id[event.target.id.length - 1]);
-                });
+                console.log(elem);
+//                elem.click(function(event) {
+//                        console.log(event.target.id[event.target.id.length - 1]);
+//                });
             });
 
         });
