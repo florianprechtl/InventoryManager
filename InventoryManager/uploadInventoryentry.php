@@ -11,7 +11,7 @@
     $amount = $_POST['amount'];
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
-    $inventory = $_POST['inventory'];
+    $inventory = $_GET['inventory'];
 
 //    if (trim($name_prod_gr) != '') {
 //        
