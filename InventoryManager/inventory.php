@@ -56,7 +56,7 @@
         color: #FFFFFF;
         border: 1px solid #031D54;
         border-radius: 100%;
-        box-shadow: 0px 0px 5px 2px #031D54;
+        box-shadow: 0px 0px 5px 0px #031D54;
         cursor: pointer;
         font-weight: normal;
         transition: all 0.2s ease-in-out;
@@ -95,7 +95,7 @@
     }
     
     #image_upload_icon {
-        line-height: 2;
+        line-height: 45px;
     }
 </style>
 
