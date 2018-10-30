@@ -19,7 +19,7 @@
     <div class="login-container container-fluid">
         <!--Header-->
         <div class="row header">
-            <h1 class="col-sm-12" align="center">Login</h1>
+            <h1 class="col-sm-12" align="center">MyFridge - Login</h1>
         </div>
         <div class="row center padding-top">
             <p class="col-sm-12">Please enter your login data</p>
@@ -45,7 +45,7 @@
 
             <button class="btn full-width margin-bottom button-login" type="submit" name="submit">Login</button>
             <div class="padding-bottom">
-                <a class="btn btn-info" role="button" href="registermodal.php">First time on our site? Click here!</a>
+                <a class="btn btn-info" role="button" data-toggle="modal" data-target="#exampleModalCenter">First time on our site? Click here!</a>
             </div>
         </form>
     </div>

@@ -23,23 +23,6 @@
 </head>
 
 <body>
-    <!-- Button trigger modal -->
-    <div class="login-container container-fluid">
-        <!--Header-->
-        <div class="row header">
-            <h1 class="col-sm-12" align="center">MyFridge</h1>
-        </div>
-
-
-        <br>
-        <br>
-
-
-        <div class="padding-bottom">
-            <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter" style="color:white">REGISTER NOW</a>
-        </div>
-    </div>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
