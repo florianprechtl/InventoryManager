@@ -27,6 +27,7 @@
 </head>
 
 <style>
+    
     .avatar-upload {
   position: relative;
   max-width: 205px;
@@ -331,8 +332,8 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
+    < script >
+        $(document).ready(function () {
 
             $('#image_demo').fadeOut();
 
@@ -351,12 +352,12 @@
                 }
             });
 
-            $('#upload_image').on('change', function() {
+            $('#upload_image').on('change', function () {
                 var reader = new FileReader();
-                reader.onload = function(event) {
+                reader.onload = function (event) {
                     $image_crop.croppie('bind', {
                         url: event.target.result
-                    }).then(function() {
+                    }).then(function () {
                         console.log('jQuery bind complete');
                     });
                 }
@@ -365,18 +366,18 @@
                 $('#button-upload-pic').fadeIn();
             });
 
-            $('.crop-image').click(function(event) {
+            $('.crop-image').click(function (event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
                     size: 'viewport'
-                }).then(function(response) {
+                }).then(function (response) {
                     $.ajax({
                         url: "uploadCroppedPic.php",
                         type: "POST",
                         data: {
                             "image": response
                         },
-                        success: function(data) {
+                        success: function (data) {
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
                             $('#uploaded_image').html(data);
@@ -394,30 +395,30 @@
                 toggleActive: true
             });
 
-            $('.button-remove').click(function(event) {
+            $('.button-remove').click(function (event) {
                 $.ajax({
                     url: 'removeInventoryEntry.php',
                     type: "POST",
                     data: {
                         'nr': event.target.id.split('_')[2]
                     },
-                    success: function() {
+                    success: function () {
                         location.reload();
                     },
-                    error: function() {
+                    error: function () {
                         alert("Removing inventory entry did not work!");
                     }
                 });
             });
 
-            $('#button_fade_to_new_product').click(function(event) {
-                $('#content_existing_product').slideUp(750, function() {
+            $('#button_fade_to_new_product').click(function (event) {
+                $('#content_existing_product').slideUp(750, function () {
                     $('#content_new_product').slideDown(750);
                 })
             });
 
-            $('#button_fade_to_existing_product').click(function(event) {
-                $('#content_new_product').slideUp(750, function() {
+            $('#button_fade_to_existing_product').click(function (event) {
+                $('#content_new_product').slideUp(750, function () {
                     $('#content_existing_product').slideDown(750);
                 })
             });
@@ -425,7 +426,7 @@
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
-                    reader.onload = function(e) {
+                    reader.onload = function (e) {
                         $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                         $('#imagePreview').hide();
                         $('#imagePreview').fadeIn(650);
@@ -434,13 +435,14 @@
                 }
             }
 
-            $("#upload_image").change(function() {
+            $(".avatar_edit").click(function () {
                 readURL(this);
             });
 
         });
 
-    </script>
+    <
+    /script>
 
 </body>
 
