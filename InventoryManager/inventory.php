@@ -40,7 +40,6 @@
         z-index: 1;
         top: 176px;
         text-align: center;
-        
     }
 
     .avatar-upload .avatar-edit input {
@@ -84,6 +83,8 @@
         height: 209px;
         position: relative;
         border: 5px solid #031D54;
+        border-radius: 5px;
+        overflow: hidden;
         box-shadow: 0px 0px 5px 2px #B1C7F5;
     }
 
