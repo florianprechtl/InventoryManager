@@ -146,14 +146,15 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label>Select existing Product:</label>
-                                                    <select>
+                                                    <select class="form-control">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
+                                                    <i class="btn btn-success">Or click here to add new Product</i>
                                                 </div>
 
-                                                <i class="btn btn-success">Or click here to add new Product</i>
+                                                
 
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
