@@ -250,7 +250,7 @@
                                                 </div>
                                                 <div class="container-fluid">
                                                     <div class="row" id="button-upload-pic" style="display: none;">
-                                                        <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
+                                                        <a class="col-sm-12 btn btn-success crop-image margin-bottom" id="button_crop_image">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -366,7 +366,7 @@
                 $('#button-upload-pic').fadeIn();
             });
 
-            $('.crop-image').click(function (event) {
+            $('#button_crop_image').click(function (event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
                     size: 'viewport'
@@ -381,6 +381,7 @@
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
                             $('#uploaded_image').html(data);
+                            readURL(this);
                         }
                     });
                 })
@@ -435,9 +436,9 @@
                 }
             }
 
-            $("#upload_image").change(function () {
-                readURL(this);
-            });
+//            $("#upload_image").change(function () {
+//                readURL(this);
+//            });
 
         });
 

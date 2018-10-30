@@ -1,6 +1,7 @@
 .croppie-container {
     width: 100%;
     height: 350px;
+    margin: auto;
 }
 
 .croppie-container .cr-image {
