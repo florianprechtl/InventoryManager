@@ -50,14 +50,15 @@
 
                             <label > Last name : </label>
                             <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
+                                <input type="hidden" name="sex" value="">
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" value="m">male
+                                    <input type="radio" name="sex" value="m">male
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" value="f">female
+                                    <input type="radio" name="sex" value="f">female
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" value="o">other
+                                    <input type="radio" name="sex" value="o">other
                                 </label>
                             </div>
 
