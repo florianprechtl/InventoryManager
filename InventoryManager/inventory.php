@@ -435,7 +435,10 @@
                 }
             }
 
-            $('#image_preview').click(function () {
+            
+            $test = $('#image_preview');
+            
+            $test.click(function () {
                 readURL(this);
             });
 
