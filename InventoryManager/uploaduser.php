@@ -9,6 +9,7 @@
     $sex = $_POST['sex'] ? "'$_POST[sex]'" : "NULL";
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
+print_r($_POST);
     
     $dateRegister = date("Y-m-d");
 
