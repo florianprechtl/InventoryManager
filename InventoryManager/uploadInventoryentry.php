@@ -30,6 +30,8 @@
         echo $sql_inventoryentry; 
         $db->query($sql_inventoryentry);
 
+        redirect('inventory.php?inventory='.$inventoryEntryNr);
+
 
 //    $sql = "SELECT * FROM Inventory";
 //
