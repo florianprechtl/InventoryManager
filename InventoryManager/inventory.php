@@ -337,7 +337,7 @@
                     dataType: 'json',
                     data: {
                         'nr': event.target.id[event.target.id.length - 1],
-                    }
+                    },
                     success: function() {
                     location.reload();
                 });
