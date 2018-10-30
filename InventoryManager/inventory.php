@@ -39,6 +39,8 @@
         right: -8px;
         z-index: 1;
         top: 16px;
+        text-align: center;
+        line-height: 2;
     }
 
     .avatar-upload .avatar-edit input {
@@ -52,7 +54,7 @@
         margin-bottom: 0;
         background: #FFFFFF;
         border: 1px solid transparent;
-        border: 100px;
+        border-radius: 100%;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
         cursor: pointer;
         font-weight: normal;
