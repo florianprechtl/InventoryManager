@@ -331,7 +331,7 @@
             });
             
             $('.button-remove').click(function(event) {
-                $ajax({
+                $.ajax({
                     url: 'removeInventoryEntry.php',
                     type: "POST",
                     dataType: 'json',
