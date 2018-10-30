@@ -1,6 +1,5 @@
 <?php
     include('connectDB.php');
-    include('basicFunctions.php');
 
     $db = connectToDB();
     $firstname = $_POST['firstname'];
@@ -11,7 +10,7 @@
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
     
-    $dateRegister = convertDate(new Date());
+    $dateRegister = date("Y-m-d");
 
         // inspiré
         if ($psw == $repeatedpsw)
