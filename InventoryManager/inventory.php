@@ -198,7 +198,7 @@
                                                 </div>
                                                 <div class="container-fluid">
                                                     <div class="row" id="button-upload-pic" style="display: none;">
-                                                        <a class="col-sm-12 btn btn-success crop_image margin-bottom">Crop & Upload Image</a>
+                                                        <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -217,11 +217,11 @@
                                                     <label for="amount">Amount</label><br>
                                                     <input class="form-control" name="amount" type="number" min="0">
                                                 </div>
-                                                <div class="form-group" id="buying-date-container">
+                                                <div class="form-group" id="buying_date_container">
                                                     <label for="date_buying">Buying date</label><br>
                                                     <input class="form-control" name="date_buying" type="text">
                                                 </div>
-                                                <div class="form-group" id="buying-date-container">
+                                                <div class="form-group" id="buying_date_container">
                                                     <label for="date_expiring">Expiring date</label><br>
                                                     <input class="form-control" name="date_expiring" type="text">
                                                 </div>
@@ -254,12 +254,13 @@
 
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
-                        echo "  <div class='inventory-item-preview'>
-                                    $row[Name]
-                                    <br>
-                                    <br>
-                                    $row[InventoryEntryNr]
-                                </div>";
+                        echo "  <div class='inventory-item-preview'>"
+                        echo "  <a type="button" class='button-remove' id='button_remove_$row[InventoryNr]'></a>"
+                        echo "  $row[Name]
+                                <br>
+                                <br>
+                                $row[InventoryEntryNr]
+                            </div>";
                     }
                 }
             ?>
@@ -300,7 +301,7 @@
                 $('#button-upload-pic').fadeIn();
             });
 
-            $('.crop_image').click(function(event) {
+            $('.crop-image').click(function(event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
                     size: 'viewport'
@@ -320,13 +321,17 @@
                 })
             });
 
-            $('#buying-date-container input').datepicker({
+            $('#buying_date_container input').datepicker({
                 format: "dd/mm/yyyy",
                 maxViewMode: 2,
                 todayBtn: "linked",
                 clearBtn: true,
                 todayHighlight: true,
                 toggleActive: true
+            });
+            
+            $('.button-remove').click(function(event) {
+                console.log(event);
             });
 
         });
