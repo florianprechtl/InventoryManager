@@ -337,15 +337,12 @@
                     data: {
                         'nr': event.target.id.split('_')[2]
                     },
-//                    success: function() {
-//                        alert("jawollo");
-//                        location.reload();
-//                    },
                     success: function() {
-                        alert('success!');
+                        alert("jawollo");
+                        location.reload();
                     },
                     error: function() {
-                        alert('error!');
+                        alert("Removing inventory entry did not work!");
                     }
                 });
             });
