@@ -53,8 +53,10 @@
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row['InventoryNr']) {
                                             echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                            $_POST['inventory'] = $_GET['inventory'];
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+                                            $_POST['inventory'] = 1;
                                         }
                                     }
                                 }

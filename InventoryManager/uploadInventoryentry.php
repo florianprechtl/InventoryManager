@@ -11,6 +11,7 @@
     $amount = $_POST['amount'];
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
+    $inventory = $_POST['inventory'];
 
 //    if (trim($name_prod_gr) != '') {
 //        
@@ -25,7 +26,7 @@
 //        $db->query($sql_product); 
 //    }
         // works as well, but we shoud not do it that way
-        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '1', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
+        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
         echo $sql_inventoryentry; 
         $db->query($sql_inventoryentry);
 
