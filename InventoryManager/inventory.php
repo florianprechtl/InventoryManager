@@ -144,7 +144,7 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                <div class="form-group">
+                                                <div class="form-group" id="content_existing_product">
                                                     <label>Select existing Product:</label>
                                                     <select class="form-control">
                                                         <option>1</option>
@@ -152,6 +152,16 @@
                                                         <option>3</option>
                                                     </select>
                                                     <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
+                                                </div>
+                                                
+                                                <div class="form-group" id="content_new_product">
+                                                    <label>Babaaaam:</label>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Go back to other content</i>
                                                 </div>
 
                                                 
@@ -334,10 +344,8 @@
             });
             
             $('#button_fade_to_new_product').click(function(event) {
-                $(event.target.parentNode).fadeOut();
-                $(event.target.parentNode).slideUp(1500, function() {
-                    $(event.target.parentNode).slideDown(1500, function () {
-                        $(event.target.parentNode).html('wifbwfuihweudhuifew');
+                $('#content_existing_content').slideUp(1500, function() {
+                    $('#content_new_product').slideDown(1500, function () {
                     })
                 })
             });
