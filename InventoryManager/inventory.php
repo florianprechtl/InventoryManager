@@ -423,7 +423,7 @@
             function preshowPicture(input) {
                 var image = new Image();
                 image.src = 'data:image/png;'+ input[0] + ',' + input[1];
-                $('#imagePreview').css("background-image", image);
+                $('#imagePreview').html(image);
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
             }
