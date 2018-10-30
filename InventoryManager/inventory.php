@@ -329,9 +329,11 @@
                 todayHighlight: true,
                 toggleActive: true
             });
-            
-            $('.button-remove').click(function(event) {
-                console.log(event.target.id[event.target.id.length - 1]);
+
+            $('.button-remove').each(function() {
+                $this.click(function(event) {
+                        console.log(event.target.id[event.target.id.length - 1]);
+                });
             });
 
         });
