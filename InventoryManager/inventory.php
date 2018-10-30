@@ -153,18 +153,20 @@
                                                     </select>
                                                     <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
                                                 </div>
-                                                
+
                                                 <div class="form-group" id="content_new_product" style="display: none;">
-                                                    <label>Babaaaam:</label>
-                                                    <select class="form-control">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                    </select>
+                                                    <div class="form-group">
+                                                        <label for="product_name">Product name</label><br>
+                                                        <input class="form-control" name="product_name" type="text" min="0">
+                                                    </div>
+                                                    <div class="form-group shadow-textarea">
+                                                    <label for="product_description">Productgroup description</label>
+                                                    <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
+                                                </div>
                                                     <i class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">Go back to other content</i>
                                                 </div>
 
-                                                
+
 
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
@@ -342,14 +344,14 @@
                     }
                 });
             });
-            
+
             $('#button_fade_to_new_product').click(function(event) {
                 $('#content_existing_product').slideUp(750, function() {
                     $('#content_new_product').slideDown(750);
                 })
             });
-            
-             $('#button_fade_to_existing_product').click(function(event) {
+
+            $('#button_fade_to_existing_product').click(function(event) {
                 $('#content_new_product').slideUp(750, function() {
                     $('#content_existing_product').slideDown(750);
                 })
