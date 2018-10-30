@@ -330,7 +330,7 @@
                 toggleActive: true
             });
 
-            $('.button-remove').each(function(elem) {
+            $('.button-remove').each((elem) => {
                 elem.click(function(event) {
                         console.log(event.target.id[event.target.id.length - 1]);
                 });
