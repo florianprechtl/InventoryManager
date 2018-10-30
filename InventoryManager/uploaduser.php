@@ -6,7 +6,7 @@
     $lastname = $_POST['lastname'];
     $newusername = $_POST['newusername'];
     $age = $_POST['age'];
-    $sex = $_POST['sex'];
+    $sex = $_POST['sex'] ? "'$_POST['sex']'" : "NULL";
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
     
@@ -17,7 +17,7 @@
         {
         echo "  New account ";
         $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
-        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, '$sex?$sex:o', '$dateRegister')";
+        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
         echo $sql_user; 
         $db->query($sql_user);
         }
