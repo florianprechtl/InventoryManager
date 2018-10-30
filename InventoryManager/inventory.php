@@ -151,7 +151,7 @@
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
-                                                    <i class="btn btn-success">Or click here to add new Product</i>
+                                                    <i class="btn btn-success margin-top full-width">Or click here to add new Product</i>
                                                 </div>
 
                                                 
