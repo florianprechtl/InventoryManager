@@ -36,7 +36,7 @@
 
     .avatar-upload .avatar-edit {
         position: absolute;
-        right: -8px;
+        right: -18px;
         z-index: 1;
         top: 184px;
         text-align: center;
@@ -49,8 +49,8 @@
 
     .avatar-upload .avatar-edit input + label {
         display: inline-block;
-        width: 34px;
-        height: 34px;
+        width: 45px;
+        height: 45px;
         margin-bottom: 0;
         background: #031D54;
         color: #FFFFFF;
@@ -63,8 +63,9 @@
     }
 
     .avatar-upload .avatar-edit input + label:hover {
-        background: #f1f1f1;
-        border-color: #d6d6d6;
+        background: #B1C7F5;
+        border-color: #031D54;
+        color: #031D54;
     }
 
     .avatar-upload .avatar-edit input + label:after {
