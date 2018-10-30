@@ -181,6 +181,10 @@
                                                         <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
+                                                <div class="avatar-preview">
+                                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -349,6 +353,22 @@
                 $('#content_new_product').slideUp(750, function() {
                     $('#content_existing_product').slideDown(750);
                 })
+            });
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                        $('#imagePreview').hide();
+                        $('#imagePreview').fadeIn(650);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $("#upload_image").change(function() {
+                readURL(this);
             });
 
         });
