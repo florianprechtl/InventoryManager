@@ -6,7 +6,7 @@
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $newusername = $_POST['newusername'];
-    $age = $_POST['ager'];
+    $age = $_POST['age'];
     // $sex = $_POST['sex'];
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
