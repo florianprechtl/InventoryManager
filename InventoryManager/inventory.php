@@ -137,7 +137,7 @@
                                         <div class="card-header" id="headingOne">
                                             <h5 class="mb-0">
                                                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Mandatory Info
+                                                    Product Info
                                                 </button>
                                             </h5>
                                         </div>
@@ -162,37 +162,14 @@
                                                         <input class="form-control" name="product_name" type="text" min="0">
                                                     </div>
                                                     <div class="form-group shadow-textarea">
-                                                    <label for="product_description">Productgroup description</label>
-                                                    <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
-                                                </div>
+                                                        <label for="product_description">Productgroup description</label>
+                                                        <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
+                                                    </div>
                                                     <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
                                                         <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
                                                     </a>
                                                 </div>
 
-
-
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Name</label>
-                                                    <input type="text" class="form-control" name="name_product">
-                                                </div>
-                                                <div class="form-group shadow-textarea">
-                                                    <label for="exampleFormControlTextarea6">Description</label>
-                                                    <textarea class="form-control z-depth-1" name="descr_product" rows="3" placeholder="Write something here..."></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Detail Info
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="upload_image">Image</label><br>
                                                     <input type="file" name="upload_image" id="upload_image" />
@@ -204,6 +181,19 @@
                                                         <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Entry Info
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="amount">Productgroup name</label><br>
                                                     <input class="form-control" name="name_prod_gr" type="text">
