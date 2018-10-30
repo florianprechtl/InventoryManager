@@ -255,7 +255,7 @@
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>";
-                        echo "  <a type='button' class='button-remove' id='button_remove_$row[InventoryNr]'></a>";
+                        echo "  <a type='button' class='button-remove' id='button_remove_$row[InventoryNr]'>X</a>";
                         echo "  $row[Name]
                                 <br>
                                 <br>
@@ -331,7 +331,7 @@
             });
             
             $('.button-remove').click(function(event) {
-                console.log(event);
+                console.log(event.target.id[event.target.id.length - 1]);
             });
 
         });
