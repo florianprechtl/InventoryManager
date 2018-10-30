@@ -56,7 +56,6 @@
                                             $_POST['inventory'] = $_GET['inventory'];
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-                                            $_POST['inventory'] = 1;
                                         }
                                     }
                                 }
@@ -66,6 +65,10 @@
                                         echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                     }
                                 }
+                            }
+                            
+                            if (!isset($_POST['inventory'])) {
+                                $_POST['inventory'] = 1;
                             }
                         ?>
                         </select>
