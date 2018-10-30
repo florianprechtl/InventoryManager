@@ -35,7 +35,7 @@
         </div>
 
         <!--Search bar and Inventory select-->
-        <form method="GET" action="inventory.php" enctype="multipart/form-data">
+        <form method="GET" action="inventory.php?inventory=<?php echo $_GET['inventory']; ?>" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
                 <div class="col-sm-5">
                     <div class="form-group">
@@ -53,7 +53,6 @@
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row['InventoryNr']) {
                                             echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                            $_POST['inventory'] = $_GET['inventory'];
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                         }
@@ -65,10 +64,6 @@
                                         echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                     }
                                 }
-                            }
-                            
-                            if (!isset($_POST['inventory'])) {
-                                $_POST['inventory'] = 1;
                             }
                         ?>
                         </select>
