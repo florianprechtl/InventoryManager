@@ -161,7 +161,7 @@
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
-                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Go back to other content</i>
+                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">Go back to other content</i>
                                                 </div>
 
                                                 
@@ -346,6 +346,13 @@
             $('#button_fade_to_new_product').click(function(event) {
                 $('#content_existing_content').slideUp(1500, function() {
                     $('#content_new_product').slideDown(1500, function () {
+                    })
+                })
+            });
+            
+             $('#button_fade_to_existing_product').click(function(event) {
+                $('#content_new_content').slideUp(1500, function() {
+                    $('#content_existing_product').slideDown(1500, function () {
                     })
                 })
             });
