@@ -1,4 +1,5 @@
 <?php
+    include('registermodal.php');
 ?>
 <html>
 
