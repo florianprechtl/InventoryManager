@@ -334,7 +334,7 @@
             });
             
             $('#button_fade_to_new_product').click(function(event) {
-                event.target.parentNode.fadeOut();
+                $(event.target.parentNode).fadeOut();
             });
 
         });
