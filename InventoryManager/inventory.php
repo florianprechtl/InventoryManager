@@ -151,7 +151,7 @@
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
-                                                    <i class="btn btn-success margin-top full-width">Or click here to add new Product</i>
+                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
                                                 </div>
 
                                                 
@@ -331,6 +331,10 @@
                         alert("Removing inventory entry did not work!");
                     }
                 });
+            });
+            
+            $('#button_fade_to_new_product').click(function(event) {
+                event.target.parent.hide();
             });
 
         });
