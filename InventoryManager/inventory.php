@@ -154,7 +154,7 @@
                                                     <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
                                                 </div>
                                                 
-                                                <div class="form-group" id="content_new_product">
+                                                <div class="form-group" id="content_new_product" style="display: none;">
                                                     <label>Babaaaam:</label>
                                                     <select class="form-control">
                                                         <option>1</option>
@@ -345,15 +345,13 @@
             
             $('#button_fade_to_new_product').click(function(event) {
                 $('#content_existing_content').slideUp(1500, function() {
-                    $('#content_new_product').slideDown(1500, function () {
-                    })
+                    $('#content_new_product').slideDown(1500);
                 })
             });
             
              $('#button_fade_to_existing_product').click(function(event) {
                 $('#content_new_content').slideUp(1500, function() {
-                    $('#content_existing_product').slideDown(1500, function () {
-                    })
+                    $('#content_existing_product').slideDown(1500);
                 })
             });
 
