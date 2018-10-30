@@ -43,8 +43,11 @@
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
                             <?php
                             $db = connectToDB();
+
                             $sql = "SELECT * FROM Inventory";
+
                             $result = $db->query($sql);
+
                             if (isset($_GET["inventory"])) {
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
@@ -123,7 +126,7 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form method="POST" action="uploadInventoryentry.php?inventory=<?php echo $_GET['inventory']; ?>" enctype="multipart/form-data">
+                        <form method="POST" action="uploadInventoryentry.php" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <p>here you could add a bunch of inputs within a form</p>
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
@@ -141,31 +144,6 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-
-
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <div class="input-group-text">
-                                                            <input type="radio" name="radio1" aria-label="Checkbox for following text input">
-                                                        </div>
-                                                    </div>
-                                                    <label for="text1">Text</label>
-                                                    <input type="text" class="form-control" aria-label="Text input with checkbox" name="text1">
-                                                    <label for="text2">Text</label>
-                                                    <input type="text" class="form-control" aria-label="Text input with checkbox" name="text2">
-                                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                                </div>
-
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <div class="input-group-text">
-                                                            <input type="radio" name="radio1" aria-label="Checkbox for following text input">
-                                                        </div>
-                                                    </div>
-                                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
-                                                </div>
-
-
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
                                                     <input type="text" class="form-control" name="name_product">
@@ -248,6 +226,7 @@
                 }
         
                 $result = $db->query($sql);
+
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>";
@@ -265,7 +244,9 @@
 
     <script>
         $(document).ready(function() {
+
             $('#image_demo').fadeOut();
+
             $image_crop = $('#image_demo').croppie({
                 enableExif: true,
                 enableRotate: true,
@@ -280,6 +261,7 @@
                     height: 300
                 }
             });
+
             $('#upload_image').on('change', function() {
                 var reader = new FileReader();
                 reader.onload = function(event) {
@@ -293,6 +275,7 @@
                 $('#image_demo').fadeIn();
                 $('#button-upload-pic').fadeIn();
             });
+
             $('.crop-image').click(function(event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
@@ -312,6 +295,7 @@
                     });
                 })
             });
+
             $('#buying_date_container input').datepicker({
                 format: "dd/mm/yyyy",
                 maxViewMode: 2,
@@ -320,6 +304,7 @@
                 todayHighlight: true,
                 toggleActive: true
             });
+
             $('.button-remove').click(function(event) {
                 $.ajax({
                     url: 'removeInventoryEntry.php',
@@ -335,7 +320,9 @@
                     }
                 });
             });
+
         });
+
     </script>
 
 </body>
