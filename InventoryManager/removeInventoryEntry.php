@@ -7,5 +7,5 @@
     $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
     $db->query($sql);
 
-    echo 'perfect';
+    redirect($_SERVER['HTTP_REFERER']);
 ?>
