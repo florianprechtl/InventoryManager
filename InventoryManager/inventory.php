@@ -244,8 +244,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <label for="upload_image">Image</label><br>
-                                                    <input type="file" name="upload_image" id="upload_image" />
                                                 </div>
                                                 <div class="" id="image_demo" style="width:300px; height: 350p;">
                                                 </div>
