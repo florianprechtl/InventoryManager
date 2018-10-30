@@ -38,9 +38,9 @@
         position: absolute;
         right: -8px;
         z-index: 1;
-        top: 16px;
+        top: 184px;
         text-align: center;
-        line-height: 2;
+        
     }
 
     .avatar-upload .avatar-edit input {
@@ -52,10 +52,11 @@
         width: 34px;
         height: 34px;
         margin-bottom: 0;
-        background: #FFFFFF;
-        border: 1px solid transparent;
+        background: #031D54;
+        color: #FFFFFF;
+        border: 1px solid #031D54;
         border-radius: 100%;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 0px 5px 2px #031D54;
         cursor: pointer;
         font-weight: normal;
         transition: all 0.2s ease-in-out;
@@ -90,6 +91,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    
+    #image_upload_icon {
+        line-height: 2;
     }
 </style>
 
@@ -242,7 +247,7 @@
                                                         <div class="avatar-upload">
                                                             <div class="avatar-edit">
                                                                 <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-                                                                <label for="upload_image"><i class="far fa-edit"></i></label>
+                                                                <label for="upload_image"><i class="far fa-edit" id="image_upload_icon"></i></label>
                                                             </div>
                                                             <div class="avatar-preview">
                                                                 <div id="imagePreview">
