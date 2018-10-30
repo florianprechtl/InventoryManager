@@ -372,8 +372,8 @@
                     type: 'canvas',
                     size: 'viewport'
                 }).then(function (response) {
-                    $image_array_1 = split(";", response);
-                    $image_array_2 = split(",", $image_array_1[1]);
+                    $image_array_1 = response.split(";");
+                    $image_array_2 = $image_array_1[1].split(",");
                     
                     $('#image_demo').fadeOut();
                     $('#button-upload-pic').fadeOut();
