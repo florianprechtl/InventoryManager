@@ -151,7 +151,7 @@
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
+                                                    <a class="btn btn-secondary btn btn-outline-info margin-top full-width" id="button_fade_to_new_product">
                                                         <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
                                                     </a>
                                                 </div>
@@ -165,7 +165,7 @@
                                                     <label for="product_description">Productgroup description</label>
                                                     <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
                                                 </div>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
+                                                    <a class="btn btn-secondary btn btn-outline-success margin-top full-width" id="button_fade_to_existing_product">
                                                         <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
                                                     </a>
                                                 </div>
