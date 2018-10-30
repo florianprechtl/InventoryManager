@@ -336,10 +336,10 @@
             $('#button_fade_to_new_product').click(function(event) {
                 $(event.target.parentNode).fadeOut();
                 $(event.target.parentNode).slideUp(1500, function() {
-                    $(event.target.parentNode).slideDown(1500)
-                });
-                $(event.target.parentNode).html('wifbwfuihweudhuifew');
-//                $(event.target.parentNode).fadeOut();
+                    $(event.target.parentNode).slideDown(1500, function () {
+                        $(event.target.parentNode).html('wifbwfuihweudhuifew');
+                    })
+                })
             });
 
         });
