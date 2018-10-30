@@ -29,61 +29,67 @@
 <style>
     
     .avatar-upload {
-  position: relative;
-  max-width: 192px;
-  margin: auto;
-}
-.avatar-upload .avatar-edit {
-  position: absolute;
-  right: -8px;
-  z-index: 1;
-  top: 16px;
-}
-.avatar-upload .avatar-edit input {
-  display: none;
-}
-.avatar-upload .avatar-edit input + label {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 0;
-  background: #FFFFFF;
-  border: 1px solid transparent;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  font-weight: normal;
-  transition: all 0.2s ease-in-out;
-}
-.avatar-upload .avatar-edit input + label:hover {
-  background: #f1f1f1;
-  border-color: #d6d6d6;
-}
-.avatar-upload .avatar-edit input + label:after {
-  content: "\f040";
-  font-family: 'FontAwesome';
-  color: #757575;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: auto;
-}
-.avatar-upload .avatar-preview {
-  width: 192px;
-  height: 192px;
-  position: relative;
-  border: 5px solid #031D54;
-  box-shadow: 0px 0px 5px 2px #B1C7F5;
-}
-.avatar-upload .avatar-preview > div {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-    </style>
+        position: relative;
+        max-width: 209px;
+        margin: auto;
+    }
+
+    .avatar-upload .avatar-edit {
+        position: absolute;
+        right: -8px;
+        z-index: 1;
+        top: 16px;
+    }
+
+    .avatar-upload .avatar-edit input {
+        display: none;
+    }
+
+    .avatar-upload .avatar-edit input + label {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 0;
+        background: #FFFFFF;
+        border: 1px solid transparent;
+        border: 100px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        font-weight: normal;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .avatar-upload .avatar-edit input + label:hover {
+        background: #f1f1f1;
+        border-color: #d6d6d6;
+    }
+
+    .avatar-upload .avatar-edit input + label:after {
+        color: #757575;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+    }
+
+    .avatar-upload .avatar-preview {
+        width: 209px;
+        height: 209px;
+        position: relative;
+        border: 5px solid #031D54;
+        box-shadow: 0px 0px 5px 2px #B1C7F5;
+    }
+
+    .avatar-upload .avatar-preview > div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
 
 <body>
     <div class="container-fluid" style="max-width: 800px; width:100%">
@@ -234,7 +240,7 @@
                                                         <div class="avatar-upload">
                                                             <div class="avatar-edit">
                                                                 <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-                                                                <label for="upload_image"></label>
+                                                                <label for="upload_image"><i class="far fa-edit"></i></label>
                                                             </div>
                                                             <div class="avatar-preview">
                                                                 <div id="imagePreview">
