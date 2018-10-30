@@ -382,7 +382,7 @@
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
                             $('#image_preview_container').fadeIn();
-                            readURL(data);
+                            preshowPicture(data);
                         }
                     });
                 })
@@ -426,21 +426,11 @@
                 })
             });
 
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-                        $('#imagePreview').hide();
-                        $('#imagePreview').fadeIn(650);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
+            function preshowPicture(input) {
+                $('#imagePreview').html(input);
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
             }
-
-//            $("#upload_image").change(function () {
-//                readURL(this);
-//            });
 
         });
 
