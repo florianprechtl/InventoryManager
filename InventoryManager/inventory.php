@@ -428,7 +428,7 @@
 
             function preshowPicture(input) {
                 var image = new Image();
-                image.src = 'data:image/png;' + input;
+                image.src = 'data:image/png;base64,' + input;
                 $('#imagePreview').html(image);
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
