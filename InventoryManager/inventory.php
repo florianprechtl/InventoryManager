@@ -332,7 +332,7 @@
         </div>
     </div>
 
-    < script >
+    <script>
         $(document).ready(function () {
 
             $('#image_demo').fadeOut();
@@ -441,8 +441,7 @@
 
         });
 
-    <
-    /script>
+    </script>
 
 </body>
 
