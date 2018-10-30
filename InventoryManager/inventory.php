@@ -47,7 +47,6 @@
   width: 34px;
   height: 34px;
   margin-bottom: 0;
-  border-radius: 100%;
   background: #FFFFFF;
   border: 1px solid transparent;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
@@ -424,6 +423,7 @@
                 var image = new Image();
                 image.src = 'data:image/png;'+ input[0] + ',' + input[1];
                 $('#imagePreview').html(image);
+                $('#imagePreview').css("width", "100%");
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
             }
