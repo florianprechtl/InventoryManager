@@ -64,7 +64,7 @@
 
     .avatar-upload .avatar-edit input + label:hover {
         background: #B1C7F5;
-        border-color: #031D54;
+        border: 3px solid #031D54;
         color: #031D54;
     }
 
