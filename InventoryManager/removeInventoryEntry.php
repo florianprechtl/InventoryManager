@@ -6,4 +6,6 @@
 
     $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
     $db->query($sql);
+
+    echo 'perfect';
 ?>
