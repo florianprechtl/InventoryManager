@@ -340,6 +340,7 @@
                     },
                     success: function() {
                     location.reload();
+                    }
                 });
             });
 
