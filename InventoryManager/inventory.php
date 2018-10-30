@@ -329,12 +329,9 @@
                 todayHighlight: true,
                 toggleActive: true
             });
-
-            $('.button-remove').each((elem) => {
-                console.log(elem);
-//                elem.click(function(event) {
-//                        console.log(event.target.id[event.target.id.length - 1]);
-//                });
+            
+            $('.button-remove').click(function(event) {
+                console.log(event.target.id);
             });
 
         });
