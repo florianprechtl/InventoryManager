@@ -47,14 +47,14 @@
                                 <input type="text" name="lastname" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </p>
 
-
-                            <label > Last name : </label>
-                            <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
-                                <input type="radio" name="sex" value="m">male
-                                <input type="radio" name="sex" value="f">female
-                                <input type="radio" name="sex" value="o">other
+                            <div class="form-group">
+                                <label for="sex">Filter by</label>
+                                <select class="form-control" name="sex" id="sex">
+                                    <option value="m" selected>male</option>
+                                    <option value="f">female</option>
+                                    <option value="o">other</option>
+                                </select>
                             </div>
-
 
                             <p> Age :
                                 <input type="text" name="age" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
