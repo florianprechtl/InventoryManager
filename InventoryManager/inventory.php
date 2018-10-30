@@ -237,7 +237,7 @@
                                                         <div class="avatar-upload">
                                                             <div class="avatar-edit">
                                                                 <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-                                                                <label for="imageUpload"></label>
+                                                                <label for="upload_image"></label>
                                                             </div>
                                                             <div class="avatar-preview">
                                                                 <div id="imagePreview">
@@ -435,10 +435,7 @@
                 }
             }
 
-            
-            $test = $('#image_preview');
-            
-            $test.click(function () {
+            $("#upload_image").change(function () {
                 readURL(this);
             });
 
