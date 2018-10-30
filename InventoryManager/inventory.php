@@ -435,7 +435,7 @@
                 }
             }
 
-            $("#upload_image").change(function () {
+            $("#image_preview").click(function () {
                 readURL(this);
             });
 
