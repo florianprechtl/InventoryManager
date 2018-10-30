@@ -6,7 +6,7 @@
     $lastname = $_POST['lastname'];
     $newusername = $_POST['newusername'];
     $age = $_POST['age'];
-    // $sex = $_POST['sex'];
+    $sex = $_POST['sex'];
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
     
@@ -17,13 +17,13 @@
         {
         echo "  New account ";
         $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
-        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, 'm', '$dateRegister')";
+        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, '$sex?$sex:o', '$dateRegister')";
         echo $sql_user; 
         $db->query($sql_user);
         }
         
         else { 
-            echo "  Password not equals, do it again  ";
+            echo "  Password does not equals, try it again  ";
             echo "<div class='btn btn-primary'><a href='registermodal.php'>Do the demand again</a></div>";
              }
 ?>

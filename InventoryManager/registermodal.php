@@ -33,7 +33,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                
+
                 <form method="POST" action="uploaduser.php" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="mx-auto">
@@ -48,6 +48,18 @@
                             </p>
 
 
+                            <label > Last name : </label>
+                            <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="m">male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="f">female
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="o">other
+                                </label>
+                            </div>
 
 
                             <p> Age :
