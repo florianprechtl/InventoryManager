@@ -48,8 +48,8 @@
   height: 34px;
   margin-bottom: 0;
   background: #FFFFFF;
-  border: 5px solid #031D54;
-  box-shadow: 0px 0px 5px 1px #B1C7F5;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
@@ -73,14 +73,12 @@
   width: 192px;
   height: 192px;
   position: relative;
-  border-radius: 100%;
-  border: 6px solid #F8F8F8;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border: 5px solid #031D54;
+  box-shadow: 0px 0px 5px 2px #B1C7F5;
 }
 .avatar-upload .avatar-preview > div {
   width: 100%;
   height: 100%;
-  border-radius: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
