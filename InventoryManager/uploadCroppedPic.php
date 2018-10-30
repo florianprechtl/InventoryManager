@@ -16,7 +16,7 @@ if(isset($_POST["image"]))
 
 	file_put_contents($imageName, $data);
 
-	echo $data;
+	echo $image_array_2[1];
 
 }
 
