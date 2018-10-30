@@ -16,7 +16,7 @@ if(isset($_POST["image"]))
 
 	file_put_contents($imageName, $data);
 
-	echo '<img src="'.$imageName.'" class="img-thumbnail" />';
+	echo $data;
 
 }
 
