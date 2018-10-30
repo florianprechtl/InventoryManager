@@ -339,7 +339,8 @@
                         'nr': event.target.id.split('_')[2]
                     },
                     success: function() {
-                    location.reload();
+                        alert("jawollo");
+                        location.reload();
                     }
                 });
             });
