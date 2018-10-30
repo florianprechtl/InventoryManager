@@ -232,6 +232,18 @@
                                                 </div>
 
                                                 <div class="form-group">
+                                                    <div class="container">
+                                                        <div class="avatar-upload">
+                                                            <div class="avatar-edit">
+                                                                <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+                                                                <label for="imageUpload"></label>
+                                                            </div>
+                                                            <div class="avatar-preview">
+                                                                <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <label for="upload_image">Image</label><br>
                                                     <input type="file" name="upload_image" id="upload_image" />
                                                 </div>
@@ -240,21 +252,6 @@
                                                 <div class="container-fluid">
                                                     <div class="row" id="button-upload-pic" style="display: none;">
                                                         <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
-                                                    </div>
-                                                </div>
-                                                <div class="container">
-                                                    <h1>jQuery Image Upload
-                                                        <small>with preview</small>
-                                                    </h1>
-                                                    <div class="avatar-upload">
-                                                        <div class="avatar-edit">
-                                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                                            <label for="imageUpload"></label>
-                                                        </div>
-                                                        <div class="avatar-preview">
-                                                            <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
