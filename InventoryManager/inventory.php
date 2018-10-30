@@ -48,8 +48,8 @@
   height: 34px;
   margin-bottom: 0;
   background: #FFFFFF;
-  border: 1px solid transparent;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  border: 5px solid #031D54;
+  box-shadow: 0px 0px 5px 1px #B1C7F5;
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
