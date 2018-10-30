@@ -344,14 +344,14 @@
             });
             
             $('#button_fade_to_new_product').click(function(event) {
-                $('#content_existing_product').slideUp(1500, function() {
-                    $('#content_new_product').slideDown(1500);
+                $('#content_existing_product').slideUp(750, function() {
+                    $('#content_new_product').slideDown(750);
                 })
             });
             
              $('#button_fade_to_existing_product').click(function(event) {
-                $('#content_new_product').slideUp(1500, function() {
-                    $('#content_existing_product').slideDown(1500);
+                $('#content_new_product').slideUp(750, function() {
+                    $('#content_existing_product').slideDown(750);
                 })
             });
 
