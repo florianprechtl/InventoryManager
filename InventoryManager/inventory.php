@@ -151,7 +151,7 @@
                                                         <option>2</option>
                                                         <option>3</option>
                                                     </select>
-                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
+                                                    <i class="fas fa-exchange-alt"></i><i class="btn btn-success margin-top full-width" id="button_fade_to_new_product">Or click here to add new Product</i>
                                                 </div>
 
                                                 <div class="form-group" id="content_new_product" style="display: none;">
@@ -163,7 +163,7 @@
                                                     <label for="product_description">Productgroup description</label>
                                                     <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
                                                 </div>
-                                                    <i class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">Go back to other content</i>
+                                                    <i class="fas fa-exchange-alt"></i><i class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">Go back to other content</i>
                                                 </div>
 
 
