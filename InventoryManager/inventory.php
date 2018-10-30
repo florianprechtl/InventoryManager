@@ -25,9 +25,9 @@
 
     <title>Inventory Manager</title>
 </head>
-    
-    <style>
-        .avatar-upload {
+
+<style>
+    .avatar-upload {
   position: relative;
   max-width: 205px;
   margin: 50px auto;
@@ -242,8 +242,19 @@
                                                         <a class="col-sm-12 btn btn-success crop-image margin-bottom">Crop & Upload Image</a>
                                                     </div>
                                                 </div>
-                                                <div class="avatar-preview">
-                                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                                <div class="container">
+                                                    <h1>jQuery Image Upload
+                                                        <small>with preview</small>
+                                                    </h1>
+                                                    <div class="avatar-upload">
+                                                        <div class="avatar-edit">
+                                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                            <label for="imageUpload"></label>
+                                                        </div>
+                                                        <div class="avatar-preview">
+                                                            <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
