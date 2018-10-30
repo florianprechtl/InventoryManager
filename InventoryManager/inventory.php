@@ -1,5 +1,6 @@
 <?php
     include('connectDB.php');
+    
 ?>
 <html>
 
@@ -143,6 +144,31 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
+                                                
+                                                
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                            <input type="radio" name="radio1" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <label for="text1" >Text</label>
+                                                    <input type="text" class="form-control" aria-label="Text input with checkbox" name="text1">
+                                                    <label for="text2" >Text</label>
+                                                    <input type="text" class="form-control" aria-label="Text input with checkbox" name="text2">
+                                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                                </div>
+                                                
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                            <input type="radio" name="radio1" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                                </div>
+                                                
+                                                
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
                                                     <input type="text" class="form-control" name="name_product">
@@ -230,6 +256,9 @@
                     while($row = $result->fetch_assoc()) {
                         echo "  <div class='inventory-item-preview'>
                                     $row[Name]
+                                    <br>
+                                    <br>
+                                    $row[ProductNr]
                                 </div>";
                     }
                 }

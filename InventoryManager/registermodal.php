@@ -48,7 +48,7 @@
                             </p>
 
                             <div class="form-group">
-                                <label for="sex">Filter by</label>
+                                <label for="sex">Sex :</label>
                                 <select class="form-control" name="sex" id="sex">
                                     <option value="m" selected>male</option>
                                     <option value="f">female</option>
