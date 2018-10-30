@@ -144,6 +144,15 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
+                                                <label>Select existing Product:</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                                
+                                                <i class="btn btn-success">Or click here to add new Product</i>
+                                                
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name</label>
                                                     <input type="text" class="form-control" name="name_product">
