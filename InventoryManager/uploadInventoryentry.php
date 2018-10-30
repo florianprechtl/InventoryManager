@@ -1,6 +1,6 @@
 <?php
     include('connectDB.php');
-    include('basicFunctions.php')
+    include('basicFunctions.php');
     $db = connectToDB();
 
     $name_product = $_POST['name_product'];
