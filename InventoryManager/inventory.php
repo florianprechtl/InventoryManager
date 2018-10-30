@@ -312,6 +312,13 @@
                         data: {
                             "image": response
                         },
+                        cache: false,
+                        success: function() {
+                            alert('success!');
+                        },
+                        error: function() {
+                            alert('error!');
+                        },
                         success: function(data) {
                             $('#image_demo').fadeOut();
                             $('#button-upload-pic').fadeOut();
@@ -329,7 +336,7 @@
                 todayHighlight: true,
                 toggleActive: true
             });
-            
+
             $('.button-remove').click(function(event) {
                 $.ajax({
                     url: 'removeInventoryEntry.php',
@@ -338,9 +345,16 @@
                     data: {
                         'nr': event.target.id.split('_')[2]
                     },
+//                    success: function() {
+//                        alert("jawollo");
+//                        location.reload();
+//                    },
+                    cache: false,
                     success: function() {
-                        alert("jawollo");
-                        location.reload();
+                        alert('success!');
+                    },
+                    error: function() {
+                        alert('error!');
                     }
                 });
             });
