@@ -336,7 +336,7 @@
                     type: "POST",
                     dataType: 'json',
                     data: {
-                        'nr': event.target.id[event.target.id.length - 1],
+                        'nr': event.target.id.split('_')[2]
                     },
                     success: function() {
                     location.reload();
