@@ -27,7 +27,7 @@
 </head>
 
 <style>
-    
+
     .avatar-upload {
         position: relative;
         max-width: 209px;
@@ -219,62 +219,66 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                
-                                                
-                                                // Picture
-                                                <div class="form-group" id="image_preview_container">
-                                                    <div class="container">
-                                                        <div class="avatar-upload">
-                                                            <div class="avatar-edit">
-                                                                <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-                                                                <label for="upload_image"><i class="far fa-edit" id="image_upload_icon"></i></label>
-                                                            </div>
-                                                            <div class="avatar-preview">
-                                                                <div id="imagePreview">
+
+                                                <div class="row">
+                                                    // Picture
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group" id="image_preview_container">
+                                                            <div class="container">
+                                                                <div class="avatar-upload">
+                                                                    <div class="avatar-edit">
+                                                                        <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+                                                                        <label for="upload_image"><i class="far fa-edit" id="image_upload_icon"></i></label>
+                                                                    </div>
+                                                                    <div class="avatar-preview">
+                                                                        <div id="imagePreview">
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="form-group" id="image_demo" style="width:300px; height: 350p;">
+                                                        </div>
+                                                        <div class="container-fluid">
+                                                            <div class="row" id="button-upload-pic" style="display: none;">
+                                                                <a class="col-sm-12 btn btn-success crop-image margin-bottom" id="button_crop_image">Crop & Upload Image</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group" id="image_demo" style="width:300px; height: 350p;">
-                                                </div>
-                                                <div class="container-fluid">
-                                                    <div class="row" id="button-upload-pic" style="display: none;">
-                                                        <a class="col-sm-12 btn btn-success crop-image margin-bottom" id="button_crop_image">Crop & Upload Image</a>
-                                                    </div>
-                                                </div>
-                                                
-                                                
-                                                // Existing product
-                                                <div class="form-group" id="content_existing_product">
-                                                    <label>Select existing Product:</label>
-                                                    <select class="form-control">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                    </select>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
-                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
-                                                    </a>
-                                                </div>
 
-                                                
-                                                // New product
-                                                <div class="form-group" id="content_new_product" style="display: none;">
-                                                    <div class="form-group">
-                                                        <label for="product_name">Product name</label><br>
-                                                        <input class="form-control" name="product_name" type="text" min="0">
+                                                    <div class="col-sm-8">
+                                                        // Existing product
+                                                        <div class="form-group" id="content_existing_product">
+                                                            <label>Select existing Product:</label>
+                                                            <select class="form-control">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                            </select>
+                                                            <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
+                                                                <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
+                                                            </a>
+                                                        </div>
+
+
+                                                        // New product
+                                                        <div class="form-group" id="content_new_product" style="display: none;">
+                                                            <div class="form-group">
+                                                                <label for="product_name">Product name</label><br>
+                                                                <input class="form-control" name="product_name" type="text" min="0">
+                                                            </div>
+                                                            <div class="form-group shadow-textarea">
+                                                                <label for="product_description">Productgroup description</label>
+                                                                <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
+                                                            </div>
+                                                            <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
+                                                                <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
+                                                            </a>
+                                                        </div>
+
                                                     </div>
-                                                    <div class="form-group shadow-textarea">
-                                                        <label for="product_description">Productgroup description</label>
-                                                        <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
-                                                    </div>
-                                                    <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
-                                                        <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
-                                                    </a>
+
                                                 </div>
-                                                
-                                                
                                             </div>
                                         </div>
                                     </div>
@@ -347,7 +351,7 @@
     </div>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
             $('#image_demo').fadeOut();
 
@@ -366,12 +370,12 @@
                 }
             });
 
-            $('#upload_image').on('change', function () {
+            $('#upload_image').on('change', function() {
                 var reader = new FileReader();
-                reader.onload = function (event) {
+                reader.onload = function(event) {
                     $image_crop.croppie('bind', {
                         url: event.target.result
-                    }).then(function () {
+                    }).then(function() {
                         console.log('jQuery bind complete');
                     });
                 }
@@ -381,14 +385,14 @@
                 $('#image_preview_container').fadeOut();
             });
 
-            $('#button_crop_image').click(function (event) {
+            $('#button_crop_image').click(function(event) {
                 $image_crop.croppie('result', {
                     type: 'canvas',
                     size: 'viewport'
-                }).then(function (response) {
+                }).then(function(response) {
                     $image_array_1 = response.split(";");
                     $image_array_2 = $image_array_1[1].split(",");
-                    
+
                     $('#image_demo').fadeOut();
                     $('#button-upload-pic').fadeOut();
                     $('#image_preview_container').fadeIn();
@@ -405,7 +409,7 @@
                 toggleActive: true
             });
 
-            $('.button-remove').click(function (event) {
+            $('.button-remove').click(function(event) {
                 $.ajax({
                     url: 'removeInventoryEntry.php',
                     type: "POST",
@@ -413,30 +417,30 @@
                         // the number of the removed button, shown in the id
                         'nr': event.target.id.split('_')[2],
                     },
-                    success: function () {
+                    success: function() {
                         location.reload();
                     },
-                    error: function () {
+                    error: function() {
                         alert("Removing inventory entry did not work!");
                     }
                 });
             });
 
-            $('#button_fade_to_new_product').click(function (event) {
-                $('#content_existing_product').slideUp(750, function () {
+            $('#button_fade_to_new_product').click(function(event) {
+                $('#content_existing_product').slideUp(750, function() {
                     $('#content_new_product').slideDown(750);
                 })
             });
 
-            $('#button_fade_to_existing_product').click(function (event) {
-                $('#content_new_product').slideUp(750, function () {
+            $('#button_fade_to_existing_product').click(function(event) {
+                $('#content_new_product').slideUp(750, function() {
                     $('#content_existing_product').slideDown(750);
                 })
             });
 
             function preshowPicture(input) {
                 var image = new Image();
-                image.src = 'data:image/png;'+ input[0] + ',' + input[1];
+                image.src = 'data:image/png;' + input[0] + ',' + input[1];
                 $('#imagePreview').html(image);
                 $('#imagePreview').css("width", "100%");
                 $('#imagePreview').hide();
