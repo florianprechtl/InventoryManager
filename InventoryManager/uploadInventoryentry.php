@@ -22,7 +22,7 @@
         
             $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
             
-            $db-query($sql);
+            $db->query($sql);
             
             
                 $imageName = time() . '.png';
@@ -32,9 +32,9 @@
     }
 
     function insertInventoryEntry() {
-        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
+        $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
                                 VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
-        $db->query($sql_inventoryentry);
+        $db->query($sql);
     }
 
     if (isset($_POST['submit'])) {
