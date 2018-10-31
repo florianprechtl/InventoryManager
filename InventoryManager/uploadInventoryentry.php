@@ -4,10 +4,16 @@
 
     $db = connectToDB();
 
-    print_r($_POST);
-    echo '<br>';
-    echo '<br>';
-    print_r($_POST['blob']);
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
 
     $name_product = $_POST['name_product'];
     $descr_product = $_POST['descr_product'];
