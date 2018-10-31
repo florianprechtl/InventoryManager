@@ -19,12 +19,12 @@
         $imageName = null;
         $data = null;
         
-        if ($name && $descr) {
+        if (isset($name) && isset($descr) {
             $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
             
             $db-query($sql);
             
-            if ($imageBase64) {
+            if (isset($imageBase64)) {
                 $imageName = time() . '.png';
                 $data = base64_decode($imageBase64);
                 file_put_contents("imgUploads/$imageName", $data);
