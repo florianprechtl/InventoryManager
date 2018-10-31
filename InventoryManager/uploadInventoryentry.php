@@ -77,7 +77,7 @@
         // works as well, but we shoud not do it that way
         
 
-        redirect('inventory.php?inventory='.$inventory);
+//        redirect('inventory.php?inventory='.$inventory);
 
 
 //    $sql = "SELECT * FROM Inventory";
