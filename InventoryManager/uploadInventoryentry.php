@@ -19,7 +19,7 @@
         $imageName = null;
         $data = null;
         
-        if (isset($name) && isset($descr) {
+        if (isset($name) && isset($descr)) {
             $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
             
             $db-query($sql);
