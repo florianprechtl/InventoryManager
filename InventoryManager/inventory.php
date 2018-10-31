@@ -207,7 +207,7 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form method="POST" action="uploadInventoryentry.php/<?php echo $_GET['inventory'] ?>" enctype="multipart/form-data">
+                        <form method="POST" action="uploadInventoryentry.php?inventory=<?php echo $_GET['inventory'] ?>" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <p>here you could add a bunch of inputs within a form</p>
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
