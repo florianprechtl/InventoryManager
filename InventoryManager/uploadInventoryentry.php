@@ -66,7 +66,7 @@
     if (isset($_POST['submit'])) {
         $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
         insertInventoryEntry($db, $inventory, $productNr, null, $amount, $date_buying, $date_expiring, null);
-        redirect('inventory.php?inventory='.$inventory);
+//        redirect('inventory.php?inventory='.$inventory);
     }
 
 //        $sql = "INSERT INTO files(mime,data) VALUES(:mime,:data)";
