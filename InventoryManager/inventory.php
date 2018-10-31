@@ -444,6 +444,10 @@
             function preshowPicture(input) {
                 var image = new Image();
                 image.src = 'data:image/png;' + input[0] + ',' + input[1];
+                
+                $pictureBlob = dataURItoBlob(image.src);
+                console.log($pictureBlob);
+                
                 $('#imagePreview').html(image);
                 $('#imagePreview').css("width", "100%");
                 $('#imagePreview').hide();
