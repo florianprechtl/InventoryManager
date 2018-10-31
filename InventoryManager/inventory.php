@@ -344,7 +344,7 @@
                     while($row = $result->fetch_assoc()) {
                         $img = file_get_contents("imgUploads/$row[Image]");
                         
-                        echo "<div class='inventory-item-preview' style=background-image: url(https://1801674php.azurewebsites.net/InventoryManager/uploads/" . $row['Image'] . ");></div>";
+                        echo "<div class='inventory-item-preview' style=background-image: url('https://1801674php.azurewebsites.net/InventoryManager/uploads/" . $row['Image'] . "');></div>";
                         echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]'>X</i>";
                         echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
                     }
