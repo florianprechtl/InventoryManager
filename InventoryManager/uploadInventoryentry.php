@@ -36,6 +36,7 @@
         echo "hier6";
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
                                 VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
+        echo $sql;
         echo "hier7";
         $db->query($sql);
         echo "hier8";
@@ -48,7 +49,7 @@
         echo "hier5";
         insertInventoryEntry($db);
         echo "hier10";
-        redirect('inventory.php?inventory='.$inventory);
+//        redirect('inventory.php?inventory='.$inventory);
     }
 
 //        $sql = "INSERT INTO files(mime,data) VALUES(:mime,:data)";
