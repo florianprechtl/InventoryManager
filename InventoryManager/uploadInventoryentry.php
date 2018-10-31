@@ -27,22 +27,28 @@
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
         
+        sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'inventory_manager_db' AND TABLE_NAME = 'product'";
+        $result = $db->query($sql);
+        print_r($result);
+        echo "<br>";
+        
         $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, Image) VALUES (NULL, NULL, '$name', '$descr', '$unit', '$imageName')";
         echo $sql;
         $db->query($sql);
 
         file_put_contents("imgUploads/$imageName", $data); 
+        return $productNr;
     }
 
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
         
         // set values of varaibles
         $inventoryNr = $inventoryNr != '' ? $inventoryNr : null;
-        $productNr = $productNr != '' ? $productNr : null;
-        $userNr = $userNr != '' ? $userNr : null;
+        $productNr = $productNr != '' ? $productNr : 5;
+        $userNr = $userNr != '' ? $userNr : 1;
         $amount = $amount != '' ? $amount : null;
-        $buyingDate = $buyingDate != '' ? $buyingDate : null;
-        $expiringDate = $expiringDate != '' ? $expiringDate : null;
+        $buyingDate = $buyingDate != '' ? "'$buyingDate'" : null;
+        $expiringDate = $expiringDate != '' ? "'$expiringDate'" : null;
         $status = $status != '' ? $status : null;
         
         
