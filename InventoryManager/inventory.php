@@ -207,11 +207,13 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form method="POST" action="uploadInventoryentry.php?inventory=<?php echo $inventory ?>&blob=<?php echo $blob ?>" enctype="multipart/form-data">
+                        <form id="inventoryEntryForm" cmethod="POST" action="uploadInventoryentry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <p>here you could add a bunch of inputs within a form</p>
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
                                 <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
+                                
+                                <input type="hidden" name="blob" value="">
 
                                 <div id="accordion">
                                     <div class="card">
@@ -440,14 +442,12 @@
                     $('#content_existing_product').slideDown(750);
                 })
             });
-            
-            $blob = null;
 
             function preshowPicture(input) {
                 var image = new Image();
                 image.src = 'data:image/png;' + input[0] + ',' + input[1];
                 
-                $blob = dataURItoBlob(image.src);
+                document.inventoryEntryForm.blob.value = dataURItoBlob(image.src);
                 
                 $('#imagePreview').html(image);
                 $('#imagePreview').css("width", "100%");

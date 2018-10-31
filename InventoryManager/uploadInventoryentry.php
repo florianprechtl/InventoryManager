@@ -11,7 +11,7 @@
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
     $inventory = $_GET['inventory'];
-    $blob = $_GET['blob'];
+    $blob = $_POST['blob'];
 
 print_r($blob);
 
