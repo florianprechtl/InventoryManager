@@ -27,6 +27,8 @@
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
         
+        $productNr = null;
+        
         $sql = "SHOW TABLE STATUS WHERE name='product'";
         $result = $db->query($sql);
         if ($result->num_rows > 0) {
