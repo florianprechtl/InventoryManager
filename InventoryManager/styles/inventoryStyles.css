@@ -43,11 +43,12 @@
     border-radius: 5px;
     min-height: 140px;
     min-width: 140px;
-    box-shadow: black 0px 0px 5px 0px
+    box-shadow: black 0px 0px 5px 0px;
 }
 
 .inventory-item-preview:hover {
-    box-shadow: inset black 0px 0px 5px 0px
+    box-shadow: inset black 0px 0px 5px 0px;
+    background-size: cover;
 }
 
 .icon-box {
