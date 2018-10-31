@@ -394,7 +394,7 @@
                     $('#image_demo').fadeOut();
                     $('#button-upload-pic').fadeOut();
                     $('#image_preview_container').fadeIn();
-                    preshowPicture($image_array_1);
+                    preshowPicture($image_array_2);
                 })
             });
 
