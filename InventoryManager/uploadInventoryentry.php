@@ -1,6 +1,7 @@
 <?php
     include('connectDB.php');
     include('basicFunctions.php');
+
     $db = connectToDB();
 
     $name_product = $_POST['name_product'];
@@ -10,6 +11,26 @@
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
     $inventory = $_GET['inventory'];
+    $blob = $_GET['blob'];
+
+    
+
+    public function insertProduct($prodNr, $name, $descr, $nameShort, $blob) {
+        
+        print_r($blob);
+        
+    }
+
+    insertProduct(1, $name_product, $descr_product, null, $blob);
+
+//        $sql = "INSERT INTO files(mime,data) VALUES(:mime,:data)";
+//        $stmt = $db->prepare($sql);
+//
+//        $stmt->bindParam(':mime', $mime);
+//        $stmt->bindParam(':data', $blob, PDO::PARAM_LOB);
+//
+//        return $stmt->execute();
+//    }
 
 //    if (trim($name_prod_gr) != '') {
 //        
@@ -24,11 +45,11 @@
 //        $db->query($sql_product); 
 //    }
         // works as well, but we shoud not do it that way
-        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
-        echo $sql_inventoryentry; 
-        $db->query($sql_inventoryentry);
-
-        redirect('inventory.php?inventory='.$inventory);
+//        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
+//        echo $sql_inventoryentry; 
+//        $db->query($sql_inventoryentry);
+//
+//        redirect('inventory.php?inventory='.$inventory);
 
 
 //    $sql = "SELECT * FROM Inventory";
