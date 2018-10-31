@@ -31,7 +31,7 @@
         $result = $db->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo "<br><br>$row<br><br>";
+                print_r("<br><br>$row<br><br>");
             }
         }
         
