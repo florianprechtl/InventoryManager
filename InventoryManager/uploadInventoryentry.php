@@ -18,28 +18,36 @@
         
         $imageName = null;
         $data = null;
+        echo "hier2";
         
-        
-            $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
-            
-            $db->query($sql);
-            
-            
-                $imageName = time() . '.png';
-                $data = base64_decode($imageBase64);
-                file_put_contents("imgUploads/$imageName", $data);
+        $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
+        echo "hier3";
+        $db->query($sql);
+
+        echo "hier4";
+        $imageName = time() . '.png';
+        $data = base64_decode($imageBase64);
+        file_put_contents("imgUploads/$imageName", $data);
+        echo "hier4.5";
    
     }
 
     function insertInventoryEntry() {
+        echo "hier6";
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
                                 VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
+        echo "hier7";
         $db->query($sql);
+        echo "hier8";
+        echo "hier9";
     }
 
     if (isset($_POST['submit'])) {
+        echo "hier1";
         insertProduct($name_product, $descr_product, null, $imageBase64);
+        echo "hier5";
         insertInventoryEntry();
+        echo "hier10";
         redirect('inventory.php?inventory='.$inventory);
     }
 
