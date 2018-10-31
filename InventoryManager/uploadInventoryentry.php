@@ -16,19 +16,36 @@
 
     function insertProduct($db, $name, $descr, $unit, $imageBase64) {
         
+        // set values of varaibles
+        $name = $name != '' ? $name : null;
+        $descr = $descr != '' ? $descr : null;
+        $unit = $unit != '' ? $unit : null;
+        
+        
         $imageName = null;
         $data = null;
+        $imageName = time() . '.png';
+        $data = base64_decode($imageBase64);
         
         $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, Image) VALUES (NULL, NULL, '$name', '$descr', '$unit', '$imageName')";
         echo $sql;
         $db->query($sql);
 
-        $imageName = time() . '.png';
-        $data = base64_decode($imageBase64);
         file_put_contents("imgUploads/$imageName", $data); 
     }
 
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
+        
+        // set values of varaibles
+        $inventoryNr = $inventoryNr != '' ? $inventoryNr : null;
+        $productNr = $productNr != '' ? $productNr : null;
+        $userNr = $userNr != '' ? $userNr : null;
+        $amount = $amount != '' ? $amount : null;
+        $buyingDate = $buyingDate != '' ? $buyingDate : null;
+        $expiringDate = $expiringDate != '' ? $expiringDate : null;
+        $status = $status != '' ? $status : null;
+        
+        
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
                                 VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status)"; 
         echo $sql;
