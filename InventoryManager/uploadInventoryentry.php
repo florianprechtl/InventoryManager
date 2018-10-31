@@ -17,7 +17,7 @@
     function insertProduct($prodNr, $name, $descr, $nameShort, $imageBase64) {
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
-        file_put_contents("/imgUploads/$imageName", $data);
+        file_put_contents("imgUploads/$imageName", $data);
         
     }
 
