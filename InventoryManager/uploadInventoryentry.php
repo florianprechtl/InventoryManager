@@ -4,6 +4,11 @@
 
     $db = connectToDB();
 
+    print_r($_POST);
+    echo <br>;
+    echo <br>;
+    print_r($_POST['blob']);
+
     $name_product = $_POST['name_product'];
     $descr_product = $_POST['descr_product'];
     $unit = $_POST['unit'];
@@ -13,7 +18,7 @@
     $inventory = $_GET['inventory'];
     $blob = $_POST['blob'];
 
-print_r($blob);
+
 
     
 
