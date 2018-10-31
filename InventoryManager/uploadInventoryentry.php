@@ -5,8 +5,8 @@
     $db = connectToDB();
 
     print_r($_POST);
-    echo <br>;
-    echo <br>;
+    echo '<br>';
+    echo '<br>';
     print_r($_POST['blob']);
 
     $name_product = $_POST['name_product'];
