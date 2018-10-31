@@ -13,6 +13,8 @@
     $inventory = $_GET['inventory'];
     $blob = $_GET['blob'];
 
+print_r($blob);
+
     
 
     function insertProduct($prodNr, $name, $descr, $nameShort, $blob) {
