@@ -221,7 +221,7 @@
                                             <div class="card-body">
                                                 <div class="container-fluid">
                                                     <div class="row">
-                                                        // Picture
+                                                        <!-- Picture -->
                                                         <div class="col-sm-4">
                                                             <div class="form-group" id="image_preview_container">
                                                                 <div class="container">
@@ -247,7 +247,7 @@
                                                         </div>
 
                                                         <div class="col-sm-8">
-                                                            // Existing product
+                                                            <!-- Existing product -->
                                                             <div class="form-group" id="content_existing_product">
                                                                 <label>Select existing Product:</label>
                                                                 <select class="form-control">
@@ -261,7 +261,7 @@
                                                             </div>
 
 
-                                                            // New product
+                                                            <!-- New product -->
                                                             <div class="form-group" id="content_new_product" style="display: none;">
                                                                 <div class="form-group">
                                                                     <label for="product_name">Product name</label><br>
