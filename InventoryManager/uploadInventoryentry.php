@@ -4,18 +4,6 @@
 
     $db = connectToDB();
 
-    foreach ($_POST['blob'] as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
     $name_product = $_POST['name_product'];
     $descr_product = $_POST['descr_product'];
     $unit = $_POST['unit'];
@@ -23,19 +11,18 @@
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
     $inventory = $_GET['inventory'];
-    $blob = $_POST['blob'];
-
-
-
+    $imageBase64 = $_POST['imageBase64'];
     
 
-    function insertProduct($prodNr, $name, $descr, $nameShort, $blob) {
+    function insertProduct($prodNr, $name, $descr, $nameShort, $imageBase64) {
+        $imageName = time() . '.png';
+        $data = base64_decode($imageBase64);
         
-        print_r($blob);
+        file_put_contents($imageName, $data);
         
     }
 
-    insertProduct(1, $name_product, $descr_product, null, $blob);
+    insertProduct($inventory, $name_product, $descr_product, null, $imageBase64);
 
 //        $sql = "INSERT INTO files(mime,data) VALUES(:mime,:data)";
 //        $stmt = $db->prepare($sql);

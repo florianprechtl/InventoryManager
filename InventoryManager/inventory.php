@@ -213,7 +213,7 @@
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
                                 <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
                                 
-                                <input type="hidden" name="blob" value="Herbert">
+                                <input type="hidden" name="imageBase64" value="">
 
                                 <div id="accordion">
                                     <div class="card">
@@ -447,9 +447,8 @@
                 var image = new Image();
                 image.src = 'data:image/png;' + input[0] + ',' + input[1];
                 
-                $blob = dataURItoBlob(image.src);
-                document.forms['inventoryEntryForm'].elements['blob'].value = dataURItoBlob(image.src);
-                var url = URL.createObjectURL($blob);
+                $imageBase64 = input[1];
+                document.forms['inventoryEntryForm'].elements['imageBase64'].value = $imageBase64;
                 
                 $('#imagePreview').html(image);
                 $('#imagePreview').css("width", "100%");
