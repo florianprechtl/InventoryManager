@@ -221,7 +221,7 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <!-- Picture -->
-                                                    <div class="col col-sm-4">
+                                                    <div class="col col-sm-5">
                                                         <div class="form-group" id="image_preview_container">
                                                             <div class="container">
                                                                 <div class="avatar-upload">
@@ -245,7 +245,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col col-sm-8">
+                                                    <div class="col col-sm-7">
                                                         <!-- Existing product -->
                                                         <div class="form-group" id="content_existing_product">
                                                             <label>Select existing Product:</label>
