@@ -31,7 +31,7 @@
         $result = $db->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                print_r("<br><br>$row[Auto_increment]<br><br>");
+                $productNr = $row['Auto_increment'];
             }
         }
         
@@ -62,8 +62,8 @@
     }
 
     if (isset($_POST['submit'])) {
-        insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
-        insertInventoryEntry($db, $inventory, null, null, $amount, $date_buying, $date_expiring, null);
+        $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
+        insertInventoryEntry($db, $inventory, $productNr, null, $amount, $date_buying, $date_expiring, null);
 //        redirect('inventory.php?inventory='.$inventory);
     }
 
