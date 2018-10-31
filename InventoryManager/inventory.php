@@ -220,18 +220,17 @@
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
                                                 <div class="row">
+                                                    
                                                     <!-- Picture -->
                                                     <div class="col col-sm-5">
                                                         <div class="form-group" id="image_preview_container">
-                                                            <div class="container">
-                                                                <div class="avatar-upload">
-                                                                    <div class="avatar-edit">
-                                                                        <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-                                                                        <label for="upload_image"><i class="far fa-edit" id="image_upload_icon"></i></label>
-                                                                    </div>
-                                                                    <div class="avatar-preview">
-                                                                        <div id="imagePreview">
-                                                                        </div>
+                                                            <div class="avatar-upload">
+                                                                <div class="avatar-edit">
+                                                                    <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+                                                                    <label for="upload_image"><i class="far fa-edit" id="image_upload_icon"></i></label>
+                                                                </div>
+                                                                <div class="avatar-preview">
+                                                                    <div id="imagePreview">
                                                                     </div>
                                                                 </div>
                                                             </div>
