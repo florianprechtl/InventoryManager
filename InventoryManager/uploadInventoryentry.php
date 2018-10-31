@@ -48,13 +48,13 @@
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
         
         // set values of varaibles
-        $inventoryNr = $inventoryNr != '' ? $inventoryNr : null;
+        $inventoryNr = $inventoryNr != '' ? $inventoryNr : 'null';
         $productNr = $productNr != '' ? $productNr : 5;
         $userNr = $userNr != '' ? $userNr : 1;
-        $amount = $amount != '' ? $amount : null;
-        $buyingDate = $buyingDate != '' ? "'$buyingDate'" : null;
-        $expiringDate = $expiringDate != '' ? "'$expiringDate'" : null;
-        $status = $status != '' ? $status : null;
+        $amount = $amount != '' ? $amount : 'null';
+        $buyingDate = $buyingDate != '' ? "'$buyingDate'" : 'null';
+        $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
+        $status = $status != '' ? $status : 'null';
         
         
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
