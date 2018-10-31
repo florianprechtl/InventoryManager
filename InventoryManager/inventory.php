@@ -447,7 +447,7 @@
                 var image = new Image();
                 image.src = 'data:image/png;' + input[0] + ',' + input[1];
                 
-                document.inventoryEntryForm.blob.value = dataURItoBlob(image.src);
+                document.forms['inventoryEntryForm'].elements['blob'].value = dataURItoBlob(image.src);
                 
                 $('#imagePreview').html(image);
                 $('#imagePreview').css("width", "100%");
