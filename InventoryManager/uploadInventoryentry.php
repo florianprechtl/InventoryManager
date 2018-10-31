@@ -27,7 +27,7 @@
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
         
-        sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'inventory_manager_db' AND TABLE_NAME = 'product'";
+        $sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'inventory_manager_db' AND TABLE_NAME = 'product'";
         $result = $db->query($sql);
         print_r($result);
         echo "<br>";
