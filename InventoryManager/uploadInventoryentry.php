@@ -14,42 +14,30 @@
     $imageBase64 = $_POST['imageBase64'];
     
 
-    function insertProduct($db, $name, $descr, $nameShort, $imageBase64) {
+    function insertProduct($db, $name, $descr, $unit, $imageBase64) {
         
         $imageName = null;
         $data = null;
-        echo "hier2";
         
-        $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
+        $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, Image) VALUES (NULL, NULL, '$name', '$descr', '$unit', '$imageName')";
         echo $sql;
-        echo "hier3";
         $db->query($sql);
 
-        echo "hier4";
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
-        file_put_contents("imgUploads/$imageName", $data);
-        echo "hier4.5";
-   
+        file_put_contents("imgUploads/$imageName", $data); 
     }
 
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
-        echo "hier6";
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
-                                VALUES (NULL, '$inventoryNr', '$productNr', '$userNr', '$amount', '$buyingDate', '$expiringDate', '$status')"; 
+                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status)"; 
         echo $sql;
-        echo "hier7";
         $db->query($sql);
-        echo "hier8";
-        echo "hier9";
     }
 
     if (isset($_POST['submit'])) {
-        echo "hier1";
-        insertProduct($db, $name_product, $descr_product, null, $imageBase64);
-        echo "hier5";
+        insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
         insertInventoryEntry($db, $inventory, null, null, $amount, $date_buying, $date_expiring, null);
-        echo "hier10";
 //        redirect('inventory.php?inventory='.$inventory);
     }
 
