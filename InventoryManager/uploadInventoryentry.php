@@ -37,7 +37,7 @@
         $db->query($sql_inventoryentry);
     }
 
-    if (isset($_POST['sumbit'])) {
+    if (isset($_POST['submit'])) {
         insertProduct($name_product, $descr_product, null, $imageBase64);
         insertInventoryEntry();
         redirect('inventory.php?inventory='.$inventory);
