@@ -18,7 +18,7 @@
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
         
-        file_put_contents($imageName, $data);
+        file_put_contents("imgUpload/$imageName", $data);
         
     }
 
