@@ -15,7 +15,7 @@
 
     
 
-    public function insertProduct($prodNr, $name, $descr, $nameShort, $blob) {
+    function insertProduct($prodNr, $name, $descr, $nameShort, $blob) {
         
         print_r($blob);
         
