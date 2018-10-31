@@ -32,8 +32,16 @@
         }
     }
 
+    function insertInventoryEntry() {
+        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
+                                VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
+        $db->query($sql_inventoryentry);
+    }
+
     if (isset($_POST['sumbit'])) {
         insertProduct($name_product, $descr_product, null, $imageBase64);
+        insertInventoryEntry();
+        redirect('inventory.php?inventory='.$inventory);
     }
 
 //        $sql = "INSERT INTO files(mime,data) VALUES(:mime,:data)";
@@ -58,11 +66,9 @@
 //        $db->query($sql_product); 
 //    }
         // works as well, but we shoud not do it that way
-//        $sql_inventoryentry = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)";
-//        echo $sql_inventoryentry; 
-//        $db->query($sql_inventoryentry);
-//
-//        redirect('inventory.php?inventory='.$inventory);
+        
+
+        redirect('inventory.php?inventory='.$inventory);
 
 
 //    $sql = "SELECT * FROM Inventory";
