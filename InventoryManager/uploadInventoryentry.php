@@ -21,6 +21,7 @@
         echo "hier2";
         
         $sql = "INSERT INTO product (ProductNr, Name, Description, NameShort, Image) VALUES (NULL, '$name', '$descr', '$nameShort', '$imageName')";
+        echo $sql;
         echo "hier3";
         $db->query($sql);
 
@@ -32,10 +33,10 @@
    
     }
 
-    function insertInventoryEntry($db) {
+    function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
         echo "hier6";
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
-                                VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
+                                VALUES (NULL, '$inventoryNr', '$productNr', '$userNr', '$amount', '$buyingDate', '$expiringDate', '$status')"; 
         echo $sql;
         echo "hier7";
         $db->query($sql);
@@ -47,7 +48,7 @@
         echo "hier1";
         insertProduct($db, $name_product, $descr_product, null, $imageBase64);
         echo "hier5";
-        insertInventoryEntry($db);
+        insertInventoryEntry($db, $inventory, null, null, $amount, $date_buying, $date_expiring, null);
         echo "hier10";
 //        redirect('inventory.php?inventory='.$inventory);
     }
