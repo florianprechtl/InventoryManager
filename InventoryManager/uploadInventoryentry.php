@@ -4,7 +4,7 @@
 
     $db = connectToDB();
 
-    foreach ($_POST as $key => $value) {
+    foreach ($_POST['blob'] as $key => $value) {
         echo "<tr>";
         echo "<td>";
         echo $key;
@@ -14,6 +14,7 @@
         echo "</td>";
         echo "</tr>";
     }
+
 
     $name_product = $_POST['name_product'];
     $descr_product = $_POST['descr_product'];
