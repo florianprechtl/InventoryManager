@@ -14,7 +14,7 @@
     $imageBase64 = $_POST['imageBase64'];
     
 
-    function insertProduct($name, $descr, $nameShort, $imageBase64) {
+    function insertProduct($db, $name, $descr, $nameShort, $imageBase64) {
         
         $imageName = null;
         $data = null;
@@ -32,7 +32,7 @@
    
     }
 
-    function insertInventoryEntry() {
+    function insertInventoryEntry($db) {
         echo "hier6";
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
                                 VALUES (NULL, '$inventory', '5', '1', '$amount', '$date_buying', '$date_expiring', NULL)"; 
@@ -44,9 +44,9 @@
 
     if (isset($_POST['submit'])) {
         echo "hier1";
-        insertProduct($name_product, $descr_product, null, $imageBase64);
+        insertProduct($db, $name_product, $descr_product, null, $imageBase64);
         echo "hier5";
-        insertInventoryEntry();
+        insertInventoryEntry($db);
         echo "hier10";
         redirect('inventory.php?inventory='.$inventory);
     }
