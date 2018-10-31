@@ -27,11 +27,11 @@
         $imageName = time() . '.png';
         $data = base64_decode($imageBase64);
         
-        $sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'inventory_manager_db' AND TABLE_NAME = 'product'";
+        $sql = "SHOW TABLE STATUS WHERE name='product'";
         $result = $db->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                print_r("<br><br>$row<br><br>");
+                print_r("<br><br>$row[Auto_increment]<br><br>");
             }
         }
         
