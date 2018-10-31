@@ -213,7 +213,7 @@
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
                                 <a href="https://codepen.io/mcraig218/pen/uqIae">Click here!</a>
                                 
-                                <input type="hidden" name="blob" value="">
+                                <input type="hidden" name="blob" value="Herbert">
 
                                 <div id="accordion">
                                     <div class="card">
