@@ -128,6 +128,7 @@
                                         while($row = $result->fetch_assoc()) {
                                             if ($_GET['inventory'] == $row['InventoryNr']) {
                                                 echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                $inventory = $_GET['inventory'];
                                             } else {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                             }
@@ -139,6 +140,11 @@
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                         }
                                     }
+                                }
+                                
+                                if (!isset($_GET['inventory'])) {
+                                    // has to be another default value afterwards, when we have user specific inventories
+                                    $inventory = 1;
                                 }
                             ?>
                         </select>
@@ -201,7 +207,7 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form method="POST" action="uploadInventoryentry.php" enctype="multipart/form-data">
+                        <form method="POST" action="uploadInventoryentry.php/<?php echo $inventory; ?>" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <p>here you could add a bunch of inputs within a form</p>
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
@@ -262,12 +268,12 @@
                                                         <!-- New product -->
                                                         <div class="form-group" id="content_new_product" style="display: none;">
                                                             <div class="form-group">
-                                                                <label for="product_name">Product name</label><br>
-                                                                <input class="form-control" name="product_name" type="text" min="0">
+                                                                <label for="name_prod">Product name</label><br>
+                                                                <input class="form-control" name="name_prod" type="text" min="0">
                                                             </div>
                                                             <div class="form-group shadow-textarea">
-                                                                <label for="product_description">Productgroup description</label>
-                                                                <textarea class="form-control z-depth-1" name="product_description" rows="3" placeholder="Write something here..."></textarea>
+                                                                <label for="descr_prod">Productgroup description</label>
+                                                                <textarea class="form-control z-depth-1" name="descr_prod" rows="3" placeholder="Write something here..."></textarea>
                                                             </div>
                                                             <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
                                                                 <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
