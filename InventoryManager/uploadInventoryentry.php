@@ -29,8 +29,11 @@
         
         $sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'inventory_manager_db' AND TABLE_NAME = 'product'";
         $result = $db->query($sql);
-        print_r($result);
-        echo "<br>";
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<br><br>$row<br><br>"
+            }
+        }
         
         $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, Image) VALUES (NULL, NULL, '$name', '$descr', '$unit', '$imageName')";
         echo $sql;
