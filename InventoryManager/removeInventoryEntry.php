@@ -18,7 +18,7 @@
     $ftp_user_pass = "Blumenbeet1";
 
     // connect to ftp
-    $conn_id = ftp_connect($ftp_server);        
+    $conn_id = ftp_connect($ftp_server, 21);        
 
     // login with username and password
     $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
