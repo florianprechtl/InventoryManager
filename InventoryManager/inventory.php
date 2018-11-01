@@ -345,7 +345,7 @@
                         $img = file_get_contents("imgUploads/$row[Image]");
                         
                         echo "<div class='inventory-item-preview' style=background-image:url(imgUploads/" . $row['Image'] . ");>";
-                        echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row['Image']'>X</i>";
+                        echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
                         echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
                     }
                 }
@@ -419,7 +419,7 @@
                     data: {
                         // the number of the removed button, shown in the id
                         'nr': event.target.id.split('_')[2],
-                        'imgName': event.target.id.split('_')[3],
+                        'imgName': event.target.id.split('_')[3]
                     },
                     success: function() {
                         location.reload();
