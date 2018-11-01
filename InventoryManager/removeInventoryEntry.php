@@ -13,15 +13,12 @@
 
     // variables
     $file = "imgUploads/$_POST[imgName]";
-    $ftp_server = 'ftp://waws-prod-am2-223.ftp.azurewebsites.windows.net';
-    $ftp_user_name = '1801674PHP\user1801674';
-    $ftp_user_pass = "Blumenbeet1";
 
     // connect to ftp
-    $conn_id = ftp_connect($ftp_server, 21);        
+    $conn_id = ftp_connect('ftp://waws-prod-am2-223.ftp.azurewebsites.windows.net');      
 
     // login with username and password
-    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+    $login_result = ftp_login($conn_id, '1801674PHP\user1801674', 'Blumenbeet1');
 
     // try to delete file
 //    if (ftp_delete($conn_id, $file)) {
