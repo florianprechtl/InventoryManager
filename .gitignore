@@ -39,4 +39,6 @@ Thumbs.db
 #own stuff#
 ###########
 *.lnk
+*.xml
+*.iml
 imgUploads/*
