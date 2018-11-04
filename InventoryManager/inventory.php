@@ -55,7 +55,7 @@
         color: #FFFFFF;
         border: 1px solid #031D54;
         border-radius: 100%;
-        box-shadow: 0px 0px 5px 0px #031D54;
+        box-shadow: 0 0 5px 0 #031D54;
         cursor: pointer;
         font-weight: normal;
         transition: all 0.2s ease-in-out;
@@ -85,7 +85,7 @@
         border: 5px solid #031D54;
         border-radius: 5px;
         overflow: hidden;
-        box-shadow: 0px 0px 5px 2px #B1C7F5;
+        box-shadow: 0 0 5px 2px #B1C7F5;
     }
 
     .avatar-upload .avatar-preview > div {
@@ -163,8 +163,8 @@
                                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
-                                                <label for="filter">Filter by</label>
-                                                <select class="form-control">
+                                                <label for="products_select">Filter by</label>
+                                                <select class="form-control" name="products_select">
                                                     <option value="0" selected>All Snippets</option>
                                                     <option value="1">Featured</option>
                                                     <option value="2">Most popular</option>
@@ -243,7 +243,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group" id="image_demo" style="width:300px; height: 350p;">
+                                                        <div class="form-group" id="image_demo" style="width:300px; height:350px;">
                                                         </div>
                                                         <div class="container-fluid">
                                                             <div class="row" id="button-upload-pic" style="display: none;">
@@ -257,9 +257,16 @@
                                                         <div class="form-group" id="content_existing_product">
                                                             <label>Select existing Product:</label>
                                                             <select class="form-control">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
+                                                                <?php
+                                                                    $sql = "SELECT * FROM Product";
+
+                                                                    $result = $db->query($sql);
+                                                                    if ($result->num_rows > 0) {
+                                                                        while ($row = $result->fetch_assoc()) {
+                                                                            echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                                        }
+                                                                    }
+                                                                ?>
                                                             </select>
                                                             <a class="btn btn-success margin-top full-width" id="button_fade_to_new_product">
                                                                 <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Or click here to add new Product
@@ -381,14 +388,14 @@
                     }).then(function() {
                         console.log('jQuery bind complete');
                     });
-                }
+                };
                 reader.readAsDataURL(this.files[0]);
                 $('#image_demo').fadeIn();
                 $('#button-upload-pic').fadeIn();
                 $('#image_preview_container').fadeOut();
             });
 
-            $('#button_crop_image').click(function(event) {
+            $('#button_crop_image').click(function() {
                 $image_crop.croppie('result', {
                     type: 'canvas',
                     size: 'viewport'
@@ -430,13 +437,13 @@
                 });
             });
 
-            $('#button_fade_to_new_product').click(function(event) {
+            $('#button_fade_to_new_product').click(function() {
                 $('#content_existing_product').slideUp(750, function() {
                     $('#content_new_product').slideDown(750);
                 })
             });
 
-            $('#button_fade_to_existing_product').click(function(event) {
+            $('#button_fade_to_existing_product').click(function() {
                 $('#content_new_product').slideUp(750, function() {
                     $('#content_existing_product').slideDown(750);
                 })
@@ -449,10 +456,9 @@
                 $imageBase64 = input[1];
                 document.forms['inventoryEntryForm'].elements['imageBase64'].value = $imageBase64;
                 
-                $('#imagePreview').html(image);
-                $('#imagePreview').css("width", "100%");
-                $('#imagePreview').hide();
-                $('#imagePreview').fadeIn(650);
+                $('#imagePreview').html(image)
+                    .css("width", "100%")
+                    .hide().fadeIn(650);
             }
             
             function dataURItoBlob(dataURI) {
