@@ -53,13 +53,16 @@
                
                             <p style = "color:blue"> My description
                             </p>
+               
+                            <p> Amount : </p>
+               
+                            <p style = "color:blue"> My amount
+                            </p>
                             
-                            <p> Statut : </p>
+                            <p> Actual Statut : </p>
                
                             <p style = "color:blue"> My statut
-                            </p>
-
-               
+                            </p>             
                
                             <div class="form-group">
                                 <label for="statut"> Statut :</label>
