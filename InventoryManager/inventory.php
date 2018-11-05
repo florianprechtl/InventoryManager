@@ -207,7 +207,7 @@
                             <h4 class="modal-title">Add new Inventory Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form id="inventoryEntryForm" method="POST" action="uploadInventoryentry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
+                        <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <p>here you could add a bunch of inputs within a form</p>
                                 <p>Maybe we can add a cool blur filter while hovering the pictures (squares) and then show some basic data about the item faded in by the hover</p>
@@ -276,7 +276,7 @@
                                                                     $result = $db->query($sql);
                                                                     if ($result->num_rows > 0) {
                                                                         while ($row = $result->fetch_assoc()) {
-                                                                            
+
                                                                             echo "<option value='$row[ProductNr]'>$row[Name]</option>";
                                                                         }
                                                                     }
