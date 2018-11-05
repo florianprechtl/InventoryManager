@@ -19,7 +19,7 @@
     if (isset($_POST['submit'])) {
         $productNr = null;
 
-        if (!isset($_POST['name_prod_existing'])) {
+        if (!isset($_POST['name_prod_existing']) && $_POST['name_prod_existing'] != '') {
             $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
         } else {
             $productNr = $_POST['name_prod_existing'];
