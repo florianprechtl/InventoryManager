@@ -34,7 +34,7 @@
                     </button>
                 </div>
 
-                <form method="POST" action="productstatut.php" enctype="multipart/form-data">
+                <form >
                     <div class="modal-body">
                         <div class="mx-auto">
 
