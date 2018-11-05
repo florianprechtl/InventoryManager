@@ -276,7 +276,7 @@
                                                                     $result = $db->query($sql);
                                                                     if ($result->num_rows > 0) {
                                                                         while ($row = $result->fetch_assoc()) {
-                                                                            $products.push(new Product($row['Name'], $row['Description'], $row['Image']));
+                                                                            
                                                                             echo "<option value='$row[ProductNr]'>$row[Name]</option>";
                                                                         }
                                                                     }
