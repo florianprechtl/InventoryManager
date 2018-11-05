@@ -43,16 +43,25 @@
            <div class="mx-auto">
 
 
-                            <p> Product Name :
-                                <input type="text" name="productname" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            <p> Product Name :   </p>
+                            
+                            <p style = "color:blue"> My name
                             </p>
 
-                            <p> Description :
-                                <input type="text" name="description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            <p> Description : </p>
+               
+                            <p style = "color:blue"> My description
+                            </p>
+                            
+                            <p> Consumption : </p>
+               
+                            <p style = "color:blue"> My consumption
                             </p>
 
+               
+               
                             <div class="form-group">
-                                <label for="Consumption of the Product ">Sex :</label>
+                                <label for="consumption"> Consumption :</label>
                                 <select class="form-control" name="consum" id="consum">
                                     <option value="c" selected>closed</option>
                                     <option value="u">used</option>
