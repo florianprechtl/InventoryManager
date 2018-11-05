@@ -257,6 +257,7 @@
                                                         <div class="form-group" id="content_existing_product">
                                                             <label for="name_prod_existing">Select existing Product:</label><br>
                                                             <select class="form-control" name="name_prod_existing">
+                                                                <option value=""></option>
                                                                 <?php
                                                                     class Product {
                                                                         public $name;
