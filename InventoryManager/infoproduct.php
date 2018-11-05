@@ -1,5 +1,6 @@
 <?php
     include('connectDB.php');
+
 ?>
 
 <html>
@@ -33,7 +34,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Product Consumption</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Product Statut</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -53,16 +54,16 @@
                             <p style = "color:blue"> My description
                             </p>
                             
-                            <p> Consumption : </p>
+                            <p> Statut : </p>
                
-                            <p style = "color:blue"> My consumption
+                            <p style = "color:blue"> My statut
                             </p>
 
                
                
                             <div class="form-group">
-                                <label for="consumption"> Consumption :</label>
-                                <select class="form-control" name="consum" id="consum">
+                                <label for="statut"> Statut :</label>
+                                <select class="form-control" name="statut" id="statut">
                                     <option value="c" selected>closed</option>
                                     <option value="u">used</option>
                                     <option value="f">finished</option>
@@ -77,7 +78,7 @@
       
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
