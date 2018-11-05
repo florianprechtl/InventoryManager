@@ -255,15 +255,29 @@
                                                     <div class="col col-sm-7">
                                                         <!-- Existing product -->
                                                         <div class="form-group" id="content_existing_product">
-                                                            <label>Select existing Product:</label>
-                                                            <select class="form-control">
+                                                            <label for="name_prod_existing">Select existing Product:</label><br>
+                                                            <select class="form-control" name="name_prod_existing">
                                                                 <?php
+                                                                    class Product {
+                                                                        public $name;
+                                                                        public $description;
+                                                                        public $img;
+
+                                                                        public function __construct($name, $description, $img) {
+                                                                            $this->name = $name;
+                                                                            $this->description = $description;
+                                                                            $this->img = $img;
+                                                                        }
+                                                                    }
+
                                                                     $sql = "SELECT * FROM Product";
+                                                                    $products = [];
 
                                                                     $result = $db->query($sql);
                                                                     if ($result->num_rows > 0) {
                                                                         while ($row = $result->fetch_assoc()) {
-                                                                            echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                                            $products.add();
+                                                                            echo "<option value='$row[ProductNr]'>$row[Name]</option>";
                                                                         }
                                                                     }
                                                                 ?>
@@ -277,12 +291,12 @@
                                                         <!-- New product -->
                                                         <div class="form-group" id="content_new_product" style="display: none;">
                                                             <div class="form-group">
-                                                                <label for="name_prod">Product name</label><br>
-                                                                <input class="form-control" name="name_product" type="text" min="0">
+                                                                <label for="name_prod_new">Product name</label><br>
+                                                                <input class="form-control" name="name_product_new" type="text" min="0">
                                                             </div>
                                                             <div class="form-group shadow-textarea">
-                                                                <label for="descr_prod">Productgroup description</label>
-                                                                <textarea class="form-control z-depth-1" name="descr_product" rows="3" placeholder="Write something here..."></textarea>
+                                                                <label for="descr_prod_new">Product description</label>
+                                                                <textarea class="form-control z-depth-1" name="descr_product_new" rows="3" placeholder="Write something here..."></textarea>
                                                             </div>
                                                             <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
                                                                 <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content

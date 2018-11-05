@@ -5,19 +5,25 @@
     $db = connectToDB();
 
     // variables of the product
-    $name_product = $_POST['name_product'];
-    $descr_product = $_POST['descr_product'];
+    $name_product = $_POST['name_product_new'];
+    $descr_product = $_POST['descr_product_new'];
     $unit = $_POST['unit'];
     $imageBase64 = $_POST['imageBase64'];
 
-    //variables of the inventoryentry
+    //variables of the inventor entry
     $amount = $_POST['amount'];
     $date_buying = convertDate($_POST['date_buying']);
     $date_expiring = convertDate($_POST['date_expiring']);
     $inventory = $_GET['inventory'];
 
     if (isset($_POST['submit'])) {
-        $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
+        $productNr = null;
+
+        if (isset($_POST['name_product_existing'])) {
+            $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
+        } else {
+            $productNr = $_POST['name_product_existing'];
+        }
         insertInventoryEntry($db, $inventory, $productNr, null, $amount, $date_buying, $date_expiring, null);
         redirect('inventory.php?inventory='.$inventory);
     }
