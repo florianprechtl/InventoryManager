@@ -163,16 +163,6 @@
                                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
-                                                <label for="products_select">Filter by</label>
-                                                <select class="form-control" name="products_select">
-                                                    <option value="0" selected>All Snippets</option>
-                                                    <option value="1">Featured</option>
-                                                    <option value="2">Most popular</option>
-                                                    <option value="3">Top rated</option>
-                                                    <option value="4">Most commented</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
                                                 <label for="contain">Author</label>
                                                 <input class="form-control" type="text" />
                                             </div>
@@ -475,27 +465,6 @@
                     .css("width", "100%")
                     .hide().fadeIn(650);
             }
-            
-            function dataURItoBlob(dataURI) {
-                // convert base64/URLEncoded data component to raw binary data held in a string
-                var byteString;
-                if (dataURI.split(',')[0].indexOf('base64') >= 0)
-                    byteString = atob(dataURI.split(',')[1]);
-                else
-                    byteString = unescape(dataURI.split(',')[1]);
-
-                // separate out the mime component
-                var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-
-                // write the bytes of the string to a typed array
-                var ia = new Uint8Array(byteString.length);
-                for (var i = 0; i < byteString.length; i++) {
-                    ia[i] = byteString.charCodeAt(i);
-                }
-
-                return new Blob([ia], {type:mimeString});
-            }
-
         });
 
     </script>
