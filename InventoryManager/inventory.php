@@ -296,7 +296,7 @@
                                                             </div>
                                                             <div class="form-group shadow-textarea">
                                                                 <label for="descr_prod_new">Product description</label>
-                                                                <textarea class="form-control z-depth-1" name="descr_product_new" rows="3" placeholder="Write something here..."></textarea>
+                                                                <textarea class="form-control z-depth-1" name="descr_prod_new" rows="3" placeholder="Write something here..."></textarea>
                                                             </div>
                                                             <a class="btn btn-success margin-top full-width" id="button_fade_to_existing_product">
                                                                 <i class="float-left fas fa-exchange-alt" style="line-height: 24px;"></i>Go back to other content
