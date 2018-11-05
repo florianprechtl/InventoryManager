@@ -21,13 +21,11 @@
 
         if (!isset($_POST['name_prod_existing'])) {
             $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
-            echo $productNr;
         } else {
             $productNr = $_POST['name_prod_existing'];
-            echo $productNr;
         }
         insertInventoryEntry($db, $inventory, $productNr, null, $amount, $date_buying, $date_expiring, null);
-        // redirect('inventory.php?inventory='.$inventory);
+        redirect('inventory.php?inventory='.$inventory);
     }
     
     
