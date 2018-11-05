@@ -33,14 +33,39 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Product Consumption</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
+      
+        
+           <div class="mx-auto">
+
+
+                            <p> Product Name :
+                                <input type="text" name="productname" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            </p>
+
+                            <p> Description :
+                                <input type="text" name="description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            </p>
+
+                            <div class="form-group">
+                                <label for="Consumption of the Product ">Sex :</label>
+                                <select class="form-control" name="consum" id="consum">
+                                    <option value="c" selected>closed</option>
+                                    <option value="u">used</option>
+                                    <option value="f">finished</option>
+                                </select>
+                            </div>
+
+
+              </div>
+          
+          
+          
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
