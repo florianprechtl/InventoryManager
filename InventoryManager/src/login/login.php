@@ -36,6 +36,13 @@
                             </div>";
             }
         }
+        if (isset($_GET['registerSuccessful'])) {
+            if ($_GET['registerSuccessful'] == 'false') {
+                echo "  <div class='alert alert-danger' role='alert'>
+                                Registration did not work. Please try again!
+                            </div>";
+            }
+        }
         ?>
         <form method="POST" action="checkLogin.php" enctype="multipart/form-data">
             <div class="row">
