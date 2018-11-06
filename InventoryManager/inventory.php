@@ -73,8 +73,6 @@
                                     // has to be another default value afterwards, when we have user specific inventories
                                     $inventory = 1;
                                 }
-
-                                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $inventory));
                             ?>
                         </select>
                     </div>
@@ -119,7 +117,9 @@
             </div>
             <!-- Modal -->
             <!-- That's where the included addInventoryEntry modal gets included afterwards -->
-
+            <?php
+                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $inventory));
+            ?>
             <?php
                 $db = connectToDB();
         
