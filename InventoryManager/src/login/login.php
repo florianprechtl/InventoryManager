@@ -21,22 +21,22 @@
         <div class="row header">
             <h1 class="col-sm-12" align="center">MyFridge - Login</h1>
         </div>
-        <?php
-            if (isset($_GET['loginDenied'])) {
-                if ($_GET['loginDenied'] == 'userUnknown') {
-                    echo "  <div class='alert alert-danger' role='alert'>
-                                User does not exist!
-                            </div>";
-                } else if ($_GET['loginDenied'] == 'wrongPassword') {
-                    echo "  <div class='alert alert-danger' role='alert'>
-                                Wrong password!
-                            </div>";
-                }
-            }
-        ?>
         <div class="row center padding-top">
             <p class="col-sm-12">Please enter your login data</p>
         </div>
+        <?php
+        if (isset($_GET['loginDenied'])) {
+            if ($_GET['loginDenied'] == 'userUnknown') {
+                echo "  <div class='alert alert-danger' role='alert'>
+                                User does not exist!
+                            </div>";
+            } else if ($_GET['loginDenied'] == 'wrongPassword') {
+                echo "  <div class='alert alert-danger' role='alert'>
+                                Wrong password!
+                            </div>";
+            }
+        }
+        ?>
         <form method="POST" action="checkLogin.php" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-sm-12 input-group input-group-sm mb-3">
