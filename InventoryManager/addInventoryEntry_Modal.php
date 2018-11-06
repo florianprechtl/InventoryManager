@@ -5,6 +5,10 @@
         global $inventory;
 
         $inventory = $number;
+
+        echo "<br><br><br><br><br><br>";
+        echo $number;
+        echo "<br><br><br><br><br><br>";
     }
 ?>
 
