@@ -34,7 +34,7 @@
                     </button>
                 </div>
 
-                <form method="POST" action="uploaduser.php" enctype="multipart/form-data">
+                <form method="POST" action="login-register/uploaduser.php" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="mx-auto">
 
