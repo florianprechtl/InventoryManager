@@ -7,6 +7,8 @@
         return $result[2].'-'.$result[1].'-'.$result[0];
     }
 
+
+    /* Use this to include files and additionally pass variables */
     function includeWithVariables($filePath, $variables = array(), $print = true) {
         $output = NULL;
         if(file_exists($filePath)){
