@@ -1,3 +1,9 @@
+<?php
+include('connectDB.php');
+
+$db = connectToDB();
+?>
+
 <html>
 
 <head>
