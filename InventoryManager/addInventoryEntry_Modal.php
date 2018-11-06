@@ -1,4 +1,12 @@
- <div class="modal fade" id="myModal" role="dialog">
+<?php
+    $this->inventory = null;
+
+    function setInventoryNumber($number) {
+        $this->inventory = $number;
+    }
+?>
+
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog" style="max-width: 700px;">
 
         <!-- Modal content-->
@@ -13,7 +21,7 @@
 
 
             <!-- Form which contains body (input elements) and footer (submit button) of the modal -->
-            <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
+            <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $this->inventory ?>" enctype="multipart/form-data">
 
                 <!-- Modal body-->
                 <div class="modal-body">
