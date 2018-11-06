@@ -61,7 +61,7 @@
         $db->query($sql);
 
         // upload image to the "imgUploads" folder
-        file_put_contents("imgUploads/$imageName", $data); 
+        file_put_contents("../../imgUploads/$imageName", $data);
         return $productNr;
     }
 
