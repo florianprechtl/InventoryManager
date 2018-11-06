@@ -56,7 +56,7 @@
                                             if ($_GET['inventory'] == $row['InventoryNr']) {
                                                 echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
                                                 $inventory = $_GET['inventory'];
-                                                setInventoryNumber($inventory);
+                                                $_SESSION['inventory'] = $inventory;
                                             } else {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                             }
@@ -73,7 +73,7 @@
                                 if (!isset($_GET['inventory'])) {
                                     // has to be another default value afterwards, when we have user specific inventories
                                     $inventory = 1;
-                                    setInventoryNumber(1);
+                                    $_SESSION['inventory'] = $inventory;
                                 }
                             ?>
                         </select>

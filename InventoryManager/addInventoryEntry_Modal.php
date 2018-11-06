@@ -1,17 +1,3 @@
-<?php
-    $inventory = null;
-
-    function setInventoryNumber($number) {
-        global $inventory;
-
-        $inventory = $number;
-
-        echo "<br><br><br><br><br><br>";
-        echo $number;
-        echo "<br><br><br><br><br><br>";
-    }
-?>
-
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog" style="max-width: 700px;">
 
@@ -27,7 +13,7 @@
 
 
             <!-- Form which contains body (input elements) and footer (submit button) of the modal -->
-            <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
+            <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $_SESSION['inventory'] ?>" enctype="multipart/form-data">
 
                 <!-- Modal body-->
                 <div class="modal-body">
