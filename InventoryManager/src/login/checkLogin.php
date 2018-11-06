@@ -32,12 +32,12 @@
                     redirect('../inventory/inventory.php');
                 } else {
                     echo "Login denied, wrong password <br>";
-                    redirect($_SERVER['HTTP_REFERER'] . '?loginDenied=wrongPassword');
+                    redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?loginDenied=wrongPassword');
                 }
             }
         } else {
             echo "There is no user with the name: <b>$username</b><br>";
-            redirect($_SERVER['HTTP_REFERER'] . '?loginDenied=userUnknown');
+            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?loginDenied=userUnknown');
         }
     }
 ?>

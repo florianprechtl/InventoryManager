@@ -14,17 +14,16 @@
     $dateRegister = date("Y-m-d");
 
         // inspiré
-        if ($psw == $repeatedpsw)
-        {
-        echo "  New account ";
-        $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
-                    VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
-        echo $sql_user; 
-        $db->query($sql_user);
-        }
-        
-        else { 
+        if ($psw == $repeatedpsw) {
+            echo "  New account ";
+            $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
+                        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
+            echo $sql_user;
+            $db->query($sql_user);
+            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
+        } else {
             echo "  Password does not equals, try it again  ";
             echo "<div class='btn btn-primary'><a href='registerNewUser_Modal.php'>Do the demand again</a></div>";
-             }
+            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
+        }
 ?>
