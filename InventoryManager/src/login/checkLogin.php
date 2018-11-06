@@ -32,12 +32,12 @@
                     redirect('../inventory/inventory.php');
                 } else {
                     echo "Login denied, wrong password <br>";
-                    redirect('../inventory/inventory.php?loginDenied');
+                    redirect('../inventory/login.php?loginDenied=wrongPassword');
                 }
             }
         } else {
             echo "There is no user with the name: <b>$username</b><br>";
-            redirect('../inventory/inventory.php?loginDenied');
+            redirect('../inventory/login.php?loginDenied=userUnknown');
         }
     }
 ?>
