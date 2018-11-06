@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    include('connectDB.php');
-    include('addInventoryEntry_Modal.php');
+    include('basicFunctions.php');
+    includeWithVariables('connectDB.php', null);
 ?>
 <html>
 
@@ -57,7 +56,6 @@
                                             if ($_GET['inventory'] == $row['InventoryNr']) {
                                                 echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
                                                 $inventory = $_GET['inventory'];
-                                                $_SESSION['inventory'] = $inventory;
                                             } else {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                             }
@@ -74,8 +72,9 @@
                                 if (!isset($_GET['inventory'])) {
                                     // has to be another default value afterwards, when we have user specific inventories
                                     $inventory = 1;
-                                    $_SESSION['inventory'] = $inventory;
                                 }
+
+                                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $inventory));
                             ?>
                         </select>
                     </div>
