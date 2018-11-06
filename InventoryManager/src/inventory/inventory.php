@@ -1,6 +1,6 @@
 <?php
-    include('basicFunctions.php');
-    includeWithVariables('connectDB.php', null);
+    include('../common/basicFunctions.php');
+    includeWithVariables('../common/connectDB.php', null);
 ?>
 <html>
 

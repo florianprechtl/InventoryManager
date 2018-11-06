@@ -1,5 +1,5 @@
 <?php
-	include("connectDB.php");
+	include('../common/connectDB.php');
 	
     $db = connectToDB();
 
@@ -28,12 +28,15 @@
                         "<br>Member since: " . $row['MemberSince'].
                         "<br>";
                     echo "<div class='padding-bottom'><a href='../inventory/inventory.php'>Go to Main Page</a></div>";
+                    redirect('../inventory/inventory.php');
                 } else {
                     echo "Login denied, wrong password <br>";
+                    redirect('../inventory/inventory.php?loginDenied');
                 }
             }
         } else {
             echo "There is no user with the name: <b>$username</b><br>";
+            redirect('../inventory/inventory.php?loginDenied');
         }
     }
 ?>

@@ -1,5 +1,5 @@
 <?php
-	include("connectDB.php");
+	include("../common/connectDB.php");
 	
     $db = connectToDB();
   	$variablename = $_POST['variablename'];
@@ -17,7 +17,7 @@
             while($row = $result->fetch_assoc()) {      
                     echo "<b>$oui</b> " . $row['UserNr'].                       
                         "<br>";
-                    echo "<div class='padding-bottom'><a href='inventory.php'>Go to Main Page</a></div>";            
+                    echo "<div class='padding-bottom'><a href='inventory.php'>Go to Main Page</a></div>";
             }
         } else {
             echo "There is no name: <b>$username</b><br>";

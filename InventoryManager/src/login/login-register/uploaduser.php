@@ -1,5 +1,5 @@
 ﻿<?php
-    include('connectDB.php');
+    include('../../common/connectDB.php');
 
     $db = connectToDB();
     $firstname = $_POST['firstname'];
@@ -9,7 +9,7 @@
     $sex = empty($_POST['sex']) ? "NULL" : "'$_POST[sex]'";
     $psw = $_POST['psw'];
     $repeatedpsw = $_POST['repeatedpsw'];
-print_r($_POST);
+    print_r($_POST);
     
     $dateRegister = date("Y-m-d");
 
@@ -18,7 +18,7 @@ print_r($_POST);
         {
         echo "  New account ";
         $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
-        VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
+                    VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
         echo $sql_user; 
         $db->query($sql_user);
         }

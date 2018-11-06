@@ -1,5 +1,5 @@
 <?php
-    include('connectDB.php');
+    include('../common/connectDB.php');
 
     $db = connectToDB();
     $inventoryEntryNr = $_POST['nr'];
