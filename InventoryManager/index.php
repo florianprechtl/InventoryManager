@@ -1,4 +1,4 @@
 <?php
 include('src/common/basicFunctions.php');
 
-redirect('src/common/login.php');
+redirect('src/login/login.php');
