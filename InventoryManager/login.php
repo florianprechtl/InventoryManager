@@ -1,5 +1,5 @@
 <?php
-    include('registermodal.php');
+    include('registerNewUser_Modal.php');
 ?>
 <html>
 

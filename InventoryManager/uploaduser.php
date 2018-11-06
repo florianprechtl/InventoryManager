@@ -25,6 +25,6 @@ print_r($_POST);
         
         else { 
             echo "  Password does not equals, try it again  ";
-            echo "<div class='btn btn-primary'><a href='registermodal.php'>Do the demand again</a></div>";
+            echo "<div class='btn btn-primary'><a href='registerNewUser_Modal.php'>Do the demand again</a></div>";
              }
 ?>
