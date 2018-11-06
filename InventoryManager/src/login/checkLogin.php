@@ -1,5 +1,6 @@
 <?php
 	include('../common/connectDB.php');
+    include('../common/basicFunctions.php');
 	
     $db = connectToDB();
 
