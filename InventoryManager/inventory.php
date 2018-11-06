@@ -7,8 +7,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/resetCss.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/inventoryStyles.css">
@@ -38,6 +38,7 @@
         <!--Search bar and Inventory select-->
         <form method="GET" action="inventory.php" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
+                <!-- Left side - inventory select -->
                 <div class="col-sm-5">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
@@ -67,7 +68,7 @@
                                         }
                                     }
                                 }
-                                
+
                                 if (!isset($_GET['inventory'])) {
                                     // has to be another default value afterwards, when we have user specific inventories
                                     $inventory = 1;
@@ -76,6 +77,8 @@
                         </select>
                     </div>
                 </div>
+
+                <!-- Right side - search bar -->
                 <div class="col-sm-5">
                     <label for="exampleFormControlSelect1">Search for specific entries:</label>
                     <div class="input-group" id="adv-search">
@@ -85,7 +88,6 @@
                             <div class="btn-group" role="group">
                                 <div class="dropdown dropdown-lg search-assesories">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-
                                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
@@ -108,13 +110,13 @@
             </div>
         </form>
 
-        <!--Inventory Showplace-->
+        <!-- Inventory entries showcase -->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
             <div class="inventory-item-preview icon-box" data-toggle="modal" data-target="#myModal">
                 <a><i class="fas fa-plus add-entry-icon"></i></a>
             </div>
             <!-- Modal -->
-            <!-- that's where the included modal gets included afterwards -->
+            <!-- That's where the included addInventoryEntry modal gets included afterwards -->
 
             <?php
                 $db = connectToDB();
