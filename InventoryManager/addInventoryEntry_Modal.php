@@ -1,9 +1,3 @@
-<?php
-include('connectDB.php');
-
-$db = connectToDB();
-?>
-
 <html>
 
 <head>
@@ -86,6 +80,8 @@ $db = connectToDB();
                                                     <select class="form-control" name="name_prod_existing">
                                                         <option value=""></option>
                                                         <?php
+                                                        $db = connectToDB();
+
                                                         class Product {
                                                             public $name;
                                                             public $description;
