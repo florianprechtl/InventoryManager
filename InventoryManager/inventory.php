@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('connectDB.php');
     include('addInventoryEntry_Modal.php');
 ?>
