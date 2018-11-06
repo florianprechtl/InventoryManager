@@ -1,5 +1,6 @@
 ﻿<?php
     include('../../common/connectDB.php');
+    include('../../common/basicFunctions.php');
 
     $db = connectToDB();
     $firstname = $_POST['firstname'];
@@ -22,8 +23,6 @@
             $db->query($sql_user);
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
-            echo "  Password does not equals, try it again  ";
-            echo "<div class='btn btn-primary'><a href='registerNewUser_Modal.php'>Do the demand again</a></div>";
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
         }
 ?>
