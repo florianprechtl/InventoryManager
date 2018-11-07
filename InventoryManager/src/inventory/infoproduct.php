@@ -46,15 +46,15 @@
                         
                         <?php
                                                     $db = connectToDB();
-                                                    class Product {
+                                                   /* class Product {
                                                         public $name;
                                                         public $description;
-                                                        public $img;
-                                                        public function __construct($name, $description, $img) {
+                                                        public $unit;
+                                                        public function __construct($name, $description, $unit) {
                                                             $this->name = $name;
                                                             $this->description = $description;
-                                                            $this->img = $img;
-                                                        }
+                                                            $this->unit = $unit;
+                                                        }*/
                                                     }
                                                     $sql = "SELECT * FROM Product";
                                                     $products = [];
@@ -69,9 +69,7 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                          //3
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Image]</option>";
-                                                            
+                                                          
                                                             
                                                            echo '<br>';
                                                            echo '<br>'; 
