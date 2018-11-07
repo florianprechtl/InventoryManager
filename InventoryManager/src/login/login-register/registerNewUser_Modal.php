@@ -1,3 +1,5 @@
+<!-- Modal of registration that can appear on the login page -->
+
 <?php
     include('../../common/connectDB.php');
 ?>
