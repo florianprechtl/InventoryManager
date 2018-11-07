@@ -63,7 +63,7 @@
                                                         while ($row = $result->fetch_assoc()) {
                                                             array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                             echo "<option value='$row[ProdNr]'>$row[Name]</option>";
-                                                            echo "<option value='$row[ProdNr]'>$row[Description]</option>";
+                                                           // echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                         }
                                                     }
                                                     ?>
