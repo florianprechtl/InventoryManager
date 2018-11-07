@@ -49,11 +49,11 @@
                                                     class Product {
                                                         public $name;
                                                         public $description;
-                                                        //public $unit;
-                                                        /*public function __construct($name, $description, $unit) {
+                                                        public $unit;
+                                                        public function __construct($name, $description, $unit) {
                                                             $this->name = $name;
                                                             $this->description = $description;
-                                                            $this->unit = $unit;*/
+                                                            $this->unit = $unit;
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Product";
@@ -69,7 +69,8 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                          //3
-                                                          
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
+                                                          echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
                                                             
                                                            echo '<br>';
                                                            echo '<br>'; 
@@ -78,15 +79,7 @@
                                                     }
                                                     ?>
 
-                            <p> Product Name :   </p>
                             
-                            <p style = "color:blue"> My name
-                            </p>
-
-                            <p> Description : </p>
-               
-                            <p style = "color:blue"> My description
-                            </p>
                
                             <p> Amount : </p>
                
