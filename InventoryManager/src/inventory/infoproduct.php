@@ -35,7 +35,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Product Statut</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Product Info</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -63,7 +63,7 @@
                                                         while ($row = $result->fetch_assoc()) {
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                          //1
-                                                          echo '  <span style = "color:blue"; "font-variant: small-caps" ;> Product Name : </span>';
+                                                          echo '  <span style = "color:blue; font-variant: small-caps"> Product Name : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Name]</option>";
                                                          //2
                                                           echo '  <span style = "color:blue"> Description : </span>';  
