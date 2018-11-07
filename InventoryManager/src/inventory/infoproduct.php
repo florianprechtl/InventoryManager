@@ -62,6 +62,7 @@
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
+                                                          echo "  <p style = "color:blue"> My name  </p>";
                                                           echo "<option value='$row[ProdNr]'>$row[Name]</option>";
                                                           echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                         }
