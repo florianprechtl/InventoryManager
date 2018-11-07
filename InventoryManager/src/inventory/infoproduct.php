@@ -107,7 +107,7 @@
                                                           echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
                                                             
                                                             
-                                                          if ($row[ProductNr] == $row[ProdNr]) 
+                                                          if (ProductNr == ProdNr) 
                                                                      {
                                                                   echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
                                                                   echo "<option value='$row[ProductNr]'>$row[ProductNr]</option>";
