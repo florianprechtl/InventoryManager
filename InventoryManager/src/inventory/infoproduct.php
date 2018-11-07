@@ -46,7 +46,7 @@
                         
                         <?php
                                                     $db = connectToDB();
-                                                   /* class Product {
+                                                    class Product {
                                                         public $name;
                                                         public $description;
                                                         public $unit;
@@ -54,7 +54,7 @@
                                                             $this->name = $name;
                                                             $this->description = $description;
                                                             $this->unit = $unit;
-                                                        }*/
+                                                        }
                                                     }
                                                     $sql = "SELECT * FROM Product";
                                                     $products = [];
