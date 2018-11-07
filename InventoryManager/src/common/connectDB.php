@@ -1,3 +1,5 @@
+<!-- Code shared on the teacher's github -->
+
 <?php
     function connectToDB() {
         // Create database connection
