@@ -43,7 +43,7 @@
       
         
            <div class="mx-auto">
-                        
+                        <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                         <?php
                                                     $db = connectToDB();
                                                     class Product {
@@ -77,8 +77,44 @@
                                                             
                                                         }
                                                     }
-                                                    ?>
+                             ?>
+               
+               <!-- INVENTORY ENTRY TABLE : AMOUNT & STATUS -->
 
+               <?php
+                                                    $db = connectToDB();
+                                                    class Inventoryentry {
+                                                        public $productnr;
+                                                        public $amount;
+                                                        public $status;
+                                                        public function __construct($productnr, $amount, $status) {
+                                                            $this->productnr = $productnr;
+                                                            $this->amount = $amount;
+                                                            $this->status = $status;
+                                                        }
+                                                    }
+                                                    $sql = "SELECT * FROM Inventoryentry";
+                                                    $products = [];
+                                                    $result = $db->query($sql);
+                                                    if ($result->num_rows > 0) {
+                                                        while ($row = $result->fetch_assoc()) {
+                                                            // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
+                                                         //1
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
+                                                          echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
+                                                         //2
+                                                        /*  echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
+                                                          echo "<option value='$row[ProdNr]'>$row[Description]</option>";
+                                                         //3
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
+                                                          echo "<option value='$row[ProdNr]'>$row[Unit]</option>";*/
+                                                            
+                                                           echo '<br>';
+                                                           echo '<br>'; 
+                                                            
+                                                        }
+                                                    }
+                                                    ?>
                             
                
                             <p> Amount : </p>
