@@ -88,7 +88,7 @@
                
                
                
-               //Utilisation de Product table :
+               //Utilisation de Product table :                                                   
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {                                                       
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
@@ -106,25 +106,32 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
                                                             
+                                                            
+                                                          if ($row[ProductNr] == $row[ProdNr]) 
+                                                                     {
+                                                                          if ($resultD->num_rows > 0)
+                                                                             {
+                                                                                  while ($row = $resultD->fetch_assoc())
+                                                                                     {                                                         
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
+                                                                                          echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
+                                                            
+                                                                                          echo '<br>';
+                                                                                          echo '<br>'; 
+                                                            
+                                                                                       }
+                                                                               }
+                                                       
+                                                                       }
                                                            echo '<br>';
                                                            echo '<br>'; 
+                                                          
                                                             
                                                         }
                                                     }
                
                //Utilisation de InventoryEntry table :
-                                                    if ($resultD->num_rows > 0) {
-                                                        while ($row = $resultD->fetch_assoc()) {
-                                                            // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
-                                                         //1
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
-                                                          echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
-                                                            
-                                                           echo '<br>';
-                                                           echo '<br>'; 
-                                                            
-                                                        }
-                                                    }
+                                                  
                        
                
                
