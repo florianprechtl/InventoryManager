@@ -35,7 +35,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Product Info</h5>
+        <h5 class="modal-title" id="exampleModalLabel">PRODUCT INFO </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -57,7 +57,7 @@
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Product";
-                                                    $products = [];
+                                                   // $products = [];
                                                     $result = $db->query($sql);
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {
