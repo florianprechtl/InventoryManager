@@ -63,7 +63,7 @@
                                                         while ($row = $result->fetch_assoc()) {
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                          //1
-                                                          echo '  <span style = "color:blue; font-variant: small-caps"> Product Name : </span>';
+                                                          echo '  <span style = "color:dark blue; font-variant: small-caps"> Product name : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Name]</option>";
                                                          //2
                                                           echo '  <span style = "color:blue"> Description : </span>';  
