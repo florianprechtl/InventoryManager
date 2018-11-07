@@ -43,7 +43,8 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
-                     <! ----for infoproduct use that ---->
+                            
+                     <!--for infoproduct use that -->
                             <?php
                                 $db = connectToDB();
 
