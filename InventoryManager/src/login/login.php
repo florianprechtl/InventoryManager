@@ -1,3 +1,5 @@
+<!-- This code is for the login page and permits the access to the registration modal -->
+
 <?php
     include('login-register/registerNewUser_Modal.php');
 ?>
