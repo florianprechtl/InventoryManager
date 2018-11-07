@@ -1,4 +1,6 @@
-﻿<?php
+<!-- As its name indicates, this code is to place the characteristics of new users into the db-->
+
+<?php
     include('../../common/connectDB.php');
     include('../../common/basicFunctions.php');
 
