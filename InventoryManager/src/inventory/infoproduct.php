@@ -50,18 +50,24 @@
                                                         public $name;
                                                         public $description;
                                                         public $unit;
-                                                        public function __construct($name, $description, $unit) {
+                                                        public $prodnr;
+                                                        public function __construct($name, $description, $unit, $prodnr) {
                                                             $this->name = $name;
                                                             $this->description = $description;
                                                             $this->unit = $unit;
+                                                            $this->prodnr = $prodnr;
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Product";
                                                    // $products = [];
                                                     $result = $db->query($sql);
                                                     if ($result->num_rows > 0) {
-                                                        while ($row = $result->fetch_assoc()) {
+                                                        while ($row = $result->fetch_assoc()) {                                                       
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
+                                                       
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number : </span>';
+                                                          echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
+                                                            
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Name]</option>";
