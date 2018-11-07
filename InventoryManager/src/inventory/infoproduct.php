@@ -43,7 +43,9 @@
       
         
            <div class="mx-auto">
-                        <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
+               
+                                             <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
+               
                         <?php
                                                     $db = connectToDB();
                                                     class Product {
@@ -61,11 +63,37 @@
                                                     $sql = "SELECT * FROM Product";
                                                    // $products = [];
                                                     $result = $db->query($sql);
+               
+               
+               
+                                     // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
+
+          
+                                                    $db = connectToDB();
+                                                    class Inventoryentry {
+                                                        public $productnr;
+                                                        public $amount;
+                                                        public $status;
+                                                        public function __construct($productnr, $amount, $status) {
+                                                            $this->productnr = $productnr;
+                                                            $this->amount = $amount;
+                                                            $this->status = $status;
+                                                        }
+                                                    }
+                                                    $sqlD = "SELECT * FROM Inventoryentry";
+                                                    //$products = [];
+                                                    $resultD = $db->query($sqlD);
+               
+               
+               
+               
+               
+               //Utilisation de Product table :
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {                                                       
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                        
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number : </span>';
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
                                                             
                                                          //1
@@ -83,44 +111,24 @@
                                                             
                                                         }
                                                     }
-                             ?>
                
-               <!-- INVENTORY ENTRY TABLE : AMOUNT & STATUS -->
-
-               <?php
-                                                    $db = connectToDB();
-                                                    class Inventoryentry {
-                                                        public $productnr;
-                                                        public $amount;
-                                                        public $status;
-                                                        public function __construct($productnr, $amount, $status) {
-                                                            $this->productnr = $productnr;
-                                                            $this->amount = $amount;
-                                                            $this->status = $status;
-                                                        }
-                                                    }
-                                                    $sqlD = "SELECT * FROM Inventoryentry";
-                                                    //$products = [];
-                                                    $resultD = $db->query($sqlD);
+               //Utilisation de InventoryEntry table :
                                                     if ($resultD->num_rows > 0) {
                                                         while ($row = $resultD->fetch_assoc()) {
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
                                                           echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
-                                                         //2
-                                                        /*  echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Description]</option>";
-                                                         //3
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Unit]</option>";*/
                                                             
                                                            echo '<br>';
                                                            echo '<br>'; 
                                                             
                                                         }
                                                     }
-                                                    ?>
+                       
+               
+               
+                           ?>
                             
                
                             <p> Amount : </p>
