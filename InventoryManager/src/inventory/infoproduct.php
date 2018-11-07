@@ -93,11 +93,11 @@
                                                             $this->status = $status;
                                                         }
                                                     }
-                                                    $sql = "SELECT * FROM Inventoryentry";
-                                                    $products = [];
-                                                    $result = $db->query($sql);
-                                                    if ($result->num_rows > 0) {
-                                                        while ($row = $result->fetch_assoc()) {
+                                                    $sqlD = "SELECT * FROM Inventoryentry";
+                                                    //$products = [];
+                                                    $resultD = $db->query($sqlD);
+                                                    if ($resultD->num_rows > 0) {
+                                                        while ($row = $resultD->fetch_assoc()) {
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
