@@ -15,6 +15,7 @@
             <!-- Form which contains body (input elements) and footer (submit button) of the modal -->
             <form id="inventoryEntryForm" method="POST" action="uploadInventoryEntry.php?inventory=<?php echo $inventory ?>" enctype="multipart/form-data">
 
+                
                 <!-- Modal body-->
                 <div class="modal-body">
 
