@@ -49,11 +49,11 @@
                                                     class Product {
                                                         public $name;
                                                         public $description;
-                                                        public $unit;
-                                                        public function __construct($name, $description, $unit) {
+                                                        //public $unit;
+                                                        /*public function __construct($name, $description, $unit) {
                                                             $this->name = $name;
                                                             $this->description = $description;
-                                                            $this->unit = $unit;
+                                                            $this->unit = $unit;*/
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Product";
