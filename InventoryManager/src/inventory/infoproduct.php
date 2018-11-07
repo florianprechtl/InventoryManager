@@ -66,9 +66,11 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Name]</option>";
                                                          //2
-                                                          echo '  <span style = "color:blue"> Description : </span>';  
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                          //3
+                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
+                                                          echo "<option value='$row[ProdNr]'>$row[Image]</option>";
                                                             
                                                             
                                                            echo '<br>';
