@@ -1,4 +1,6 @@
+<!-- Meme code mais pour afficher une valeur particulière -->
 <?php
+
 	include("../common/connectDB.php");
 	
     $db = connectToDB();
