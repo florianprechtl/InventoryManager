@@ -1,3 +1,5 @@
+<!-- echo are ephemeral, we will not see this intermediate page at the end -->
+
 <?php
 	include('../common/connectDB.php');
     include('../common/basicFunctions.php');
