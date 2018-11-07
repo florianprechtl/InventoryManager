@@ -23,6 +23,7 @@
     <title> Product Info </title>
 </head>
 
+    
 <body>
     
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -42,7 +43,29 @@
       
         
            <div class="mx-auto">
-
+                        
+                        <?php
+                                                    $db = connectToDB();
+                                                    class Product {
+                                                        public $name;
+                                                        public $description;
+                                                        public $img;
+                                                        public function __construct($name, $description, $img) {
+                                                            $this->name = $name;
+                                                            $this->description = $description;
+                                                            $this->img = $img;
+                                                        }
+                                                    }
+                                                    $sql = "SELECT * FROM Product";
+                                                    $products = [];
+                                                    $result = $db->query($sql);
+                                                    if ($result->num_rows > 0) {
+                                                        while ($row = $result->fetch_assoc()) {
+                                                            array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
+                                                            echo "<option value='$row[ProdNr]'>$row[Name]</option>";
+                                                        }
+                                                    }
+                                                    ?>
 
                             <p> Product Name :   </p>
                             
