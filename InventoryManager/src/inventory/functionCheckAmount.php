@@ -27,13 +27,13 @@
     
     //echo '<span> LGFU </span>';
 
-    function checkinfo($numerot) {
+    function checkinfo($numero) {
    
    // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
 
           
                                                     $db = connectToDB();
-                                                    $numero = $numerot; 
+                                                    
     
                                       echo '<span> Hey Jixou </span>';
                                       echo '<br>';
