@@ -23,7 +23,7 @@
                 if ($row['Password'] == $password) {
                     echo "Login succesfull <br><br>";
                     echo "UserNr: " . $row['UserNr'].
-                        "<br>Userame: " . $row['Username'].
+                        "<br>Username: " . $row['Username'].
                         "<br>Password: " . $row['Password'].
                         "<br>Firstname: " . $row['Firstname'].
                         "<br>Lastname: " . $row['Lastname'].
