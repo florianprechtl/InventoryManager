@@ -69,7 +69,7 @@
                                                                                           echo '<br>';
                                                                                           //echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
                                                                                           echo $row[Amount];
-                                                                                          $totalAmoun += $row[Amount];
+                                                                                          $totalAmount += $row[Amount];
                                                             
                                                                                           echo '<br>';
                                                                                           echo '<br>'; 
