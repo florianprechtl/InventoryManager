@@ -38,6 +38,7 @@
                             $result = $db->query($sql);
 
                             if (isset($_GET["inventory"])) {
+                                echo "<option value=''  selected>oben</option>";
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row['InventoryNr']) {
@@ -49,6 +50,7 @@
                                     }
                                 }
                             } else {
+                                echo "<option value=''  selected>unten</option>";
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
                                         echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
