@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModal<?php echo $inventory_nr ?>" tabindex="-1" role="dialog"
+<div class="modal fade" id="exampleModal<?php echo $inventoryEntryNr ?>" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -13,10 +13,8 @@
             <div class="mx-auto">
                 <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                 <?php
-
-                    checkfirstinfo(47);
-                    checksecondinfo(47);
-
+                    checkfirstinfo($inventoryEntryNr);
+                    checksecondinfo($inventoryEntryNr);
                 ?>
             </div>
 
