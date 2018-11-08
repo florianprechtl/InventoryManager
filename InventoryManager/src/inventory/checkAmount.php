@@ -63,7 +63,8 @@
                                                                                       {
                                                    
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
-                                                                                          echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
+                                                                                          //echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
+                                                                                          echo $row[Amount];
                                                             
                                                                                           echo '<br>';
                                                                                           echo '<br>'; 
