@@ -16,7 +16,6 @@
                 $db = connectToDB();
 
                 $sql = "SELECT * FROM Product join Inventoryentry where Product.ProdNr = Inventoryentry.ProductNr and InventoryEntryNr = $inventoryEntryNr";
-                echo $sql;
                 $result = $db->query($sql);
 
                 //Utilisation de Product table :
