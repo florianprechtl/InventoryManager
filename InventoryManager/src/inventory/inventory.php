@@ -121,8 +121,12 @@
                 $db = connectToDB();
         
                 if (isset($_SESSION['inventory_nr'])) {
-                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr]";
+                    if (isset($_GET['searchEntry'])) {
+                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] and Name like '%$_GET[searchEntry]%'";
+                    } else {
+                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr]";
 
+                    }
                     $result = $db->query($sql);
 
                     if ($result->num_rows > 0) {
