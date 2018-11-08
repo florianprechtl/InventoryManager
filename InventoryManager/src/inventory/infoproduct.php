@@ -1,7 +1,6 @@
 <?php
     include('../common/connectDB.php');
-    include('../inventory/functionCheckAmount.php');
-    include('https://github.com/florianprechtl/InventoryManager/blob/master/InventoryManager/src/inventory/functionCheckAmount.php');
+    //include('../inventory/functionCheckAmount.php');
 
 
 ?>
@@ -110,6 +109,70 @@
                
                
                            ?>
+               
+               <?php
+    
+   
+    checkinfo(42);
+    
+    function checkinfo($numero) {
+   
+   // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
+
+          
+                                                    $db = connectToDB();
+                                                    
+    
+                                      echo '<span> Hey Jixou </span>';
+                                      echo '<br>';
+
+                                                    class Inventoryentry 
+                                                    {
+                                                        public $productnr;
+                                                        public $amount;
+                                                        public $status;
+                                                        public function __construct($productnr, $amount, $status)
+                                                        {
+                                                            $this->productnr = $productnr;
+                                                            $this->amount = $amount;
+                                                            $this->status = $status;
+                                                        }
+                                                    }
+                                                    $sql = "SELECT * FROM Inventoryentry";
+                                                    $result = $db->query($sql);         
+                                               
+                                                    $numero=43; 
+                                                    $totalAmount = 0;
+   
+                                                    if ($result->num_rows > 0)
+                                                          {
+                                                              while ($row = $result->fetch_assoc())
+                                                                               {          
+                                                                                    // echo '<span> La mec </span>';
+                                                                                    // echo '<br>';
+                                                                 
+
+                                                                                      if ($row[ProductNr] == $numero) 
+                                                                                      {
+                                                                                          
+                                                    
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
+                                                                                          echo '<br>';
+                                                                                          echo $row[Amount];
+                                                                                          $totalAmount += $row[Amount];
+                                                            
+                                                                                          echo '<br>';
+                                                                                          echo '<br>'; 
+                                                            
+                                                                                       }                
+                                                                                   } 
+                                                           }
+                                                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
+                                                    echo $totalAmount;                                   
+                                                    echo '<br>';
+                   }
+        
+           ?>
 
               </div>
           
