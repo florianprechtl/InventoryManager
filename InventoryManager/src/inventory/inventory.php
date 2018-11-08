@@ -80,8 +80,8 @@
                         <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group">
-                                <div class="dropdown dropdown-lg search-assesories">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+<!--                                <div class="dropdown dropdown-lg search-assesories">-->
+<!--                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>-->
 <!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
 <!--                                        <form class="form-horizontal" role="form">-->
 <!--                                            <div class="form-group">-->
@@ -95,7 +95,7 @@
 <!--                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>-->
 <!--                                        </form>-->
 <!--                                    </div>-->
-                                </div>
+<!--                                </div>-->
                                 <button type="submit" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
