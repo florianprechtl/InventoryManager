@@ -48,7 +48,7 @@
                
                         <?php
                                                     $db = connectToDB();
-                                                    $numero = 43;
+                                                    $numero = 42;
                
                
                                                     class Product {
