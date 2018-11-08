@@ -47,14 +47,10 @@
                             
                      <!--for infoproduct use that -->
                             <?php
-                            echo "<option value='$row[InventoryNr]'>$_SESSION[user_nr]</option>";
-                            echo "<option value='$row[InventoryNr]'>";
-                            echo "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
-                            echo "</option>";
-
                                 $db = connectToDB();
 
-                                $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
+                                // $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
+                                $sql = "Select * from Inventory";
 
                                 $result = $db->query($sql);
 
