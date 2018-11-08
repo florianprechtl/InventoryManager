@@ -84,6 +84,7 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
                                                           echo $row[Name];
                                                           echo '<br>';
+                                                          echo '<br>';
 
                                                          //2
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
@@ -92,7 +93,7 @@
                                                          //3
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           echo $row[Unit];
-                                                          
+                                                          echo '<br>';
                                                            
                                                          
 
@@ -155,7 +156,7 @@
                                                                                       {
                                                                                           
                                                     
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock </span>';
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Amount in stock </span>';
                                                                                           echo  $stock ;
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
                                                                                           
@@ -172,6 +173,7 @@
                                                                                           
                                                                                           
                                                                                           $stock += 1;
+                                                                                         
                                                                                          
                                                                                          /* if( $row[Status] == 0) 
                                                                                               {
@@ -193,8 +195,10 @@
                                                                                               } 
                                                             
                                                                                           echo '<br>'; 
+                                                                                          echo '<br>';
                                                             
-                                                                                       }                
+                                                                                       }        
+                                                                  
                                                                                    } 
                                                            }
                                                     echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
