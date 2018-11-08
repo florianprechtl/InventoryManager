@@ -88,31 +88,35 @@
                                                     $resultD = $db->query($sqlD);*/
                
                
-               
+                                                    $numero = 43;
                
                
                //Utilisation de Product table :                                                   
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {                                                       
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
-                                                       if ($row[ProdNr] == 42){
+                                                       if ($row[ProdNr] == $numero){
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
                                                           //echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
                                                            echo $row[ProdNr];
+                                                           echo '<br>';
                                                             
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
                                                           //echo "<option value='$row[ProdNr]'>$row[Name]</option>";
                                                           echo $row[Name];
+                                                          echo '<br>';
 
                                                          //2
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Description]</option>";
+                                                         // echo "<option value='$row[ProdNr]'>$row[Description]</option>";
                                                           echo $row[Description];
+                                                          echo '<br>';
                                                          //3
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           //echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
                                                           echo $row[Unit];
+                                                           
                                                             
                                                             
                        //Utilisation de InventoryEntry table :
