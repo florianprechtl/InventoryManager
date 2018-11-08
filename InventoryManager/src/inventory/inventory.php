@@ -11,7 +11,7 @@
 
         <!--Header-->
         <div class="row header">
-            <h1 class="col-sm-12" align="center">Inventory Manager<i class="btn btn-sm btn-dark float-right" href="../logout/logout.php">Logout</i></h1>
+            <h1 class="col-sm-12" align="center">Inventory Manager<a class="btn btn-sm btn-dark float-right" href="../logout/logout.php">Logout</a></h1>
         </div>
 
         <!--Search bar and Inventory select-->
