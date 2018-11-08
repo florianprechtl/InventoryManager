@@ -97,17 +97,22 @@
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
                                                        if ($row[ProdNr] == 42){
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
+                                                          //echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
+                                                           echo $row[ProdNr];
                                                             
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Name]</option>";
+                                                          //echo "<option value='$row[ProdNr]'>$row[Name]</option>";
+                                                          echo $row[Name];
+
                                                          //2
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[Description]</option>";
+                                                          echo $row[Description];
                                                          //3
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                                                          echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
+                                                          //echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
+                                                          echo $row[Unit];
                                                             
                                                             
                        //Utilisation de InventoryEntry table :
