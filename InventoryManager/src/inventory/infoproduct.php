@@ -156,8 +156,24 @@
                                                                                           echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
                                                                                           
+                                                                                          echo '<br>'; 
+
+                                                                                          
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
-                                                                                          echo $row[Status];
+                                                                                         
+                                                                                          if( $row[Status] == NULL) 
+                                                                                              {
+                                                                                              
+                                                                                              echo '<span> non-opened </span>';
+                                                                            
+                                                                                              } 
+                                                                                          else
+                                                                                              {
+                                                                                              
+                                                                                              echo '<span> opened </span>';
+
+                                                                                              } 
+                                                                                          
                                                             
                                                                                           echo '<br>'; 
                                                             
