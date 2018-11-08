@@ -32,7 +32,7 @@
     // Insert of userInventoryEntry with a prepare statement
     $sql = "INSERT INTO InventoryUserMatrix (MatrixNr, InventoryNr, UserNr) VALUES (?, ?, ?)";
     $stmt = $db->prepare($sql);
-    $stmt->bind_param('iii', $matrix_nr, $name_inventory, $user_nr);
+    $stmt->bind_param('iii', $matrix_nr, $inventory_nr, $user_nr);
     $stmt->execute();
 
     redirect("inventory.php?inventory=$inventory_nr");
