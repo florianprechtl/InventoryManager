@@ -48,7 +48,7 @@
                             <?php
                                 $db = connectToDB();
 
-                                $sql = "SELECT * FROM Inventory";
+                                $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[UserNr]";
 
                                 $result = $db->query($sql);
 
