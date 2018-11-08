@@ -34,7 +34,7 @@
                     session_start();
                     $_SESSION['user_nr'] = $row['UserNr'];
                     echo "<br><br>";
-                    echo $_SESSION['user_nr'];
+                    echo "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
 
 
                     // redirect('../inventory/inventory.php');
