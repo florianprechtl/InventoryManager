@@ -19,7 +19,6 @@
                 Inventory Manager
                 <a class="btn btn-sm btn-light margin-bottom margin-top margin-left float-right" href="../logout/logout.php">Logout</a>
                 <p class="float-right header-user-show">signed in as <?php echo $_SESSION['user_name']?></p>
-
             </h1>
         </div>
 
@@ -33,7 +32,7 @@
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
                             
-                     <!--for infoproduct use that -->
+                     <!-- for info product use that -->
                             <?php
                                 $db = connectToDB();
 
@@ -45,7 +44,7 @@
                                         while($row = $result->fetch_assoc()) {
                                             if ($_GET['inventory'] == $row['InventoryNr']) {
                                                 echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                                $inventory = $_GET['inventory'];
+                                                $_SESSION['inventory_nr'] = $inventory;
                                             } else {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                             }
@@ -55,6 +54,11 @@
                                     if ($result->num_rows > 0) {
                                         while($row = $result->fetch_assoc()) {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+
+                                            // first option gets selected
+                                            if (!isset($_SESSION['inventory_nr'])) {
+                                                $_SESSION['inventory_nr'] = $row[InventoryNr];
+                                            }
                                         }
                                     }
                                 }
@@ -113,24 +117,27 @@
             <?php
                 $db = connectToDB();
         
-                if (isset($_GET["inventory"])) {
-                    $inventoryNr = $_GET["inventory"];
-                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $inventoryNr";
+                if (isset($_SESSION["inventory_nr"])) {
+                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[$inventory_nr]";
+
+                    $result = $db->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            $img = file_get_contents("../../imgUploads/$row[Image]");
+
+                            echo "<div class='inventory-item-preview' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
+                            echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
+                            echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
+                        }
+                    }
                 } else {
-                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = 1;";
+                    echo "  <div class='alert alert-danger' role='alert'>
+                                No entries!
+                            </div>";
                 }
         
-                $result = $db->query($sql);
 
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        $img = file_get_contents("../../imgUploads/$row[Image]");
-                        
-                        echo "<div class='inventory-item-preview' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
-                        echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
-                        echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
-                    }
-                }
             ?>
         </div>
     </div>
