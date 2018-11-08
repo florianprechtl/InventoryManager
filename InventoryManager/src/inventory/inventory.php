@@ -117,7 +117,9 @@
             <!-- Modal -->
             <!-- That's where the included addInventoryEntry modal gets included afterwards -->
             <?php
-                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $_SESSION['inventory_nr']));
+                if (isset($_SESSION['inventory_nr'])) {
+                    includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $_SESSION['inventory_nr']));
+                }
             ?>
 
             <?php
