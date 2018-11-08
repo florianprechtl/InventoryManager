@@ -79,7 +79,7 @@
                     <div class="input-group" id="adv-search">
                         <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
                         <div class="input-group-btn">
-                            <div class="btn-group" role="group">
+                            <div class="btn-group search-button" role="group">
 <!--                                <div class="dropdown dropdown-lg search-assesories">-->
 <!--                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>-->
 <!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
