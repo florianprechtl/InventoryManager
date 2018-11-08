@@ -86,6 +86,10 @@ $(document).ready(function() {
         })
     });
 
+    $('#select_prod_existing').change(function() {
+        alert('jo there is something changing');
+    });
+
     function preshowPicture(input) {
         var image = new Image();
         image.src = 'data:image/png;' + input[0] + ',' + input[1];
