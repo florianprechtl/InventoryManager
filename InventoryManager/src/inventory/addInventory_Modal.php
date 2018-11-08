@@ -13,7 +13,7 @@
 
 
             <!-- Form which contains body (input elements) and footer (submit button) of the modal -->
-            <form id="inventoryEntryForm" method="POST" action="uploadInventory.php" enctype="multipart/form-data">
+            <form id="inventoryEntryForm" method="GET" action="uploadInventory.php" enctype="multipart/form-data">
 
                 <!-- Modal body-->
                 <div class="modal-body">
