@@ -119,7 +119,7 @@
                                                     $db = connectToDB();
                                                     
     
-                                      echo '<span> Hey Jixou </span>';
+                                     // echo '<span> Hey Jixou </span>';
                                       echo '<br>';
 
                                                     class Inventoryentry 
@@ -155,6 +155,9 @@
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
                                                                                           echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
+                                                                                          
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
+                                                                                          echo $row[Status];
                                                             
                                                                                           echo '<br>'; 
                                                             
