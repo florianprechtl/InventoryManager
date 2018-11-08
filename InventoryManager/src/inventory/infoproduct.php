@@ -58,11 +58,13 @@
                                                         public $description;
                                                         public $unit;
                                                         public $prodnr;
+                                                        
                                                         public function __construct($name, $description, $unit, $prodnr) {
                                                             $this->name = $name;
                                                             $this->description = $description;
                                                             $this->unit = $unit;
                                                             $this->prodnr = $prodnr;
+                                                            
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Product";
@@ -130,11 +132,13 @@
                                                         public $productnr;
                                                         public $amount;
                                                         public $status;
-                                                        public function __construct($productnr, $amount, $status)
+                                                        public $expiringdate;
+                                                        public function __construct($productnr, $amount, $status, $expiringdate)
                                                         {
                                                             $this->productnr = $productnr;
                                                             $this->amount = $amount;
                                                             $this->status = $status;
+                                                            $this->expiringdate = $expiringdate;
                                                         }
                                                     }
                                                     $sql = "SELECT * FROM Inventoryentry";
@@ -170,11 +174,7 @@
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status </span>';
                                                                                           echo  $stock ;
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
-                                                                                          
-                                                                                          
-                                                                                          $stock += 1;
-                                                                                         
-                                                                                         
+
                                                                                          /* if( $row[Status] == 0) 
                                                                                               {
                                                                                               
@@ -193,6 +193,15 @@
                                                                                               echo '<span> no relative info </span>';
 
                                                                                               } 
+                                                                                          
+                                                                                          echo '<br>'; 
+                                                                                          
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date </span>';
+                                                                                          echo  $stock ;
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                                                                          echo $row[ExpiringDate];
+                                                                                          
+                                                                                          $stock += 1;
                                                             
                                                                                           echo '<br>'; 
                                                                                           echo '<br>';
