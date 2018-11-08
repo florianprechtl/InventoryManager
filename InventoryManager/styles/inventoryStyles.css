@@ -162,3 +162,14 @@
 #image_upload_icon {
     line-height: 45px;
 }
+
+
+/* other styles */
+
+h1 > p {
+    font-size: 12px;
+}
+
+h1 p {
+    color: green;
+}
