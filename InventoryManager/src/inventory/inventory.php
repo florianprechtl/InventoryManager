@@ -72,7 +72,7 @@
                             </select>
                         </div>
                         <div class="col-sm-2 no-padding-left" style="margin-top: 31px;">
-                            <i class="btn btn-primary" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
+                            <i class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
                             <?php
                                 include('addInventory_Modal.php');
                             ?>

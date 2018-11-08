@@ -31,7 +31,7 @@
 
                 <!-- Modal footer-->
                 <div class="modal-footer">
-                    <button type="submit" name="add_new_inventory" class="btn button-search">Submit</button>
+                    <button type="submit" name="add_new_inventory" class="btn btn-primary">Submit</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </form>
