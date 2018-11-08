@@ -69,7 +69,7 @@
                
                
                
-                                     // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
+                                   /*  // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
 
           
                                                     $db = connectToDB();
@@ -85,7 +85,7 @@
                                                     }
                                                     $sqlD = "SELECT * FROM Inventoryentry";
                                                     //$products = [];
-                                                    $resultD = $db->query($sqlD);
+                                                    $resultD = $db->query($sqlD);*/
                
                
                
@@ -110,8 +110,8 @@
                                                           echo "<option value='$row[ProdNr]'>$row[Unit]</option>";
                                                             
                                                             
-                                                         // if (ProductNr == ProdNr) 
-                                                                    // {
+                       //Utilisation de InventoryEntry table :
+                                                   /*
                                                                   echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
                                                                  // echo "<option value='$row[InventoryEntryNr]'>$row[ProductNr]</option>";
                                                                  echo "<span $row[ProductNr]</span>";
@@ -128,7 +128,7 @@
                                                                                        }
                                                                                }
                                                        
-                                                                      // }
+                                                                      */
                                                            echo '<br>';
                                                            echo '<br>'; 
                                                            
@@ -138,7 +138,6 @@
                                                         }
                                                     }
                
-               //Utilisation de InventoryEntry table :
                                                   
                        
                
