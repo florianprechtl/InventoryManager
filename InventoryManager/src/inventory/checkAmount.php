@@ -57,7 +57,7 @@
                                                     //echo "<span $row[ProductNr]</span>";
                                                     if ($result->num_rows > 0)
                                                           {
-                                                              while ($row = $resul->fetch_assoc())
+                                                              while ($row = $result->fetch_assoc())
                                                                                {          
                                                                                      echo '<span> La </span>';
 
