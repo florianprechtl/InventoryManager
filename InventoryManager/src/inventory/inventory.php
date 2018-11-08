@@ -76,7 +76,7 @@
 
                             <div class="input-group-btn">
                                 <div class="btn-group search-button" role="group">
-                                    <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'>+</button>
+                                    <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
                                 </div>
                             </div>
                         </div>
