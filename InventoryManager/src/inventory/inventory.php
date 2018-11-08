@@ -2,7 +2,7 @@
 
 <?php
     include('../common/basicFunctions.php');
-    includeWithVariables('../common/connectDB.php', null);
+    includeWithVariables('../common/connectDB.php', array());
     include('../common/header_session_start.php');
 ?>
 
