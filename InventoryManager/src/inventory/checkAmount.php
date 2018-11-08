@@ -50,7 +50,8 @@
                                                     //$products = [];
                                                     $result = $db->query($sql);         
                                                
-                                                    $numero=43;
+                                                    $numero=43; 
+                                                    $totalAmount = 0;
    
                                                     if ($result->num_rows > 0)
                                                           {
@@ -58,19 +59,25 @@
                                                                                {          
                                                                                     // echo '<span> La mec </span>';
                                                                                     // echo '<br>';
+                                                                 
 
                                                                                       if ($row[ProductNr] == $numero) 
                                                                                       {
-                                                   
+                                                                                          
+                                                    
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
                                                                                           echo '<br>';
                                                                                           //echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
                                                                                           echo $row[Amount];
+                                                                                          $totalAmoun += $row[Amount];
                                                             
                                                                                           echo '<br>';
                                                                                           echo '<br>'; 
                                                             
-                                                                                       }
-                                                                               } 
+                                                                                       }                
+                                                                                   } 
                                                            }
+                                                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount : </span>';
+                                                    echo $totalAmount;                                   
+                                                    echo '<br>';
                              ?>
