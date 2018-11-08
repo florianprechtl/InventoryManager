@@ -36,8 +36,19 @@
             if (isset($_GET['registerSuccessful'])) {
                 if ($_GET['registerSuccessful'] == 'false') {
                     echo "  <div class='alert alert-danger' role='alert'>
-                                            Registration did not work. Please try again!
-                                        </div>";
+                                Registration did not work. Please try again!
+                            </div>";
+                } else if ($_GET['registerSuccessful'] == 'ture') {
+                    echo "  <div class='alert alert-success' role='alert'>
+                                Registration successful! Please try to login!
+                            </div>";
+                }
+            }
+            if (isset($_GET['goBackDenied'])) {
+                if ($_GET['goBackDenied'] == 'true') {
+                    echo "  <div class='alert alert-danger' role='alert'>
+                                You have to login again. Session timeout!
+                            </div>";
                 }
             }
             ?>

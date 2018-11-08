@@ -22,7 +22,7 @@
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
 
             $db->query($sql_user);
-            redirect("../../inventory/inventory.php?registrationSuccessful=true");
+            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
         }
