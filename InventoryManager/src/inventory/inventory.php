@@ -31,44 +31,43 @@
 
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
-                            
-                     <!-- for info product use that -->
                             <?php
-                                $db = connectToDB();
+                            $db = connectToDB();
 
-                                $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
-                                $result = $db->query($sql);
+                            $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
+                            $result = $db->query($sql);
 
-                                if (isset($_GET["inventory"])) {
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
-                                            if ($_GET['inventory'] == $row['InventoryNr']) {
-                                                echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                                $_SESSION['inventory_nr'] = $inventory;
-                                            } else {
-                                                echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
+                            if (isset($_GET["inventory"])) {
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        if ($_GET['inventory'] == $row['InventoryNr']) {
+                                            echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                            $_SESSION['inventory_nr'] = $_GET['inventory'];
+                                        } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-
-                                            // first option gets selected
-                                            if (!isset($_SESSION['inventory_nr'])) {
-                                                $_SESSION['inventory_nr'] = $row[InventoryNr];
-                                            }
                                         }
                                     }
                                 }
+                            } else {
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
-                                if (!isset($_GET['inventory'])) {
-                                    // has to be another default value afterwards, when we have user specific inventories
-                                    $inventory = 1;
+                                        // first option gets selected
+                                        if (!isset($_SESSION['inventory_nr'])) {
+                                            $_SESSION['inventory_nr'] = $row[InventoryNr];
+                                        }
+                                    }
                                 }
+                            }
+
+                            if (!isset($_GET['inventory'])) {
+                                // has to be another default value afterwards, when we have user specific inventories
+                                $inventory = 1;
+                            }
                             ?>
                         </select>
+
                     </div>
                 </div>
 
@@ -117,7 +116,7 @@
             <?php
                 $db = connectToDB();
         
-                if (isset($_SESSION["inventory_nr"])) {
+                if (isset($_SESSION['inventory_nr'])) {
                     $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[$inventory_nr]";
 
                     $result = $db->query($sql);
