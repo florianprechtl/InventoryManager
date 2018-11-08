@@ -1,6 +1,8 @@
 <?php
     include('../common/connectDB.php');
     include('../inventory/functionCheckAmount.php');
+    include('https://github.com/florianprechtl/InventoryManager/blob/master/InventoryManager/src/inventory/functionCheckAmount.php');
+
 
 ?>
 
