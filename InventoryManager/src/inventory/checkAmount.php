@@ -31,7 +31,7 @@
                                                     $db = connectToDB();
                                                     $numero = $_POST['numero']; 
     
-                                      echo '<span> Hey You </span>';
+                                      echo '<span> Hey Jixou </span>';
                                       echo '<br>';
 
                                                     class Inventoryentry 
