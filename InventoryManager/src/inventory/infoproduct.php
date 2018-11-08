@@ -141,6 +141,7 @@
                                                
                                                     $numero=43; 
                                                     $totalAmount = 0;
+                                                    $stock = 1;
    
                                                     if ($result->num_rows > 0)
                                                           {
@@ -154,8 +155,9 @@
                                                                                       {
                                                                                           
                                                     
-                                                                                          //echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
-                                                                                          //echo $row[Amount];
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock'  .$stock ':</span>';
+                                                                                          $stock += 1;
+                                                                                          echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
                                                                                           
                                                                                           echo '<br>'; 
