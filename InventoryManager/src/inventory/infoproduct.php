@@ -1,178 +1,168 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModal<?php echo $_POST['inventory_nr']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">PRODUCT INFO </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      
-        
-           <div class="mx-auto">
-               
+<div class="modal fade" id="exampleModal<?php echo $inventory_nr ?>" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PRODUCT INFO </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-                                             <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
-                        <?php
-               
-               checkfirstinfo(47);
-               
-               
-               function checkfirstinfo($numero) {
-                                                    $db = connectToDB();
-                                                    
-               
-               
 
-                                                    $sql = "SELECT * FROM Product";
-                                                    $result = $db->query($sql);
-              
-                                                 
-               
-               
-               //Utilisation de Product table :                                                   
-                                                    if ($result->num_rows > 0) {
-                                                        while ($row = $result->fetch_assoc()) { 
-                                                            
-                                                       if ($row['ProdNr'] == $numero){
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
-                                                           echo $row['ProdNr'];
-                                                           echo '<br>';
-                                                            
-                                                         //1
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
-                                                          echo $row['Name'];
-                                                          echo '<br>';
-                                                          echo '<br>';
+            <div class="mx-auto">
 
-                                                         //2
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                                                          echo $row['Description'];
-                                                          echo '<br>';
-                                                         //3
-                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                                                          echo $row['Unit'];
-                                                          echo '<br>';
-                                                           
-                                                         
 
-                                                           }
-                                                          
-                                                            
-                                                        }
-                                                    }
-               
-                                                  
-                       
+                <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
+                <?php
+
+                checkfirstinfo(47);
+
+
+                function checkfirstinfo($numero)
+                {
+                    $db = connectToDB();
+
+
+                    $sql = "SELECT * FROM Product";
+                    $result = $db->query($sql);
+
+
+                    //Utilisation de Product table :
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+
+                            if ($row['ProdNr'] == $numero) {
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
+                                echo $row['ProdNr'];
+                                echo '<br>';
+
+                                //1
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
+                                echo $row['Name'];
+                                echo '<br>';
+                                echo '<br>';
+
+                                //2
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
+                                echo $row['Description'];
+                                echo '<br>';
+                                //3
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
+                                echo $row['Unit'];
+                                echo '<br>';
+
+
+                            }
+
+
+                        }
+                    }
+
+
+                }
+
+                ?>
+
+
+
+                <?php
+
+                checksecondinfo(47);
+
+                function checksecondinfo($numero)
+                {
+
+                    // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
+
+
+                    $db = connectToDB();
+
+
+                    //echo '<span> Hey Jixou </span>';
+                    echo '<br>';
+
+                    $sql = "SELECT * FROM Inventoryentry";
+                    $result = $db->query($sql);
+
+
+                    $totalAmount = 0;
+                    $stock = 1;
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            // echo '<span> La mec </span>';
+                            // echo '<br>';
+
+
+                            if ($row['ProductNr'] == $numero) {
+                                //4
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
+                                echo $stock;
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                echo '<br>';
+
+                                $stock += 1;
+
+                                //5
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
+                                echo $row['Amount'];
+
+                                $totalAmount += $row['Amount'];
+
+                                echo '<br>';
+
+                                //6
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
+
+                                /* if( $row[Status] == 0)
+                                     {
+
+                                     echo '<span> non-opened </span>';
+
+                                     }*/
+                                if ($row['Status'] == 1) {
+
+                                    echo '<span> opened </span>';
+
                                 }
-               
-                           ?>
-               
-              
-               
-               <?php
-               
-                 checksecondinfo(47);
-    
-    function checksecondinfo($numero) {
-   
-   // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
+                                if ($row['Status'] == NULL) {
 
-          
-                                                    $db = connectToDB();
-                                                    
-    
-                                      //echo '<span> Hey Jixou </span>';
-                                      echo '<br>';
+                                    echo '<span> no relative info </span>';
 
-                                                    $sql = "SELECT * FROM Inventoryentry";
-                                                    $result = $db->query($sql);         
-                                               
-                                                    
-                                                    $totalAmount = 0;
-                                                    $stock = 1;
-   
-                                                    if ($result->num_rows > 0)
-                                                          {
-                                                              while ($row = $result->fetch_assoc())
-                                                                               {          
-                                                                                    // echo '<span> La mec </span>';
-                                                                                    // echo '<br>';
-                                                                 
+                                }
 
-                                                                                      if ($row['ProductNr'] == $numero)
-                                                                                      {
-                                                                                          //4
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
-                                                                                          echo  $stock ;
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
-                                                                                          echo '<br>';
-                                                                                          
-                                                                                          $stock += 1;
-                                                                                          
-                                                                                          //5
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
-                                                                                          echo $row['Amount'];
-                                                                                          
-                                                                                          $totalAmount += $row['Amount'];
-                                                                                          
-                                                                                          echo '<br>'; 
+                                echo '<br>';
 
-                                                                                          //6
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
+                                //7
+                                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
+                                echo $row['ExpiringDate'];
 
-                                                                                         /* if( $row[Status] == 0) 
-                                                                                              {
-                                                                                              
-                                                                                              echo '<span> non-opened </span>';
-                                                                            
-                                                                                              }*/ 
-                                                                                          if( $row['Status'] == 1)
-                                                                                              {
-                                                                                              
-                                                                                              echo '<span> opened </span>';
+                                echo '<br>';
+                                echo '<br>';
 
-                                                                                              } 
-                                                                                          if( $row['Status'] == NULL)
-                                                                                              {
-                                                                                              
-                                                                                              echo '<span> no relative info </span>';
+                            }
 
-                                                                                              } 
-                                                                                          
-                                                                                          echo '<br>'; 
-                                                                                          
-                                                                                          //7
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
-                                                                                          echo $row['ExpiringDate'];
-                                                            
-                                                                                          echo '<br>'; 
-                                                                                          echo '<br>';
-                                                            
-                                                                                       }        
-                                                                  
-                                                                                   } 
-                                                           }
-                                                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
-                                                    echo $totalAmount;   
-        
-                                                    echo '<br>'; 
-                                                    echo '<br>'; 
-                   }
-        
-           ?>
+                        }
+                    }
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
+                    echo $totalAmount;
 
-              </div>
-          
-          
-          
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
+                    echo '<br>';
+                    echo '<br>';
+                }
+
+                ?>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
