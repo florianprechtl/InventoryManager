@@ -31,7 +31,7 @@
                                                     $db = connectToDB();
                                                     $numero = $_POST['numero']; 
     
-                                      echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Hey Jixouuu </span>';
+                                      echo '<span> Hey You </span>';
 
                                                     class Inventoryentry 
                                                     {
@@ -45,21 +45,25 @@
                                                             $this->status = $status;
                                                         }
                                                     }
-                                                    $sqlD = "SELECT * FROM Inventoryentry";
+                                                    $sql = "SELECT * FROM Inventoryentry";
                                                     //$products = [];
-                                                    $resultD = $db->query($sqlD);
+                                                    $result = $db->query($sql);
                                                     
                                                     
                                                     
-                                                    if ($row[Amount] == 400)
-                                                    {
-                                                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
+                                                    
+                                                    //echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
                                                    // echo "<option value='$row[InventoryEntryNr]'>$row[ProductNr]</option>";
-                                                    echo "<span $row[ProductNr]</span>";
-                                                                          if ($resultD->num_rows > 0)
-                                                                             {
-                                                                                  while ($row = $resultD->fetch_assoc())
-                                                                                     {                                                         
+                                                    //echo "<span $row[ProductNr]</span>";
+                                                    if ($result->num_rows > 0)
+                                                          {
+                                                              while ($row = $resul->fetch_assoc())
+                                                                               {          
+                                                                                     echo '<span> La </span>';
+
+                                                                                      if ($row[Amount] == 400) 
+                                                                                      {
+                                                   
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
                                                                                           echo "<option value='$row[InventoryEntryNr]'>$row[Amount]</option>";
                                                             
@@ -68,5 +72,5 @@
                                                             
                                                                                        }
                                                                                } 
-                                                    }
+                                                           }
                              ?>
