@@ -48,6 +48,9 @@
                
                         <?php
                                                     $db = connectToDB();
+               
+                                                    //public $numero;
+               
                                                     class Product {
                                                         public $name;
                                                         public $description;
@@ -92,7 +95,7 @@
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) {                                                       
                                                             // array_push($products, new Product($row['Name'], $row['Description'], $row['Image']));
-                                                       if ($row[Name] == "Tomato"){
+                                                       if ($row[ProdNr] == 42){
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
                                                           echo "<option value='$row[ProdNr]'>$row[ProdNr]</option>";
                                                             
