@@ -73,18 +73,6 @@
                                                     <?php
                                                     $db = connectToDB();
 
-                                                    class Product {
-                                                        public $name;
-                                                        public $description;
-                                                        public $img;
-
-                                                        public function __construct($name, $description, $img) {
-                                                            $this->name = $name;
-                                                            $this->description = $description;
-                                                            $this->img = $img;
-                                                        }
-                                                    }
-
                                                     $sql = "SELECT * FROM Product";
                                                     $products = [];
 
