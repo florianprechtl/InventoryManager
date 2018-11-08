@@ -93,6 +93,8 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           echo $row[Unit];
                                                           echo '<br>';
+                                                           
+                                                         
 
                                                            }
                                                           
@@ -119,7 +121,7 @@
                                                     $db = connectToDB();
                                                     
     
-                                     // echo '<span> Hey Jixou </span>';
+                                      echo '<span> Hey Jixou </span>';
                                       echo '<br>';
 
                                                     class Inventoryentry 
