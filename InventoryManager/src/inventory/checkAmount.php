@@ -24,12 +24,13 @@
 </head> 
 
    <?php
+    function checkinfo($numerot) {
    
    // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
 
           
                                                     $db = connectToDB();
-                                                    $numero = $_POST['numero']; 
+                                                    $numero = $numerot; 
     
                                       echo '<span> Hey Jixou </span>';
                                       echo '<br>';
@@ -78,4 +79,6 @@
                                                     echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
                                                     echo $totalAmount;                                   
                                                     echo '<br>';
-                             ?>
+                   }
+        
+           ?>
