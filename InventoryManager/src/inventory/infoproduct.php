@@ -161,19 +161,24 @@
                                                                                           
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
                                                                                          
-                                                                                          if( $row[Status] == NULL) 
+                                                                                          if( $row[Status] == 0) 
                                                                                               {
                                                                                               
                                                                                               echo '<span> non-opened </span>';
                                                                             
                                                                                               } 
-                                                                                          else
+                                                                                          if( $row[Status] == 1) 
                                                                                               {
                                                                                               
                                                                                               echo '<span> opened </span>';
 
                                                                                               } 
-                                                                                          
+                                                                                          else
+                                                                                              {
+                                                                                              
+                                                                                              echo '<span> no relative info </span>';
+
+                                                                                              } 
                                                             
                                                                                           echo '<br>'; 
                                                             
