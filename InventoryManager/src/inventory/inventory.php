@@ -24,7 +24,7 @@
         </div>
 
         <!-- Search bar and Inventory select -->
-        <form method="POST" action="../common/manageForms.php" enctype="multipart/form-data">
+        <form method="POST" action="<?php echo isset($_GET['search']) ? 'inventory.php' : 'uploadInventory.php'?>" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
@@ -76,7 +76,7 @@
 
                             <div class="input-group-btn">
                                 <div class="btn-group search-button" role="group">
-                                    <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
+                                    <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal' value="search"><i class="fas fa-plus"></i></button>
                                 </div>
                             </div>
                         </div>
