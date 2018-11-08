@@ -3,7 +3,7 @@
 <html>
 
     <?php
-        include('../common/inventory_header_session_start.php');
+        include('../common/login_header_session_start.php');
         include('login-register/registerNewUser_Modal.php');
     ?>
 
