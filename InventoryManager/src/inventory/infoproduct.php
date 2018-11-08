@@ -50,7 +50,7 @@
                                              <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                         <?php
                
-               checkfirstinfo(50);
+               checkfirstinfo(47);
                
                
                function checkfirstinfo($numero) {
@@ -120,7 +120,7 @@
                
                <?php
                
-                 checksecondinfo(50);
+                 checksecondinfo(47);
     
     function checksecondinfo($numero) {
    
