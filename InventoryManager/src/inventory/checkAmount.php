@@ -3,7 +3,7 @@
 
 ?>
 
-/* <html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <script src="../../additionals/bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
 
     <title> Check Amount </title>
-</head> */
+</head> 
 
    <?php
    
