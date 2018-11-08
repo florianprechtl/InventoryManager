@@ -93,7 +93,7 @@
                                                           echo $row[Unit];
                                                           echo '<br>';
                                                           
-                                                          checkinfo($numero);
+                                                          checkinfo(42);
                                                           echo '<br>'; 
 
                                                            
