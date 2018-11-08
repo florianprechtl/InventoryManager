@@ -37,8 +37,9 @@
                             $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
                             $result = $db->query($sql);
 
+                            $_SESSION['inventory_nr'] = null;
+
                             if (isset($_GET["inventory"])) {
-                                $_SESSION['inventory_nr'] = null;
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row['InventoryNr']) {
