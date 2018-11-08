@@ -132,6 +132,8 @@
                                                            
                                                            echo '<br>';
                                                            echo '<br>'; 
+                             <form method="POST" action="checkAmount.php" enctype="multipart/form-data"> </form>
+
                                                            
                                                            }
                                                           
@@ -145,7 +147,6 @@
                
                            ?>
                             
-               <form method="POST" action="checkAmount.php" enctype="multipart/form-data">
 
                             <p> Amount : </p>
                
@@ -165,7 +166,7 @@
                                     <option value="f">finished</option>
                                 </select>
                             </div>
-        </form>
+        
 
               </div>
           
