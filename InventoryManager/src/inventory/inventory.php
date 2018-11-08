@@ -46,6 +46,10 @@
                                             $_SESSION['inventory_nr'] = $_GET['inventory'];
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+                                            // first option gets selected
+                                            if (!isset($_SESSION['inventory_nr'])) {
+                                                $_SESSION['inventory_nr'] = $row[InventoryNr];
+                                            }
                                         }
                                     }
                                 }
