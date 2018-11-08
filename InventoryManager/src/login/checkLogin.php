@@ -36,7 +36,7 @@
                     $_SESSION['user_name'] = $row['Username'];
                     $_SESSION['inventory_nr'] = null;
                     echo "<br><br>";
-                    echo "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
+                    echo "SELECT * FROM Inventory join Inventoryusermatrix on inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
                     redirect('../inventory/inventory.php');
                 } else {
                     echo "Login denied, wrong password <br>";
