@@ -129,6 +129,8 @@
                                                                                }
                                                        
                                                                       */
+                                                           
+                                                            <form method="POST" action="checkAmount.php" enctype="multipart/form-data">
                                                            echo '<br>';
                                                            echo '<br>'; 
                                                            
