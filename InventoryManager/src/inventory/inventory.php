@@ -48,7 +48,7 @@
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
                                             // first option gets selected
                                             if (!isset($_SESSION['inventory_nr'])) {
-                                                $_SESSION['inventory_nr'] = $row[InventoryNr];
+                                                $_SESSION['inventory_nr'] = $row['InventoryNr'];
                                             }
                                         }
                                     }
@@ -61,7 +61,7 @@
 
                                         // first option gets selected
                                         if (!isset($_SESSION['inventory_nr'])) {
-                                            $_SESSION['inventory_nr'] = $row[InventoryNr];
+                                            $_SESSION['inventory_nr'] = $row['InventoryNr'];
                                         }
                                     }
                                 }
@@ -117,7 +117,6 @@
             <!-- Modal -->
             <!-- That's where the included addInventoryEntry modal gets included afterwards -->
             <?php
-            $_SESSION['inventory_nr'] = 2;
                 if (isset($_SESSION['inventory_nr'])) {
                     includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $_SESSION['inventory_nr']));
                 }
