@@ -156,7 +156,7 @@
                                                                                           
                                                     
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock </span>';
-                                                                                          echo $stock 
+                                                                                          echo $stock ;
                                                                                           echo '<span> : </span>';
                                                                                           $stock += 1;
                                                                                           
