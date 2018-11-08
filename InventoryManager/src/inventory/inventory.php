@@ -138,7 +138,7 @@
                             echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
                             echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
 
-                            includeWithVariables('infoproduct.php', array('inventoryEntryNr' => $row['InventoryEntryNr']));
+                            includeWithVariables('infoProductEntry_Modal.php', array('inventoryEntryNr' => $row['InventoryEntryNr']));
                         }
                     }
                 } else {
