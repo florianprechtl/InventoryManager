@@ -109,7 +109,7 @@
 <!--                                        </form>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-                                <button type="submit" name="search" class="btn button-search" value="search"><i class="fas fa-search"></i></button>
+                                <button type="submit" name="search" id="search_button" class="btn button-search" value="search"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </div>

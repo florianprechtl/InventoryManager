@@ -31,4 +31,9 @@ $(document).ready(function() {
             $('#content_existing_product').slideDown(750);
         })
     });
+
+    $('#inventorySelect').change(function() {
+       $('#search_button').click();
+    });
+
 });
