@@ -24,6 +24,9 @@
 </head> 
 
    <?php
+    
+    echo '<span> LGFU </span>';
+
     function checkinfo($numerot) {
    
    // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
