@@ -75,8 +75,8 @@
 
                 <!-- Right side - search bar -->
                 <div class="col-sm-5">
+                    <label for="searchEntry">Search for specific entries:</label>
                     <div class="input-group" id="adv-search">
-                        <label for="searchEntry">Search for specific entries:</label>
                         <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group">
