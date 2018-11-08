@@ -121,7 +121,7 @@
                                                     $db = connectToDB();
                                                     
     
-                                      echo '<span> Hey Jixou </span>';
+                                     // echo '<span> Hey Jixou </span>';
                                       echo '<br>';
 
                                                     class Inventoryentry 
