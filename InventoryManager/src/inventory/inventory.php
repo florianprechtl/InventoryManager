@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid" style="max-width: 800px; width:100%">
 
-        <!--Header-->
+        <!-- Header -->
         <div class="row header">
             <h1 class="col-sm-12 no-margin-bottom" align="center">
                 Inventory Manager
@@ -22,30 +22,42 @@
             </h1>
         </div>
 
-        <!--Search bar and Inventory select-->
+        <!-- Search bar and Inventory select -->
         <form method="GET" action="inventory.php" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
                     <div class="form-group">
 
-                        <label for="exampleFormControlSelect1">Select Inventory:</label>
-                        <select class="form-control" name="inventory" id="exampleFormControlSelect1">
+                        <label for="inventorySelect"">Select Inventory:</label>
+                        <select class="form-control" name="inventory" id="inventorySelect">
                             <?php
-                            $db = connectToDB();
+                                $db = connectToDB();
 
-                            $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
-                            $result = $db->query($sql);
+                                $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
+                                $result = $db->query($sql);
 
-                            $_SESSION['inventory_nr'] = null;
+                                $_SESSION['inventory_nr'] = null;
 
-                            if (isset($_GET["inventory"])) {
-                                if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        if ($_GET['inventory'] == $row['InventoryNr']) {
-                                            echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                            $_SESSION['inventory_nr'] = $_GET['inventory'];
-                                        } else {
+                                if (isset($_GET["inventory"])) {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            if ($_GET['inventory'] == $row['InventoryNr']) {
+                                                echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                $_SESSION['inventory_nr'] = $_GET['inventory'];
+                                            } else {
+                                                echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+
+                                                // first option gets selected
+                                                if (!isset($_SESSION['inventory_nr'])) {
+                                                    $_SESSION['inventory_nr'] = $row['InventoryNr'];
+                                                }
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
                                             // first option gets selected
@@ -55,23 +67,6 @@
                                         }
                                     }
                                 }
-                            } else {
-                                if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-
-                                        // first option gets selected
-                                        if (!isset($_SESSION['inventory_nr'])) {
-                                            $_SESSION['inventory_nr'] = $row['InventoryNr'];
-                                        }
-                                    }
-                                }
-                            }
-
-                            if (!isset($_GET['inventory'])) {
-                                // has to be another default value afterwards, when we have user specific inventories
-                                $inventory = 1;
-                            }
                             ?>
                         </select>
 
@@ -80,27 +75,26 @@
 
                 <!-- Right side - search bar -->
                 <div class="col-sm-5">
-                    <label for="exampleFormControlSelect1">Search for specific entries:</label>
                     <div class="input-group" id="adv-search">
-
-                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <label for="searchEntry">Search for specific entries:</label>
+                        <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group">
                                 <div class="dropdown dropdown-lg search-assesories">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                        <form class="form-horizontal" role="form">
-                                            <div class="form-group">
-                                                <label for="contain">Author</label>
-                                                <input class="form-control" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="contain">Contains the words</label>
-                                                <input class="form-control" type="text" />
-                                            </div>
-                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                                        </form>
-                                    </div>
+<!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
+<!--                                        <form class="form-horizontal" role="form">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <label for="contain">Product name</label>-->
+<!--                                                <input class="form-control" type="text" />-->
+<!--                                            </div>-->
+<!--                                            <div class="form-group">-->
+<!--                                                <label for="contain">Contains the words</label>-->
+<!--                                                <input class="form-control" type="text" />-->
+<!--                                            </div>-->
+<!--                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
                                 </div>
                                 <button type="submit" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
                             </div>
@@ -145,8 +139,6 @@
                                 No entries!
                             </div>";
                 }
-        
-
             ?>
         </div>
     </div>
