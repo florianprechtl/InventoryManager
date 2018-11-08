@@ -117,8 +117,9 @@
             <!-- Modal -->
             <!-- That's where the included addInventoryEntry modal gets included afterwards -->
             <?php
-                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $inventory));
+                includeWithVariables('addInventoryEntry_Modal.php', array('inventory' => $_SESSION['inventory_nr']));
             ?>
+
             <?php
                 $db = connectToDB();
         
