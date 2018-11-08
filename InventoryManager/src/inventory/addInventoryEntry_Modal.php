@@ -94,7 +94,7 @@
                                             <div class="form-group" id="content_new_product" style="display: none;">
                                                 <div class="form-group">
                                                     <label for="name_prod_new">Product name</label><br>
-                                                    <input class="form-control" name="name_prod_new" type="text" min="0">
+                                                    <input class="form-control" name="name_prod_new" type="text">
                                                 </div>
                                                 <div class="form-group shadow-textarea">
                                                     <label for="descr_prod_new">Product description</label>

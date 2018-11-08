@@ -24,44 +24,29 @@
         </div>
 
         <!-- Search bar and Inventory select -->
-        <form method="GET" action="inventory.php" enctype="multipart/form-data">
-            <div class="row justify-content-between margin-top">
-                <!-- Left side - inventory select -->
-                <div class="col-sm-5">
-                    <div class="form-group">
-                        <label for="inventorySelect"">Select Inventory:</label>
+        <form id="search_form" method="GET" action="inventory.php" enctype="multipart/form-data"></form>
+        <div class="row justify-content-between margin-top">
+            <!-- Left side - inventory select -->
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="inventorySelect"">Select Inventory:</label>
+                    <div class="input-group" id="adv-search">
+                        <select class="form-control" name="inventory" id="inventorySelect"  form="search_form">
+                            <?php
+                                $db = connectToDB();
 
+                                $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
+                                $result = $db->query($sql);
 
-                        <div class="input-group" id="adv-search">
+                                $_SESSION['inventory_nr'] = null;
 
-                            <select class="form-control" name="inventory" id="inventorySelect">
-                                <?php
-                                    $db = connectToDB();
-
-                                    $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
-                                    $result = $db->query($sql);
-
-                                    $_SESSION['inventory_nr'] = null;
-
-                                    if (isset($_GET["inventory"])) {
-                                        if ($result->num_rows > 0) {
-                                            while($row = $result->fetch_assoc()) {
-                                                if ($_GET['inventory'] == $row['InventoryNr']) {
-                                                    echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                                    $_SESSION['inventory_nr'] = $_GET['inventory'];
-                                                } else {
-                                                    echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-
-                                                    // first option gets selected
-                                                    if (!isset($_SESSION['inventory_nr'])) {
-                                                        $_SESSION['inventory_nr'] = $row['InventoryNr'];
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        if ($result->num_rows > 0) {
-                                            while($row = $result->fetch_assoc()) {
+                                if (isset($_GET["inventory"])) {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            if ($_GET['inventory'] == $row['InventoryNr']) {
+                                                echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                $_SESSION['inventory_nr'] = $_GET['inventory'];
+                                            } else {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
                                                 // first option gets selected
@@ -71,51 +56,46 @@
                                             }
                                         }
                                     }
-                                ?>
-                            </select>
+                                } else {
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                            echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
-                            <div class="input-group-btn">
-                                <div class="btn-group search-button" role="group">
-                                    <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
-                                </div>
+                                            // first option gets selected
+                                            if (!isset($_SESSION['inventory_nr'])) {
+                                                $_SESSION['inventory_nr'] = $row['InventoryNr'];
+                                            }
+                                        }
+                                    }
+                                }
+                            ?>
+                        </select>
+
+                        <div class="input-group-btn">
+                            <div class="btn-group search-button" role="group">
+                                <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
                     </div>
-                    <?php
-                        include('addInventory_Modal.php');
-                    ?>
                 </div>
+                <?php
+                    include('addInventory_Modal.php');
+                ?>
+            </div>
 
-                <!-- Right side - search bar -->
-                <div class="col-sm-5">
-                    <label for="searchEntry">Search for specific entries:</label>
-                    <div class="input-group" id="adv-search">
-                        <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
-                        <div class="input-group-btn">
-                            <div class="btn-group search-button" role="group">
-<!--                                <div class="dropdown dropdown-lg">-->
-<!--                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>-->
-<!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
-<!--                                        <form class="form-horizontal" role="form">-->
-<!--                                            <div class="form-group">-->
-<!--                                                <label for="contain">Product name</label>-->
-<!--                                                <input class="form-control" type="text" />-->
-<!--                                            </div>-->
-<!--                                            <div class="form-group">-->
-<!--                                                <label for="contain">Contains the words</label>-->
-<!--                                                <input class="form-control" type="text" />-->
-<!--                                            </div>-->
-<!--                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>-->
-<!--                                        </form>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-                                <button type="submit" name="search" class="btn button-search"><i class="fas fa-search"></i></button>
-                            </div>
+            <!-- Right side - search bar -->
+            <div class="col-sm-5">
+                <label for="searchEntry">Search for specific entries:</label>
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." form="search_form"/>
+                    <div class="input-group-btn">
+                        <div class="btn-group search-button" role="group">
+                            <button type="submit" name="search" class="btn button-search"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
 
         <!-- Inventory entries showcase -->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
