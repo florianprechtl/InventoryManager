@@ -1,3 +1,4 @@
+<?php?>
 <!-- Modal -->
 <div class="modal fade" id="info_modal_<?php echo $inventoryEntryNr ?>" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
