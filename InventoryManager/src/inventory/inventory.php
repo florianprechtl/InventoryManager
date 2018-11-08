@@ -18,7 +18,7 @@
             <h1 class="col-sm-12 no-margin-bottom" align="center">
                 Inventory Manager
                 <a class="btn btn-sm btn-light margin-bottom margin-top margin-left float-right" href="../logout/logout.php">Logout</a>
-                <p class="float-right margin-top margin-bottom header-user-show">signed in as <?php echo $_SESSION['user_name']?></p>
+                <p class="float-right header-user-show">signed in as <?php echo $_SESSION['user_name']?></p>
 
             </h1>
         </div>
