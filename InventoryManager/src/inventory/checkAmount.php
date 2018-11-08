@@ -32,6 +32,7 @@
                                                     $numero = $_POST['numero']; 
     
                                       echo '<span> Hey You </span>';
+                                      echo '<br>';
 
                                                     class Inventoryentry 
                                                     {
@@ -59,9 +60,10 @@
                                                           {
                                                               while ($row = $result->fetch_assoc())
                                                                                {          
-                                                                                     echo '<span> La </span>';
+                                                                                     echo '<span> La mec </span>';
+                                                                                     echo '<br>';
 
-                                                                                      if ($row[Amount] == 400) 
+                                                                                      if ($row[ProductNr] == 42) 
                                                                                       {
                                                    
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
