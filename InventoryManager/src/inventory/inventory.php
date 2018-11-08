@@ -133,7 +133,7 @@
                         while($row = $result->fetch_assoc()) {
                             $img = file_get_contents("../../imgUploads/$row[Image]");
 
-                            echo "<div class='inventory-item-preview' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
+                            echo "<div class='inventory-item-preview' id='inventory_item_preview_$row[InventoryEntryNr]' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
                             echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
                             echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
                         }
