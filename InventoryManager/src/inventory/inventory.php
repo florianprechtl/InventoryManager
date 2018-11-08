@@ -38,6 +38,7 @@
                             $result = $db->query($sql);
 
                             if (isset($_GET["inventory"])) {
+                                $_SESSION['inventory_nr'] = null;
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()) {
                                         if ($_GET['inventory'] == $row['InventoryNr']) {
@@ -45,6 +46,7 @@
                                             $_SESSION['inventory_nr'] = $_GET['inventory'];
                                         } else {
                                             echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
+
                                             // first option gets selected
                                             if (!isset($_SESSION['inventory_nr'])) {
                                                 $_SESSION['inventory_nr'] = $row['InventoryNr'];
