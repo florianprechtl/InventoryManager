@@ -70,8 +70,8 @@
                                 }
                             ?>
                         </select>
-
                     </div>
+                    <i class="btn btn-primary" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
                 </div>
 
                 <!-- Right side - search bar -->
