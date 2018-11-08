@@ -156,9 +156,9 @@
                                                                                           
                                                     
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock </span>';
-                                                                                          echo style = "color:grey; font-variant: small-caps; font-weight:bold" $stock ;
+                                                                                          echo  $stock ;
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
-                                                                                          $stock += 1;
+                                                                                          
                                                                                           
                                                                                           echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
@@ -166,7 +166,12 @@
                                                                                           echo '<br>'; 
 
                                                                                           
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status </span>';
+                                                                                          echo  $stock ;
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                                                                          
+                                                                                          
+                                                                                          $stock += 1;
                                                                                          
                                                                                          /* if( $row[Status] == 0) 
                                                                                               {
