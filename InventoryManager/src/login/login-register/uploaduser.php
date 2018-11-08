@@ -18,11 +18,11 @@
 
         // inspiré
         if ($psw == $repeatedpsw) {
-            echo "  New account ";
             $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
-            echo $sql_user;
+
             $db->query($sql_user);
+            redirect("../../inventory/inventory.php");
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
         }
