@@ -126,7 +126,7 @@
                 $db = connectToDB();
         
                 if (isset($_SESSION['inventory_nr'])) {
-                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[$inventory_nr]";
+                    $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr]";
 
                     $result = $db->query($sql);
 
