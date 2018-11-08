@@ -24,7 +24,7 @@
         </div>
 
         <!-- Search bar and Inventory select -->
-        <form method="GET" action="<?php echo isset($_POST['search']) ? 'inventory.php' : 'uploadInventory.php'?>inventory.php" enctype="multipart/form-data">
+        <form method="GET" action="<?php echo isset($_POST['search']) ? 'inventory.php' : 'uploadInventory.php'?>" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
