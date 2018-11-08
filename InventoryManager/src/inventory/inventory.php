@@ -29,7 +29,7 @@
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
                     <div class="row">
-                        <div class="col col-sm-10 form-group">
+                        <div class="col-sm-10 form-group">
                             <label for="inventorySelect"">Select Inventory:</label>
                             <select class="form-control" name="inventory" id="inventorySelect">
                                 <?php
@@ -71,7 +71,7 @@
                                 ?>
                             </select>
                         </div>
-                        <div class="col col-sm-2 no-padding-left" style="margin-top: 31px;">
+                        <div class="col-sm-2 no-padding-left" style="margin-top: 31px;">
                             <i class="btn btn-primary" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
                             <?php
                                 include('addInventory_Modal.php');
