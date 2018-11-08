@@ -93,11 +93,7 @@
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           echo $row[Unit];
                                                           echo '<br>';
-                                                          
-                                                          checkinfo(42);
-                                                          echo '<br>'; 
 
-                                                           
                                                            }
                                                           
                                                             
@@ -157,11 +153,9 @@
                                                                                           
                                                     
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
-                                                                                          echo '<br>';
                                                                                           echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
                                                             
-                                                                                          echo '<br>';
                                                                                           echo '<br>'; 
                                                             
                                                                                        }                
