@@ -48,9 +48,14 @@
                
                                              <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                
+               checkfirstinfo(50);
+               checksecondinfo(50);
+               
                         <?php
+               
+               function checkfirstinfo($numero) {
                                                     $db = connectToDB();
-                                                    $numero = 50;
+                                                    
                
                
                                                     class Product {
@@ -107,16 +112,15 @@
                
                                                   
                        
-               
+                                }
                
                            ?>
                
+              
+               
                <?php
     
-   
-    checkinfo(42);
-    
-    function checkinfo($numero) {
+    function checksecondinfo($numero) {
    
    // -- INVENTORY ENTRY TABLE : AMOUNT & STATUS -- //
 
