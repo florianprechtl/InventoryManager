@@ -166,10 +166,6 @@
 
 /* other styles */
 
-h1 > p {
+.header-user-show {
     font-size: 12px;
-}
-
-h1 p {
-    color: green;
 }
