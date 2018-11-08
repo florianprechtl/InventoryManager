@@ -48,12 +48,10 @@
                      <!--for infoproduct use that -->
                             <?php
                                 session_start();
-                                echo "<option value='$row[InventoryNr]'>$_SESSION[user_nr]</option>";
 
                                 $db = connectToDB();
 
-                                // $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
-                                $sql = "Select * from Inventory";
+                                $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
                                 $result = $db->query($sql);
 
                                 if (isset($_GET["inventory"])) {
