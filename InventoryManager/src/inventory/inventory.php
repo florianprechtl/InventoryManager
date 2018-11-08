@@ -3,7 +3,7 @@
 <?php
     include('../common/basicFunctions.php');
     includeWithVariables('../common/connectDB.php', array());
-    include('../common/inventory_header_session_start.php');
+    include('inventory_header_session_start.php');
     include('../common/product.php');
 
     if (!isset($_SESSION['user_nr'])) {

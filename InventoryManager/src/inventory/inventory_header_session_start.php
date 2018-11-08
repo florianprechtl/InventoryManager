@@ -22,6 +22,7 @@
     <script src="../../additionals/croppie/croppie.js"></script>
     <script src="../../additionals/bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
     <script src="../../scripts/imgCrop.js"></script>
+    <script src="../../scripts/inventory.js"></script>
 
     <title>My Fridge</title>
 </head>
