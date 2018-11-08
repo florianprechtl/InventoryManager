@@ -33,6 +33,7 @@
                     echo "<div class='padding-bottom'><a href='../inventory/inventory.php'>Go to Main Page</a></div>";
                     session_start();
                     $_SESSION['user_nr'] = $row['UserNr'];
+                    $_SESSION['user_name'] = $row['Username'];
                     echo "<br><br>";
                     echo "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
                     redirect('../inventory/inventory.php');
