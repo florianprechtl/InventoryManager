@@ -159,21 +159,24 @@
                                                                                       if ($row[ProductNr] == $numero) 
                                                                                       {
                                                                                           
-                                                    
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Amount in stock </span>';
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
                                                                                           echo  $stock ;
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                                                                          echo '<br>';
+                                                                                          
+                                                                                          $stock += 1;
                                                                                           
                                                                                           
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock :</span>';
                                                                                           echo $row[Amount];
+                                                                                          
                                                                                           $totalAmount += $row[Amount];
                                                                                           
                                                                                           echo '<br>'; 
 
                                                                                           
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status </span>';
-                                                                                          echo  $stock ;
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status :</span>';
+                                                                                     
 
                                                                                          /* if( $row[Status] == 0) 
                                                                                               {
@@ -196,12 +199,8 @@
                                                                                           
                                                                                           echo '<br>'; 
                                                                                           
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date </span>';
-                                                                                          echo  $stock ;
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date :</span>';
                                                                                           echo $row[ExpiringDate];
-                                                                                          
-                                                                                          $stock += 1;
                                                             
                                                                                           echo '<br>'; 
                                                                                           echo '<br>';
@@ -211,8 +210,10 @@
                                                                                    } 
                                                            }
                                                     echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
-                                                    echo $totalAmount;                                   
-                                                    echo '<br>';
+                                                    echo $totalAmount;   
+        
+                                                    echo '<br>'; 
+                                                    echo '<br>'; 
                    }
         
            ?>
