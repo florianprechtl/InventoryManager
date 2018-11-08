@@ -49,7 +49,8 @@
                                                     
                                                     
                                                     
-                                                    
+                                                    if ($row[ProductNr] == 42)
+                                                    {
                                                     echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
                                                    // echo "<option value='$row[InventoryEntryNr]'>$row[ProductNr]</option>";
                                                     echo "<span $row[ProductNr]</span>";
@@ -64,5 +65,6 @@
                                                                                           echo '<br>'; 
                                                             
                                                                                        }
-                                                                               }
+                                                                               } 
+                                                    }
                              ?>
