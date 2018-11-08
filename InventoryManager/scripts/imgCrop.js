@@ -72,6 +72,9 @@ $(document).ready(function() {
                 alert("Removing inventory entry did not work!");
             }
         });
+
+        /* stops the event at the current DOM object layer to prevent propagation to lower layers and thus prevent opening the modal  */
+        event.stopPropagation();
     });
 
     $('#button_fade_to_new_product').click(function() {
