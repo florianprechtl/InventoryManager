@@ -145,27 +145,6 @@
                
                
                            ?>
-                            
-
-                            <p> Amount : </p>
-               
-                            <p style = "color:blue"> My amount
-                            </p>
-                            
-                            <p> Actual Statut : </p>
-               
-                            <p style = "color:blue"> My statut
-                            </p>             
-               
-                            <div class="form-group">
-                                <label for="statut"> Statut :</label>
-                                <select class="form-control" name="statut" id="statut">
-                                    <option value="c" selected>closed</option>
-                                    <option value="u">used</option>
-                                    <option value="f">finished</option>
-                                </select>
-                            </div>
-        
 
               </div>
           
