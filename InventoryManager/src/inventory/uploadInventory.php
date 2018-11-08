@@ -7,7 +7,7 @@
     $db = connectToDB();
 
     // Variables of the inventory
-    $inventory_name = $_GET['inventory_name'];
+    $name_inventory = $_GET['name_inventory'];
     $description_inventory = $_GET['description_inventory'];
     $inventory_nr="";
 
@@ -22,7 +22,7 @@
     }
 
     // Insert of the new inventory
-    $sql = "INSERT INTO Inventory (InventoryNr, Name, Description) VALUES (NULL, '$inventory_name', '$description_inventory')";
+    $sql = "INSERT INTO Inventory (InventoryNr, Name, Description) VALUES (NULL, '$name_inventory', '$description_inventory')";
     $db->query($sql);
 
     // Insert of userInventoryEntry
