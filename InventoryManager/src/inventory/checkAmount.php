@@ -30,7 +30,9 @@
           
                                                     $db = connectToDB();
                                                     $numero = $_POST['numero']; 
-                                                    
+    
+                                      echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Hey Jixou </span>';
+
                                                     class Inventoryentry 
                                                     {
                                                         public $productnr;
