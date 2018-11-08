@@ -18,8 +18,8 @@
                         <input class="form-control" name="name_inventory" type="text">
                     </div>
                     <div class="form-group shadow-textarea">
-                        <label for="descr_prod_new">Inventory description</label>
-                        <textarea class="form-control z-depth-1" name="descr_prod_new" rows="3" placeholder="Write something here..."></textarea>
+                        <label for="description_inventory">Inventory description</label>
+                        <textarea class="form-control z-depth-1" name="description_inventory" rows="3" placeholder="Write something here..."></textarea>
                     </div>
                 </div>
             </div>

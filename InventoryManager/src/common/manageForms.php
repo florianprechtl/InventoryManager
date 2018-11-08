@@ -1,14 +1,14 @@
 <?php
+    include('basicFunctions.php');
 
-    echo "POST:<br><br>" ;
-    print_r($_POST);
-    var_dump($_POST);
+    $name_inventory = $_GET['name_inventory'];
+    $description_inventory = $_GET['description_inventory'];
+    $search_entry = $_GET['search_entry'];
+    $inventory= $_GET['inventory'];
 
-    echo "<br><br>GET:<br><br>";
-    print_r($_GET);
-    var_dump($_GET);
-
-    echo "<br><br>";
-
-    echo "success";
+    if (isset($_POST['search'])) {
+        redirect("../inventory/inventory.php?inventory=$inventory&searchEntry=$search_entry");
+    } else if (isset($_POST['add_new_inventory'])) {
+        redirect("../inventory/uploadInventory.php?name_inventory=$name_inventory&description_inventory=$description_inventory");
+    }
 ?>

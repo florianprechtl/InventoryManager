@@ -24,7 +24,7 @@
         </div>
 
         <!-- Search bar and Inventory select -->
-        <form method="GET" action="<?php echo isset($_GET['search']) ? 'inventory.php' : 'uploadInventory.php'?>" enctype="multipart/form-data">
+        <form method="GET" action="../common/manageForms.php" enctype="multipart/form-data">
             <div class="row justify-content-between margin-top">
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
@@ -88,9 +88,9 @@
 
                 <!-- Right side - search bar -->
                 <div class="col-sm-5">
-                    <label for="searchEntry">Search for specific entries:</label>
+                    <label for="search_entry">Search for specific entries:</label>
                     <div class="input-group" id="adv-search">
-                        <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
+                        <input type="text" class="form-control" name="search_entry" id="search_entry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group search-button" role="group">
 <!--                                <div class="dropdown dropdown-lg">-->
@@ -134,8 +134,8 @@
                 $db = connectToDB();
         
                 if (isset($_SESSION['inventory_nr'])) {
-                    if (isset($_GET['searchEntry'])) {
-                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] and Name like '%$_GET[searchEntry]%'";
+                    if (isset($_GET['search_entry'])) {
+                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] and Name like '%$_GET[search_entry]%'";
                     } else {
                         $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr]";
 
