@@ -48,22 +48,18 @@
                                                     }
                                                     $sql = "SELECT * FROM Inventoryentry";
                                                     //$products = [];
-                                                    $result = $db->query($sql);
-                                                    
-                                                    
-                                                    
-                                                    
-                                                    //echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Produuuuuct Nr: </span>';
-                                                   // echo "<option value='$row[InventoryEntryNr]'>$row[ProductNr]</option>";
-                                                    //echo "<span $row[ProductNr]</span>";
+                                                    $result = $db->query($sql);         
+                                               
+                                                    $numero=43;
+   
                                                     if ($result->num_rows > 0)
                                                           {
                                                               while ($row = $result->fetch_assoc())
                                                                                {          
-                                                                                     echo '<span> La mec </span>';
-                                                                                     echo '<br>';
+                                                                                    // echo '<span> La mec </span>';
+                                                                                    // echo '<br>';
 
-                                                                                      if ($row[ProductNr] == 42) 
+                                                                                      if ($row[ProductNr] == $numero) 
                                                                                       {
                                                    
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
