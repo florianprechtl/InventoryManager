@@ -173,7 +173,7 @@
                                                                                               echo '<span> opened </span>';
 
                                                                                               } 
-                                                                                          else
+                                                                                          if( $row[Status] == NULL)
                                                                                               {
                                                                                               
                                                                                               echo '<span> no relative info </span>';
