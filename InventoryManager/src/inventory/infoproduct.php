@@ -154,8 +154,8 @@
                                                                                       {
                                                                                           
                                                     
-                                                                                          echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
-                                                                                          echo $row[Amount];
+                                                                                          //echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount : </span>';
+                                                                                          //echo $row[Amount];
                                                                                           $totalAmount += $row[Amount];
                                                                                           
                                                                                           echo '<br>'; 
@@ -163,12 +163,12 @@
                                                                                           
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
                                                                                          
-                                                                                          if( $row[Status] == 0) 
+                                                                                         /* if( $row[Status] == 0) 
                                                                                               {
                                                                                               
                                                                                               echo '<span> non-opened </span>';
                                                                             
-                                                                                              } 
+                                                                                              }*/ 
                                                                                           if( $row[Status] == 1) 
                                                                                               {
                                                                                               
