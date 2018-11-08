@@ -132,7 +132,6 @@
                                                            
                                                            echo '<br>';
                                                            echo '<br>'; 
-                             <form method="POST" action="checkAmount.php" enctype="multipart/form-data"> </form>
 
                                                            
                                                            }
