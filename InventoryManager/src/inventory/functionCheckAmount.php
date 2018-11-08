@@ -25,7 +25,7 @@
 
    <?php
     
-    //echo '<span> LGFU </span>';
+    echo '<span> LGFU </span>';
     checkinfo(42);
     
     function checkinfo($numero) {
