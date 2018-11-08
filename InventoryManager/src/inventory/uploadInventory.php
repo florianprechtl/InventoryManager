@@ -1,14 +1,28 @@
 <?php
+    include('../common/connectDB.php');
+    include('../common/basicFunctions.php');
 
-    echo "POST:<br><br>" ;
-    print_r($_POST);
-    var_dump($_POST);
+    $db = connectToDB();
 
-    echo "<br><br>GET:<br><br>";
-    print_r($_GET);
-    var_dump($_GET);
+    // Variables of the inventory
+    $inventory_name = $_GET['inventory_name'];
+    $description_inventory = $_GET['description_inventory'];
+    $inventoryNr="";
 
-    echo "<br><br>";
+    // Get next autoincrement value that is returned by the function
+    $sql = "SHOW TABLE STATUS WHERE name='inventory'";
+    $result = $db->query($sql);
 
-    echo "success";
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $inventoryNr = $row['Auto_increment'];
+        }
+    }
+
+    // Insert of the new inventory
+    $sql = "INSERT INTO Inventory (InventoryNr, Name, Description) VALUES (NULL, '$inventory_name', '$description_inventory')";
+
+    $db->query($sql);
+
+    redirect("inventory.php?inventory=$inventoryNr");
 ?>
