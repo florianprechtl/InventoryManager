@@ -31,8 +31,8 @@
                         "<br>Member since: " . $row['MemberSince'].
                         "<br>";
                     echo "<div class='padding-bottom'><a href='../inventory/inventory.php'>Go to Main Page</a></div>";
-                    // session_start();
-                    // $_SESSION['user_nr']=$row['UserNr'];
+                    session_start();
+                    $_SESSION['user_nr']=$row['UserNr'];
                     redirect('../inventory/inventory.php');
                 } else {
                     echo "Login denied, wrong password <br>";
