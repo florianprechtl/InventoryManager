@@ -50,7 +50,7 @@
                
                         <?php
                                                     $db = connectToDB();
-                                                    $numero = 42;
+                                                    $numero = 50;
                
                
                                                     class Product {
