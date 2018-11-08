@@ -35,24 +35,24 @@
                                                     if ($result->num_rows > 0) {
                                                         while ($row = $result->fetch_assoc()) { 
                                                             
-                                                       if ($row[ProdNr] == $numero){
+                                                       if ($row['ProdNr'] == $numero){
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
-                                                           echo $row[ProdNr];
+                                                           echo $row['ProdNr'];
                                                            echo '<br>';
                                                             
                                                          //1
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
-                                                          echo $row[Name];
+                                                          echo $row['Name'];
                                                           echo '<br>';
                                                           echo '<br>';
 
                                                          //2
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                                                          echo $row[Description];
+                                                          echo $row['Description'];
                                                           echo '<br>';
                                                          //3
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                                                          echo $row[Unit];
+                                                          echo $row['Unit'];
                                                           echo '<br>';
                                                            
                                                          
@@ -101,7 +101,7 @@
                                                                                     // echo '<br>';
                                                                  
 
-                                                                                      if ($row[ProductNr] == $numero) 
+                                                                                      if ($row['ProductNr'] == $numero)
                                                                                       {
                                                                                           //4
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
@@ -113,9 +113,9 @@
                                                                                           
                                                                                           //5
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
-                                                                                          echo $row[Amount];
+                                                                                          echo $row['Amount'];
                                                                                           
-                                                                                          $totalAmount += $row[Amount];
+                                                                                          $totalAmount += $row['Amount'];
                                                                                           
                                                                                           echo '<br>'; 
 
@@ -128,13 +128,13 @@
                                                                                               echo '<span> non-opened </span>';
                                                                             
                                                                                               }*/ 
-                                                                                          if( $row[Status] == 1) 
+                                                                                          if( $row['Status'] == 1)
                                                                                               {
                                                                                               
                                                                                               echo '<span> opened </span>';
 
                                                                                               } 
-                                                                                          if( $row[Status] == NULL)
+                                                                                          if( $row['Status'] == NULL)
                                                                                               {
                                                                                               
                                                                                               echo '<span> no relative info </span>';
@@ -145,7 +145,7 @@
                                                                                           
                                                                                           //7
                                                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
-                                                                                          echo $row[ExpiringDate];
+                                                                                          echo $row['ExpiringDate'];
                                                             
                                                                                           echo '<br>'; 
                                                                                           echo '<br>';
