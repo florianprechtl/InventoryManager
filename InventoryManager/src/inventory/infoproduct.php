@@ -150,7 +150,7 @@
                                                     $sql = "SELECT * FROM Inventoryentry";
                                                     $result = $db->query($sql);         
                                                
-                                                    $numero=43; 
+                                                    
                                                     $totalAmount = 0;
                                                     $stock = 1;
    
