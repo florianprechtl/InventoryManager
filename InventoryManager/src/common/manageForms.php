@@ -6,9 +6,10 @@
     $search_entry = $_GET['search_entry'];
     $inventory= $_GET['inventory'];
 
-    if (isset($_POST['search'])) {
+    if (isset($_GET['search'])) {
         redirect("../inventory/inventory.php?inventory=$inventory&searchEntry=$search_entry");
-    } else if (isset($_POST['add_new_inventory'])) {
+    }
+    if (isset($_GET['add_new_inventory'])) {
         redirect("../inventory/uploadInventory.php?name_inventory=$name_inventory&description_inventory=$description_inventory");
     }
 ?>
