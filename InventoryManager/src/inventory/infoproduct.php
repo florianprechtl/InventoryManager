@@ -1,5 +1,6 @@
 <?php
     include('../common/connectDB.php');
+    include('../inventory/functionCheckAmount.php');
 
 ?>
 
@@ -90,10 +91,10 @@
                                                          //3
                                                           echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
                                                           echo $row[Unit];
-
-                                                           
-                                                           echo '<br>';
-                                                           echo '<br>'; 
+                                                          echo '<br>';
+                                                          
+                                                          checkinfo($numero);
+                                                          echo '<br>'; 
 
                                                            
                                                            }
