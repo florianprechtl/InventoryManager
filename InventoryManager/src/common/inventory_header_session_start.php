@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+    session_start();
 ?>
 <html>
 
@@ -24,5 +23,5 @@ session_start();
     <script src="../../additionals/bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
     <script src="../../scripts/imgCrop.js"></script>
 
-    <title>Inventory Manager</title>
+    <title>My Fridge</title>
 </head>
