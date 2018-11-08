@@ -79,12 +79,11 @@
                                     <button type="button" class="btn button-search" data-toggle='modal' data-target='#add_inventory_modal'>+</button>
                                 </div>
                             </div>
-                        </div<
-                        <?php
-                            include('addInventory_Modal.php');
-                        ?>
+                        </div>
                     </div>
-
+                    <?php
+                        include('addInventory_Modal.php');
+                    ?>
                 </div>
 
                 <!-- Right side - search bar -->
