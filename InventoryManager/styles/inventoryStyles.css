@@ -30,10 +30,6 @@
     color: #FFFFFF;
 }
 
-.search-button {
-    height: 38px;
-}
-
 .header {
     background-color: #031D54;
     color: #FFFFFF;
@@ -90,7 +86,14 @@
 
 .button-search {
     background-color: #031D54;
-    color: white;
+    color: #B1C7F5;
+    height: 38px;
+}
+
+.button-search:hover {
+    background-color: #B1C7F5;
+    color: #031D54;
+    height: 38px;
 }
 
 /* img crop styles */
