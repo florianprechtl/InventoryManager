@@ -46,12 +46,12 @@
         
            <div class="mx-auto">
                
+
                                              <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
+                        <?php
                
                checkfirstinfo(50);
-               checksecondinfo(50);
                
-                        <?php
                
                function checkfirstinfo($numero) {
                                                     $db = connectToDB();
@@ -119,6 +119,8 @@
               
                
                <?php
+               
+                 checksecondinfo(50);
     
     function checksecondinfo($numero) {
    
