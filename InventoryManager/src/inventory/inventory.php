@@ -48,7 +48,7 @@
                             <?php
                                 $db = connectToDB();
 
-                                $sql = "SELECT * FROM Inventory WHERE UserNr = $_SESSION[UserNr]";
+                                $sql = "SELECT * FROM Inventory";
 
                                 $result = $db->query($sql);
 
