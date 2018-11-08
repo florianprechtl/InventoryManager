@@ -4,6 +4,10 @@
     include('../common/basicFunctions.php');
     includeWithVariables('../common/connectDB.php', array());
     include('../common/header_session_start.php');
+
+    if (!isset($_SESSION['user_nr'])) {
+        redirect('../login/login.php?goBackDenied=true');
+    }
 ?>
 
 <body>
