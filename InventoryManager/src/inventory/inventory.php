@@ -15,7 +15,7 @@
 
         <!--Header-->
         <div class="row header">
-            <h1 class="col-sm-12 no-margin-bottom" align="center">Inventory Manager<p class="float-right"><?php $_SESSION['user_name']?> logged in</p><a class="btn btn-sm btn-light margin-bottom margin-top float-right" href="../logout/logout.php">Logout</a></h1>
+            <h1 class="col-sm-12 no-margin-bottom" align="center">Inventory Manager<p class="float-right"><?php echo $_SESSION['user_name']?> logged in</p><a class="btn btn-sm btn-light margin-bottom margin-top float-right" href="../logout/logout.php">Logout</a></h1>
         </div>
 
         <!--Search bar and Inventory select-->
