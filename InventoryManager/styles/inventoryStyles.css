@@ -30,6 +30,10 @@
     color: #FFFFFF;
 }
 
+.input-group-btn {
+    height: 38px;
+}
+
 .header {
     background-color: #031D54;
     color: #FFFFFF;
