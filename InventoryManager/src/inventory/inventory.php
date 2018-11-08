@@ -28,25 +28,37 @@
             <div class="row justify-content-between margin-top">
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
-                    <div class="form-group">
+                    <div class="row">
+                        <div class="col col-sm-11 form-group">
+                            <label for="inventorySelect"">Select Inventory:</label>
+                            <select class="form-control" name="inventory" id="inventorySelect">
+                                <?php
+                                    $db = connectToDB();
 
-                        <label for="inventorySelect"">Select Inventory:</label>
-                        <select class="form-control" name="inventory" id="inventorySelect">
-                            <?php
-                                $db = connectToDB();
+                                    $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
+                                    $result = $db->query($sql);
 
-                                $sql = "SELECT * FROM Inventory join Inventoryusermatrix on Inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
-                                $result = $db->query($sql);
+                                    $_SESSION['inventory_nr'] = null;
 
-                                $_SESSION['inventory_nr'] = null;
+                                    if (isset($_GET["inventory"])) {
+                                        if ($result->num_rows > 0) {
+                                            while($row = $result->fetch_assoc()) {
+                                                if ($_GET['inventory'] == $row['InventoryNr']) {
+                                                    echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
+                                                    $_SESSION['inventory_nr'] = $_GET['inventory'];
+                                                } else {
+                                                    echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
-                                if (isset($_GET["inventory"])) {
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
-                                            if ($_GET['inventory'] == $row['InventoryNr']) {
-                                                echo "<option value='$row[InventoryNr]'  selected>$row[Name]</option>";
-                                                $_SESSION['inventory_nr'] = $_GET['inventory'];
-                                            } else {
+                                                    // first option gets selected
+                                                    if (!isset($_SESSION['inventory_nr'])) {
+                                                        $_SESSION['inventory_nr'] = $row['InventoryNr'];
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    } else {
+                                        if ($result->num_rows > 0) {
+                                            while($row = $result->fetch_assoc()) {
                                                 echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
 
                                                 // first option gets selected
@@ -56,24 +68,15 @@
                                             }
                                         }
                                     }
-                                } else {
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
-                                            echo "<option value='$row[InventoryNr]'>$row[Name]</option>";
-
-                                            // first option gets selected
-                                            if (!isset($_SESSION['inventory_nr'])) {
-                                                $_SESSION['inventory_nr'] = $row['InventoryNr'];
-                                            }
-                                        }
-                                    }
-                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col col-sm-1">
+                            <i class="btn btn-primary" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
+                            <?php
+                                include('addInventory_Modal.php');
                             ?>
-                        </select>
-                        <i class="btn btn-primary" data-toggle='modal' data-target='#add_inventory_modal'>+</i>
-                        <?php
-                            include('addInventory_Modal.php');
-                        ?>
+                        </div>
                     </div>
 
                 </div>
