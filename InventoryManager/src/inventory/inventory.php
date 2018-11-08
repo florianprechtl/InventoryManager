@@ -88,7 +88,7 @@
                         <input type="text" class="form-control" name="searchEntry" id="searchEntry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group search-button" role="group">
-<!--                                <div class="dropdown dropdown-lg search-assesories">-->
+<!--                                <div class="dropdown dropdown-lg">-->
 <!--                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>-->
 <!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
 <!--                                        <form class="form-horizontal" role="form">-->
@@ -104,7 +104,7 @@
 <!--                                        </form>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-                                <button type="submit" class="btn button-search search-assesories"><i class="fas fa-search"></i></button>
+                                <button type="submit" name="search" class="btn button-search"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </div>
