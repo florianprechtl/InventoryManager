@@ -41,11 +41,17 @@
                 <!-- Left side - inventory select -->
                 <div class="col-sm-5">
                     <div class="form-group">
+
                         <label for="exampleFormControlSelect1">Select Inventory:</label>
                         <select class="form-control" name="inventory" id="exampleFormControlSelect1">
                             
                      <!--for infoproduct use that -->
                             <?php
+                            echo "<option value='$row[InventoryNr]'>$_SESSION[user_nr]</option>";
+                            echo "<option value='$row[InventoryNr]'>";
+                            echo "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
+                            echo "</option>";
+
                                 $db = connectToDB();
 
                                 $sql = "SELECT * FROM Inventory join Inventroyusermatrix on inventory.InventoryNr = Inventroyusermatrix.InventroyNr WHERE UserNr = $_SESSION[user_nr]";
