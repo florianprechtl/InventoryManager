@@ -11,7 +11,7 @@
     $age = $_POST['age'];
     $sex = empty($_POST['sex']) ? "NULL" : "'$_POST[sex]'";
     $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
-    $repeatedpsw = $_POST['repeatedpsw'];
+    $repeatedpsw = password_hash($_POST['repeatedpsw'], PASSWORD_DEFAULT);
     print_r($_POST);
     
     $dateRegister = date("Y-m-d");
