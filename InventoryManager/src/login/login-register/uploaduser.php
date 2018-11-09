@@ -10,7 +10,7 @@
     $newusername = $_POST['newusername'];
     $age = $_POST['age'];
     $sex = empty($_POST['sex']) ? "NULL" : "'$_POST[sex]'";
-    $psw = $_POST['psw'];
+    $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
     $repeatedpsw = $_POST['repeatedpsw'];
     print_r($_POST);
     

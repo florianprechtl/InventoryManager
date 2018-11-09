@@ -20,7 +20,7 @@
         
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                if ($row['Password'] == $password) {
+                if (password_verify($password, $row['Password'])) {
                     echo "Login succesfull <br><br>";
                     echo "UserNr: " . $row['UserNr'].
                         "<br>Username: " . $row['Username'].
