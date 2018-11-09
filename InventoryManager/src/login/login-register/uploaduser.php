@@ -10,14 +10,17 @@
     $newusername = $_POST['newusername'];
     $age = $_POST['age'];
     $sex = empty($_POST['sex']) ? "NULL" : "'$_POST[sex]'";
-    $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
-    $repeatedpsw = password_hash($_POST['repeatedpsw'], PASSWORD_DEFAULT);
+    $psw = $_POST['psw'];
+    $repeatedpsw = $_POST['repeatedpsw'];
     print_r($_POST);
     
     $dateRegister = date("Y-m-d");
 
         // inspiré
         if ($psw == $repeatedpsw) {
+
+            $psd = password_hash($psd, PASSWORD_DEFAULT);
+
             $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
 
