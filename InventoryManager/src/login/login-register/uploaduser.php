@@ -19,7 +19,7 @@
         // inspiré
         if ($psw == $repeatedpsw) {
 
-            $psd = password_hash($psd, PASSWORD_DEFAULT);
+            $psw = password_hash($psw, PASSWORD_DEFAULT);
 
             $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
