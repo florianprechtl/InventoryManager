@@ -1,4 +1,6 @@
 <?php
+    include('../common/basicFunctions.php');
+
     session_start();
     if (isset($_SESSION['user_name']) && isset($_SESSION['user_nr'])) {
         redirect('../inventory/inventory.php');
