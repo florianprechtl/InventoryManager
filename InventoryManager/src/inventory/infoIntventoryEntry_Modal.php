@@ -11,12 +11,17 @@
             </div>
 
             <div class="mx-auto">
+                 
                 <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                 <?php
                 $db = connectToDB();
 
                 $sql = "SELECT * FROM Product join Inventoryentry where Product.ProdNr = Inventoryentry.ProductNr and InventoryEntryNr = $inventoryEntryNr";
                 $result = $db->query($sql);
+     
+                $stock = 0;
+                $totalAmount = 0;
+               
 
                 //Utilisation de Product table :
                 if ($result->num_rows > 0) {
