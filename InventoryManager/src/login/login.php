@@ -5,8 +5,6 @@
     <?php
         include('login_header_session_start.php');
         include('login-register/registerNewUser_Modal.php');
-        include('../common/basicFunctions.php');
-        session_start();
 
         if (isset($_SESSION['user_name']) && isset($_SESSION['user_nr'])) {
             redirect('../inventory/inventory.php');
