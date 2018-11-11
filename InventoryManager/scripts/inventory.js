@@ -16,20 +16,20 @@ $(document).ready(function() {
             }
         });
 
-        /* stops the event at the current DOM object layer to prevent propagation to lower layers and thus prevent opening the modal  */
+        /* stops the event at the current DOM object layer to prevent propagation to lower layers and thus prevent opening the modal */
         event.stopPropagation();
     });
 
     $('#button_fade_to_new_product').click(function () {
         $('#content_existing_product').slideUp(750, function () {
             $('#content_new_product').slideDown(750);
-        })
+        });
     });
 
     $('#button_fade_to_existing_product').click(function () {
         $('#content_new_product').slideUp(750, function () {
             $('#content_existing_product').slideDown(750);
-        })
+        });
     });
 
     $('#inventorySelect').change(function() {
