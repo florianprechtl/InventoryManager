@@ -12,7 +12,7 @@
 
             <!-- Modal body-->
             <div class="modal-body">
-                <div class="form-group" id="content_new_product">
+                <div class="form-group" id="content_new_inventory">
                     <div class="form-group">
                         <label for="name_inventory">Inventory name</label><br>
                         <input class="form-control" name="name_inventory" type="text">
