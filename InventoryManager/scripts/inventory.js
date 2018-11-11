@@ -21,7 +21,9 @@ $(document).ready(function() {
     });
 
     $('#button_fade_to_new_product').click(function () {
+        $a = $('#content_existing_product');
         $('#content_existing_product').slideUp(750, function () {
+            $b = $('#content_new_product');
             $('#content_new_product').slideDown(750);
         });
     });
