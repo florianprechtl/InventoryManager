@@ -25,7 +25,7 @@
             $productNr = $_POST['name_prod_existing'];
         }
         insertInventoryEntry($db, $inventory, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
-        // redirect('inventory.php?inventory='.$inventory);
+        redirect('inventory.php?inventory='.$inventory);
     }
     
     
