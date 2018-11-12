@@ -15,7 +15,7 @@
                 <div class="form-group" id="content_new_inventory">
                     <div class="form-group">
                         <label for="name_inventory">Inventory name</label><br>
-                        <input class="form-control" required name="name_inventory" type="text">
+                        <input class="form-control" name="name_inventory" type="text" required>
                     </div>
                     <div class="form-group shadow-textarea">
                         <label for="description_inventory">Inventory description</label>
