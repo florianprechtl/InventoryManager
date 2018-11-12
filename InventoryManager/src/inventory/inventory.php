@@ -117,6 +117,23 @@
             </div>
         </form>
 
+        <!-- Alerts -->
+        <div class="row">
+            <?php
+            if (isset($_GET['updateSuccessful'])) {
+                if ($_GET['updateSuccessful'] == 'true') {
+                    echo "  <div class='alert alert-info' role='alert'>
+                                            Successfully changed inventory entry!
+                                        </div>";
+                } else if ($_GET['updateSuccessful'] == 'false') {
+                    echo "  <div class='alert alert-danger' role='alert'>
+                                            Something went wrong! Changes have not been saved!
+                                        </div>";
+                }
+            }
+            ?>
+        </div>
+
         <!-- Inventory entries showcase -->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
             <div class="inventory-item-preview icon-box" data-toggle="modal" data-target="#myModal">
