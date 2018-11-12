@@ -118,15 +118,15 @@
         </form>
 
         <!-- Alerts -->
-        <div class="row">
+        <div class="row justify-content-center">
             <?php
             if (isset($_GET['updateSuccessful'])) {
                 if ($_GET['updateSuccessful'] == 'true') {
-                    echo "  <div class='alert alert-info' role='alert'>
+                    echo "  <div class='col-sm-11 alert alert-info' role='alert'>
                                             Successfully changed inventory entry!
                                         </div>";
                 } else if ($_GET['updateSuccessful'] == 'false') {
-                    echo "  <div class='alert alert-danger' role='alert'>
+                    echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
                                             Something went wrong! Changes have not been saved!
                                         </div>";
                 }
