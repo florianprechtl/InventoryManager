@@ -41,9 +41,11 @@ $(document).ready(function() {
 });
 
 function editInventoryEntry($event) {
+    $idNr = $event.target.id.split('_')[2];
+
     disable($($event.target));
-    // $('#dismiss_changes').show();
-    // $('#save_changes').slideToggle;
+    $('#dismiss_changes_' + $idNr).show();
+    $('#save_changes_' + $idNr).slideToggle;
 }
 
 function disable($elem) {
