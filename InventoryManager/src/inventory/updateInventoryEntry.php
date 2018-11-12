@@ -13,8 +13,8 @@
         $unit = $_POST['unit'];
         $expiring_date = $_POST['date_expiring'];
         $buying_date = $_POST['date_buying'];
-        $date_buying = convertDate($_POST['date_buying']);
-        $date_expiring = convertDate($_POST['date_expiring']);
+        $date_buying = $_POST['date_buying'];
+        $date_expiring = $_POST['date_expiring'];
         $inventory_nr = $_SESSION['inventory_nr'];
 
 
