@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="amount">Description</label><br>
-                            <textarea class="form-control" name="description" id="descr_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->description?>">
+                            <textarea class="form-control" name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
 
