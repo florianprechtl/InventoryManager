@@ -3,21 +3,49 @@
     include('../common/connectDB.php');
     session_start();
 
-    print_r($_POST);
+    $date_pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])'; // yyyy-mm-dd
 
     if (isset($_POST['save_changes'])) {
         // update inventory entry
 
-        $inventory_entry_nr = $_POST['inventory_entry_nr'];
-        $amount = $_POST['amount'];
-        $unit = $_POST['unit'];
-        $expiring_date = $_POST['date_expiring'];
-        $buying_date = $_POST['date_buying'];
-        $date_buying = $_POST['date_buying'];
-        $date_expiring = $_POST['date_expiring'];
+        // validate and sanitize inputs
+        if (isset($_POST['inventory_entry_nr'])) {
+            $inventory_entry_nr = filter_var($_POST['inventory_entry_nr'], FILTER_SANITIZE_NUMBER_INT);
+        } else {
+            $inventory_entry_nr = null;
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+        }
+
+        if (isset($_POST['amount'])) {
+            $amount = filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_INT);
+        } else {
+            $amount = null;
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+        }
+
+        if (isset($_POST['unit']) && strlen($_POST['unit']) <= 10) {
+            $unit = filter_var($_POST['unit'], FILTER_SANITIZE_NUMBER_STRING);
+        } else {
+            $unit = null;
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+        }
+
+        if (isset($_POST['date_buying']) && preg_match($date_pattern, $_POST['date_buying'])){
+            $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_NUMBER_STRING);
+        } else {
+            $date_buying = null;
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+        }
+
+        if (isset($_POST['date_expiring']) && preg_match($date_pattern, $_POST['date_expiring'])) {
+            $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_NUMBER_STRING);
+        } else {
+            $date_expiring = null;
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+        }
+
+
         $inventory_nr = $_SESSION['inventory_nr'];
-
-
         $db = connectToDB();
 
         // Insert of the new inventory with a prepare statement
