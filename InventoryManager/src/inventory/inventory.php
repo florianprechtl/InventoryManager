@@ -185,6 +185,9 @@
 
                             includeWithVariables('infoInventoryEntry_Modal.php', array('inventoryEntryNr' => $row['InventoryEntryNr']));
                         }
+                    } else {
+                        echo "<div class='inventory-item-preview alert alert-danger'>";
+                        echo "<strong>No entries yet!</strong><br><br>Add one by clicking on the plus panel on the left!</div>";
                     }
                 } else {
                     echo "  <div class='alert alert-danger inventory-item-preview' role='alert'>
