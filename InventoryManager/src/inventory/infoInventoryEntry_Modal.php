@@ -40,11 +40,11 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6 form-group date-container">
+                        <div class="col-sm-6 form-group">
                             <label for="date_buying">Buying date</label><br>
                             <input class="form-control" disabled name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->buyingDate?>">
                         </div>
-                        <div class="col-sm-6 form-group date-container">
+                        <div class="col-sm-6 form-group">
                             <label for="date_expiring">Expiring date</label><br>
                             <input class="form-control" disabled name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->expiringDate?>">
                         </div>
@@ -61,14 +61,4 @@
         </div>
     </div>
 </div>
-<script>
-    $('.date-container input').datepicker({
-        format: "dd/mm/yyyy",
-        maxViewMode: 2,
-        todayBtn: "linked",
-        clearBtn: true,
-        todayHighlight: true,
-        toggleActive: true
-    });
-</script>
 
