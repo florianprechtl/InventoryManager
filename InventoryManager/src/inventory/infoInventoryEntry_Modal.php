@@ -19,11 +19,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 form-group">
-                            <label for="unit">Name</label><br>
+                            <label for="name">Name</label><br>
                             <input class="form-control" disabled name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label for="amount">Description</label><br>
+                            <label for="description">Description</label><br>
                             <textarea class="form-control" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
