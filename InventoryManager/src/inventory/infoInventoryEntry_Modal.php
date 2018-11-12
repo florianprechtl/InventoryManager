@@ -13,7 +13,7 @@
                 $inventoryEntry = getInventoryEntry($inventoryEntryNr);
             ?>
 
-            <form  id="inventoryEntryUpdateForm" method="POST" action="updateInventoryEntry.php" enctype="multipart/form-data">
+            <form  id="inventoryEntryUpdateForm" method="POST" action="../common/manageForms.php" enctype="multipart/form-data">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 form-group">
@@ -54,8 +54,8 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo $inventoryEntryNr ?>"></button>
-                <button type="submit" class="btn btn-primary" onclick="saveInventoryEntry(event)" id="save_changes_<?php echo $inventoryEntryNr ?>" style="display: none;">Save changes</button>
-                <button type="submit" class="btn btn-danger" id="dismiss_changes_<?php echo $inventoryEntryNr ?>" style="display: none;">Dismiss changes</button>
+                <button type="submit" name="save_changes" class="btn btn-primary" onclick="saveInventoryEntry(event)" id="save_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="save_changes">Save changes</button>
+                <button type="submit" name="dismiss_changes" class="btn btn-danger" id="dismiss_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="dismiss_changes">Dismiss changes</button>
             </div>
         </div>
     </div>
