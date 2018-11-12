@@ -48,7 +48,7 @@ $(document).ready(function() {
     });
 
     $('.date-container input').datepicker({
-        format: "dd/mm/yyyy",
+        format: "yyyy//mm/dd",
         maxViewMode: 2,
         todayBtn: "linked",
         clearBtn: true,
