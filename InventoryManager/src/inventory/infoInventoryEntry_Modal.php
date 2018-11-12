@@ -18,33 +18,33 @@
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="unit">Name</label><br>
-                            <input class="form-control" name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
+                            <input class="form-control" disabled name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="amount">Description</label><br>
-                            <textarea class="form-control" name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
+                            <textarea class="form-control" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="unit">Unit</label><br>
-                            <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->unit?>">
+                            <input class="form-control" disabled name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->unit?>">
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="amount">Amount</label><br>
-                            <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->amount?>">
+                            <input class="form-control" disabled name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->amount?>">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-6 form-group date-container">
                             <label for="date_buying">Buying date</label><br>
-                            <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->buyingDate?>">
+                            <input class="form-control" disabled name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->buyingDate?>">
                         </div>
                         <div class="col-sm-6 form-group date-container">
                             <label for="date_expiring">Expiring date</label><br>
-                            <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->expiringDate?>">
+                            <input class="form-control" disabled name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->expiringDate?>">
                         </div>
                     </div>
                 </div>
