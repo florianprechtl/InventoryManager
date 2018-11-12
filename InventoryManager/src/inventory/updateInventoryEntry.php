@@ -8,21 +8,17 @@
         // update inventory entry
 
         $inventory_nr = $_POST['inventory_entry_nr'];
+        $amount = $_POST['amount'];
 
 
         $db = connectToDB();
 
-//        // Insert of the new inventory with a prepare statement
-//        $sql = "Update Product Set Name = $name Where ProdNr = ";
-//        $stmt = $db->prepare($sql);
-//        $stmt->bind_param('iss', $inventory_nr, $name_inventory, $description_inventory);
-//        $stmt->execute();
-//
-//        // Insert of userInventoryEntry with a prepare statement
-//        $sql = "INSERT INTO InventoryUserMatrix (MatrixNr, InventoryNr, UserNr) VALUES (?, ?, ?)";
-//        $stmt = $db->prepare($sql);
-//        $stmt->bind_param('iii', $matrix_nr, $inventory_nr, $user_nr);
-//        $stmt->execute();
+        // Insert of the new inventory with a prepare statement
+        $sql = "Update InventoryEntry Set Amount = ? Where InventoryEntryNr = ?";
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param('ii', $amount, $inventory_nr);
+        $stmt->execute();
+        redirect('inventory.php?updateSuccessful=true');
     }
     if (isset($_POST['dismiss_changes'])) {
         redirect('inventory.php');
