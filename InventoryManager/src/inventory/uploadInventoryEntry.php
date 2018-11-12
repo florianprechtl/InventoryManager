@@ -76,7 +76,7 @@
         $productNr = $productNr != '' ? $productNr : 5;
         $userNr = $userNr != '' ? $userNr : 1;
         $amount = $amount != '' ? $amount : 'null';
-        $unit = $unit != '' ? $unit : 'null';
+        $unit = $unit != '' ? "'$unit'" : 'null';
         $buyingDate = $buyingDate != '' ? "'$buyingDate'" : 'null';
         $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
         $status = $status != '' ? $status : 'null';
