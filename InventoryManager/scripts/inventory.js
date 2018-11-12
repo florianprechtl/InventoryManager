@@ -41,7 +41,11 @@ $(document).ready(function() {
 });
 
 function editInventoryEntry() {
-    $('#edit_button').disable();
+    disable($('#edit_button'));
     $('#dismiss_changes').show();
     $('#save_changes').slideToggle;
+}
+
+function disable($elem) {
+    $elem.prop("disabled",true);
 }
