@@ -60,15 +60,15 @@
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
 
-            $productNr = row['ProductNr'];
-            $userNr = row['UserNr'];
-            $name = row['Name'];
-            $description = row['Description'];
-            $amount = row['Amount'];
-            $unit = row['Unit'];
-            $status = row['Status'];
-            $expiringDate = row['ExpiringDate'];
-            $buyingDate = row['BuyingDate'];
+            $productNr = $row['ProductNr'];
+            $userNr = $row['UserNr'];
+            $name = $row['Name'];
+            $description = $row['Description'];
+            $amount = $row['Amount'];
+            $unit = $row['Unit'];
+            $status = $row['Status'];
+            $expiringDate = $row['ExpiringDate'];
+            $buyingDate = $row['BuyingDate'];
         }
 
         return new Inventoryentry($inventoryEntryNr, $productNr, $userNr,
