@@ -48,15 +48,14 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo $inventoryEntryNr ?>"></button>
+                    <button type="submit" name="save_changes" class="btn btn-primary" onclick="saveInventoryEntry(event)" id="save_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="save_changes">Save changes</button>
+                    <button type="submit" name="dismiss_changes" class="btn btn-danger" id="dismiss_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="dismiss_changes">Dismiss changes</button>
+                </div>
             </form>
-
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo $inventoryEntryNr ?>"></button>
-                <button type="submit" name="save_changes" class="btn btn-primary" onclick="saveInventoryEntry(event)" id="save_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="save_changes">Save changes</button>
-                <button type="submit" name="dismiss_changes" class="btn btn-danger" id="dismiss_changes_<?php echo $inventoryEntryNr ?>" style="display: none;" value="dismiss_changes">Dismiss changes</button>
-            </div>
         </div>
     </div>
 </div>
