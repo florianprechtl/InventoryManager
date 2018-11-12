@@ -11,6 +11,22 @@
             </div>
 
             <div class="mx-auto">
+                <div class="form-group">
+                    <label for="unit">Unit</label><br>
+                    <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label><br>
+                    <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>">
+                </div>
+                <div class="form-group">
+                    <label for="date_buying">Buying date</label><br>
+                    <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>">
+                </div>
+                <div class="form-group">
+                    <label for="date_expiring">Expiring date</label><br>
+                    <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>">
+                </div>
                  
                 <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                 <?php
@@ -25,69 +41,68 @@
 
                 //Utilisation de Product table :
                 if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
+                    $row = $result->fetch_assoc();
 
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
-                        echo $row['ProdNr'];
-                        echo '<br>';
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
+                    echo $row['ProdNr'];
+                    echo '<br>';
 
-                        //1
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
-                        echo $row['Name'];
-                        echo '<br>';
-                        echo '<br>';
+                    //1
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
+                    echo $row['Name'];
+                    echo '<br>';
+                    echo '<br>';
 
-                        //2
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                        echo $row['Description'];
-                        echo '<br>';
+                    //2
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
+                    echo $row['Description'];
+                    echo '<br>';
 
-                        //3
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                        echo $row['Unit'];
-                        echo '<br>';
+                    //3
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
+                    echo $row['Unit'];
+                    echo '<br>';
 
-                        //4
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
-                        echo $stock;
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
-                        echo '<br>';
+                    //4
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
+                    echo $stock;
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
+                    echo '<br>';
 
-                        $stock += 1;
+                    $stock += 1;
 
-                        //5
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
-                        echo $row['Amount'];
+                    //5
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
+                    echo $row['Amount'];
 
-                        $totalAmount += $row['Amount'];
+                    $totalAmount += $row['Amount'];
 
-                        echo '<br>';
+                    echo '<br>';
 
-                        //6
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
+                    //6
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
 
-                        /* if( $row[Status] == 0)
-                             {
+                    /* if( $row[Status] == 0)
+                         {
 
-                             echo '<span> non-opened </span>';
+                         echo '<span> non-opened </span>';
 
-                             }*/
-                        if ($row['Status'] == 1) {
-                            echo '<span> opened </span>';
-                        }
-                        if ($row['Status'] == NULL) {
-                            echo '<span> no relative info </span>';
-                        }
-
-                        echo '<br>';
-
-                        //7
-                        echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
-                        echo $row['ExpiringDate'];
-
-                        echo '<br>';
-                        echo '<br>';
+                         }*/
+                    if ($row['Status'] == 1) {
+                        echo '<span> opened </span>';
                     }
+                    if ($row['Status'] == NULL) {
+                        echo '<span> no relative info </span>';
+                    }
+
+                    echo '<br>';
+
+                    //7
+                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
+                    echo $row['ExpiringDate'];
+
+                    echo '<br>';
+                    echo '<br>';
                 }
                 echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
                 echo $totalAmount;
