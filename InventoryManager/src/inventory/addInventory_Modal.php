@@ -15,7 +15,7 @@
                 <div class="form-group" id="content_new_inventory">
                     <div class="form-group">
                         <label for="name_inventory">Inventory name</label><br>
-                        <input class="form-control" name="name_inventory" type="text">
+                        <input class="form-control" required name="name_inventory" type="text">
                     </div>
                     <div class="form-group shadow-textarea">
                         <label for="description_inventory">Inventory description</label>
@@ -27,7 +27,7 @@
             <!-- Modal footer-->
             <div class="modal-footer">
                 <button type="submit" name="add_new_inventory" class="btn btn-primary" value="add_new_inventory">Submit</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" form="" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
 
         </div>
