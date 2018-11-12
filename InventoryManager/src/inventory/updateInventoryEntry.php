@@ -30,14 +30,14 @@
             redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false3");
         }
 
-        if (isset($_POST['date_buying']) && preg_match($date_pattern, $_POST['date_buying'])){
+        if (isset($_POST['date_buying']) && strlen($_POST['date_buying']) == 10){
             $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_NUMBER_STRING);
         } else {
             $date_buying = null;
             redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false4");
         }
 
-        if (isset($_POST['date_expiring']) && preg_match($date_pattern, $_POST['date_expiring'])) {
+        if (isset($_POST['date_expiring']) && strlen($_POST['date_expiring']) == 10) {
             $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_NUMBER_STRING);
         } else {
             $date_expiring = null;
