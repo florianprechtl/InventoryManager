@@ -40,11 +40,11 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-6 form-group datepicker">
                             <label for="date_buying">Buying date</label><br>
                             <input class="form-control" disabled name="date_buying" type="text" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" id="buying_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->buyingDate?>">
                         </div>
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-6 form-group datepicker">
                             <label for="date_expiring">Expiring date</label><br>
                             <input class="form-control" disabled name="date_expiring" type="text" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" id="expiring_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->expiringDate?>">
                         </div>
