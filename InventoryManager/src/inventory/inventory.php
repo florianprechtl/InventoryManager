@@ -135,7 +135,7 @@
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
-                                <strong>Something went wrong! Changes have not been saved!</strong>
+                                <strong>Updating the entry did not work! </strong>Please try again or give up!
                             </div>";
                 }
             }
@@ -149,14 +149,7 @@
                             </div>";
             }
 
-            if ($_GET['updateSuccessful'] == 'false') {
-                echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
-                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                    <span aria-hidden='true'>&times;</span>
-                                </button>
-                                <strong>Updating the entry did not work! </strong>Please try again or give up!
-                            </div>";
-            }
+
             ?>
         </div>
 
