@@ -14,6 +14,8 @@
             ?>
 
             <form  id="inventoryEntryUpdateForm" method="POST" action="../inventory/updateInventoryEntry.php" enctype="multipart/form-data">
+                <input name="inventory_entry_nr" hidden value="<?=$inventoryEntry?>">
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 form-group">
