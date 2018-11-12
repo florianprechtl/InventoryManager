@@ -45,9 +45,21 @@ function editInventoryEntry($event) {
 
     disable($($event.target));
     $('#dismiss_changes_' + $idNr).show();
-    $('#save_changes_' + $idNr).slideToggle;
+    $('#save_changes_' + $idNr).show();
+}
+
+function saveInventoryEntry($event) {
+    $idNr = $event.target.id.split('_')[2];
+
+    enable($('#edit_button_' + $idNr));
+    $('#dismiss_changes_' + $idNr).hide();
+    $('#save_changes_' + $idNr).hide();
 }
 
 function disable($elem) {
     $elem.prop("disabled",true);
+}
+
+function enable($elem) {
+    $elem.prop("disabled",false);
 }

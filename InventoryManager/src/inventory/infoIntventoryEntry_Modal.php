@@ -102,7 +102,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo $inventoryEntryNr ?>"></button>
-                <button type="submit" class="btn btn-primary" id="save_changes_<?php echo $inventoryEntryNr ?>" hidden>Save changes</button>
+                <button type="submit" class="btn btn-primary" onclick="saveInventoryEntry(event)" id="save_changes_<?php echo $inventoryEntryNr ?>">Save changes</button>
                 <button type="submit" class="btn btn-danger" id="dismiss_changes_<?php echo $inventoryEntryNr ?>" hidden>Dismiss changes</button>
             </div>
         </div>
