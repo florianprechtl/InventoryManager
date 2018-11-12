@@ -22,7 +22,7 @@
             $this->unit = $unit;
             $this->status = $status;
             $this->expiringDate = $expiringDate;
-            $this->expiringDate = $expiringDate;
+            $this->buyingDate = $buyingDate;
         }
     }
 ?>
