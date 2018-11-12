@@ -123,12 +123,18 @@
             if (isset($_GET['updateSuccessful'])) {
                 if ($_GET['updateSuccessful'] == 'true') {
                     echo "  <div class='col-sm-11 alert alert-info' role='alert'>
-                                            Successfully changed inventory entry!
-                                        </div>";
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                                <strong>Successfully changed inventory entry!</strong>
+                            </div>";
                 } else if ($_GET['updateSuccessful'] == 'false') {
                     echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
-                                            Something went wrong! Changes have not been saved!
-                                        </div>";
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                                <strong>Something went wrong! Changes have not been saved!</strong>
+                            </div>";
                 }
             }
             ?>
