@@ -100,9 +100,9 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo row[InventoryNr]?>"></button>
+                <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo row[InventoryEntryNr]?>"></button>
                 <button type="submit" class="btn btn-primary" id="save_changes_<?php echo row[InventoryNr]?>" hidden>Save changes</button>
-                <button type="submit" class="btn btn-danger" id="dismiss_changes_<?php echo row[InventoryNr]?>" hidden>Dismiss changes</button>
+                <button type="submit" class="btn btn-danger" id="dismiss_changes_<?php echo row[InventoryEntryNr]?>" hidden>Dismiss changes</button>
             </div>
         </div>
     </div>
