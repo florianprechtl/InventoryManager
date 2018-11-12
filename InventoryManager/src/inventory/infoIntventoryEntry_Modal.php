@@ -19,11 +19,11 @@
                     <label for="amount">Amount</label><br>
                     <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>">
                 </div>
-                <div class="form-group">
+                <div class="form-group date-container">
                     <label for="date_buying">Buying date</label><br>
                     <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>">
                 </div>
-                <div class="form-group">
+                <div class="form-group date-container">
                     <label for="date_expiring">Expiring date</label><br>
                     <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>">
                 </div>

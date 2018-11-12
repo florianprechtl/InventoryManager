@@ -47,7 +47,7 @@ $(document).ready(function() {
         })
     });
 
-    $('#buying_date_container input').datepicker({
+    $('date-container input').datepicker({
         format: "dd/mm/yyyy",
         maxViewMode: 2,
         todayBtn: "linked",
