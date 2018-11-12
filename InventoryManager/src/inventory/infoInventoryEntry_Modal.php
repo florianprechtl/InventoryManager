@@ -13,7 +13,7 @@
                 $inventoryEntry = getInventoryEntry($inventoryEntryNr);
             ?>
 
-            <form  id="inventoryEntryUpdateForm" method="POST" action="../common/manageForms.php" enctype="multipart/form-data">
+            <form  id="inventoryEntryUpdateForm" method="POST" action="../inventory/updateInventoryEntry.php" enctype="multipart/form-data">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 form-group">
