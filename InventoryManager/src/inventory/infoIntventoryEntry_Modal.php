@@ -100,9 +100,16 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" onclick="edit()" id="edit_button"><i class="fas fa-pencil"></i></button>
                 <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-danger">Dismiss changes</button>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function edit() {
+        $('#edit_button').disable();
+    }
+</script>
 
