@@ -100,7 +100,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-default" onclick="editInventoryEntry()" id="edit_button"><i class="fas fa-pencil"></i></button>
+                <button type="button" class="btn btn-default" onclick="editInventoryEntry()" id="edit_button"><i class="fas fa-edit"></i></button>
                 <button type="submit" class="btn btn-primary">Save changes</button>
                 <button type="submit" class="btn btn-danger">Dismiss changes</button>
             </div>
