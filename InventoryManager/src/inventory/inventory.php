@@ -69,6 +69,8 @@
                                                     $_SESSION['inventory_nr'] = $row['InventoryNr'];
                                                 }
                                             }
+                                        } else {
+                                            $_SESSION['inventory_nr'] = "none";
                                         }
                                     }
                                 ?>
@@ -137,6 +139,14 @@
                             </div>";
                 }
             }
+            if ($_SESSION['inventory_nr'] == "none") {
+                echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                                <strong>There is no inventory yet! </strong>Add your first inventory by clicking on the plus button next to the select field.
+                            </div>";
+            }
             ?>
         </div>
 
@@ -177,8 +187,8 @@
                         }
                     }
                 } else {
-                    echo "  <div class='alert alert-danger' role='alert'>
-                                No entries!
+                    echo "  <div class='alert alert-danger inventory-item-preview' role='alert'>
+                                No entries so far!
                             </div>";
                 }
             ?>
