@@ -28,6 +28,6 @@
         redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=true");
     }
     if (isset($_POST['dismiss_changes'])) {
-        redirect("inventory.php?inventory=$inventory_nr");
+        redirect("inventory.php?inventory=$inventory_nr&grege=wefewf");
     }
 ?>
