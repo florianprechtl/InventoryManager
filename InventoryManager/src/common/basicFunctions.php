@@ -1,4 +1,6 @@
 <?php
+    include('inventoryentry.php');
+
     function convertDate($date) {
         echo $date.'<br>';
         echo "date gets converted";
@@ -72,4 +74,5 @@
         return new Inventoryentry($inventoryEntryNr, $productNr, $userNr,
             $name, $description, $amount, $unit, $status, $expiringDate, $buyingDate);
     }
+
 ?>
