@@ -13,28 +13,28 @@
             $inventory_entry_nr = filter_var($_POST['inventory_entry_nr'], FILTER_SANITIZE_NUMBER_INT);
         } else {
             $inventory_entry_nr = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false1");
         }
 
         if (isset($_POST['amount'])) {
             $amount = filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_INT);
         } else {
             $amount = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false2");
         }
 
         if (isset($_POST['unit']) && strlen($_POST['unit']) <= 10) {
             $unit = filter_var($_POST['unit'], FILTER_SANITIZE_NUMBER_STRING);
         } else {
             $unit = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false3");
         }
 
         if (isset($_POST['date_buying']) && preg_match($date_pattern, $_POST['date_buying'])){
             $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_NUMBER_STRING);
         } else {
             $date_buying = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false4");
         }
 
         if (isset($_POST['date_expiring']) && preg_match($date_pattern, $_POST['date_expiring'])) {
