@@ -46,6 +46,7 @@ function editInventoryEntry($event) {
     disable($($event.target));
     $('#dismiss_changes_' + $idNr).show();
     $('#save_changes_' + $idNr).show();
+    $('#name_field_' + $idNr).show();
 }
 
 function saveInventoryEntry($event) {
@@ -54,6 +55,7 @@ function saveInventoryEntry($event) {
     enable($('#edit_button_' + $idNr));
     $('#dismiss_changes_' + $idNr).hide();
     $('#save_changes_' + $idNr).hide();
+    $('#name_field_' + $idNr).hide();
 }
 
 function disable($elem) {
