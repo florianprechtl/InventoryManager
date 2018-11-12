@@ -40,10 +40,10 @@ $(document).ready(function() {
 
 });
 
-function editInventoryEntry() {
-    disable($('#edit_button'));
-    $('#dismiss_changes').show();
-    $('#save_changes').slideToggle;
+function editInventoryEntry($event) {
+    disable($($event.target));
+    // $('#dismiss_changes').show();
+    // $('#save_changes').slideToggle;
 }
 
 function disable($elem) {
