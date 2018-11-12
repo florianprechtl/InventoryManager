@@ -1,6 +1,7 @@
 <?php
     include('../common/basicFunctions.php');
     include('../common/connectDB.php');
+    session_start();
 
     print_r($_POST);
 
