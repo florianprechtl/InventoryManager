@@ -61,4 +61,14 @@
         </div>
     </div>
 </div>
+<script>
+    $('.date-container input').datepicker({
+        format: "dd/mm/yyyy",
+        maxViewMode: 2,
+        todayBtn: "linked",
+        clearBtn: true,
+        todayHighlight: true,
+        toggleActive: true
+    });
+</script>
 
