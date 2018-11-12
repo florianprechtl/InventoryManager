@@ -9,58 +9,46 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <label for="unit">Name</label><br>
-                        <input class="form-control" name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>">
+            <?php
+                $inventoryEntry = getInventoryEntry($inventoryEntryNr);
+            ?>
+
+            <form  id="inventoryEntryUpdateForm" method="POST" action="updateInventoryEntry.php" enctype="multipart/form-data">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label for="unit">Name</label><br>
+                            <input class="form-control" name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="amount">Description</label><br>
+                            <textarea class="form-control" name="description" id="descr_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->description?>">
+                        </div>
                     </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="amount">Description</label><br>
-                        <input class="form-control" name="description" type="text" id="descr_field_<?php echo $inventoryEntryNr ?>">
+
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label for="unit">Unit</label><br>
+                            <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->unit?>">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="amount">Amount</label><br>
+                            <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->amount?>">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 form-group date-container">
+                            <label for="date_buying">Buying date</label><br>
+                            <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->buyingDate?>">
+                        </div>
+                        <div class="col-sm-6 form-group date-container">
+                            <label for="date_expiring">Expiring date</label><br>
+                            <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->expiringDate?>">
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <label for="unit">Unit</label><br>
-                        <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>">
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="amount">Amount</label><br>
-                        <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6 form-group date-container">
-                        <label for="date_buying">Buying date</label><br>
-                        <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>">
-                    </div>
-                    <div class="col-sm-6 form-group date-container">
-                        <label for="date_expiring">Expiring date</label><br>
-                        <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>">
-                    </div>
-                </div>
-
-                <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
-                <?php
-                $db = connectToDB();
-
-                $sql = "SELECT * FROM Product join Inventoryentry where Product.ProdNr = Inventoryentry.ProductNr and InventoryEntryNr = $inventoryEntryNr";
-                $result = $db->query($sql);
-
-                $stock = 0;
-                $totalAmount = 0;
-
-
-                //Utilisation de Product table :
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                }
-
-                ?>
-            </div>
+            </form>
 
 
             <div class="modal-footer">
