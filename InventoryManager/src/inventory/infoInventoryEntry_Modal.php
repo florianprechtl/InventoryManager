@@ -31,11 +31,11 @@
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="unit">Unit</label><br>
-                            <input class="form-control" disabled name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->unit?>">
+                            <input class="form-control" disabled name="unit" type="text" pattern="^([a-z]|[A-Z]){0,10}$" id="unit_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->unit?>">
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="amount">Amount</label><br>
-                            <input class="form-control" disabled name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->amount?>">
+                            <input class="form-control" disabled name="amount" type="number" min="0" max="100000" id="amount_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->amount?>">
                         </div>
                     </div>
 
