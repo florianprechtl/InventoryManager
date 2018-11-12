@@ -21,12 +21,14 @@
      
                 $stock = 0;
                 $totalAmount = 0;
-                $inventoryEntryNr = row['InventoryEntryNr'];
+                $inventoryEntryNr = 0;
                
 
                 //Utilisation de Product table :
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+                        $inventoryEntryNr = row['InventoryEntryNr'];
+
                         echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
                         echo $row['ProdNr'];
                         echo '<br>';
