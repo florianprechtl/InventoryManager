@@ -8,7 +8,6 @@
         // update inventory entry
 
         $inventory_nr = $_POST['inventory_entry_nr'];
-        $name = $_POST['name'];
 
 
         $db = connectToDB();
