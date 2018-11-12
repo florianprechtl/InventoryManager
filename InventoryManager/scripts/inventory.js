@@ -45,8 +45,8 @@ function editInventoryEntry($event) {
 
     disable($('#edit_button_' + $idNr));
 
-    enable($('#name_field_' + $idNr));
-    enable($('#descr_field_' + $idNr));
+    // enable($('#name_field_' + $idNr));
+    // enable($('#descr_field_' + $idNr));
     enable($('#unit_field_' + $idNr));
     enable($('#amount_field_' + $idNr));
     enable($('#buying_date_' + $idNr));
@@ -61,8 +61,8 @@ function saveInventoryEntry($event) {
 
     enable($('#edit_button_' + $idNr));
 
-    disable($('#name_field_' + $idNr));
-    disable($('#descr_field_' + $idNr));
+    // disable($('#name_field_' + $idNr));
+    // disable($('#descr_field_' + $idNr));
     disable($('#unit_field_' + $idNr));
     disable($('#amount_field_' + $idNr));
     disable($('#buying_date_' + $idNr));

@@ -20,11 +20,11 @@
         $productNr = null;
 
         if (!isset($_POST['name_prod_existing']) || $_POST['name_prod_existing'] == '') {
-            $productNr = insertProduct($db, $name_product, $descr_product, $unit, $imageBase64);
+            $productNr = insertProduct($db, $name_product, $descr_product, $imageBase64);
         } else {
             $productNr = $_POST['name_prod_existing'];
         }
-        insertInventoryEntry($db, $inventory, $productNr, null, $amount, $date_buying, $date_expiring, null);
+        insertInventoryEntry($db, $inventory, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
         redirect('inventory.php?inventory='.$inventory);
     }
     
@@ -56,7 +56,7 @@
         }
         
         // insert product 
-        $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Unit, Image) VALUES (NULL, NULL, '$name', '$descr', '$unit', '$imageName')";
+        $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Image) VALUES (NULL, NULL, '$name', '$descr', '$imageName')";
         echo $sql;
         $db->query($sql);
 
@@ -69,20 +69,21 @@
     /*
     *   Function that inserts inventoryentry
     */
-    function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status) {
+    function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status) {
         
         // set values of variables
         $inventoryNr = $inventoryNr != '' ? $inventoryNr : 'null';
         $productNr = $productNr != '' ? $productNr : 5;
         $userNr = $userNr != '' ? $userNr : 1;
         $amount = $amount != '' ? $amount : 'null';
+        $unit = $unit != '' ? $unit : 'null';
         $buyingDate = $buyingDate != '' ? "'$buyingDate'" : 'null';
         $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
         $status = $status != '' ? $status : 'null';
         
         // insert inventor entry
         $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, BuyingDate, ExpiringDate, Status) 
-                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $buyingDate, $expiringDate, $status)"; 
+                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status)";
         echo $sql;
         $db->query($sql);
     }

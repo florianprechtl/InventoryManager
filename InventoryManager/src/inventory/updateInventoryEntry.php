@@ -7,15 +7,14 @@
     if (isset($_POST['save_changes'])) {
         // update inventory entry
 
-        $inventory_nr = $_POST['inventory_entry'];
-
-        var_dump($inventory_nr);
+        $inventory_nr = $_POST['inventory_entry_nr'];
+        $name = $_POST['name'];
 
 
         $db = connectToDB();
 
 //        // Insert of the new inventory with a prepare statement
-//        $sql = "INSERT INTO Inventory (InventoryNr, Name, Description) VALUES (?, ?, ?)";
+//        $sql = "Update Product Set Name = $name Where ProdNr = ";
 //        $stmt = $db->prepare($sql);
 //        $stmt->bind_param('iss', $inventory_nr, $name_inventory, $description_inventory);
 //        $stmt->execute();
