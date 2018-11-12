@@ -41,7 +41,7 @@
             $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_NUMBER_STRING);
         } else {
             $date_expiring = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false");
+            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false5");
         }
 
 
