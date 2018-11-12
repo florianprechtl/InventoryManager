@@ -13,6 +13,8 @@
         $unit = $_POST['unit'];
         $expiring_date = $_POST['date_expiring'];
         $buying_date = $_POST['date_buying'];
+        $date_buying = convertDate($_POST['date_buying']);
+        $date_expiring = convertDate($_POST['date_expiring']);
         $inventory_nr = $_SESSION['inventory_nr'];
 
 
@@ -21,7 +23,7 @@
         // Insert of the new inventory with a prepare statement
         $sql = "Update InventoryEntry Set Amount = ?, Unit = ?, ExpiringDate = ?, BuyingDate = ? Where InventoryEntryNr = ?";
         $stmt = $db->prepare($sql);
-        $stmt->bind_param('isssi', $amount, $unit, $expiring_date, $buying_date, $inventory_entry_nr);
+        $stmt->bind_param('isssi', $amount, $unit, $date_expiring, $date_buying, $inventory_entry_nr);
         $stmt->execute();
         redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=true");
     }
