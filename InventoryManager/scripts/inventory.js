@@ -41,5 +41,7 @@ $(document).ready(function() {
 });
 
 function editInventoryEntry() {
-    alert('yay');
+    $('#edit_button').disable();
+    $('#dismiss_changes').show();
+    $('#save_changes').slideToggle;
 }
