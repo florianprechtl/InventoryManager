@@ -13,35 +13,35 @@
             $inventory_entry_nr = filter_var($_POST['inventory_entry_nr'], FILTER_SANITIZE_NUMBER_INT);
         } else {
             $inventory_entry_nr = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false1");
+            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
         }
 
         if (isset($_POST['amount'])) {
             $amount = filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_INT);
         } else {
             $amount = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false2");
+            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
         }
 
         if (isset($_POST['unit']) && strlen($_POST['unit']) <= 10) {
             $unit = filter_var($_POST['unit'], FILTER_SANITIZE_STRING);
         } else {
             $unit = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false3");
+            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
         }
 
         if (isset($_POST['date_buying']) && strlen($_POST['date_buying']) == 10){
             $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_STRING);
         } else {
             $date_buying = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false4");
+            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
         }
 
         if (isset($_POST['date_expiring']) && strlen($_POST['date_expiring']) == 10) {
             $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_STRING);
         } else {
             $date_expiring = null;
-            redirect("inventory.php?inventory=$inventory_nr&successfullUpdate=false5");
+            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
         }
 
 

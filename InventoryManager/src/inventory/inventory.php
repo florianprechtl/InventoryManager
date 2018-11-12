@@ -139,12 +139,22 @@
                             </div>";
                 }
             }
+
             if ($_SESSION['inventory_nr'] == "none") {
                 echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
                                 <strong>There is no inventory yet! </strong>Add your first inventory by clicking on the plus button next to the select field.
+                            </div>";
+            }
+
+            if ($_GET['updateSuccessful'] == 'false') {
+                echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                                <strong>Updating the entry did not work! </strong>Please try again or give up!
                             </div>";
             }
             ?>
