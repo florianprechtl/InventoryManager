@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="info_modal_<?php echo $inventoryEntryNr ?>" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="max-width: 700px;">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">PRODUCT INFO </h5>
@@ -9,106 +9,55 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="unit">Name</label><br>
+                        <input class="form-control" name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="amount">Description</label><br>
+                        <input class="form-control" name="description" type="text" id="descr_field_<?php echo $inventoryEntryNr ?>">
+                    </div>
+                </div>
 
-            <div class="mx-auto">
-                <div class="form-group">
-                    <label for="unit">Unit</label><br>
-                    <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="unit">Unit</label><br>
+                        <input class="form-control" name="unit" type="text" id="unit_field_<?php echo $inventoryEntryNr ?>">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="amount">Amount</label><br>
+                        <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="amount">Amount</label><br>
-                    <input class="form-control" name="amount" type="number" min="0" id="amount_field_<?php echo $inventoryEntryNr ?>">
+
+                <div class="row">
+                    <div class="col-sm-6 form-group date-container">
+                        <label for="date_buying">Buying date</label><br>
+                        <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>">
+                    </div>
+                    <div class="col-sm-6 form-group date-container">
+                        <label for="date_expiring">Expiring date</label><br>
+                        <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>">
+                    </div>
                 </div>
-                <div class="form-group date-container">
-                    <label for="date_buying">Buying date</label><br>
-                    <input class="form-control" name="date_buying" type="text" id="buying_date_<?php echo $inventoryEntryNr ?>">
-                </div>
-                <div class="form-group date-container">
-                    <label for="date_expiring">Expiring date</label><br>
-                    <input class="form-control" name="date_expiring" type="text" id="expiring_date_<?php echo $inventoryEntryNr ?>">
-                </div>
-                 
+
                 <!-- PRODUCT TABLE : NAME & DESCRIPTION -->
                 <?php
                 $db = connectToDB();
 
                 $sql = "SELECT * FROM Product join Inventoryentry where Product.ProdNr = Inventoryentry.ProductNr and InventoryEntryNr = $inventoryEntryNr";
                 $result = $db->query($sql);
-     
+
                 $stock = 0;
                 $totalAmount = 0;
-               
+
 
                 //Utilisation de Product table :
                 if ($result->num_rows > 0) {
                     $row = $result->fetch_assoc();
-
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product number reference: </span>';
-                    echo $row['ProdNr'];
-                    echo '<br>';
-
-                    //1
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Product name : </span>';
-                    echo $row['Name'];
-                    echo '<br>';
-                    echo '<br>';
-
-                    //2
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Description : </span>';
-                    echo $row['Description'];
-                    echo '<br>';
-
-                    //3
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Unit : </span>';
-                    echo $row['Unit'];
-                    echo '<br>';
-
-                    //4
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > - Box n°</span>';
-                    echo $stock;
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold"> : </span>';
-                    echo '<br>';
-
-                    $stock += 1;
-
-                    //5
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Amount in stock : </span>';
-                    echo $row['Amount'];
-
-                    $totalAmount += $row['Amount'];
-
-                    echo '<br>';
-
-                    //6
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Status : </span>';
-
-                    /* if( $row[Status] == 0)
-                         {
-
-                         echo '<span> non-opened </span>';
-
-                         }*/
-                    if ($row['Status'] == 1) {
-                        echo '<span> opened </span>';
-                    }
-                    if ($row['Status'] == NULL) {
-                        echo '<span> no relative info </span>';
-                    }
-
-                    echo '<br>';
-
-                    //7
-                    echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Expiring date : </span>';
-                    echo $row['ExpiringDate'];
-
-                    echo '<br>';
-                    echo '<br>';
                 }
-                echo '<span style = "color:grey; font-variant: small-caps; font-weight:bold" > Total Amount of this product : </span>';
-                echo $totalAmount;
-
-                echo '<br>';
-                echo '<br>';
 
                 ?>
             </div>
