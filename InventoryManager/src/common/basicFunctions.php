@@ -2,11 +2,22 @@
     include('inventoryentry.php');
 
     function convertDate($date) {
-        echo $date.'<br>';
-        echo "date gets converted";
-        // converts form mm/dd/yyyy to yyyy-mm-dd
-        $result = explode('/', $date);
-        return $result[2].'-'.$result[1].'-'.$result[0];
+        if (preg_match('(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}', $date)) {
+
+            echo $date . '<br>';
+            echo "date gets converted";
+            // converts form mm/dd/yyyy to yyyy-mm-dd
+            $result = explode('/', $date);
+            if (count($result) > 1) {
+                return $result[2] . '-' . $result[1] . '-' . $result[0];
+            } else {
+                return $date;
+            }
+
+        } else {
+            return false;
+            redirect('../inventory/inventory.php?wifhiufhwefui=ewfiuewfn');
+        }
     }
 
 
