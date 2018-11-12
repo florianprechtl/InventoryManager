@@ -43,33 +43,14 @@ $(document).ready(function() {
 function editInventoryEntry($event) {
     $idNr = $event.target.id.split('_')[2];
 
-    disable($('#edit_button_' + $idNr));
-
-    // enable($('#name_field_' + $idNr));
-    // enable($('#descr_field_' + $idNr));
     enable($('#unit_field_' + $idNr));
     enable($('#amount_field_' + $idNr));
     enable($('#buying_date_' + $idNr));
     enable($('#expiring_date_' + $idNr));
 
+    $('#edit_button_' + $idNr).hide();
     $('#dismiss_changes_' + $idNr).show();
     $('#save_changes_' + $idNr).show();
-}
-
-function saveInventoryEntry($event) {
-    $idNr = $event.target.id.split('_')[2];
-
-    enable($('#edit_button_' + $idNr));
-
-    // disable($('#name_field_' + $idNr));
-    // disable($('#descr_field_' + $idNr));
-    disable($('#unit_field_' + $idNr));
-    disable($('#amount_field_' + $idNr));
-    disable($('#buying_date_' + $idNr));
-    disable($('#expiring_date_' + $idNr));
-
-    $('#dismiss_changes_' + $idNr).hide();
-    $('#save_changes_' + $idNr).hide();
 }
 
 function disable($elem) {
