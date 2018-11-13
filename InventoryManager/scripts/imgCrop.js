@@ -1,3 +1,5 @@
+// crop image is used on the adding product modal -> add a correct image of the new product
+
 $(document).ready(function() {
 
     $('#image_demo').fadeOut();
