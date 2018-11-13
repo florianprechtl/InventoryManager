@@ -5,5 +5,7 @@ or do we join them in the same ?
 
 - problem of non logical example : 
 we have amount of Leeks = 6 and unit = kg. We consider that there are 6 leeks in the fridge or 6kg of leeks ?
+==> 6kg ==> so it's the same for tomatoes etc, it is not unity 
+=> maybe we can introduce a "piece" as a unity -> then we can consider that we have 6 leeks 
 
 
