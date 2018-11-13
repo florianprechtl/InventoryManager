@@ -1,3 +1,5 @@
 - productgroup = unuseful and complicated 
 
+- if the same product appears twice because of a difference into the expiring date, do we distinguish it in two products 
+or do we join them in the same ?
 
