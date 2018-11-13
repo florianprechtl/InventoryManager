@@ -2,3 +2,4 @@
 - don't forget the _ in $_POST
 - always keep in mind that the smallest typos will break your neck, especially if it's something like "name_descr = name_desrc"
 - never forget the $ infornt of variables. Otherwise you will get crazy resuts if you e.g. try to access an array -> then the variable name without $ will be seen as string
+- keep several internet pages open, especially in order to reload the main menu to let the modification appear faster on the website app link
