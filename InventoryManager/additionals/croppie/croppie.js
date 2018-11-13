@@ -4,6 +4,7 @@
  * Foliotek
  * Version: 2.6.2
  *************************/
+
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
