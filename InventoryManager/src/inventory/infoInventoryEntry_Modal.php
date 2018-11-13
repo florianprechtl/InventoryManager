@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Modal for the info of products-->
 <div class="modal fade" id="info_modal_<?php echo $inventoryEntryNr ?>" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" style="max-width: 700px;">
