@@ -40,6 +40,7 @@ $(document).ready(function() {
 
 });
 
+// function to modify the info of a product
 function editInventoryEntry($event) {
     $idNr = $event.target.id.split('_')[2];
 
