@@ -4,6 +4,7 @@
     margin: auto;
 }
 
+
 .croppie-container .cr-image {
     z-index: -1;
     position: absolute;
@@ -13,6 +14,7 @@
     max-height: none;
     max-width: none;
 }
+
 
 .croppie-container .cr-boundary {
     position: relative;
@@ -128,6 +130,7 @@
 /*************************************/
 /*http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html */
 /*************************************/
+
 
 .cr-slider {
     -webkit-appearance: none;
