@@ -16,7 +16,8 @@
     
     $dateRegister = date("Y-m-d");
 
-        // inspiré
+        // je me suis inspiré du uploadinventoryentry
+        // ça marche
         if ($psw == $repeatedpsw) {
 
             $psw = password_hash($psw, PASSWORD_DEFAULT);
