@@ -73,7 +73,7 @@
                                                     <?php
                                                     $db = connectToDB();
 
-                                                    $sql = "SELECT * FROM Product";
+                                                    $sql = "SELECT * FROM Product  Order by Name";
                                                     $products = [];
 
                                                     $result = $db->query($sql);
