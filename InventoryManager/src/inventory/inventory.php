@@ -171,9 +171,9 @@
         
                 if (isset($_SESSION['inventory_nr'])) {
                     if (isset($_GET['search_entry'])) {
-                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] and Name like '%$_GET[search_entry]%'";
+                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] and Name like '%$_GET[search_entry]%' Order by Name";
                     } else {
-                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr]";
+                        $sql = "SELECT * FROM inventoryentry inner join product on inventoryentry.ProductNr = product.ProdNr where InventoryNr = $_SESSION[inventory_nr] Order by Name";
 
                     }
                     $result = $db->query($sql);
