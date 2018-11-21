@@ -124,14 +124,14 @@
             <?php
             if (isset($_GET['updateSuccessful'])) {
                 if ($_GET['updateSuccessful'] == 'true') {
-                    echo "  <div class='col-sm-11 alert alert-info' role='alert'>
+                    echo "  <div class='col-sm-9 alert alert-info' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
                                 <strong>Successfully changed inventory entry!</strong>
                             </div>";
                 } else if ($_GET['updateSuccessful'] == 'false') {
-                    echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
+                    echo "  <div class='col-sm-9 alert alert-danger' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
@@ -141,7 +141,7 @@
             }
 
             if ($_SESSION['inventory_nr'] == "none") {
-                echo "  <div class='col-sm-11 alert alert-danger' role='alert'>
+                echo "  <div class='col-sm-9 alert alert-danger' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
