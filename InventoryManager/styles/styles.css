@@ -73,3 +73,9 @@
 .no-padding-left {
     padding-left: 0 !important;
 }
+
+
+/* Datepicker */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff !important; opacity: 1;
+}
