@@ -20,7 +20,7 @@
         $productNr = null;
 
         if (!isset($_POST['name_prod_existing']) || $_POST['name_prod_existing'] == '') {
-            $productNr = insertProduct($db, $name_product, $descr_product, $imageBase64);
+            $productNr = insertProduct($db, $name_product, $descr_product, $descr_product, $imageBase64);
         } else {
             $productNr = $_POST['name_prod_existing'];
         }
