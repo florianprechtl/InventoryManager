@@ -120,7 +120,7 @@
         </form>
 
         <!-- Alerts -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center padding-right padding-left padding-top">
             <?php
             if (isset($_GET['updateSuccessful'])) {
                 if ($_GET['updateSuccessful'] == 'true') {
