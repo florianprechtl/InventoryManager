@@ -133,11 +133,11 @@
                                     </div>
                                     <div class="form-group date-container">
                                         <label for="date_buying">Buying date</label><br>
-                                        <input class="form-control" name="date_buying" type="text" readonly="true">
+                                        <input class="form-control date-picker-input" name="date_buying" type="text" readonly="true">
                                     </div>
                                     <div class="form-group date-container">
                                         <label for="date_expiring">Expiring date</label><br>
-                                        <input class="form-control" name="date_expiring" type="text" readonly="true">
+                                        <input class="form-control date-picker-input" name="date_expiring" type="text" readonly="true">
                                     </div>
                                 </div>
                             </div>
