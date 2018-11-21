@@ -76,6 +76,10 @@
 
 
 /* Datepicker */
-.date-picker-input {
+.date-picker-input .form-control[disabled] {
+     background-color: #fff !important; opacity: 1;
+ }
+
+.date-picker-input[disabled] {
     background-color: #fff !important; opacity: 1;
 }
