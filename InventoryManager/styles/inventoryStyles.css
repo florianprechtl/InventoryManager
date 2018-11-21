@@ -50,8 +50,6 @@
 
 .inventory-item-preview:hover {
     box-shadow: inset black 0px 0px 5px 0px;
-    opacity: 0;
-    font-weight: bold;
 }
 
 .icon-box {
