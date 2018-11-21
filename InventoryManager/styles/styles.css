@@ -76,6 +76,6 @@
 
 
 /* Datepicker */
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.date-container. form-control[disabled], .date-container. form-control[readonly], .date-container fieldset[disabled] .form-control {
     background-color: #fff !important; opacity: 1;
 }
