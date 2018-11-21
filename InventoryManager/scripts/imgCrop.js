@@ -51,6 +51,8 @@ $(document).ready(function() {
 
     $('.date-container input').datepicker({
         format: "yyyy-mm-dd",
+        ignoreReadonly: true,
+        allowInputToggle: true,
         maxViewMode: 2,
         todayBtn: "linked",
         clearBtn: true,
