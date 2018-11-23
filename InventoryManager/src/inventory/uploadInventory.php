@@ -8,7 +8,7 @@
 
     // Variables of the inventory
 
-    if (isset($_GET['name_inventory'])) {
+    if (isset($_GET['name_inventory']) && !empty($_GET['name_inventory'])) {
         $name_inventory = $_GET['name_inventory'];
     } else {
         redirect("inventory.php?inventory=$inventory_nr&error=nameNotDefined");

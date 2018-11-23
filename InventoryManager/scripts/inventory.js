@@ -35,7 +35,6 @@ $(document).ready(function() {
     });
 
     $('#inventorySelect').change(function() {
-        let a = $('#search_button');
        $('#search_button').click();
     });
 
