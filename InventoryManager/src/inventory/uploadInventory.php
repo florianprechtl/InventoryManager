@@ -7,7 +7,12 @@
 
 
     // Variables of the inventory
-    $name_inventory = $_GET['name_inventory'];
+
+    if (isset($_GET['name_inventory'])) {
+        $name_inventory = $_GET['name_inventory'];
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&error=nameNotDefined");
+    }
     $description_inventory = $_GET['description_inventory'];
     $inventory_nr = "";
     $user_nr = $_SESSION['user_nr'];

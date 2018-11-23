@@ -140,6 +140,17 @@
                 }
             }
 
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == 'nameNotDefined') {
+                    echo "  <div class='col-sm-9 alert alert-danger' role='alert'>
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                                <strong>Adding inventory did not work! </strong>No name defined
+                            </div>";
+                }
+            }
+
             if ($_SESSION['inventory_nr'] == "none") {
                 echo "  <div class='col-sm-9 alert alert-danger' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
