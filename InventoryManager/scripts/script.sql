@@ -30,7 +30,7 @@ INSERT INTO `inventory` (`InventoryNr`, `Name`, `Description`) VALUES
 
 
 INSERT INTO `inventoryentry` (`InventoryEntryNr`, `InventoryNr`, `ProductNr`, `UserNr`, `Amount`, `BuyingDate`, `ExpiringDate`, `Status`) VALUES
-(1, 1, 6, 1, 10, '2018-10-22', '2018-11-03', 0),
+(1, 1, 6, 1, 10, '2018-10-23', '2018-11-03', 0),
 (2, 1, 4, 1, 3, '2018-01-12', '2018-01-16', 1),
 (3, 1, 7, 1, 12, '2018-03-03', '2018-03-12', NULL),
 (4, 3, 9, 1, 4, '2018-06-01', '2018-06-15', NULL),
