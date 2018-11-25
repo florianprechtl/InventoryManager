@@ -1,4 +1,4 @@
-<!-- This code is for the login page and permits the access to the registration modal -->
+<!--  This code is for the login page and permits the access to the registration modal  -->
 
 <html>
 
