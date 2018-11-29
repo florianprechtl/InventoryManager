@@ -42,8 +42,8 @@
         } else {
             $productNr = $_POST['name_prod_existing'];
         }
-        insertInventoryEntry($db, $inventory, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
-        redirect('inventory.php?inventory='.$inventory);
+        insertInventoryEntry($db, $inventory_nr, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
+        redirect('inventory.php?inventory='.$inventory_nr);
     }
     
     
