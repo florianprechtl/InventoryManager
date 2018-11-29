@@ -1,6 +1,5 @@
-<!-- Code shared on the teacher's github -->
-
 <?php
+    // connect to the database and return instance
     function connectToDB() {
         // Create database connection
         $connectstr_dbhost = '';

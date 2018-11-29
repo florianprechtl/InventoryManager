@@ -1,8 +1,8 @@
 <?php
     include('inventoryentry.php');
 
-    // converts date to desired pattern
-    // unused atm
+    // Converts date to desired pattern
+    // Unused atm
     function convertDate($date) {
         if (preg_match('[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])', $date)) {
 
@@ -46,7 +46,7 @@
 
     }
 
-
+    // Redirects within the application path
     function redirect($url) {
         ob_start();
         header('Location: '.$url);

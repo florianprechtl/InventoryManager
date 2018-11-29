@@ -1,4 +1,7 @@
+<!-- Is used to manage two competing forms
+This file decides which php file to redirect to -->
 <?php
+
     include('basicFunctions.php');
 
     $name_inventory = $_GET['name_inventory'];

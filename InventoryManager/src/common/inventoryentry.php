@@ -1,3 +1,5 @@
+<!-- Just the class Inventoryentry, which makes it easier to manage the entries within the files -->
+
 <?php
     class Inventoryentry{
 

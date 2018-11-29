@@ -1,3 +1,4 @@
+<!-- Just the class Product, which makes it easier to manage products within the files -->
 <?php
     class Product {
 
