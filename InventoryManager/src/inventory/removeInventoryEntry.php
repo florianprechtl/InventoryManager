@@ -19,9 +19,8 @@
     }
 
     // Delete inventory entry from db
-    $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = ?";
+    $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
     $stmt = $db->prepare($sql);
-    $stmt->bind_param('i', $inventoryEntryNr);
     $stmt->excute();
 
 
