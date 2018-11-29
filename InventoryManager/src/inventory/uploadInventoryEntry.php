@@ -100,15 +100,15 @@
     */
     function insertProduct($db, $name, $descr, $imageBase64) {
         
-        // set values of varaibles
+        // Set values of variables
+        $productNr = null;
+        $prodgrNr = null;
         $name = $name != '' ? $name : null;
         $descr = $descr != '' ? $descr : null;
-        $imageName = null;
-        $data = null;
         $imageName = time() . '.png';
+
+        // Decoding base64 image
         $data = base64_decode($imageBase64);
-        
-        $productNr = null;
         
         // get next autoincrement value that is returned by the function
         $sql = "SHOW TABLE STATUS WHERE name='product'";
@@ -119,19 +119,20 @@
             }
         }
         
-        // insert product 
-        $sql = "INSERT INTO product (ProdNr, ProdgrNr, Name, Description, Image) VALUES (NULL, NULL, '$name', '$descr', '$imageName')";
-        echo $sql;
-        $db->query($sql);
+        // Insert product
+        $sql = "INSERT INTO Product (ProdNr, ProdgrNr, Name, Description, Image) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param('iisss', $productNr, $prodgrNr, $name, $descr, $imageName);
+        $stmt->execute();
 
-        // upload image to the "imgUploads" folder
+        // Upload image to the "imgUploads" folder
         file_put_contents("../../imgUploads/$imageName", $data);
         return $productNr;
     }
 
 
     /*
-    *   Function that inserts inventoryentry
+    *   Function that inserts inventory entry
     */
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status) {
         
@@ -146,7 +147,7 @@
         $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
         $status = $status != '' ? $status : 'null';
         
-        // insert inventor entry
+        // Insert inventor entry
         $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         echo $sql;
