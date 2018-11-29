@@ -146,9 +146,19 @@
         $status = $status != '' ? $status : 'null';
         
         // insert inventor entry
-        $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status) 
-                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status)";
+//        $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
+//                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status)";
+//        echo $sql;
+//        $db->query($sql);
+
+
+        $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
+                                VALUES ((?, ?, ?, ?, ?, ?, ?, ?, ?))";
         echo $sql;
-        $db->query($sql);
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param('iiiiisddi', NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
+        $stmt->execute();
+
+
     }
 ?>
