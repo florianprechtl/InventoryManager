@@ -155,7 +155,7 @@
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         echo $sql;
         $stmt = $db->prepare($sql);
-        $stmt->bind_param('iiiiisddi', $inventoryEntryNr, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
+        $stmt->bind_param('iiiiisssi', $inventoryEntryNr, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
         $stmt->execute();
 
 
