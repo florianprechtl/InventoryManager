@@ -23,7 +23,6 @@
                                 $db = connectToDB();
 
                                 $sql = "SELECT * FROM Product where ProdNr = $inventoryEntry->productNr";
-                                echo $sql;
                                 $result = $db->query($sql);
 
                                 if ($result->num_rows > 0) {
