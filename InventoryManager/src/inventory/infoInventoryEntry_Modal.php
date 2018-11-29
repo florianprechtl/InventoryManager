@@ -18,13 +18,13 @@
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-4 form-group">
                             <label for="name">Name</label><br>
                             <input class="form-control" disabled name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
                         </div>
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-8 form-group">
                             <label for="description">Description</label><br>
-                            <textarea class="form-control" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
+                            <textarea class="form-control" rows="5" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
 
