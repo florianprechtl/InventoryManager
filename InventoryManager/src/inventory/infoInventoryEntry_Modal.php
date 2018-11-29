@@ -17,8 +17,10 @@
                 <input name="inventory_entry_nr" hidden value="<?=$inventoryEntry->inventoryEntryNr?>">
 
                 <div class="container-fluid">
+                    <!-- Picture, Name and Description -->
                     <div class="row">
                         <div class="col-sm-4 form-group">
+                            <!-- picture of product -->
                             <?php
                                 $db = connectToDB();
 
@@ -40,6 +42,8 @@
                         </div>
                     </div>
 
+                    <!-- Editable -->
+                    <!-- Unit and Amount -->
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <label for="unit">Unit</label><br>
@@ -51,6 +55,7 @@
                         </div>
                     </div>
 
+                    <!-- Dates -->
                     <div class="row">
                         <div class="col-sm-6 form-group date-container">
                             <label for="date_buying">Buying date</label><br>
@@ -63,6 +68,7 @@
                     </div>
                 </div>
 
+                <!-- All Buttons -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-default fas fa-edit" onclick="editInventoryEntry(event)" id="edit_button_<?php echo $inventoryEntryNr ?>"></button>

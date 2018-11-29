@@ -33,7 +33,7 @@
                                 <div class="card-body">
                                     <div class="row">
 
-                                        <!-- left content ------ Picture upload and display -->
+                                        <!-- Left content ------ Picture upload and display -->
                                         <div class="col col-sm-5">
 
                                             <!-- Placeholder for picture data -->
@@ -62,7 +62,7 @@
 
                                         </div>
 
-                                        <!-- right content -->
+                                        <!-- Right content -->
                                         <div class="col col-sm-7">
 
                                             <!-- Existing product -->

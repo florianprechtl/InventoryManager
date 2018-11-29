@@ -12,6 +12,7 @@
 
             <!-- Modal body-->
             <div class="modal-body">
+                <!-- Name and Description for Inventory Entry -->
                 <div class="form-group" id="content_new_inventory">
                     <div class="form-group">
                         <label for="name_inventory">Inventory name</label><br>

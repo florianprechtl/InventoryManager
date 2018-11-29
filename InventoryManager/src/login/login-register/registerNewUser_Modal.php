@@ -13,6 +13,7 @@
 
             <form method="POST" action="login-register/uploaduser.php" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <!-- Inputs for the modal -->
                     <div class="mx-auto">
 
 

@@ -95,22 +95,6 @@
                         <input type="text" class="form-control" name="search_entry" id="search_entry" placeholder="Search for ..." />
                         <div class="input-group-btn">
                             <div class="btn-group search-button" role="group">
-<!--                                <div class="dropdown dropdown-lg">-->
-<!--                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>-->
-<!--                                    <div class="dropdown-menu dropdown-menu-right" role="menu">-->
-<!--                                        <form class="form-horizontal" role="form">-->
-<!--                                            <div class="form-group">-->
-<!--                                                <label for="contain">Product name</label>-->
-<!--                                                <input class="form-control" type="text" />-->
-<!--                                            </div>-->
-<!--                                            <div class="form-group">-->
-<!--                                                <label for="contain">Contains the words</label>-->
-<!--                                                <input class="form-control" type="text" />-->
-<!--                                            </div>-->
-<!--                                            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>-->
-<!--                                        </form>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                                 <button type="submit" name="search" id="search_button" class="btn button-search" value="search"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
@@ -177,6 +161,8 @@
                 }
             ?>
 
+            <!-- Adding Entry panels plus their specific modal -->
+            <!-- If there is nothing to show, there will be a warning for the user -->
             <?php
                 $db = connectToDB();
         

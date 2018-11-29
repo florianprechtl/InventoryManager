@@ -1,3 +1,4 @@
+<!-- Used in order to outsource the inventory header -->
 <?php
     session_start();
 ?>
