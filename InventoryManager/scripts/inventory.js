@@ -13,6 +13,7 @@ $(document).ready(function() {
             },
             error: function ($res) {
                 alert($res + "Removing inventory entry did not work!");
+                console.log($res);
             }
         });
 
