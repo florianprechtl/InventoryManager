@@ -4,6 +4,8 @@
     session_start();
 
     $date_pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])'; // yyyy-mm-dd
+    $inventory_nr = $_SESSION['inventory_nr'];
+    $db = connectToDB();
 
     if (isset($_POST['save_changes'])) {
         // update inventory entry
@@ -33,20 +35,24 @@
         if (isset($_POST['date_buying']) && strlen($_POST['date_buying']) == 10){
             $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_STRING);
         } else {
-            $date_buying = null;
-            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
+            if (empty($_POST['date_buying'])) {
+                redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
+            } else {
+                $date_buying = null;
+            }
         }
 
         if (isset($_POST['date_expiring']) && strlen($_POST['date_expiring']) == 10) {
             $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_STRING);
         } else {
-            $date_expiring = null;
-            redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
+            if (empty($_POST['date_expiring'])) {
+                redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
+            } else {
+                $date_expiring = null;
+            }
         }
 
 
-        $inventory_nr = $_SESSION['inventory_nr'];
-        $db = connectToDB();
 
         // Insert of the new inventory with a prepare statement
         $sql = "Update InventoryEntry Set Amount = ?, Unit = ?, ExpiringDate = ?, BuyingDate = ? Where InventoryEntryNr = ?";
