@@ -4,7 +4,14 @@
     session_start();
 
     $date_pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])'; // yyyy-mm-dd
-    $inventory_nr = $_SESSION['inventory_nr'];
+
+    if (isset($_SESSION['inventory_nr'])) {
+        $inventory_nr = filter_var($_SESSION['inventory_nr'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        $inventory_nr = null;
+        redirect("inventory.php?inventory=$inventory_nr&updateSuccessful=false");
+    }
+
     $db = connectToDB();
 
     if (isset($_POST['save_changes'])) {
