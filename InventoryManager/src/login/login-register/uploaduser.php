@@ -63,7 +63,7 @@
             $sql= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);
-            $stmt->bind_param('issssisd', $usernr, $newusername, $firstname, $lastname, $psw, $age, $sex, $dateRegister);
+            $stmt->bind_param('issssiss', $usernr, $newusername, $firstname, $lastname, $psw, $age, $sex, $dateRegister);
             print_r($stmt);
             echo "<br>";
             $stmt->execute();
