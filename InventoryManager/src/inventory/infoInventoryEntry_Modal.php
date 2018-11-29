@@ -24,7 +24,6 @@
 
                                 $sql = "SELECT * FROM Product where ProdNr = $inventoryEntry->productNr";
                                 $result = $db->query($sql);
-                                echo $sql;
 
                                 if ($result->num_rows > 0) {
                                     $row = $result->fetch_assoc();
