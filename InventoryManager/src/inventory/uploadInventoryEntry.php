@@ -48,7 +48,7 @@
 
     // Amount
     if (isset($_POST['amount'])) {
-        $amount =  filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_FLOAT);
+        $amount =  filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_INT);
     } else {
         $amount = null;
     }
