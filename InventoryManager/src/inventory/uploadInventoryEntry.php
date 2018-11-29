@@ -55,7 +55,7 @@
 
 
     // Unit
-    if (isset($_POST['unit']) && strlen($_POST['date_buying']) == 10){
+    if (isset($_POST['unit']) && strlen($_POST['date_buying']) <= 10){
         $unit = filter_var($_POST['unit'], FILTER_SANITIZE_STRING);
     } else {
         $unit = null;
