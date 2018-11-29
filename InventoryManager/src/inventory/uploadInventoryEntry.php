@@ -86,6 +86,7 @@
         if (!isset($_POST['name_prod_existing']) || $_POST['name_prod_existing'] == '') {
             $productNr = insertProduct($db, $name_product, $descr_product, $imageBase64);
         } else {
+            // name of the product is atm the value of the select option, which is the productNr
             $productNr = $_POST['name_prod_existing'];
         }
         insertInventoryEntry($db, $inventory_nr, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
