@@ -27,8 +27,7 @@
                                 echo $sql;
 
                                 if ($result->num_rows > 0) {
-                                    echo $row['Image'];
-                                    echo $row['ProdNr'];
+                                    $row = $result->fetch_assoc();
                                     echo "<div class='inventory-info-item-preview' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
                                     echo "</div>";
                                 }
