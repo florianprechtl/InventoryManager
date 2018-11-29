@@ -64,8 +64,11 @@
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);
             $stmt->bind_param('issssisd', $usernr, $newusername, $firstname, $lastname, $psw, $age, $sex, $dateRegister);
+            echo sql;
+            echo "<br>";
+            echo $stmt->get_result();
             $stmt->execute();
-            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
+            //redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
         }
