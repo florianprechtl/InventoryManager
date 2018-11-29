@@ -4,17 +4,35 @@
 
     $db = connectToDB();
 
+    // Validate and sanitize inputs
+    // Inventory nr
+    if (isset($_GET['inventory'])) {
+        $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        $inventory_nr = null;
+    }
+
+    // Product name
+    if (isset($_POST['name_prod_new'])) {
+        if(strlen($_GET['name_inventory']) <= 30) {
+            $name_product =  filter_var($_POST['name_prod_new'], FILTER_SANITIZE_STRING);
+        } else {
+            redirect("inventory.php?inventory=$inventory_nr&error=productNameToLong");
+        }
+    } else {
+        $name_product = null;
+        redirect("inventory.php?inventory=$inventory_nr&error=productNameNotDefined");
+    }
+
     // variables of the product
-    $name_product = $_POST['name_prod_new'];
     $descr_product = $_POST['descr_prod_new'];
-    $unit = $_POST['unit'];
     $imageBase64 = $_POST['imageBase64'];
 
     //variables of the inventor entry
     $amount = $_POST['amount'];
+    $unit = $_POST['unit'];
     $date_buying = $_POST['date_buying'];
     $date_expiring = $_POST['date_expiring'];
-    $inventory = $_GET['inventory'];
 
     if (isset($_POST['submit'])) {
         $productNr = null;

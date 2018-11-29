@@ -16,7 +16,11 @@
 
     // Inventory name
     if (isset($_GET['name_inventory']) && !empty($_GET['name_inventory'])) {
-        $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
+        if(strlen($_GET['name_inventory']) <= 20) {
+            $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
+        } else {
+            redirect("inventory.php?inventory=$inventory_nr&error=nameToLong");
+        }
     } else {
         $name_inventory = null;
         redirect("inventory.php?inventory=$inventory_nr&error=nameNotDefined");
@@ -24,7 +28,11 @@
 
     // Inventory description
     if (isset($_GET['description_inventory'])) {
-        $description_inventory =  filter_var($_GET['description_inventory'], FILTER_SANITIZE_STRING);
+        if(strlen($_GET['description_inventory']) <= 150) {
+            $description_inventory =  filter_var($_GET['description_inventory'], FILTER_SANITIZE_STRING);
+        } else {
+            redirect("inventory.php?inventory=$inventory_nr&error=descriptionToLong");
+        }
     } else {
         $description_inventory = null;
     }
