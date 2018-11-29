@@ -137,22 +137,16 @@
         
         // set values of variables
         $inventoryEntryNr = null;
-//        $inventoryNr = $inventoryNr != '' ? $inventoryNr : 'null';
-//        $productNr = $productNr != '' ? $productNr : 5;
-//        $userNr = $userNr != '' ? $userNr : 1;
-//        $amount = $amount != '' ? $amount : 'null';
-//        $unit = $unit != '' ? "'$unit'" : 'null';
-//        $buyingDate = $buyingDate != '' ? "'$buyingDate'" : 'null';
-//        $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
-//        $status = $status != '' ? $status : 'null';
+        $inventoryNr = $inventoryNr != '' ? $inventoryNr : 'null';
+        $productNr = $productNr != '' ? $productNr : 5;
+        $userNr = $userNr != '' ? $userNr : 1;
+        $amount = $amount != '' ? $amount : 'null';
+        $unit = $unit != '' ? "'$unit'" : 'null';
+        $buyingDate = $buyingDate != '' ? "'$buyingDate'" : 'null';
+        $expiringDate = $expiringDate != '' ? "'$expiringDate'" : 'null';
+        $status = $status != '' ? $status : 'null';
         
         // insert inventor entry
-//        $sql = "INSERT INTO inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
-//                                VALUES (NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status)";
-//        echo $sql;
-//        $db->query($sql);
-
-
         $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         echo $sql;
