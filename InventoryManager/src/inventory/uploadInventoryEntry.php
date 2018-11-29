@@ -110,9 +110,12 @@
         // Decoding base64 image
         $data = base64_decode($imageBase64);
         
-        // get next autoincrement value that is returned by the function
+        // Get next autoincrement value that is returned by the function
         $sql = "SHOW TABLE STATUS WHERE name='product'";
-        $result = $db->query($sql);
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $productNr = $row['Auto_increment'];
@@ -136,7 +139,7 @@
     */
     function insertInventoryEntry($db, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status) {
         
-        // set values of variables
+        // Set values of variables
         $inventoryEntryNr = null;
         $inventoryNr = $inventoryNr != '' ? $inventoryNr : 'null';
         $productNr = $productNr != '' ? $productNr : 5;
