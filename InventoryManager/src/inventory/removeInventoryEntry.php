@@ -4,8 +4,10 @@
     $db = connectToDB();
     $inventoryEntryNr = $_POST['nr'];
 
-    $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
-    $db->query($sql);
+    $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->bind_param('i', $inventoryEntryNr);
+    $stmt->excute();
 
     ################################
     ## delete img from ftp server ##
