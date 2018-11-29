@@ -2,17 +2,33 @@
     include('../common/connectDB.php');
 
     $db = connectToDB();
-    $inventoryEntryNr = $_POST['nr'];
 
+    // Validation and sanitization
+    // Inventory entry nr
+    if (isset($_POST['unit'])) {
+        $inventoryEntryNr = filter_var($_POST['nr'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        return 0;
+    }
+
+
+    if (isset($_POST['imgName'])) {
+        $imgName = filter_var($_POST['nr'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        return 0;
+    }
+
+    // Delete inventory entry from db
     $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = ?";
     $stmt = $db->prepare($sql);
     $stmt->bind_param('i', $inventoryEntryNr);
     $stmt->excute();
 
+
+
     ################################
     ## delete img from ftp server ##
     ################################
 
-    // does not necessarily make sense to remove pic from ftp server because we could use it again later
-    $file = "imgUploads/$_POST[imgName]";
+    $file = "imgUploads/$imgName";
 ?>
