@@ -153,7 +153,7 @@
 
 
         $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
-                                VALUES ((?, ?, ?, ?, ?, ?, ?, ?, ?))";
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         echo $sql;
         $stmt = $db->prepare($sql);
         $stmt->bind_param('iiiiisddi', NULL, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
