@@ -28,5 +28,6 @@
     ## delete img from ftp server ##
     ################################
 
+    // They should not be deleted, because we are only deleting the entry and not the whole product, which can be reused afterwards
     $file = "imgUploads/$imgName";
 ?>
