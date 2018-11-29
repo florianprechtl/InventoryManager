@@ -6,16 +6,28 @@
     $db = connectToDB();
 
 
-    // Variables of the inventory
-
+    // validate and sanitize inputs
     if (isset($_GET['name_inventory']) && !empty($_GET['name_inventory'])) {
-        $name_inventory = $_GET['name_inventory'];
+        $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
     } else {
+        $name_inventory = null;
         redirect("inventory.php?inventory=$inventory_nr&error=nameNotDefined");
     }
-    $description_inventory = $_GET['description_inventory'];
+
+    if (isset($_GET['description_inventory'])) {
+        $description_inventory =  filter_var($_GET['description_inventory'], FILTER_SANITIZE_STRING);
+    } else {
+        $description_inventory = null;
+    }
+
+    if (isset($_SESSION['user_nr'])) {
+        $user_nr =  filter_var($_SESSION['user_nr'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        $user_nr = null;
+        redirect("inventory.php?inventory=$inventory_nr&error=userNotDefined");
+    }
+
     $inventory_nr = "";
-    $user_nr = $_SESSION['user_nr'];
     $matrix_nr = null;
 
 

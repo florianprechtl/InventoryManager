@@ -204,7 +204,7 @@
                         echo "<strong>No entries yet!</strong><br><br>Add one by clicking on the plus panel on the left!</div>";
                     } else {
                         echo "<div class='inventory-item-preview alert alert-danger'>";
-                        echo "<strong>No results found!</strong><br><br>there is not such an item in the inventory!</div>";
+                        echo "<strong>No results found!</strong><br><br>Keyword $_GET[search_entry] does item in the inventory!</div>";
                     }
                 }
             ?>
