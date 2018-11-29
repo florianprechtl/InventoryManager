@@ -11,8 +11,8 @@ $(document).ready(function() {
             success: function () {
                 location.reload();
             },
-            error: function () {
-                alert("Removing inventory entry did not work!");
+            error: function ($res) {
+                alert($res + "Removing inventory entry did not work!");
             }
         });
 
