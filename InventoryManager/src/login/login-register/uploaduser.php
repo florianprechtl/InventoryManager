@@ -15,43 +15,43 @@
     if (isset($_POST['firstname'])) {
         $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Lastname
     if (isset($_POST['lastname'])) {
         $lastname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Username
     if (isset($_POST['newusername'])) {
         $newusername = filter_var($_POST['newusername'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Age
     if (isset($_POST['age'])) {
         $age = filter_var($_POST['age'], FILTER_SANITIZE_NUMBER_INT);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Sex
     if (isset($_POST['sex'])) {
         $sex = filter_var($_POST['sex'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Password
     if (isset($_POST['psw'])) {
         $psw = filter_var($_POST['psw'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
     // Repeated password
     if (isset($_POST['repeatedpsw'])) {
         $repeatedpsw = filter_var($_POST['repeatedpsw'], FILTER_SANITIZE_STRING);
     } else {
-        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+        redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
     }
 
     // Get current date
