@@ -4,25 +4,62 @@
     include('../../common/connectDB.php');
     include('../../common/basicFunctions.php');
 
+    // Connecting to the database
     $db = connectToDB();
+
+    // Setting up variables
     $usernr = null;
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $newusername = $_POST['newusername'];
-    $age = $_POST['age'];
-    $sex = empty($_POST['sex']) ? "NULL" : "'$_POST[sex]'";
-    $psw = $_POST['psw'];
-    $repeatedpsw = $_POST['repeatedpsw'];
-    print_r($_POST);
-    
+
+    // Validation and sanitization
+    // Firstname
+    if (isset($_POST['firstname'])) {
+        $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Lastname
+    if (isset($_POST['lastname'])) {
+        $lastname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Username
+    if (isset($_POST['newusername'])) {
+        $newusername = filter_var($_POST['newusername'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Age
+    if (isset($_POST['age'])) {
+        $age = filter_var($_POST['age'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Sex
+    if (isset($_POST['sex'])) {
+        $sex = filter_var($_POST['sex'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Password
+    if (isset($_POST['psw'])) {
+        $psw = filter_var($_POST['psw'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+    // Repeated password
+    if (isset($_POST['repeatedpsw'])) {
+        $repeatedpsw = filter_var($_POST['repeatedpsw'], FILTER_SANITIZE_STRING);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&registerSuccessful=false");
+    }
+
+    // Get current date
     $dateRegister = date("Y-m-d");
 
-        // je me suis inspiré du uploadinventoryentry
-        // ça marche
+        // Check if user entered equal passwords
         if ($psw == $repeatedpsw) {
-
             $psw = password_hash($psw, PASSWORD_DEFAULT);
-
             $sql= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
             $stmt = $db->prepare($sql);
