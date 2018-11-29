@@ -49,13 +49,13 @@
 }
 
 .inventory-info-item-preview {
-    margin: 0;
+    margin: auto;
     margin-top: 35px;
     margin-bottom: 20px;
     background-color: #B1C7F5;
     border-radius: 5px;
-    min-height: 202.76px;
-    min-width: 202.76px;
+    height: 202.76px;
+    width: 202.76px;
     box-shadow: black 0px 0px 2px 0px;
     background-size: cover;
 }
