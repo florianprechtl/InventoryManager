@@ -5,7 +5,7 @@
 
     // Validation and sanitization
     // Inventory entry nr
-    if (isset($_POST['unit'])) {
+    if (isset($_POST['nr'])) {
         $inventoryEntryNr = filter_var($_POST['nr'], FILTER_SANITIZE_NUMBER_INT);
     } else {
         return 0;
