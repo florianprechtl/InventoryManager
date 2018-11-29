@@ -1,3 +1,4 @@
+<!-- Used in order to outsource the login header -->
 <?php
     include('../common/basicFunctions.php');
 
