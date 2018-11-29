@@ -6,13 +6,15 @@
     $db = connectToDB();
 
 
-    // validate and sanitize inputs
+    // Validate and sanitize inputs
+    // Inventory nr
     if (isset($_GET['inventory'])) {
         $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
     } else {
         $inventory_nr = null;
     }
 
+    // Inventory name
     if (isset($_GET['name_inventory']) && !empty($_GET['name_inventory'])) {
         $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
     } else {
@@ -20,12 +22,14 @@
         redirect("inventory.php?inventory=$inventory_nr&error=nameNotDefined");
     }
 
+    // Inventory description
     if (isset($_GET['description_inventory'])) {
         $description_inventory =  filter_var($_GET['description_inventory'], FILTER_SANITIZE_STRING);
     } else {
         $description_inventory = null;
     }
 
+    // User nr
     if (isset($_SESSION['user_nr'])) {
         $user_nr =  filter_var($_SESSION['user_nr'], FILTER_SANITIZE_NUMBER_INT);
     } else {
@@ -33,10 +37,11 @@
         redirect("inventory.php?inventory=$inventory_nr&error=userNotDefined");
     }
 
-    $matrix_nr = null;
 
 
-    // Get next autoincrement value that is returned by the function
+
+
+    // Get next auto-increment value that is returned by the function
     $sql = "SHOW TABLE STATUS WHERE name='inventory'";
     $result = $db->query($sql);
     if ($result->num_rows > 0) {
@@ -57,5 +62,6 @@
     $stmt->bind_param('iii', $matrix_nr, $inventory_nr, $user_nr);
     $stmt->execute();
 
+    // Redirect to the newly created inventory
     redirect("inventory.php?inventory=$inventory_nr");
 ?>
