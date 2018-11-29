@@ -3,20 +3,34 @@
 <?php
 	include('../common/connectDB.php');
     include('../common/basicFunctions.php');
-	
+
+    // Connect to the database
     $db = connectToDB();
 
-	$username = $_POST['username'];
-    $password = $_POST['password'];
-    
-    echo $username . " entered the password " . $password . "<br>"; 
+    // Validation and sanitization
+    // Username
+    if (isset($_POST['username'])) {
+        $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    } else {
+        $username = null;
+    }
+    // Password
+    if (isset($_POST['password'])) {
+        $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    } else {
+        $password = null;
+    }
+
     checkUserAccountInformation($username, $password, $db);
 
     
     function checkUserAccountInformation($username, $password, $db) {
-        $sql = "SELECT * FROM user WHERE Username = '$username'";
+        $sql = "SELECT * FROM user WHERE username = ?";
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param('s', $username);
+        $stmt->execute();
         
-        $result = $db->query($sql);
+        $result = $stmt->get_result();
         
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
@@ -35,16 +49,12 @@
                     $_SESSION['user_nr'] = $row['UserNr'];
                     $_SESSION['user_name'] = $row['Username'];
                     $_SESSION['inventory_nr'] = null;
-                    echo "<br><br>";
-                    echo "SELECT * FROM Inventory join Inventoryusermatrix on inventory.InventoryNr = Inventoryusermatrix.InventoryNr WHERE UserNr = $_SESSION[user_nr]";
                     redirect('../inventory/inventory.php');
                 } else {
-                    echo "Login denied, wrong password <br>";
                     redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?loginDenied=wrongPassword');
                 }
             }
         } else {
-            echo "There is no user with the name: <b>$username</b><br>";
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?loginDenied=userUnknown');
         }
     }
