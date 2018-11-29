@@ -14,7 +14,7 @@
 
     // Product name
     if (isset($_POST['name_prod_new'])) {
-        if(strlen($_GET['name_inventory']) <= 30) {
+        if(strlen($_POST['name_prod_new']) <= 30) {
             $name_product =  filter_var($_POST['name_prod_new'], FILTER_SANITIZE_STRING);
         } else {
             redirect("inventory.php?inventory=$inventory_nr&error=productNameToLong");
@@ -24,21 +24,67 @@
         redirect("inventory.php?inventory=$inventory_nr&error=productNameNotDefined");
     }
 
-    // variables of the product
-    $descr_product = $_POST['descr_prod_new'];
-    $imageBase64 = $_POST['imageBase64'];
+    // Product description
+    if (isset($_POST['descr_prod_new'])) {
+        if(strlen($_POST['descr_prod_new']) <= 1000) {
+            $descr_product =  filter_var($_POST['descr_prod_new'], FILTER_SANITIZE_STRING);
+        } else {
+            redirect("inventory.php?inventory=$inventory_nr&error=productDescriptionToLong");
+        }
+    } else {
+        $descr_product = null;
+    }
 
-    //variables of the inventor entry
-    $amount = $_POST['amount'];
-    $unit = $_POST['unit'];
-    $date_buying = $_POST['date_buying'];
-    $date_expiring = $_POST['date_expiring'];
+    // Base64 Image
+    if (isset($_POST['imageBase64'])) {
+        if(strlen($_POST['imageBase64']) <= 100000000) {
+            $imageBase64 = filter_var($_POST['imageBase64'], FILTER_SANITIZE_STRING);
+        } else {
+            redirect("inventory.php?inventory=$inventory_nr&error=base64ImageToBig");
+        }
+    } else {
+        $imageBase64 = null;
+    }
+
+    // Amount
+    if (isset($_POST['amount'])) {
+        $amount =  filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_FLOAT);
+    } else {
+        $amount = null;
+    }
+
+
+    // Unit
+    if (isset($_POST['unit']) && strlen($_POST['date_buying']) == 10){
+        $unit = filter_var($_POST['unit'], FILTER_SANITIZE_STRING);
+    } else {
+        $unit = null;
+    }
+
+    // Date buying
+    if (isset($_POST['date_buying']) && strlen($_POST['date_buying']) == 10){
+        $date_buying = filter_var($_POST['date_buying'], FILTER_SANITIZE_STRING);
+    } else {
+        $date_buying = null;
+    }
+
+    // Date expiring
+    if (isset($_POST['date_expiring']) && strlen($_POST['date_expiring']) == 10) {
+        $date_expiring = filter_var($_POST['date_expiring'], FILTER_SANITIZE_STRING);
+    } else {
+        $date_expiring = null;
+    }
+
+
+
+
+
 
     if (isset($_POST['submit'])) {
         $productNr = null;
 
         if (!isset($_POST['name_prod_existing']) || $_POST['name_prod_existing'] == '') {
-            $productNr = insertProduct($db, $name_product, $descr_product, $descr_product, $imageBase64);
+            $productNr = insertProduct($db, $name_product, $descr_product, $imageBase64);
         } else {
             $productNr = $_POST['name_prod_existing'];
         }
@@ -51,12 +97,11 @@
     /*
     * function that inserts product and returns the prodNr of the inserted product
     */
-    function insertProduct($db, $name, $descr, $unit, $imageBase64) {
+    function insertProduct($db, $name, $descr, $imageBase64) {
         
         // set values of varaibles
         $name = $name != '' ? $name : null;
         $descr = $descr != '' ? $descr : null;
-        $unit = $unit != '' ? $unit : null;
         $imageName = null;
         $data = null;
         $imageName = time() . '.png';
