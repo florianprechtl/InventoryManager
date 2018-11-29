@@ -7,6 +7,12 @@
 
 
     // validate and sanitize inputs
+    if (isset($_GET['inventory'])) {
+        $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        $inventory_nr = null;
+    }
+
     if (isset($_GET['name_inventory']) && !empty($_GET['name_inventory'])) {
         $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
     } else {
@@ -25,12 +31,6 @@
     } else {
         $user_nr = null;
         redirect("inventory.php?inventory=$inventory_nr&error=userNotDefined");
-    }
-
-    if (isset($_GET['inventory'])) {
-        $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
-    } else {
-        $inventory_nr = null;
     }
 
     $matrix_nr = null;
