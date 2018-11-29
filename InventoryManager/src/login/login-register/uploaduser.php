@@ -5,6 +5,7 @@
     include('../../common/basicFunctions.php');
 
     $db = connectToDB();
+    $usernr = null;
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $newusername = $_POST['newusername'];
@@ -22,10 +23,11 @@
 
             $psw = password_hash($psw, PASSWORD_DEFAULT);
 
-            $sql_user= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
+            $sql= "INSERT INTO user (UserNr, Username, Firstname, Lastname, Password, Age, Sex, MemberSince)
                         VALUES (NULL, '$newusername', '$firstname', '$lastname','$psw', $age, $sex, '$dateRegister')";
-
-            $db->query($sql_user);
+            $stmt = $db->prepare($sql);
+            $stmt->bind_param('issssisd', $usernr, $newusername, $firstname, $lastname, $psw, $age, $sex, $dateRegister);
+            $stmt->execute();
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
