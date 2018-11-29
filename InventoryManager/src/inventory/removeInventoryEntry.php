@@ -19,9 +19,11 @@
     }
 
     // Delete inventory entry from db
+//    $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
+//    $stmt = $db->prepare($sql);
+//    $stmt->excute();
     $sql = "DELETE FROM InventoryEntry WHERE InventoryEntryNr = $inventoryEntryNr";
-    $stmt = $db->prepare($sql);
-    $stmt->excute();
+    $db->query($sql);
 
 
 
