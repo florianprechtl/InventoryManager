@@ -70,7 +70,7 @@
             echo $stmt->get_result();
             echo "<br>";
             print_r($stmt);
-            //redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
+            redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
         }
