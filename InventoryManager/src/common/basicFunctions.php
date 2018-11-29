@@ -1,6 +1,8 @@
 <?php
     include('inventoryentry.php');
 
+    // converts date to desired pattern
+    // unused atm
     function convertDate($date) {
         if (preg_match('[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])', $date)) {
 
@@ -52,21 +54,12 @@
         die();
     }
 
+    // Returns desired inventory entry, with which u can work afterwards to have everything stored in one object
     function getInventoryEntry($inventoryEntryNr) {
         $db = connectToDB();
 
         $sql = "SELECT * FROM Product join Inventoryentry where Product.ProdNr = Inventoryentry.ProductNr and InventoryEntryNr = $inventoryEntryNr";
         $result = $db->query($sql);
-
-        $productNr = null;
-        $userNr = null;
-        $name = null;
-        $description = null;
-        $amount = null;
-        $unit = null;
-        $status = null;
-        $expiringDate = null;
-        $buyingDate = null;
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
@@ -80,10 +73,12 @@
             $status = $row['Status'];
             $expiringDate = $row['ExpiringDate'];
             $buyingDate = $row['BuyingDate'];
-        }
 
-        return new Inventoryentry($inventoryEntryNr, $productNr, $userNr,
-            $name, $description, $amount, $unit, $status, $expiringDate, $buyingDate);
+            return new Inventoryentry($inventoryEntryNr, $productNr, $userNr,
+                $name, $description, $amount, $unit, $status, $expiringDate, $buyingDate);
+        } else {
+            return 0;
+        }
     }
 
 ?>
