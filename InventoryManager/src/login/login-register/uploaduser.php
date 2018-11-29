@@ -64,10 +64,12 @@
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);
             $stmt->bind_param('issssisd', $usernr, $newusername, $firstname, $lastname, $psw, $age, $sex, $dateRegister);
-            echo $sql;
+            print_r($stmt);
             echo "<br>";
-            echo $stmt->get_result();
             $stmt->execute();
+            echo $stmt->get_result();
+            echo "<br>";
+            print_r($stmt);
             //redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=true');
         } else {
             redirect(explode('?', $_SERVER['HTTP_REFERER'])[0] . '?registerSuccessful=false');
