@@ -19,12 +19,23 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4 form-group">
+                            <?php
+                                $db = connectToDB();
+
+                                $sql = "SELECT * FROM Product where ProdNr = $inventoryEntry->productNr";
+                                $result = $db->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    echo "<div class='inventory-item-preview' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
+                                    echo "</div>";
+                                }
+                            ?>
                             <label for="name">Name</label><br>
                             <input class="form-control" disabled name="name" type="text" id="name_field_<?php echo $inventoryEntryNr ?>" value="<?=$inventoryEntry->name?>">
                         </div>
                         <div class="col-sm-8 form-group">
                             <label for="description">Description</label><br>
-                            <textarea class="form-control" rows="5" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
+                            <textarea class="form-control" rows="8" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
 
