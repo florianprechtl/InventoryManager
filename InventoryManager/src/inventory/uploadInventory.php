@@ -27,7 +27,12 @@
         redirect("inventory.php?inventory=$inventory_nr&error=userNotDefined");
     }
 
-    $inventory_nr = "";
+    if (isset($_GET['inventory'])) {
+        $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        $inventory_nr = null;
+    }
+
     $matrix_nr = null;
 
 

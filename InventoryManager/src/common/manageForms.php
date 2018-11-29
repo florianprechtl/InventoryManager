@@ -9,6 +9,6 @@
     if (isset($_GET['search'])) {
         redirect("../inventory/inventory.php?inventory=$inventory&search_entry=$search_entry");
     } else if (isset($_GET['add_new_inventory'])) {
-        redirect("../inventory/uploadInventory.php?name_inventory=$name_inventory&description_inventory=$description_inventory");
+        redirect("../inventory/uploadInventory.php?inventory=$inventory&name_inventory=$name_inventory&description_inventory=$description_inventory");
     }
 ?>
