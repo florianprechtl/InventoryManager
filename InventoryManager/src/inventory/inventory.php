@@ -17,7 +17,7 @@
         <!-- Header -->
         <div class="row header">
             <h1 class="col-sm-12 no-margin-bottom" align="center">
-                Inventory Manager
+                MyFridge
                 <a class="btn btn-sm btn-light margin-bottom margin-top margin-left float-right" href="../logout/logout.php">Logout</a>
                 <p class="float-right header-user-show">signed in as <?php echo $_SESSION['user_name']?></p>
             </h1>
