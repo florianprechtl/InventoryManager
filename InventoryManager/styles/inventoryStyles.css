@@ -193,5 +193,5 @@
 }
 
 .info-description-textarea {
-    height: 290px;
+    height: 290px !important;
 }
