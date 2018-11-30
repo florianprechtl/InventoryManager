@@ -1,13 +1,7 @@
 body {
     height: 100%;
-    background-image: url("../../Documentation/Mockups/Main Page InventoryManager.png");
+    background-image: url("../../InventoryManager/additionals/imgs/fridge_inside.png");
 }
-
-.container-fluid {
-    background-color: white;
-}
-
-
 
 /* standard padding that should be used to stay conform */
 .padding-top {

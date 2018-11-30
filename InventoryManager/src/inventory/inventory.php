@@ -12,7 +12,7 @@
 ?>
 
 <body>
-    <div class="container-fluid" style="max-width: 800px; width:100%">
+    <div class="container-fluid main-frame" style="max-width: 800px; width:100%">
 
         <!-- Header -->
         <div class="row header">
