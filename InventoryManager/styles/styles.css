@@ -1,6 +1,7 @@
 body {
     height: 100%;
     background-image: url("../../InventoryManager/additionals/imgs/fridge_inside.png");
+    background-size: cover;
 }
 
 /* standard padding that should be used to stay conform */
