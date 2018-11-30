@@ -51,7 +51,7 @@
 .inventory-info-item-preview {
     margin: auto;
     margin-top: 33px;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
     background-color: #B1C7F5;
     border-radius: 5px;
     height: 202.76px;
@@ -190,4 +190,8 @@
     font-size: 14px;
     display: inline;
     margin-top: 22px;
+}
+
+.info-description-textarea {
+    height: 290px;
 }

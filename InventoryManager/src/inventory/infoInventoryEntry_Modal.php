@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-sm-8 form-group">
                             <label for="description">Description</label><br>
-                            <textarea class="form-control" rows="12" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
+                            <textarea class="form-control info-description-textarea" disabled name="description" id="descr_field_<?php echo $inventoryEntryNr ?>"><?=$inventoryEntry->description?></textarea>
                         </div>
                     </div>
 
