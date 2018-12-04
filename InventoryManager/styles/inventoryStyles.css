@@ -62,6 +62,7 @@
 
 .inventory-item-preview:hover {
     box-shadow: inset black 0px 0px 5px 0px;
+    translation: 0.2s;
 }
 
 .inventory-item-preview:hover {
@@ -71,7 +72,7 @@
 .add-inventory-entry-button {
     background-color: #031D54;
     color: #B1C7F5;
-    transition: 0.5s ;
+    transition: 0.2s ;
 }
 
 .add-inventory-entry-button:hover {
@@ -114,6 +115,7 @@
     background-color: #031D54;
     color: #B1C7F5;
     height: 38px;
+    transition: 0.2s;
 }
 
 .button-search:hover {
