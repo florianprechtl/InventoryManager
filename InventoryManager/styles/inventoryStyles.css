@@ -71,12 +71,12 @@
 .add-inventory-entry-button {
     background-color: #031D54;
     color: #B1C7F5;
+    transition: 0.5s ;
 }
 
 .add-inventory-entry-button:hover {
     background-color: #B1C7F5;
     color: #031D54;
-    font-size: 20px;
 }
 
 .icon-box {
