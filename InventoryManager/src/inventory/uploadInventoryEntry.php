@@ -141,23 +141,24 @@
         
         // Set values of variables
         $inventoryEntryNr = null;
-        $inventoryNr = $inventoryNr != '' ? $inventoryNr : null;
-        $productNr = $productNr != '' ? $productNr : null;
-        $userNr = $userNr != '' ? $userNr : null;
-        $amount = $amount != '' ? $amount : null;
-        $unit = $unit != '' ? $unit : null;
-        $buyingDate = $buyingDate != '' ? $buyingDate : null;
-        $expiringDate = $expiringDate != '' ? $expiringDate : null;
-        $status = $status != '' ? $status : null;
         
         // Insert inventor entry
         $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        echo $buyingDate;
-        echo $expiringDate;
+
         $stmt = $db->prepare($sql);
+
+        print_r($stmt);
+
         $stmt->bind_param('iiiiisssi', $inventoryEntryNr, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
+
+        print_r($stmt);
+
         $stmt->execute();
+
+        print_r($stmt);
+
+        $stmt->debugDumpParams();
 
 
     }
