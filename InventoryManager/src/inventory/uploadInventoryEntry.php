@@ -75,6 +75,13 @@
         $date_expiring = null;
     }
 
+    // User nr
+    if (isset($_SESSION['user_nr'])) {
+        $user_nr = filter_var($_SESSION['user_nr'], FILTER_SANITIZE_NUMBER_INT);
+    } else {
+        redirect("inventory.php?inventory=$inventory_nr&error=noUserDefined");
+    }
+
 
 
 
@@ -89,8 +96,8 @@
             // name of the product is atm the value of the select option, which is the productNr
             $productNr = $_POST['name_prod_existing'];
         }
-        insertInventoryEntry($db, $inventory_nr, $productNr, null, $amount, $unit, $date_buying, $date_expiring, null);
-        // redirect('inventory.php?inventory='.$inventory_nr);
+        insertInventoryEntry($db, $inventory_nr, $productNr, $user_nr, $amount, $unit, $date_buying, $date_expiring, null);
+        redirect('inventory.php?inventory='.$inventory_nr);
     }
     
     
