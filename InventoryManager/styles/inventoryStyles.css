@@ -64,6 +64,15 @@
     box-shadow: inset black 0px 0px 5px 0px;
 }
 
+.inventory-item-preview:hover {
+    box-shadow: inset black 0px 0px 5px 0px;
+}
+
+.add-inventory-entry-button:hover {
+    background-color: #B1C7F5;
+    color: #031D54;
+}
+
 .icon-box {
   display: inline-block;
   width: 4em;

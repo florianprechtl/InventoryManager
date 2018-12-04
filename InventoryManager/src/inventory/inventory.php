@@ -150,7 +150,7 @@
 
         <!-- Inventory entries showcase -->
         <div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
-            <div class="inventory-item-preview icon-box" data-toggle="modal" data-target="#myModal">
+            <div class="inventory-item-preview icon-box add-inventory-entry-button" data-toggle="modal" data-target="#myModal">
                 <a><i class="fas fa-plus add-entry-icon"></i></a>
             </div>
             <!-- Modal -->
