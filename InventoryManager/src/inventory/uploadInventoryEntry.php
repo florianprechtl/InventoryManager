@@ -153,7 +153,8 @@
         // Insert inventor entry
         $sql = "INSERT INTO Inventoryentry (InventoryEntryNr, InventoryNr, ProductNr, UserNr, Amount, Unit, BuyingDate, ExpiringDate, Status)
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        echo $sql;
+        echo $buyingDate;
+        echo $expiringDate;
         $stmt = $db->prepare($sql);
         $stmt->bind_param('iiiiisssi', $inventoryEntryNr, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
         $stmt->execute();
