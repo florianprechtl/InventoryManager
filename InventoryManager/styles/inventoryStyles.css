@@ -76,6 +76,7 @@
 .add-inventory-entry-button:hover {
     background-color: #B1C7F5;
     color: #031D54;
+    font-size: 20px;
 }
 
 .icon-box {
