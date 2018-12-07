@@ -17,7 +17,7 @@ This file decides which php file to redirect to -->
         $name_inventory =  filter_var($_GET['name_inventory'], FILTER_SANITIZE_STRING);
     } else {
         $name_inventory = null;
-        redirect("inventory.php?inventory=$inventory_nr&error=errorNotDefined");
+        redirect("../inventory/inventory.php?inventory=$inventory_nr&error=errorNotDefined");
     }
 
     // Description
