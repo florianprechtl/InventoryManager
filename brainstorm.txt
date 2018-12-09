@@ -9,4 +9,7 @@ we have amount of Leeks = 6 and unit = kg. We consider that there are 6 leeks in
 => maybe we can introduce a "piece" as a unity -> then we can consider that we have 6 leeks 
 ----> the user can now change and update the product info so he can choose to modify the unit : problem solved 
 
+brainstorm finished
+project finished.
+
 
