@@ -155,18 +155,8 @@
                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $db->prepare($sql);
-
-        print_r($stmt);
-
         $stmt->bind_param('iiiiisssi', $inventoryEntryNr, $inventoryNr, $productNr, $userNr, $amount, $unit, $buyingDate, $expiringDate, $status);
-
-        print_r($stmt);
-
         $stmt->execute();
-
-        print_r($stmt);
-
-        $stmt->debugDumpParams();
 
 
     }
