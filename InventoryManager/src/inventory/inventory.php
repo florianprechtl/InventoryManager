@@ -181,7 +181,7 @@
 
                             echo "<div class='inventory-item-preview' data-toggle='modal' data-target='#info_modal_$row[InventoryEntryNr]' id='inventory_item_preview_$row[InventoryEntryNr]' style=background-image:url(../../imgUploads/" . $row['Image'] . ");>";
                             echo "<i class='btn btn-danger button-remove' id='button_remove_$row[InventoryEntryNr]_$row[Image]'>X</i>";
-                            echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
+                            // echo "$row[Name]<br><br>$row[InventoryEntryNr]</div>";
 
                             includeWithVariables('infoInventoryEntry_Modal.php', array('inventoryEntryNr' => $row['InventoryEntryNr']));
                         }
