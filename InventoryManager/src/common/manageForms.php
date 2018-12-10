@@ -6,7 +6,7 @@ This file decides which php file to redirect to -->
 
     // Validation and sanitization
     // Inventory nr
-    if (isset($_GET['add_new_inventory']) && isset($_GET['inventory'])) {
+    if (isset($_GET['inventory'])) {
         $inventory_nr =  filter_var($_GET['inventory'], FILTER_SANITIZE_NUMBER_INT);
     } else {
         $inventory_nr = null;
