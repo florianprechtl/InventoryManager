@@ -1,6 +1,6 @@
 # InventoryManager
 
-This project was created completely with PHP in collaboration with my french friend and study college Jix.
+This project was created completely with PHP in collaboration with my french friend and study college [Jix](https://github.com/JixPOYLO).
 
 # Project environment
 
@@ -14,3 +14,6 @@ You can:
 * add/delete/update ingredients 
 * upload your own pictures of the things you want to keep track of
 * reuse previously added ingredients
+
+
+![Inventory View](/Documentation/Wiki Pictures/Inventory.PNG)
