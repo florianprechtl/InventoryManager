@@ -29,4 +29,4 @@ Adding new Inventory items:
 
 Database UML Diagramm:
 
-![Inventory View](Documentation/UML/UML_state_08112018_whatWeWillImplement.png)
+![Inventory View](Documentation/UML/UML_state_08112018_whatWeWillImplement.PNG)
