@@ -16,4 +16,4 @@ You can:
 * reuse previously added ingredients
 
 
-![Inventory View](/Documentation/Wiki Pictures/Inventory.PNG)
+[Inventory View](./Documentation/Wiki Pictures/Inventory.PNG)
